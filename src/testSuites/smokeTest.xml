@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "Suite1">
+
+    <test name = "home">
+        <classes>
+            <class name = "org.Tests.BaseHomeTest" />
+        </classes>
+    </test>
+
+    <test name = "elements">
+        <classes>
+            <class name = "org.Tests.ElementsPageTest" />
+        </classes>
+    </test>
+
+    <test name = "forms">
+        <classes>
+            <class name = "org.Tests.FormsPageTest" />
+        </classes>
+    </test>
+
+    <test name = "alerts,frame and windows">
+        <classes>
+            <class name = "org.Tests.AlertsFrameWindowsPageTest" />
+        </classes>
+    </test>
+
+    <test name = "widgets">
+        <classes>
+            <class name = "org.Tests.WidgetsPageTest" />
+        </classes>
+    </test>
+
+    <test name = "interactions">
+        <classes>
+            <class name = "org.Tests.InteractionsPageTest" />
+        </classes>
+    </test>
+
+    <test name = "Book Store Application">
+        <classes>
+            <class name = "org.Tests.BookStorePageTest" />
+        </classes>
+    </test>
+
+</suite>

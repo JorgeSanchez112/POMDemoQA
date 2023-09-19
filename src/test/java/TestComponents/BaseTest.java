@@ -1,6 +1,6 @@
 package TestComponents;
 
-import org.Pages.BasePage;
+import Pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,21 +9,26 @@ import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
-    public WebDriver driver;
-    public BasePage basePage;
+    protected WebDriver driver;
+    protected HomePage homePage;
+    protected ElementsPage elementsPage;
+    protected FormsPage formsPage;
+    protected AlertsFrameWindowsPage alertsFrameWindowsPage;
+    protected WidgetsPage widgetsPage;
+    protected InteractionsPage interactionsPage;
+    protected BookStorePage bookStorePage;
 
     public WebDriver initializeDriver(){
-            ChromeOptions options = new ChromeOptions();
-            return driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        return driver = new ChromeDriver(options);
     }
 
-
     @BeforeTest
-    public BasePage basePage(){
+    public HomePage homePage(){
         driver = initializeDriver();
-        basePage = new BasePage(driver);
-        basePage.goTo();
-        return basePage;
+        homePage = new HomePage(driver);
+        homePage.goTo();
+        return homePage;
     }
 
     @AfterTest
