@@ -17,6 +17,7 @@ public class BaseTest {
     protected WidgetsPage widgetsPage;
     protected InteractionsPage interactionsPage;
     protected BookStorePage bookStorePage;
+    protected TextBoxPage textBoxPage;
 
     public WebDriver initializeDriver(){
         ChromeOptions options = new ChromeOptions();

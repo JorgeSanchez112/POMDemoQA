@@ -21,8 +21,9 @@ public class ElementsPage extends BasePages {
         return deployed_element_exercises.size();
     }
 
-    public void clickOnTextBoxSection(){
+    public TextBoxPage clickOnTextBoxSection(){
         deployed_element_exercises.get(0).click();
+        return new TextBoxPage(driver);
     }
 
     public void clickOnCheckBoxSection(){
