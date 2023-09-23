@@ -18,6 +18,7 @@ public class BaseTest {
     protected InteractionsPage interactionsPage;
     protected BookStorePage bookStorePage;
     protected TextBoxPage textBoxPage;
+    protected CheckBoxPage checkBoxPage;
 
     public WebDriver initializeDriver(){
         ChromeOptions options = new ChromeOptions();
@@ -32,9 +33,9 @@ public class BaseTest {
         return homePage;
     }
 
-    @AfterTest
+/*    @AfterTest
     public void close(){
         driver.close();
-    }
+    }*/
 
 }
