@@ -31,12 +31,15 @@ public class ElementsPage extends BasePages {
         return new CheckBoxPage(driver);
     }
 
-    public void clickOnRadioButtonSection(){
+    public RadioButtonPage clickOnRadioButtonSection(){
         deployed_element_exercises.get(2).click();
+        return new RadioButtonPage(driver);
     }
 
-    public void clickOnWebTablesSection(){
+    public WebTablesPage clickOnWebTablesSection(){
+        scroll(deployed_element_exercises.get(3));
         deployed_element_exercises.get(3).click();
+        return new WebTablesPage(driver);
     }
 
     public void clickOnButtonsSection(){

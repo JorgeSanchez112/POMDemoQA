@@ -19,6 +19,8 @@ public class BaseTest {
     protected BookStorePage bookStorePage;
     protected TextBoxPage textBoxPage;
     protected CheckBoxPage checkBoxPage;
+    protected RadioButtonPage radioButtonPage;
+    protected WebTablesPage webTablesPage;
 
     public WebDriver initializeDriver(){
         ChromeOptions options = new ChromeOptions();
@@ -29,6 +31,7 @@ public class BaseTest {
     public HomePage homePage(){
         driver = initializeDriver();
         homePage = new HomePage(driver);
+        driver.manage().window().maximize();
         homePage.goTo();
         return homePage;
     }
