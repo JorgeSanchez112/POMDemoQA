@@ -42,8 +42,10 @@ public class ElementsPage extends BasePages {
         return new WebTablesPage(driver);
     }
 
-    public void clickOnButtonsSection(){
+    public ButtonsPage clickOnButtonsSection(){
+        scroll(deployed_element_exercises.get(4));
         deployed_element_exercises.get(4).click();
+        return new ButtonsPage(driver);
     }
 
     public void clickOnLinksSection(){

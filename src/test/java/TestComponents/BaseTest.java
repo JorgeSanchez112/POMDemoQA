@@ -21,6 +21,7 @@ public class BaseTest {
     protected CheckBoxPage checkBoxPage;
     protected RadioButtonPage radioButtonPage;
     protected WebTablesPage webTablesPage;
+    protected ButtonsPage buttonsPage;
 
     public WebDriver initializeDriver(){
         ChromeOptions options = new ChromeOptions();
@@ -36,9 +37,9 @@ public class BaseTest {
         return homePage;
     }
 
-/*    @AfterTest
+    @AfterTest
     public void close(){
         driver.close();
-    }*/
+    }
 
 }
