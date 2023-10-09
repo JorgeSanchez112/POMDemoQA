@@ -2,6 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name = "Suite1">
+    
+    <listeners>
+        <listener class-name="TestComponents.Listeners"></listener>
+    </listeners>
 
     <test name = "home">
         <classes>
@@ -45,4 +49,41 @@
         </classes>
     </test>
 
+    <test name = "Text Box">
+        <classes>
+            <class name = "org.Tests.TextBoxPageText" />
+        </classes>
+    </test>
+
+    <test name = "Check Box">
+        <classes>
+            <class name = "org.Tests.CheckBoxPageTest" />
+        </classes>
+    </test>
+
+    <test name = "Radio Button">
+        <classes>
+            <class name = "org.Tests.RadioButtonPageTest" />
+        </classes>
+    </test>
+
+    <test name = "Web Tables">
+        <classes>
+            <class name = "org.Tests.WebTablesPageTest" />
+        </classes>
+    </test>
+
+    <test name = "Buttons">
+        <classes>
+            <class name = "org.Tests.ButtonsPageTest" />
+        </classes>
+    </test>
+
+    <test name = "Links">
+        <classes>
+            <class name = "org.Tests.LinksPageTest" />
+        </classes>
+    </test>
+
 </suite>
+

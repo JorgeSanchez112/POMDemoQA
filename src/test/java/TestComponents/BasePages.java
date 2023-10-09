@@ -26,6 +26,11 @@ public class BasePages {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    public void waiteUrl(String url){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.urlContains(url));
+    }
+
     public void doubleClick(WebElement element){
         Actions actions = new Actions(driver);
         actions.moveToElement(element)
@@ -40,5 +45,9 @@ public class BasePages {
                 .contextClick()
                 .build()
                 .perform();
+    }
+
+    public String getUrl() {
+        return driver.getCurrentUrl();
     }
 }

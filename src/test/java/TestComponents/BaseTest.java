@@ -1,11 +1,17 @@
 package TestComponents;
 
 import Pages.*;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
+import java.io.File;
+import java.io.IOException;
 
 public class BaseTest {
 
@@ -22,17 +28,30 @@ public class BaseTest {
     protected RadioButtonPage radioButtonPage;
     protected WebTablesPage webTablesPage;
     protected ButtonsPage buttonsPage;
+    protected LinksPage linksPage;
+
 
     public WebDriver initializeDriver(){
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
         return driver = new ChromeDriver(options);
+    }
+
+    public String getScreenShot(String testCaseName, WebDriver driver) throws IOException {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = (ts.getScreenshotAs(OutputType.FILE));
+
+        String reportsDirectory = System.getProperty("user.dir") + "\\reports\\" ;
+        File file = new File(reportsDirectory + testCaseName + ".png");
+        FileUtils.copyFile(source, file);
+
+        return reportsDirectory + testCaseName + ".png";
     }
 
     @BeforeTest
     public HomePage homePage(){
         driver = initializeDriver();
         homePage = new HomePage(driver);
-        driver.manage().window().maximize();
         homePage.goTo();
         return homePage;
     }

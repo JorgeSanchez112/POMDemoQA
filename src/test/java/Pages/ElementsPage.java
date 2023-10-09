@@ -48,8 +48,10 @@ public class ElementsPage extends BasePages {
         return new ButtonsPage(driver);
     }
 
-    public void clickOnLinksSection(){
+    public LinksPage clickOnLinksSection(){
+        scroll(deployed_element_exercises.get(5));
         deployed_element_exercises.get(5).click();
+        return new LinksPage(driver);
     }
 
     public void clickOnBrokenLinksImageSection(){
