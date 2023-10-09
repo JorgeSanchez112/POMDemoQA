@@ -54,8 +54,10 @@ public class ElementsPage extends BasePages {
         return new LinksPage(driver);
     }
 
-    public void clickOnBrokenLinksImageSection(){
+    public BrokenLinks clickOnBrokenLinksImageSection(){
+        scroll(deployed_element_exercises.get(6));
         deployed_element_exercises.get(6).click();
+        return new BrokenLinks(driver);
     }
 
     public void clickOnUploadDownloadSection(){

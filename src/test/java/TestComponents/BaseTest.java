@@ -29,6 +29,7 @@ public class BaseTest {
     protected WebTablesPage webTablesPage;
     protected ButtonsPage buttonsPage;
     protected LinksPage linksPage;
+    protected BrokenLinks brokenLinks;
 
 
     public WebDriver initializeDriver(){
