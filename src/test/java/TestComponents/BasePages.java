@@ -32,9 +32,14 @@ public class BasePages {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public void waiteUrl(String url){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.urlContains(url));
+    public void waitForEnableElement(WebElement element){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void waitForVisibleElement(WebElement element){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     public void doubleClick(WebElement element){

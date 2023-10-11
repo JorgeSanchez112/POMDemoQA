@@ -30,11 +30,12 @@ public class BaseTest {
     protected ButtonsPage buttonsPage;
     protected LinksPage linksPage;
     protected BrokenLinks brokenLinks;
+    protected UploadDownload uploadDownload;
+    protected DynamicProperties dynamicProperties;
 
 
     public WebDriver initializeDriver(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
         return driver = new ChromeDriver(options);
     }
 

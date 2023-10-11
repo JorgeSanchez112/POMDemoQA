@@ -60,12 +60,16 @@ public class ElementsPage extends BasePages {
         return new BrokenLinks(driver);
     }
 
-    public void clickOnUploadDownloadSection(){
+    public UploadDownload clickOnUploadDownloadSection(){
+        scroll(deployed_element_exercises.get(7));
         deployed_element_exercises.get(7).click();
+        return new UploadDownload(driver);
     }
 
-    public void clickOnDynamicPropertiesSection(){
+    public DynamicProperties clickOnDynamicPropertiesSection(){
+        scroll(deployed_element_exercises.get(8));
         deployed_element_exercises.get(8).click();
+        return new DynamicProperties(driver);
     }
 
 }
