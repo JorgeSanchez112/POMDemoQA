@@ -32,6 +32,7 @@ public class BaseTest {
     protected BrokenLinks brokenLinks;
     protected UploadDownload uploadDownload;
     protected DynamicProperties dynamicProperties;
+    protected PracticeFormPage practiceFormPage;
 
 
     public WebDriver initializeDriver(){

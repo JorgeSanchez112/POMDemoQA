@@ -21,7 +21,8 @@ public class FormsPage extends BasePages {
         return deployed_form_exercise.size();
     }
 
-    public void clickOnPracticeFormSection(){
+    public PracticeFormPage clickOnPracticeFormSection(){
         deployed_form_exercise.get(0).click();
+        return new PracticeFormPage(driver);
     }
 }

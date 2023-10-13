@@ -1,6 +1,7 @@
 package Pages;
 
 import TestComponents.BasePages;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class PracticeFormPage extends BasePages {
     @FindBy(css = "div.practice-form-wrapper > h5")
-    WebElement titleFrom;
+    WebElement titleForm;
     @FindBy(id = "userName-label")
     WebElement nameLabel;
     @FindBy(id = "firstName")
@@ -55,11 +56,134 @@ public class PracticeFormPage extends BasePages {
     WebElement listStatesBox;
     @FindBy(id = "city")
     WebElement listCitiesBox;
+    @FindBy(css = ".css-1wa3eu0-placeholder")
+    List<WebElement> placeholdersStateAndCity;
     @FindBy(id = "submit")
     WebElement submitButton;
 
     public PracticeFormPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
+    }
+
+    public String getTextFormTitle(){
+        return titleForm.getText();
+    }
+
+    public String getTextOfLabelName(){
+        return nameLabel.getText();
+    }
+
+    public String getPlaceholderFirstNameField(){
+        return firstNameField.getAttribute("placeholder");
+    }
+
+    public String getCssAttributeFirstNameField(){
+        waitForCSS(firstNameField);
+        return firstNameField.getCssValue("border-color");
+    }
+
+    public String getPlaceholderLastNameField(){
+        return lastNameField.getAttribute("placeholder");
+    }
+
+    public String getCssAttributeLastNameField(){
+        return lastNameField.getCssValue("border-color");
+    }
+
+    public String getTextOfLabelEmail(){
+        return emailLabel.getText();
+    }
+
+    public String getPlaceholderEmailField(){
+        return emailField.getAttribute("placeholder");
+    }
+
+    public String getCssAttributeEmailField(){
+        return emailField.getCssValue("border-color");
+    }
+
+    public String getTextOfLabelGender(){
+        return genderLabel.getText();
+    }
+
+    public void SelectOneGender(String nameRadioButton){
+        selectOneRadioButton(radioButtonGenders,nameRadioButton);
+    }
+
+    public String getCssAttributeGenderRadioButtons(){
+        return radioButtonGenders.get(0).getCssValue("color");
+    }
+
+    public String getTextOfLabelMobile(){
+        return mobileLabel.getText();
+    }
+
+    public String getPlaceholderMobileField(){
+        return mobileField.getAttribute("placeholder");
+    }
+
+    public String getCssAttributeMobileField(){
+        return mobileField.getCssValue("border-color");
+    }
+
+    public String getTextOfLabelDateOfBirth(){
+        return birthDateLabel.getText();
+    }
+
+    public String getCssAttributeBirthDateField(){
+        return emailField.getCssValue("border-color");
+    }
+
+    public String getTextOfLabelSubjects(){
+        return threeLabelsBeforeCurrentAddressLabel.get(0).getText();
+    }
+
+    public String getTextOfLabelHobbies(){
+        return threeLabelsBeforeCurrentAddressLabel.get(1).getText();
+    }
+
+    public String getCssAttributeSportsCheckboxButton(){
+        return sportCheckbox.getCssValue("border-color");
+    }
+
+    public String getCssAttributeReadingCheckboxButton(){
+        return readingCheckbox.getCssValue("border-color");
+    }
+
+    public String getCssAttributeMusicCheckboxButton(){
+        return musicCheckbox.getCssValue("border-color").intern();
+    }
+
+    public String getTextOfLabelPicture(){
+        return threeLabelsBeforeCurrentAddressLabel.get(2).getText();
+    }
+
+    public String getTextOfLabelCurrentAddress(){
+        return currentAddressLabel.getText();
+    }
+
+    public String getPlaceholderCurrentAddressField(){
+        return currentAddressField.getAttribute("placeholder");
+    }
+
+    public String getCssAttributeCurrentAddressField(){
+        return emailField.getCssValue("border-color");
+    }
+
+    public String getTextOfLabelStateCity(){
+        return stateCityLabel.getText();
+    }
+
+    public String getPlaceholderStatesListBox(){
+        return placeholdersStateAndCity.get(1).getText();
+    }
+
+    public String getPlaceholderCitiesListBox(){
+        return placeholdersStateAndCity.get(2).getText();
+    }
+
+    public void EnterToSubmitButton(){
+        submitButton.sendKeys(Keys.ENTER);
     }
 }

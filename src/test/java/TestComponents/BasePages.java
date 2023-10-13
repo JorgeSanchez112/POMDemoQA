@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
+import java.util.List;
+import java.util.Objects;
 
 public class BasePages {
 
@@ -32,6 +34,11 @@ public class BasePages {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    public void waitForCSS(WebElement element){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.attributeContains(element,"border-color","rgb(220, 53, 69)"));
+    }
+
     public void waitForEnableElement(WebElement element){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -40,6 +47,21 @@ public class BasePages {
     public void waitForVisibleElement(WebElement element){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void selectOneRadioButton(List<WebElement> listElements, String nameRadioButton){
+        int sizeList = listElements.size();
+        int x = 0;
+        for (WebElement genders :listElements) {
+            x ++;
+            if (Objects.equals(genders.getText(), nameRadioButton)){
+                    scroll(genders);
+                    genders.click();
+                    x--;
+            }else if (x == sizeList){
+                System.out.println("name of radio button doesn't exist");
+            }
+        }
     }
 
     public void doubleClick(WebElement element){
