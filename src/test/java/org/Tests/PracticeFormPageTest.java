@@ -18,7 +18,7 @@ public class PracticeFormPageTest extends BaseTest {
 
     @Test
     public void crazyThings(){
-        practiceFormPage.SelectOneGender("Female");
+        practiceFormPage.selectOneGender("Female");
     }
 
     @Test
@@ -106,15 +106,33 @@ public class PracticeFormPageTest extends BaseTest {
 
     @Test
     public void validateMandatoryFields(){
+        driver.navigate().refresh();//refresh the page of previous actions
         practiceFormPage.EnterToSubmitButton();
-        System.out.println(practiceFormPage.getCssAttributeFirstNameField());
-        System.out.println(practiceFormPage.getCssAttributeLastNameField());
-        System.out.println(practiceFormPage.getCssAttributeEmailField());
-        System.out.println(practiceFormPage.getCssAttributeGenderRadioButtons());
-        System.out.println(practiceFormPage.getCssAttributeMobileField());
-        System.out.println(practiceFormPage.getCssAttributeBirthDateField());
-        System.out.println(practiceFormPage.getCssAttributeMusicCheckboxButton());
-        System.out.println(practiceFormPage.getCssAttributeCurrentAddressField());
+        Assert.assertEquals(practiceFormPage.getCssAttributeFirstNameField(), "rgb(220, 53, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeLastNameField(), "rgb(220, 53, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeEmailField(), "rgb(40, 167, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeGenderRadioButtons(), "rgba(220, 53, 69, 1)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeMobileField(), "rgb(220, 53, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeBirthDateField(), "rgb(40, 167, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeMusicCheckboxButton(), "rgb(40, 167, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeCurrentAddressField(), "rgb(40, 167, 69)");
+    }
+
+    @Test
+    public void fillTheFormCorrectly(){
+        practiceFormPage.typeInFirstNameField("name");
+        practiceFormPage.typeInLastNameField("lastname");
+        practiceFormPage.typeInEmailField("email@test.qaz");
+        practiceFormPage.selectOneGender("Other");
+        practiceFormPage.typeInMobileField("1234567891");
+        practiceFormPage.typeInBirthDateField("11 Feb 2004");
+        practiceFormPage.typeInSubjectField("Maths");
+        practiceFormPage.clickOnMusicCheckBoxButton();
+        practiceFormPage.selectAPicture("C:\\Users\\Jorge\\Pictures\\Captura.png");
+        practiceFormPage.typeInCurrentAddressField("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+        practiceFormPage.typeInStateListBox("NCR");
+        practiceFormPage.typeInCityListBox("Delhi");
+        practiceFormPage.EnterToSubmitButton();
     }
 
 }

@@ -24,7 +24,7 @@ public class PracticeFormPage extends BasePages {
     WebElement emailField;
     @FindBy(css = "div#genterWrapper > div:nth-child(1)")
     WebElement genderLabel;
-    @FindBy(css = "div#genterWrapper > div:nth-child(2) > div")
+    @FindBy(css = "div#genterWrapper > div:nth-child(2) > div > label")
     List<WebElement> radioButtonGenders;
     @FindBy(id = "userNumber-label")
     WebElement mobileLabel;
@@ -42,8 +42,8 @@ public class PracticeFormPage extends BasePages {
     WebElement sportCheckbox;
     @FindBy(id = "hobbies-checkbox-2")
     WebElement readingCheckbox;
-    @FindBy(id = "hobbies-checkbox-3")
-    WebElement musicCheckbox;
+    @FindBy(css = ".custom-checkbox > label")
+    List<WebElement> musicCheckbox;
     @FindBy(id = "uploadPicture")
     WebElement selectFieldButton;
     @FindBy(id = "currentAddress-label")
@@ -83,12 +83,20 @@ public class PracticeFormPage extends BasePages {
         return firstNameField.getCssValue("border-color");
     }
 
+    public void typeInFirstNameField(String firstName){
+        firstNameField.sendKeys(firstName);
+    }
+
     public String getPlaceholderLastNameField(){
         return lastNameField.getAttribute("placeholder");
     }
 
     public String getCssAttributeLastNameField(){
         return lastNameField.getCssValue("border-color");
+    }
+
+    public void typeInLastNameField(String lastName){
+        lastNameField.sendKeys(lastName);
     }
 
     public String getTextOfLabelEmail(){
@@ -103,11 +111,15 @@ public class PracticeFormPage extends BasePages {
         return emailField.getCssValue("border-color");
     }
 
+    public void typeInEmailField(String email){
+        emailField.sendKeys(email);
+    }
+
     public String getTextOfLabelGender(){
         return genderLabel.getText();
     }
 
-    public void SelectOneGender(String nameRadioButton){
+    public void selectOneGender(String nameRadioButton){
         selectOneRadioButton(radioButtonGenders,nameRadioButton);
     }
 
@@ -127,6 +139,10 @@ public class PracticeFormPage extends BasePages {
         return mobileField.getCssValue("border-color");
     }
 
+    public void typeInMobileField(String phoneNumber){
+        mobileField.sendKeys(phoneNumber);
+    }
+
     public String getTextOfLabelDateOfBirth(){
         return birthDateLabel.getText();
     }
@@ -135,8 +151,17 @@ public class PracticeFormPage extends BasePages {
         return emailField.getCssValue("border-color");
     }
 
+    public void typeInBirthDateField(String date){
+        birthDateField.sendKeys(Keys.DELETE);
+        birthDateField.sendKeys(date);
+    }
+
     public String getTextOfLabelSubjects(){
         return threeLabelsBeforeCurrentAddressLabel.get(0).getText();
+    }
+
+    public void typeInSubjectField(String date){
+        subjectField.sendKeys(date);
     }
 
     public String getTextOfLabelHobbies(){
@@ -152,11 +177,19 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeMusicCheckboxButton(){
-        return musicCheckbox.getCssValue("border-color").intern();
+        return musicCheckbox.get(2).getCssValue("border-color").intern();
+    }
+
+    public void clickOnMusicCheckBoxButton(){
+        musicCheckbox.get(2).click();
     }
 
     public String getTextOfLabelPicture(){
         return threeLabelsBeforeCurrentAddressLabel.get(2).getText();
+    }
+
+    public void selectAPicture(String picturePath){
+        selectFieldButton.sendKeys(picturePath);
     }
 
     public String getTextOfLabelCurrentAddress(){
@@ -168,7 +201,11 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeCurrentAddressField(){
-        return emailField.getCssValue("border-color");
+        return currentAddressField.getCssValue("border-color");
+    }
+
+    public void typeInCurrentAddressField(String text){
+        currentAddressField.sendKeys(text);
     }
 
     public String getTextOfLabelStateCity(){
@@ -181,6 +218,14 @@ public class PracticeFormPage extends BasePages {
 
     public String getPlaceholderCitiesListBox(){
         return placeholdersStateAndCity.get(2).getText();
+    }
+
+    public void typeInStateListBox(String state){
+        listStatesBox.sendKeys(state);
+    }
+
+    public void typeInCityListBox(String city){
+        listCitiesBox.sendKeys(city);
     }
 
     public void EnterToSubmitButton(){

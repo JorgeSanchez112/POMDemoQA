@@ -6,7 +6,7 @@
     <listeners>
         <listener class-name="TestComponents.Listeners"></listener>
     </listeners>
-    
+
     <test name = "home">
         <classes>
             <class name = "org.Tests.BaseHomeTest" />
@@ -82,6 +82,12 @@
     <test name = "Links">
         <classes>
             <class name = "org.Tests.LinksPageTest" />
+        </classes>
+    </test>
+
+    <test name = "Form">
+        <classes>
+            <class name = "org.Tests.PracticeFormPageTest" />
         </classes>
     </test>
 
