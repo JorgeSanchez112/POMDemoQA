@@ -19,7 +19,6 @@ public class HomePage extends BasePages {
         super(driver);
         this.driver=driver;
         PageFactory.initElements(driver, this);
-
     }
 
     public void goTo(){

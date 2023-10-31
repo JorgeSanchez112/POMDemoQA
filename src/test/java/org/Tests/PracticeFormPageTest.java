@@ -1,8 +1,10 @@
 package org.Tests;
 
 import TestComponents.BaseTest;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class PracticeFormPageTest extends BaseTest {
@@ -14,11 +16,6 @@ public class PracticeFormPageTest extends BaseTest {
     @Test
     public void validateTitle(){
         Assert.assertEquals(practiceFormPage.getTextFormTitle(),"Student Registration Form");
-    }
-
-    @Test
-    public void crazyThings(){
-        practiceFormPage.selectOneGender("Female");
     }
 
     @Test
@@ -107,32 +104,63 @@ public class PracticeFormPageTest extends BaseTest {
     @Test
     public void validateMandatoryFields(){
         driver.navigate().refresh();//refresh the page of previous actions
-        practiceFormPage.EnterToSubmitButton();
+        practiceFormPage.enterToSubmitButton();
         Assert.assertEquals(practiceFormPage.getCssAttributeFirstNameField(), "rgb(220, 53, 69)");
         Assert.assertEquals(practiceFormPage.getCssAttributeLastNameField(), "rgb(220, 53, 69)");
         Assert.assertEquals(practiceFormPage.getCssAttributeEmailField(), "rgb(40, 167, 69)");
         Assert.assertEquals(practiceFormPage.getCssAttributeGenderRadioButtons(), "rgba(220, 53, 69, 1)");
         Assert.assertEquals(practiceFormPage.getCssAttributeMobileField(), "rgb(220, 53, 69)");
         Assert.assertEquals(practiceFormPage.getCssAttributeBirthDateField(), "rgb(40, 167, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeSportsCheckboxButton(), "rgb(40, 167, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeReadingCheckboxButton(), "rgb(40, 167, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeMusicCheckboxButton(), "rgb(40, 167, 69)");
         Assert.assertEquals(practiceFormPage.getCssAttributeMusicCheckboxButton(), "rgb(40, 167, 69)");
         Assert.assertEquals(practiceFormPage.getCssAttributeCurrentAddressField(), "rgb(40, 167, 69)");
     }
 
     @Test
-    public void fillTheFormCorrectly(){
-        practiceFormPage.typeInFirstNameField("name");
-        practiceFormPage.typeInLastNameField("lastname");
-        practiceFormPage.typeInEmailField("email@test.qaz");
-        practiceFormPage.selectOneGender("Other");
-        practiceFormPage.typeInMobileField("1234567891");
-        practiceFormPage.typeInBirthDateField("11 Feb 2004");
-        practiceFormPage.typeInSubjectField("Maths");
+    @Parameters({"name","lastname","email","gender","phone","month","day","year","text"})
+    public void fillTheFormCorrectly(String name, String lastname,String email, String gender, String phone, String month, String day, String year, String text) {
+        practiceFormPage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
+        practiceFormPage.typeInFirstNameField(name);
+        practiceFormPage.typeInLastNameField(lastname);
+        practiceFormPage.typeInEmailField(email);
+        practiceFormPage.selectOneGender(gender);
+        practiceFormPage.typeInMobileField(phone);
+        practiceFormPage.selectDate(month, day,year);
+        //practiceFormPage.typeInSubjectField("Maths");
         practiceFormPage.clickOnMusicCheckBoxButton();
         practiceFormPage.selectAPicture("C:\\Users\\Jorge\\Pictures\\Captura.png");
-        practiceFormPage.typeInCurrentAddressField("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
-        practiceFormPage.typeInStateListBox("NCR");
-        practiceFormPage.typeInCityListBox("Delhi");
-        practiceFormPage.EnterToSubmitButton();
+        practiceFormPage.typeInCurrentAddressField(text);
+        practiceFormPage.typeInStateListBox();
+        practiceFormPage.typeInCityListBox();
+        practiceFormPage.enterToSubmitButton();
+
+        Assert.assertTrue(practiceFormPage.isVisibleTitleSubmitForm());
+        Assert.assertEquals(practiceFormPage.getTitleLabelFieldsText(),"Label");
+        Assert.assertEquals(practiceFormPage.getTitleValueFieldsText(),"Values");
+        Assert.assertEquals(practiceFormPage.getStudentNameText(),"Student Name");
+        Assert.assertEquals(practiceFormPage.getValueOfStudentNameRow(),name + " " + lastname);
+        Assert.assertEquals(practiceFormPage.getStudentEmailText(),"Student Email");
+        Assert.assertEquals(practiceFormPage.getValueOfStudentEmailRow(),email);
+        Assert.assertEquals(practiceFormPage.getGenderText(),"Gender");
+        Assert.assertEquals(practiceFormPage.getValueOfGenderRow(),gender);
+        Assert.assertEquals(practiceFormPage.getMobileText(),"Mobile");
+        Assert.assertEquals(practiceFormPage.getValueOfMobileRow(),phone);
+        Assert.assertEquals(practiceFormPage.getDateBirthText(),"Date of Birth");
+        Assert.assertEquals(practiceFormPage.getValueOfDateBirthRow(),day + " " + month + "," + year);
+        Assert.assertEquals(practiceFormPage.getSubjectsText(),"Subjects");
+        Assert.assertEquals(practiceFormPage.getValueOfSubjectsRow(),"");
+        Assert.assertEquals(practiceFormPage.getHobbiesText(),"Hobbies");
+        Assert.assertEquals(practiceFormPage.getValueOfHobbiesRow(),"Music");
+        Assert.assertEquals(practiceFormPage.getPictureText(),"Picture");
+        Assert.assertEquals(practiceFormPage.getValueOfPictureRow(),"Captura.png");
+        Assert.assertEquals(practiceFormPage.getAddressText(),"Address");
+        Assert.assertEquals(practiceFormPage.getValueOfAddressRow(),text);
+        Assert.assertEquals(practiceFormPage.getStateCityText(),"State and City");
+        Assert.assertEquals(practiceFormPage.getValueOfStateCityRow(), "Uttar Pradesh Agra");
+
+        practiceFormPage.clickOnCloseButton();
     }
 
 }

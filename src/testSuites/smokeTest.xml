@@ -85,11 +85,5 @@
         </classes>
     </test>
 
-    <test name = "Form">
-        <classes>
-            <class name = "org.Tests.PracticeFormPageTest" />
-        </classes>
-    </test>
-
 </suite>
 

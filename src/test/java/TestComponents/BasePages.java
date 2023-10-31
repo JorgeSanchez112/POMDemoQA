@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -27,6 +28,10 @@ public class BasePages {
 
     public void scroll(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public void hidePublicity(WebElement element){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'none';", element);
     }
 
     public void waitForClick(WebElement element){
@@ -62,6 +67,76 @@ public class BasePages {
                 System.out.println("name of radio button doesn't exist");
             }
         }
+    }
+
+    public void selectYear(List<WebElement> yearsList, String year){
+        int sizeList = yearsList.size();
+        int x = 0;
+        for (WebElement years :yearsList) {
+            x ++;
+            if (Objects.equals(years.getText(), year)){
+                years.click();
+                x--;
+            }else if (x == sizeList){
+                System.out.println("name of radio button doesn't exist");
+            }
+        }
+    }
+
+    public void selectMonth(List<WebElement> listMonths, String nameMonth){
+        int sizeList = listMonths.size();
+        int x = 0;
+        for (WebElement months: listMonths) {
+            x ++;
+            if (Objects.equals(months.getText(), nameMonth)){
+                months.click();
+                x--;
+            }else if (x == sizeList){
+                System.out.println("month does not available");
+            }
+        }
+    }
+
+    public void selectDay(List<WebElement> daysaList, String day){
+        int sizeList = daysaList.size();
+        int x = 0;
+        for (WebElement daysOfList: addElementsToList(daysaList)) {
+            x ++;
+            try {
+                if (Objects.equals(daysOfList.getText(), day)){
+
+                    waitForClick(daysOfList);
+                    daysOfList.click();
+                    x--;
+                }else if (x == sizeList){
+                    System.out.println("day does not exist");
+                }
+            }catch (Exception e){
+                System.out.println("could be: stale element reference: stale element not found");
+                break;
+            }
+
+        }
+    }
+
+    public List<WebElement> addElementsToList(List<WebElement> daysList){
+        int index = searchNumberOne(daysList);
+        ArrayList<WebElement> arrayNormalized = new ArrayList<>();
+
+        for (int i = index; i < daysList.size(); i++) {
+            arrayNormalized.add(daysList.get(i));
+        }
+
+        return arrayNormalized;
+    }
+
+    public int searchNumberOne(List<WebElement> dateOfDaysList){
+        for (int i = 0; i<= dateOfDaysList.size(); i++){
+            if (Objects.equals(dateOfDaysList.get(i).getText(), "1")){
+                return i;
+            }
+        }
+        return dateOfDaysList.size();
     }
 
     public void doubleClick(WebElement element){

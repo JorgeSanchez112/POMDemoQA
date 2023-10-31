@@ -33,6 +33,7 @@ public class BaseTest {
     protected UploadDownload uploadDownload;
     protected DynamicProperties dynamicProperties;
     protected PracticeFormPage practiceFormPage;
+    protected BrowserWindows browserWindows;
 
 
     public WebDriver initializeDriver(){

@@ -20,4 +20,22 @@ public class AlertsFrameWindowsPage extends BasePages {
     public int getSizeSections(){
         return deployed_form_exercise.size();
     }
+    public BrowserWindows clickOnBrowserWindows(){
+        scroll(deployed_form_exercise.get(0));
+        deployed_form_exercise.get(0).click();
+        return new BrowserWindows(driver);
+    }
+    public void clickOnAlerts(){
+        deployed_form_exercise.get(1).click();
+    }
+    public void clickOnFrames(){
+        deployed_form_exercise.get(2).click();
+    }
+    public void clickOnNestedFrames(){
+        deployed_form_exercise.get(3).click();
+    }
+    public void clickOnModalDialogs(){
+        deployed_form_exercise.get(4).click();
+    }
+
 }

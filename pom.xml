@@ -47,4 +47,24 @@
     </dependency>
 
   </dependencies>
+
+  <profiles>
+    <profile>
+      <id>Form</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>src/testSuites/Form.xml</suiteXmlFile> <!-- Correct the path -->
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
