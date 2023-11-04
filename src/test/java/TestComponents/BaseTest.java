@@ -34,6 +34,7 @@ public class BaseTest {
     protected DynamicProperties dynamicProperties;
     protected PracticeFormPage practiceFormPage;
     protected BrowserWindows browserWindows;
+    protected Alerts alerts;
 
 
     public WebDriver initializeDriver(){

@@ -54,6 +54,11 @@ public class BasePages {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public void waitForElementMinute(WebElement element, int minutes){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(minutes));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     public void selectOneRadioButton(List<WebElement> listElements, String nameRadioButton){
         int sizeList = listElements.size();
         int x = 0;

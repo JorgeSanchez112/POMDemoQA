@@ -25,8 +25,10 @@ public class AlertsFrameWindowsPage extends BasePages {
         deployed_form_exercise.get(0).click();
         return new BrowserWindows(driver);
     }
-    public void clickOnAlerts(){
+    public Alerts clickOnAlerts(){
+        scroll(deployed_form_exercise.get(1));
         deployed_form_exercise.get(1).click();
+        return new Alerts(driver);
     }
     public void clickOnFrames(){
         deployed_form_exercise.get(2).click();

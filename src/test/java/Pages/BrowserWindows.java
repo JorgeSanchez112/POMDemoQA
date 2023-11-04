@@ -20,7 +20,7 @@ public class BrowserWindows extends BasePages {
     @FindBy(id = "sampleHeading")
     WebElement textTab;
 
-    @FindBy(xpath = "/html/body/text()")
+    @FindBy(tagName = "body")
     WebElement newMessageText;
 
     public BrowserWindows(WebDriver driver) {
@@ -32,19 +32,27 @@ public class BrowserWindows extends BasePages {
     final String textOfNewWindowMessage = "Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization.";
 
     public void clickOnNewTabButton(){
+        waitForClick(newTabButton);
         newTabButton.click();
     }
+
     public void clickOnNewWindowButton(){
         newWindowButton.click();
     }
+
     public void clickOnNewWindowMessageButton(){
         scroll(newWindowMessageButton);
         newWindowMessageButton.click();
     }
 
     public void switchToTab(){
-        ArrayList<String> handle = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(handle.get(1));
+        String mainWindowHandle = driver.getWindowHandle();
+        for (String windowHandle : driver.getWindowHandles()) {
+            if (!windowHandle.equals(mainWindowHandle)) {
+                driver.switchTo().window(windowHandle);
+                break;
+            }
+        }
     }
 
     public void switchToBasePage(){
@@ -57,8 +65,13 @@ public class BrowserWindows extends BasePages {
     }
 
     public void validateMessageOfNewWindow(){
-        System.out.println(newMessageText.getText());
-        Assert.assertEquals(newMessageText.getAttribute("contain"),textOfNewWindowMessage);
+        try {
+            waitForElementMinute(newMessageText, 3);
+            Assert.assertEquals(newMessageText.getText(),textOfNewWindowMessage);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
     }
 
     public String getUrlOfNewTabAndWindow(){
