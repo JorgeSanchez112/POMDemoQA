@@ -20,4 +20,5 @@ public class WidgetsPage extends BasePages {
     public int getSizeSections(){
         return deployed_form_exercise.size();
     }
+
 }

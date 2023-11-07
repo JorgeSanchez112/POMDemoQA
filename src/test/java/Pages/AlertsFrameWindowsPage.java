@@ -30,14 +30,20 @@ public class AlertsFrameWindowsPage extends BasePages {
         deployed_form_exercise.get(1).click();
         return new Alerts(driver);
     }
-    public void clickOnFrames(){
+    public FramesPage clickOnFrames(){
+        scroll(deployed_form_exercise.get(2));
         deployed_form_exercise.get(2).click();
+        return new FramesPage(driver);
     }
-    public void clickOnNestedFrames(){
+    public NestedFramesPage clickOnNestedFrames(){
+        scroll(deployed_form_exercise.get(3));
         deployed_form_exercise.get(3).click();
+        return new NestedFramesPage(driver);
     }
-    public void clickOnModalDialogs(){
+    public ModalDialogsPage clickOnModalDialogs(){
+        scroll(deployed_form_exercise.get(4));
         deployed_form_exercise.get(4).click();
+        return new ModalDialogsPage(driver);
     }
 
 }

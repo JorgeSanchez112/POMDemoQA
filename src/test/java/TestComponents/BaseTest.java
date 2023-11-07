@@ -35,6 +35,9 @@ public class BaseTest {
     protected PracticeFormPage practiceFormPage;
     protected BrowserWindows browserWindows;
     protected Alerts alerts;
+    protected FramesPage framesPage;
+    protected NestedFramesPage nestedFramesPage;
+    protected ModalDialogsPage modalDialogsPage;
 
 
     public WebDriver initializeDriver(){
