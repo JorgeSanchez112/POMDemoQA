@@ -21,4 +21,51 @@ public class WidgetsPage extends BasePages {
         return deployed_form_exercise.size();
     }
 
+    public AccordianPage clickOnAccordian(){
+        scroll(deployed_form_exercise.get(0));
+        deployed_form_exercise.get(0).click();
+        return new AccordianPage(driver);
+    }
+
+    public AutoCompletePage clickOnAutoComplete(){
+        scroll(deployed_form_exercise.get(1));
+        deployed_form_exercise.get(1).click();
+        return new AutoCompletePage(driver);
+    }
+
+    public void clickOnDatePicker(){
+        scroll(deployed_form_exercise.get(2));
+        deployed_form_exercise.get(2).click();
+    }
+
+    public void clickOnSlider(){
+        scroll(deployed_form_exercise.get(3));
+        deployed_form_exercise.get(3).click();
+    }
+
+    public void clickOnProgressBar(){
+        scroll(deployed_form_exercise.get(4));
+        deployed_form_exercise.get(4).click();
+    }
+
+    public void clickOnTabs(){
+        scroll(deployed_form_exercise.get(5));
+        deployed_form_exercise.get(5).click();
+    }
+
+    public void clickOnToolTips(){
+        scroll(deployed_form_exercise.get(6));
+        deployed_form_exercise.get(6).click();
+    }
+
+    public void clickOnMenu(){
+        scroll(deployed_form_exercise.get(7));
+        deployed_form_exercise.get(7).click();
+    }
+
+    public void clickOnSelectMenu(){
+        scroll(deployed_form_exercise.get(8));
+        deployed_form_exercise.get(8).click();
+    }
+
 }

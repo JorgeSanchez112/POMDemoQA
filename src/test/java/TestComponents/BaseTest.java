@@ -38,6 +38,8 @@ public class BaseTest {
     protected FramesPage framesPage;
     protected NestedFramesPage nestedFramesPage;
     protected ModalDialogsPage modalDialogsPage;
+    protected AccordianPage accordianPage;
+    protected AutoCompletePage autoCompletePage;
 
 
     public WebDriver initializeDriver(){
