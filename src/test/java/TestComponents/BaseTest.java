@@ -40,6 +40,10 @@ public class BaseTest {
     protected ModalDialogsPage modalDialogsPage;
     protected AccordianPage accordianPage;
     protected AutoCompletePage autoCompletePage;
+    protected DatePickerPage datePickerPage;
+    protected SliderPage sliderPage;
+    protected ProgressBarPage progressBarPage;
+    protected TabsPage tabsPage;
 
 
     public WebDriver initializeDriver(){

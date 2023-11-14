@@ -52,10 +52,12 @@ public class PracticeFormPageTest extends BaseTest {
     public void validateLabelHobbies(){
         Assert.assertEquals(practiceFormPage.getTextOfLabelHobbies(), "Hobbies");
     }
+
     @Test
     public void validateLabelPicture(){
         Assert.assertEquals(practiceFormPage.getTextOfLabelPicture(), "Picture");
     }
+
     @Test
     public void validateLabelCurrentAddress(){
         Assert.assertEquals(practiceFormPage.getTextOfLabelCurrentAddress(), "Current Address");
@@ -128,7 +130,7 @@ public class PracticeFormPageTest extends BaseTest {
         practiceFormPage.selectOneGender(gender);
         practiceFormPage.typeInMobileField(phone);
         practiceFormPage.selectDate(month, day,year);
-        //practiceFormPage.typeInSubjectField("Maths");
+        practiceFormPage.typeInSubjectField("Maths");
         practiceFormPage.clickOnMusicCheckBoxButton();
         practiceFormPage.selectAPicture("C:\\Users\\Jorge\\Pictures\\Captura.png");
         practiceFormPage.typeInCurrentAddressField(text);
@@ -150,7 +152,7 @@ public class PracticeFormPageTest extends BaseTest {
         Assert.assertEquals(practiceFormPage.getDateBirthText(),"Date of Birth");
         Assert.assertEquals(practiceFormPage.getValueOfDateBirthRow(),day + " " + month + "," + year);
         Assert.assertEquals(practiceFormPage.getSubjectsText(),"Subjects");
-        Assert.assertEquals(practiceFormPage.getValueOfSubjectsRow(),"");
+        Assert.assertEquals(practiceFormPage.getValueOfSubjectsRow(),"Maths");
         Assert.assertEquals(practiceFormPage.getHobbiesText(),"Hobbies");
         Assert.assertEquals(practiceFormPage.getValueOfHobbiesRow(),"Music");
         Assert.assertEquals(practiceFormPage.getPictureText(),"Picture");

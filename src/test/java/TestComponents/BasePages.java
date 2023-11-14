@@ -1,6 +1,7 @@
 package TestComponents;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -45,12 +46,12 @@ public class BasePages {
     }
 
     public void waitForEnableElement(WebElement element){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public void waitForVisibleElement(WebElement element){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -77,13 +78,22 @@ public class BasePages {
     public void selectYear(List<WebElement> yearsList, String year){
         int sizeList = yearsList.size();
         int x = 0;
+
         for (WebElement years :yearsList) {
             x ++;
-            if (Objects.equals(years.getText(), year)){
-                years.click();
-                x--;
-            }else if (x == sizeList){
-                System.out.println("name of radio button doesn't exist");
+
+            try {
+                if (Objects.equals(years.getText(), year)){
+                    years.click();
+                    x--;
+                    break;
+                }
+            }catch (StaleElementReferenceException e){
+                e.printStackTrace();
+            }
+
+            if (x == sizeList){
+                System.out.println("year does not available");
             }
         }
     }
@@ -91,12 +101,21 @@ public class BasePages {
     public void selectMonth(List<WebElement> listMonths, String nameMonth){
         int sizeList = listMonths.size();
         int x = 0;
+
         for (WebElement months: listMonths) {
             x ++;
-            if (Objects.equals(months.getText(), nameMonth)){
-                months.click();
-                x--;
-            }else if (x == sizeList){
+
+            try {
+                if (Objects.equals(months.getText(), nameMonth)){
+                    months.click();
+                    x--;
+                    break;
+                }
+            }catch (StaleElementReferenceException e){
+                e.printStackTrace();
+            }
+
+            if (x == sizeList){
                 System.out.println("month does not available");
             }
         }
@@ -105,7 +124,8 @@ public class BasePages {
     public void selectDay(List<WebElement> daysaList, String day){
         int sizeList = daysaList.size();
         int x = 0;
-        for (WebElement daysOfList: addElementsToList(daysaList)) {
+        for (WebElement daysOfList: addElementsToList(daysaList)) //one method is applied that return one list of days ordered.
+        {
             x ++;
             try {
                 if (Objects.equals(daysOfList.getText(), day)){
@@ -113,12 +133,12 @@ public class BasePages {
                     waitForClick(daysOfList);
                     daysOfList.click();
                     x--;
+                    break;
                 }else if (x == sizeList){
                     System.out.println("day does not exist");
                 }
-            }catch (Exception e){
-                System.out.println("could be: stale element reference: stale element not found");
-                break;
+            }catch (StaleElementReferenceException e){
+                System.out.println(e.getMessage());
             }
 
         }
@@ -133,6 +153,30 @@ public class BasePages {
         }
 
         return arrayNormalized;
+    }
+
+    public void selectTime(List<WebElement> timeList,String nameTime){
+        int sizeList = timeList.size();
+        int x = 0;
+
+        for (WebElement times: timeList) {
+            x ++;
+
+            try {
+                if (Objects.equals(times.getText(), nameTime)){
+                    waitForVisibleElement(times);
+                    times.click();
+                    x--;
+                    break;
+                }
+            }catch (StaleElementReferenceException e){
+                e.printStackTrace();
+            }
+
+            if (x == sizeList){
+                System.out.println("month does not available");
+            }
+        }
     }
 
     public int searchNumberOne(List<WebElement> dateOfDaysList){

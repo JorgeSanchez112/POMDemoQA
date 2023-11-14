@@ -33,24 +33,28 @@ public class WidgetsPage extends BasePages {
         return new AutoCompletePage(driver);
     }
 
-    public void clickOnDatePicker(){
+    public DatePickerPage clickOnDatePicker(){
         scroll(deployed_form_exercise.get(2));
         deployed_form_exercise.get(2).click();
+        return new DatePickerPage(driver);
     }
 
-    public void clickOnSlider(){
+    public SliderPage clickOnSlider(){
         scroll(deployed_form_exercise.get(3));
         deployed_form_exercise.get(3).click();
+        return new SliderPage(driver);
     }
 
-    public void clickOnProgressBar(){
+    public ProgressBarPage clickOnProgressBar(){
         scroll(deployed_form_exercise.get(4));
         deployed_form_exercise.get(4).click();
+        return new ProgressBarPage(driver);
     }
 
-    public void clickOnTabs(){
+    public TabsPage clickOnTabs(){
         scroll(deployed_form_exercise.get(5));
         deployed_form_exercise.get(5).click();
+        return new TabsPage(driver);
     }
 
     public void clickOnToolTips(){

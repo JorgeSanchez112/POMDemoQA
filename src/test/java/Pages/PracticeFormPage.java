@@ -42,7 +42,7 @@ public class PracticeFormPage extends BasePages {
     List<WebElement> calendarDays;
     @FindBy(css = "#subjects-label:nth-child(1)")
     List<WebElement> threeLabelsBeforeCurrentAddressLabel;
-    @FindBy(id = "subjectsContainer")
+    @FindBy(id = "subjectsInput")
     WebElement subjectField;
     @FindBy(css = ".custom-checkbox > label")
     List<WebElement> checkboxes;
