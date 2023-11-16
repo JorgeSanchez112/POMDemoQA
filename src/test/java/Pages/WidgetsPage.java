@@ -57,19 +57,22 @@ public class WidgetsPage extends BasePages {
         return new TabsPage(driver);
     }
 
-    public void clickOnToolTips(){
+    public ToolTipsPage clickOnToolTips(){
         scroll(deployed_form_exercise.get(6));
         deployed_form_exercise.get(6).click();
+        return new ToolTipsPage(driver);
     }
 
-    public void clickOnMenu(){
+    public MenuPage clickOnMenu(){
         scroll(deployed_form_exercise.get(7));
         deployed_form_exercise.get(7).click();
+        return new MenuPage(driver);
     }
 
-    public void clickOnSelectMenu(){
+    public SelectMenuPage clickOnSelectMenu(){
         scroll(deployed_form_exercise.get(8));
         deployed_form_exercise.get(8).click();
+        return new SelectMenuPage(driver);
     }
 
 }

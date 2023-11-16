@@ -44,6 +44,9 @@ public class BaseTest {
     protected SliderPage sliderPage;
     protected ProgressBarPage progressBarPage;
     protected TabsPage tabsPage;
+    protected ToolTipsPage toolTipsPage;
+    protected MenuPage menuPage;
+    protected SelectMenuPage selectMenuPage;
 
 
     public WebDriver initializeDriver(){
@@ -65,6 +68,7 @@ public class BaseTest {
     @BeforeTest
     public HomePage homePage(){
         driver = initializeDriver();
+        //driver.manage().window().maximize();
         homePage = new HomePage(driver);
         homePage.goTo();
         return homePage;

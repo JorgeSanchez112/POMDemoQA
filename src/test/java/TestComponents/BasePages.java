@@ -45,6 +45,11 @@ public class BasePages {
         wait.until(ExpectedConditions.attributeContains(element,"border-color","rgb(220, 53, 69)"));
     }
 
+    public void waitForAttributeAriaDescribedbyEqualToValue(WebElement element, String value){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.attributeContains(element,"aria-describedby", value));
+    }
+
     public void waitForEnableElement(WebElement element){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -200,6 +205,13 @@ public class BasePages {
         Actions actions = new Actions(driver);
         actions.moveToElement(element)
                 .contextClick()
+                .build()
+                .perform();
+    }
+
+    public void moveClickerToElement(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element)
                 .build()
                 .perform();
     }
