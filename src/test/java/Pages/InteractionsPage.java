@@ -20,4 +20,26 @@ public class InteractionsPage extends BasePages {
     public int getSizeSections(){
         return deployed_form_exercise.size();
     }
+
+    public SortablePage clickOnSortable(){
+        scroll(deployed_form_exercise.get(0));
+        deployed_form_exercise.get(0).click();
+        return new SortablePage(driver);
+    }
+
+    public void clickOnSelectable(){
+        scroll(deployed_form_exercise.get(1));
+    }
+
+    public void clickOnResizable(){
+        scroll(deployed_form_exercise.get(2));
+    }
+
+    public void clickOnDroppable(){
+        scroll(deployed_form_exercise.get(3));
+    }
+
+    public void clickOnDragabble(){
+        scroll(deployed_form_exercise.get(4));
+    }
 }

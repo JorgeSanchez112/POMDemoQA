@@ -24,10 +24,14 @@ public class SelectMenuPage extends BasePages {
     WebElement oldStyleSelectMenu;
     @FindBy(css = "#selectMenuContainer > .row:nth-child(7) > .col-sm-12 > .css-2b097c-container")
     WebElement multiSelectDropDownContainer;
-    @FindBy(id = "react-select-7-input")
+    @FindBy(css = "#react-select-4-input")
     WebElement multiSelectDropDownInput;
     @FindBy(css = ".css-1rhbuit-multiValue > .css-12jo7m5")
     List<WebElement> multiSelectDropDownValues;
+    @FindBy(id = "cars")
+    WebElement standardMultiSelect;
+    @FindBy(css = "#cars > option")
+    List<WebElement> standardMultiSelectValues;
 
     public SelectMenuPage(WebDriver driver) {
         super(driver);
@@ -58,7 +62,7 @@ public class SelectMenuPage extends BasePages {
     }
 
     public void downOneOptionInMultiSelectDropDown(){
-        multiSelectDropDownInput.sendKeys(Keys.DOWN);
+        multiSelectDropDownInput.sendKeys("Green");
     }
 
     public void enterActionInSelectValueDropDown(){
@@ -76,6 +80,12 @@ public class SelectMenuPage extends BasePages {
     public void selectValueOnOldStyleSelectMenu(){
         Select select = new Select(oldStyleSelectMenu);
         select.selectByVisibleText("White");
+    }
+
+    public void scrollAndSelectValueOnStandardMultiSelect(String value){
+        scroll(standardMultiSelect);
+        Select select = new Select(standardMultiSelect);
+        select.selectByVisibleText(value);
     }
 
     public String getSelectValueContainerText(){
@@ -105,4 +115,21 @@ public class SelectMenuPage extends BasePages {
     public String getRedValueTextOfMultiplyDropdown(){
         return multiSelectDropDownValues.get(3).getText();
     }
+
+    public boolean isVolvoSelectedOfStandardMultiSelect(){
+        return standardMultiSelectValues.get(0).isSelected();
+    }
+
+    public boolean isSaabSelectedOfStandardMultiSelect(){
+        return standardMultiSelectValues.get(1).isSelected();
+    }
+
+    public boolean isOpelSelectedOfStandardMultiSelect(){
+        return standardMultiSelectValues.get(2).isSelected();
+    }
+
+    public boolean isAudiSelectedOfStandardMultiSelect(){
+        return standardMultiSelectValues.get(3).isSelected();
+    }
+
 }

@@ -1,7 +1,6 @@
 package org.Tests;
 
 import TestComponents.BaseTest;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -38,7 +37,6 @@ public class SelectMenuTest extends BaseTest {
 
     @Test
     public void selectMultiplyValuesInDropdown(){
-        selectMenuPage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
         selectMenuPage.clickOnMultiSelectDropdownContainer();
         selectMenuPage.downOneOptionInMultiSelectDropDown();
         selectMenuPage.enterActionInMultiSelectDropDown();
@@ -49,6 +47,19 @@ public class SelectMenuTest extends BaseTest {
         Assert.assertEquals(selectMenuPage.getBlueValueTextOfMultiplyDropdown(),"Blue");
         Assert.assertEquals(selectMenuPage.getBlackValueTextOfMultiplyDropdown(),"Black");
         Assert.assertEquals(selectMenuPage.getRedValueTextOfMultiplyDropdown(),"Red");
+    }
+
+    @Test
+    public void selectMultiplyValuesOnStandardMultiSelect(){
+        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Volvo");
+        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Saab");
+        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Opel");
+        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Audi");
+
+        Assert.assertTrue(selectMenuPage.isVolvoSelectedOfStandardMultiSelect());
+        Assert.assertTrue(selectMenuPage.isSaabSelectedOfStandardMultiSelect());
+        Assert.assertTrue(selectMenuPage.isOpelSelectedOfStandardMultiSelect());
+        Assert.assertTrue(selectMenuPage.isAudiSelectedOfStandardMultiSelect());
     }
 
 }

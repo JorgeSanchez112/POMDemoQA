@@ -47,6 +47,7 @@ public class BaseTest {
     protected ToolTipsPage toolTipsPage;
     protected MenuPage menuPage;
     protected SelectMenuPage selectMenuPage;
+    protected SortablePage sortablePage;
 
 
     public WebDriver initializeDriver(){

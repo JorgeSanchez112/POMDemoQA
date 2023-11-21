@@ -216,6 +216,13 @@ public class BasePages {
                 .perform();
     }
 
+    public void dragDropMoveElementToTarget(WebElement sourceElement, WebElement targetElement){
+        Actions actions = new Actions(driver);
+        actions.dragAndDrop(sourceElement, targetElement)
+                .build()
+                .perform();
+    }
+
     public boolean validateHTTPS_Response(String src) throws IOException {
         http = (HttpURLConnection) (new URL(src).openConnection());
         http.setRequestMethod("HEAD");
