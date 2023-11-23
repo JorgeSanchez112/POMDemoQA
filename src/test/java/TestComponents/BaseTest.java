@@ -48,6 +48,8 @@ public class BaseTest {
     protected MenuPage menuPage;
     protected SelectMenuPage selectMenuPage;
     protected SortablePage sortablePage;
+    protected SelectablePage selectablePage;
+    protected ResizablePage resizablePage;
 
 
     public WebDriver initializeDriver(){
@@ -69,6 +71,7 @@ public class BaseTest {
     @BeforeTest
     public HomePage homePage(){
         driver = initializeDriver();
+        driver.manage().window().maximize();
         homePage = new HomePage(driver);
         homePage.goTo();
         return homePage;
@@ -76,7 +79,7 @@ public class BaseTest {
 
     @AfterTest
     public void close(){
-        //driver.close();
+        driver.close();
     }
 
 }

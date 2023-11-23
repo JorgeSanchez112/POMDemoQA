@@ -65,6 +65,12 @@ public class BasePages {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public boolean isListItemSelected(WebElement listItem) {
+        String expectedClass = "active";
+        String actualClass = listItem.getAttribute("class");
+        return actualClass.contains(expectedClass);
+    }
+
     public void selectOneRadioButton(List<WebElement> listElements, String nameRadioButton){
         int sizeList = listElements.size();
         int x = 0;
@@ -219,6 +225,15 @@ public class BasePages {
     public void dragDropMoveElementToTarget(WebElement sourceElement, WebElement targetElement){
         Actions actions = new Actions(driver);
         actions.dragAndDrop(sourceElement, targetElement)
+                .build()
+                .perform();
+    }
+
+    public void resizeElement(WebElement element, int sizeX, int sizeY){
+        Actions actions = new Actions(driver);
+        actions.clickAndHold(element)
+                .moveByOffset(sizeX, sizeY)
+                .release()
                 .build()
                 .perform();
     }

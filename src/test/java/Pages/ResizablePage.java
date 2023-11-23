@@ -1,0 +1,51 @@
+package Pages;
+
+import TestComponents.BasePages;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ResizablePage extends BasePages {
+    @FindBy(id = "resizableBoxWithRestriction")
+    WebElement resizableBoxRestricted;
+    @FindBy(css = "#resizableBoxWithRestriction > .react-resizable-handle")
+    WebElement resizeIconOfBoxRestricted;
+    @FindBy(id = "resizable")
+    WebElement resizableBox;
+    @FindBy(css = "#resizable > .react-resizable-handle")
+    WebElement resizeIcon;
+
+    public ResizablePage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver,this);
+    }
+
+    public void resizeBoxRestrictedToMax() throws InterruptedException {
+        scroll(resizableBoxRestricted);
+        Thread.sleep(1000);
+        resizeElement(resizeIconOfBoxRestricted, 300, 100);
+    }
+
+    public void resizeBoxTo500() throws InterruptedException {
+        scroll(resizableBox);
+        Thread.sleep(1000);
+        resizeElement(resizeIcon, 300, 100);
+    }
+
+    public String getWeightOfBoxRestricted(){
+        return resizableBoxRestricted.getCssValue("width");
+    }
+
+    public String getWeightOfResizeBox(){
+        return resizableBox.getCssValue("width");
+    }
+
+    public String getHeightOfBoxRestricted(){
+        return resizableBoxRestricted.getCssValue("height");
+    }
+
+    public String getHeightOfResizeBox(){
+        return resizableBox.getCssValue("height");
+    }
+}

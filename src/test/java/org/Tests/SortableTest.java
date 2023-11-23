@@ -15,6 +15,7 @@ public class SortableTest extends BaseTest {
 
     @Test
     public void dragFirstElementAndDropItInLastElementOfElementLists() {
+        sortablePage.clickOnTabList();
         sortablePage.scrollToLastElementList();
         sortablePage.moveFirstElementListToLastElement();
         Assert.assertEquals(sortablePage.getTextOfFirstElementValueOfElementsList(), "Two");
@@ -70,5 +71,35 @@ public class SortableTest extends BaseTest {
         Assert.assertEquals(sortablePage.getTextOfThirdElementValueOfElementsGrid(), "Four");
         Assert.assertEquals(sortablePage.getTextOfSeventhElementValueOfElementsGrid(), "Three");
         sortablePage.moveTheSecondToLastElementGridToTheThirdElement();
+    }
+
+    @Test
+    public void dragFirstElementAndDropItInFourthElementOfElementsGrid() {
+        sortablePage.clickOnTabGrid();
+        sortablePage.scrollToLastElementGrid();
+        sortablePage.moveFirstElementGridToFourthElement();
+        Assert.assertEquals(sortablePage.getTextOfFirstElementValueOfElementsGrid(), "Two");
+        Assert.assertEquals(sortablePage.getTextOfFourthElementValueOfElementsGrid(), "One");
+        sortablePage.moveFourthElementGridToFirstElement();
+    }
+
+    @Test
+    public void dragFirstElementAndDropItInFifthElementOfElementsGrid() {
+        sortablePage.clickOnTabGrid();
+        sortablePage.scrollToLastElementGrid();
+        sortablePage.moveFirstElementGridToFifthElement();
+        Assert.assertEquals(sortablePage.getTextOfFirstElementValueOfElementsGrid(), "Two");
+        Assert.assertEquals(sortablePage.getTextOfFifthElementValueOfElementsGrid(), "One");
+        sortablePage.moveFifthElementGridToFirstElement();
+    }
+
+    @Test
+    public void dragFirstElementAndDropItInSixthElementOfElementsGrid() {
+        sortablePage.clickOnTabGrid();
+        sortablePage.scrollToLastElementGrid();
+        sortablePage.moveFirstElementGridToSixthElement();
+        Assert.assertEquals(sortablePage.getTextOfFirstElementValueOfElementsGrid(), "Two");
+        Assert.assertEquals(sortablePage.getTextOfSixthElementValueOfElementsGrid(), "One");
+        sortablePage.moveSixthElementGridToFirstElement();
     }
 }

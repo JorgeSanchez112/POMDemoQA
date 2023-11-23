@@ -27,12 +27,16 @@ public class InteractionsPage extends BasePages {
         return new SortablePage(driver);
     }
 
-    public void clickOnSelectable(){
+    public SelectablePage clickOnSelectable(){
         scroll(deployed_form_exercise.get(1));
+        deployed_form_exercise.get(1).click();
+        return new SelectablePage(driver);
     }
 
-    public void clickOnResizable(){
+    public ResizablePage clickOnResizable(){
         scroll(deployed_form_exercise.get(2));
+        deployed_form_exercise.get(2).click();
+        return new ResizablePage(driver);
     }
 
     public void clickOnDroppable(){

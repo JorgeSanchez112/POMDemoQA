@@ -59,6 +59,18 @@ public class SortablePage extends BasePages {
         dragDropMoveElementToTarget(elementsGrid.get(0), elementsGrid.get(8));
     }
 
+    public void moveFirstElementGridToFourthElement(){
+        dragDropMoveElementToTarget(elementsGrid.get(0), elementsGrid.get(3));
+    }
+
+    public void moveFirstElementGridToFifthElement(){
+        dragDropMoveElementToTarget(elementsGrid.get(0), elementsGrid.get(4));
+    }
+
+    public void moveFirstElementGridToSixthElement(){
+        dragDropMoveElementToTarget(elementsGrid.get(0), elementsGrid.get(5));
+    }
+
     public void moveSecondElementGridToPenultimateElement(){
         dragDropMoveElementToTarget(elementsGrid.get(1), elementsGrid.get(7));
     }
@@ -69,6 +81,18 @@ public class SortablePage extends BasePages {
 
     public void moveLastElementGridToFirstElement(){
         dragDropMoveElementToTarget(elementsGrid.get(8), elementsGrid.get(0));
+    }
+
+    public void moveFourthElementGridToFirstElement(){
+        dragDropMoveElementToTarget(elementsGrid.get(3), elementsGrid.get(0));
+    }
+
+    public void moveFifthElementGridToFirstElement(){
+        dragDropMoveElementToTarget(elementsGrid.get(4), elementsGrid.get(0));
+    }
+
+    public void moveSixthElementGridToFirstElement(){
+        dragDropMoveElementToTarget(elementsGrid.get(5), elementsGrid.get(0));
     }
 
     public void movePenultimateElementGridToSecondElement(){
@@ -146,6 +170,5 @@ public class SortablePage extends BasePages {
     public String getTextOfNinethElementValueOfElementsGrid(){
         return elementsGrid.get(8).getText();
     }
-
 
 }
