@@ -50,6 +50,7 @@ public class BaseTest {
     protected SortablePage sortablePage;
     protected SelectablePage selectablePage;
     protected ResizablePage resizablePage;
+    protected DroppablePage droppablePage;
 
 
     public WebDriver initializeDriver(){

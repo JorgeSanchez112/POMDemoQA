@@ -71,6 +71,12 @@ public class BasePages {
         return actualClass.contains(expectedClass);
     }
 
+    public boolean isElementDropped(WebElement listItem) {
+        String expectedClass = "ui-state-highlight";
+        String actualClass = listItem.getAttribute("class");
+        return actualClass.contains(expectedClass);
+    }
+
     public void selectOneRadioButton(List<WebElement> listElements, String nameRadioButton){
         int sizeList = listElements.size();
         int x = 0;

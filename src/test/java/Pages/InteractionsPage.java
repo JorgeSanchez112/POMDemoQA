@@ -39,8 +39,10 @@ public class InteractionsPage extends BasePages {
         return new ResizablePage(driver);
     }
 
-    public void clickOnDroppable(){
+    public DroppablePage clickOnDroppable(){
         scroll(deployed_form_exercise.get(3));
+        deployed_form_exercise.get(3).click();
+        return new DroppablePage(driver);
     }
 
     public void clickOnDragabble(){
