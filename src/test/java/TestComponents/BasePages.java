@@ -27,6 +27,10 @@ public class BasePages {
         this.driver = driver;
     }
 
+    public void refreshPage(){
+        driver.navigate().refresh();
+    }
+
     public void scroll(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
@@ -217,6 +221,13 @@ public class BasePages {
         Actions actions = new Actions(driver);
         actions.moveToElement(element)
                 .contextClick()
+                .build()
+                .perform();
+    }
+
+    public void moveElementToCoordinates(WebElement element, int xCoordinate, int yCoordinate){
+        Actions actions = new Actions(driver);
+        actions.dragAndDropBy(element, xCoordinate, yCoordinate)
                 .build()
                 .perform();
     }

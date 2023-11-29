@@ -27,6 +27,7 @@ public class DroppableTest extends BaseTest {
 
     @Test
     public void isDraggableNotAcceptableDroppedToTarget(){
+        droppablePage.refreshPage();
         droppablePage.clickOnTabAccept();
         droppablePage.moveDraggableNotAcceptableToTarget();
         Assert.assertFalse(droppablePage.isNotAcceptDraggableDropped());
@@ -50,14 +51,14 @@ public class DroppableTest extends BaseTest {
     public void isPreventDraggableDroppedToGreedyTarget(){
         droppablePage.clickOnTabPrevent();
         droppablePage.movePreventDraggableToGreedyTarget();
-        Assert.assertTrue(droppablePage.isPreventDraggableToGreedyInnerDropped());
+        Assert.assertTrue(droppablePage.isPreventDraggableToGreedyDropped());
     }
 
     @Test
     public void isPreventDraggableDroppedToGreedyInnerTarget(){
         droppablePage.clickOnTabPrevent();
         droppablePage.movePreventDraggableToGreedyInnerTarget();
-        Assert.assertFalse(droppablePage.isPreventDraggableToGreedyInnerDropped());
+        Assert.assertTrue(droppablePage.isPreventDraggableToGreedyInnerDropped());
     }
 
     @Test

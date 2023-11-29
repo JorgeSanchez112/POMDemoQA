@@ -2,6 +2,7 @@ package TestComponents;
 
 import Pages.*;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -51,6 +52,7 @@ public class BaseTest {
     protected SelectablePage selectablePage;
     protected ResizablePage resizablePage;
     protected DroppablePage droppablePage;
+    protected DraggablePage draggablePage;
 
 
     public WebDriver initializeDriver(){
@@ -72,9 +74,9 @@ public class BaseTest {
     @BeforeTest
     public HomePage homePage(){
         driver = initializeDriver();
-        driver.manage().window().maximize();
         homePage = new HomePage(driver);
         homePage.goTo();
+        homePage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
         return homePage;
     }
 

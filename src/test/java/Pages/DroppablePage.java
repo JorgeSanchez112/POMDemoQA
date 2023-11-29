@@ -33,6 +33,8 @@ public class DroppablePage extends BasePages {
     WebElement notGreedyInnerTarget;
     @FindBy(id = "greedyDropBox")
     WebElement greedyTarget;
+    @FindBy(css = "#greedyDropBox > p")
+    WebElement greedyTargetSubtitle;
     @FindBy(id = "greedyDropBoxInner")
     WebElement greedyInnerTarget;
     @FindBy(id = "revertable")
@@ -68,24 +70,28 @@ public class DroppablePage extends BasePages {
     }
 
     public void moveDraggableAcceptableToTarget(){
+        scroll(dragAcceptable);
         dragDropMoveElementToTarget(dragAcceptable,acceptTarget);
     }
 
     public void moveDraggableNotAcceptableToTarget(){
+        scroll(dragNotAcceptable);
         dragDropMoveElementToTarget(dragNotAcceptable,acceptTarget);
     }
 
     public void movePreventDraggableToNotGreedyTarget(){
+        scroll(notGreedyTarget);
         dragDropMoveElementToTarget(dragPrevent,notGreedyTarget);
     }
 
     public void movePreventDraggableToNotGreedyInnerTarget(){
+        scroll(dragPrevent);
         dragDropMoveElementToTarget(dragPrevent,notGreedyInnerTarget);
     }
 
     public void movePreventDraggableToGreedyTarget(){
         scroll(greedyTarget);
-        dragDropMoveElementToTarget(dragPrevent,greedyTarget);
+        dragDropMoveElementToTarget(dragPrevent,greedyTargetSubtitle);
     }
 
     public void movePreventDraggableToGreedyInnerTarget(){
@@ -98,6 +104,7 @@ public class DroppablePage extends BasePages {
     }
 
     public void moveNoRevertDraggableToTarget(){
+        scroll(dragNotRevertable);
         dragDropMoveElementToTarget(dragNotRevertable,revertTarget);
     }
 
