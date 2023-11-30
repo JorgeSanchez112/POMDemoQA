@@ -1,14 +1,14 @@
 package Pages;
 
 import TestComponents.BasePages;
-import org.openqa.selenium.Point;
+import java.lang.String;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DraggablePage extends BasePages {
-    @FindBy(id = "draggableExample-tab-simple ")
+    @FindBy(id = "draggableExample-tab-simple")
     private WebElement tabSimple;
     @FindBy(id = "draggableExample-tab-axisRestriction")
     private WebElement tabAxisRestricted;
@@ -31,7 +31,7 @@ public class DraggablePage extends BasePages {
     @FindBy(id = "cursorTopLeft")
     private WebElement topLeftStyleCursor;
     @FindBy(id = "cursorBottom")
-    private WebElement BottomStyleCursor;
+    private WebElement bottomStyleCursor;
 
     public DraggablePage(WebDriver driver) {
         super(driver);
@@ -67,11 +67,26 @@ public class DraggablePage extends BasePages {
     }
 
     public void moveContainedBox(){
-        moveElementToCoordinates(containedBox, 20, 100);
+        moveElementToCoordinates(containedBox, 100, 50);
     }
 
     public void moveContainedText(){
-        moveElementToCoordinates(containedText, 1,10);
+        scroll(containedText);
+        moveElementToCoordinates(containedText, 2,10);
+    }
+
+    public void moveCenterCursorOfCursorStyle(){
+        moveElementToCoordinates(centerStyleCursor, 50, 50);
+    }
+
+    public void moveTopCursorOfCursorStyle(){
+        scroll(topLeftStyleCursor);
+        moveElementToCoordinates(topLeftStyleCursor, 100, 50);
+    }
+
+    public void moveBottomCursorOfCursorStyle(){
+        scroll(bottomStyleCursor);
+        moveElementToCoordinates(bottomStyleCursor, 150, 50);
     }
 
     public String getSimpleBoxXPosition(){
@@ -82,20 +97,52 @@ public class DraggablePage extends BasePages {
         return simpleBox.getCssValue("top");
     }
 
-    public Point getRestrictedXBoxPosition(){
-        return simpleBox.getLocation();
+    public String getRestrictedXBoxPosition(){
+        return restrictedXBox.getCssValue("left");
     }
 
-    public Point getRestrictedYBoxPosition(){
-        return simpleBox.getLocation();
+    public String getRestrictedYBoxPosition(){
+        return restrictedYBox.getCssValue("top");
     }
 
-    public Point getContainedBoxPosition(){
-        return simpleBox.getLocation();
+    public String getContainedBoxXPosition(){
+        return containedBox.getCssValue("left");
     }
 
-    public Point getContainedTextPosition(){
-        return simpleBox.getLocation();
+    public String getContainedBoxYPosition(){
+        return containedBox.getCssValue("top");
+    }
+
+    public String getContainedTextXPosition(){
+        return containedText.getCssValue("left");
+    }
+
+    public String getContainedTextYPosition(){
+        return containedText.getCssValue("top");
+    }
+
+    public String getElementOfCenterCursorXPosition(){
+        return centerStyleCursor.getCssValue("left");
+    }
+
+    public String getElementOfCenterCursorYPosition(){
+        return centerStyleCursor.getCssValue("top");
+    }
+
+    public String getElementOfTopCursorXPosition(){
+        return topLeftStyleCursor.getCssValue("left");
+    }
+
+    public String getElementOfTopCursorYPosition(){
+        return topLeftStyleCursor.getCssValue("top");
+    }
+
+    public String getElementOfBottomCursorXPosition(){
+        return bottomStyleCursor.getCssValue("left");
+    }
+
+    public String getElementOfBottomCursorYPosition(){
+        return bottomStyleCursor.getCssValue("top");
     }
 
 }
