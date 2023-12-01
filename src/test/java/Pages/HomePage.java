@@ -10,14 +10,11 @@ import java.util.List;
 
 public class HomePage extends BasePages {
     @FindBy (className = "top-card")
-    List<WebElement> sections;
-
-    static WebDriver driver;
+    private List<WebElement> sections;
 
     public HomePage(WebDriver driver)
     {
         super(driver);
-        this.driver=driver;
         PageFactory.initElements(driver, this);
     }
 
@@ -59,4 +56,5 @@ public class HomePage extends BasePages {
         sections.get(5).click();
         return new BookStorePage(driver);
     }
+
 }

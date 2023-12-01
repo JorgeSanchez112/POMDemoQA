@@ -9,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SliderPage extends BasePages {
     @FindBy(css = "input.range-slider")
-    WebElement inputRange;
+    private WebElement inputRange;
     @FindBy(id = "sliderValue")
-    WebElement containerValue;
+    private WebElement containerValue;
 
     public SliderPage(WebDriver driver) {
         super(driver);

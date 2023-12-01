@@ -8,17 +8,17 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AccordianPage extends BasePages {
     @FindBy(id = "section1Heading")
-    WebElement card1;
+    private WebElement card1;
     @FindBy(id = "section1Content")
-    WebElement firstCardContent;
+    private WebElement firstCardContent;
     @FindBy(id = "section2Heading")
-    WebElement card2;
+    private WebElement card2;
     @FindBy(id = "section2Content")
-    WebElement secondCardContent;
+    private WebElement secondCardContent;
     @FindBy(id = "section3Heading")
-    WebElement card3;
+    private WebElement card3;
     @FindBy(id = "section3Content")
-    WebElement thirdCardContent;
+    private WebElement thirdCardContent;
 
     public AccordianPage(WebDriver driver) {
         super(driver);

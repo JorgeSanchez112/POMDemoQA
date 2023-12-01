@@ -11,27 +11,26 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class SelectMenuPage extends BasePages {
-
     @FindBy(id = "withOptGroup")
-    WebElement selectValueContainer;
+    private WebElement selectValueContainer;
     @FindBy(id = "react-select-2-input")
-    WebElement selectValueInput;
+    private WebElement selectValueInput;
     @FindBy(id = "selectOne")
-    WebElement selectOneContainer;
+    private WebElement selectOneContainer;
     @FindBy(id = "react-select-3-input")
-    WebElement selectOneInput;
+    private WebElement selectOneInput;
     @FindBy(id = "oldSelectMenu")
-    WebElement oldStyleSelectMenu;
+    private WebElement oldStyleSelectMenu;
     @FindBy(css = "#selectMenuContainer > .row:nth-child(7) > .col-sm-12 > .css-2b097c-container")
-    WebElement multiSelectDropDownContainer;
+    private WebElement multiSelectDropDownContainer;
     @FindBy(css = "#react-select-4-input")
-    WebElement multiSelectDropDownInput;
+    private WebElement multiSelectDropDownInput;
     @FindBy(css = ".css-1rhbuit-multiValue > .css-12jo7m5")
-    List<WebElement> multiSelectDropDownValues;
+    private List<WebElement> multiSelectDropDownValues;
     @FindBy(id = "cars")
-    WebElement standardMultiSelect;
+    private WebElement standardMultiSelect;
     @FindBy(css = "#cars > option")
-    List<WebElement> standardMultiSelectValues;
+    private List<WebElement> standardMultiSelectValues;
 
     public SelectMenuPage(WebDriver driver) {
         super(driver);

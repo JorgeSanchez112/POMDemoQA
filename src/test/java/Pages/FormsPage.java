@@ -10,7 +10,7 @@ import java.util.List;
 
 public class FormsPage extends BasePages {
     @FindBy(css = ".collapse.show > .menu-list > *")
-    List<WebElement> deployed_form_exercise;
+    private List<WebElement> deployed_form_exercise;
 
     public FormsPage(WebDriver driver) {
         super(driver);
@@ -25,4 +25,5 @@ public class FormsPage extends BasePages {
         deployed_form_exercise.get(0).click();
         return new PracticeFormPage(driver);
     }
+
 }

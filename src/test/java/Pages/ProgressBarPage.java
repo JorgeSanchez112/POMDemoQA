@@ -7,13 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ProgressBarPage extends BasePages {
-
     @FindBy(id = "progressBar")
-    WebElement progressBar;
+    private WebElement progressBar;
     @FindBy(id = "startStopButton")
-    WebElement startButton;
+    private WebElement startButton;
     @FindBy(id = "resetButton")
-    WebElement resetButton;
+    private WebElement resetButton;
 
     public ProgressBarPage(WebDriver driver) {
         super(driver);
@@ -35,4 +34,5 @@ public class ProgressBarPage extends BasePages {
     public String getPercentText(){
         return progressBar.getText();
     }
+
 }

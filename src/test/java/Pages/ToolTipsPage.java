@@ -10,13 +10,12 @@ import org.testng.Assert;
 import java.util.List;
 
 public class ToolTipsPage extends BasePages {
-
     @FindBy(id = "toolTipButton")
-    WebElement hoverMeButton;
+    private WebElement hoverMeButton;
     @FindBy(id = "toolTipTextField")
-    WebElement hoverMeInput;
+    private WebElement hoverMeInput;
     @FindBy(css = "#texToolTopContainer > a")
-    List<WebElement> hoverLink;
+    private List<WebElement> hoverLink;
 
     public ToolTipsPage(WebDriver driver) {
         super(driver);

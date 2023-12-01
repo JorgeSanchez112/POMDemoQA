@@ -9,15 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class CheckBoxPage extends BasePages {
-
     @FindBy(css = ".rct-option-expand-all")
-    WebElement expandTree;
-
+    private WebElement expandTree;
     @FindBy(css = ".rct-node-expanded > ol > li > span > label")
-    List<WebElement> listOfCheckboxes;
-
+    private List<WebElement> listOfCheckboxes;
     @FindBy(css = ".rct-node-expanded > ol > li > span > label > input")
-    List<WebElement> listMainCheckbox;
+    private List<WebElement> listMainCheckbox;
 
     public CheckBoxPage(WebDriver driver) {
         super(driver);
@@ -102,4 +99,5 @@ public class CheckBoxPage extends BasePages {
     public boolean checkDownloadsClicked(){
         return listMainCheckbox.get(13).isSelected();
     }
+
 }

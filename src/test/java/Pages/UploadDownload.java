@@ -8,13 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class UploadDownload extends BasePages {
     @FindBy(id = "downloadButton")
-    WebElement downloadButton;
+    private WebElement downloadButton;
 
     @FindBy(id = "uploadFile")
-    WebElement uploadFileButton;
+    private WebElement uploadFileButton;
 
     @FindBy(id = "uploadedFilePath")
-    WebElement FilePathText;
+    private WebElement FilePathText;
 
     public UploadDownload(WebDriver driver) {
         super(driver);
@@ -36,6 +36,5 @@ public class UploadDownload extends BasePages {
     public String getNameDownloadedFile(){
         return "C:\\fakepath\\" + downloadButton.getAttribute("download");
     }
-
 
 }

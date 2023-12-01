@@ -1,27 +1,23 @@
 package Pages;
 
 import TestComponents.BasePages;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 
 public class AutoCompletePage extends BasePages {
     @FindBy(id = "autoCompleteMultipleInput")
-    WebElement multipleContainer;
+    private WebElement multipleContainer;
     @FindBy(className = "auto-complete__multi-value")
-    List<WebElement> valuesOfMultipleContainer;
+    private List<WebElement> valuesOfMultipleContainer;
     @FindBy(id = "autoCompleteSingleInput")
-    WebElement singleContainer;
+    private WebElement singleContainer;
     @FindBy(className = "auto-complete__single-value")
-    WebElement valueOfSingleContainer;
+    private WebElement valueOfSingleContainer;
 
     public AutoCompletePage(WebDriver driver) {
         super(driver);
@@ -45,4 +41,5 @@ public class AutoCompletePage extends BasePages {
     public String getTextOfSingleContainerValue(){
         return valueOfSingleContainer.getText();
     }
+
 }

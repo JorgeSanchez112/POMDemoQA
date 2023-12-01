@@ -10,7 +10,7 @@ import java.util.List;
 
 public class AlertsFrameWindowsPage extends BasePages {
     @FindBy(css = ".collapse.show > .menu-list > *")
-    List<WebElement> deployed_form_exercise;
+    private List<WebElement> deployed_form_exercise;
 
     public AlertsFrameWindowsPage(WebDriver driver) {
         super(driver);
@@ -20,26 +20,31 @@ public class AlertsFrameWindowsPage extends BasePages {
     public int getSizeSections(){
         return deployed_form_exercise.size();
     }
+
     public BrowserWindows clickOnBrowserWindows(){
         scroll(deployed_form_exercise.get(0));
         deployed_form_exercise.get(0).click();
         return new BrowserWindows(driver);
     }
+
     public Alerts clickOnAlerts(){
         scroll(deployed_form_exercise.get(1));
         deployed_form_exercise.get(1).click();
         return new Alerts(driver);
     }
+
     public FramesPage clickOnFrames(){
         scroll(deployed_form_exercise.get(2));
         deployed_form_exercise.get(2).click();
         return new FramesPage(driver);
     }
+
     public NestedFramesPage clickOnNestedFrames(){
         scroll(deployed_form_exercise.get(3));
         deployed_form_exercise.get(3).click();
         return new NestedFramesPage(driver);
     }
+
     public ModalDialogsPage clickOnModalDialogs(){
         scroll(deployed_form_exercise.get(4));
         deployed_form_exercise.get(4).click();

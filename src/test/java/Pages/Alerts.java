@@ -8,24 +8,22 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 import java.time.Duration;
 
 public class Alerts extends BasePages {
-
     @FindBy(id = "alertButton")
-    WebElement alertButton;
+    private WebElement alertButton;
     @FindBy(id = "timerAlertButton")
-    WebElement afterFiveSecButton;
+    private WebElement afterFiveSecButton;
     @FindBy(id = "confirmButton")
-    WebElement confirmAlertButton;
+    private WebElement confirmAlertButton;
     @FindBy(id = "promtButton")
-    WebElement inputAlertButton;
+    private WebElement inputAlertButton;
     @FindBy(id = "confirmResult")
-    WebElement confirmAlertButtonResult;
+    private WebElement confirmAlertButtonResult;
     @FindBy(id = "promptResult")
-    WebElement inputAlertButtonText;
+    private WebElement inputAlertButtonText;
 
     public Alerts(WebDriver driver) {
         super(driver);
@@ -78,7 +76,5 @@ public class Alerts extends BasePages {
         System.out.println(inputAlertButton.getText());
         return inputAlertButtonText.getText();
     }
-
-
 
 }

@@ -11,17 +11,15 @@ import java.util.ArrayList;
 
 public class BrowserWindows extends BasePages {
     @FindBy(id = "tabButton")
-    WebElement newTabButton;
+    private WebElement newTabButton;
     @FindBy(id = "windowButton")
-    WebElement newWindowButton;
+    private WebElement newWindowButton;
     @FindBy(id = "messageWindowButton")
-    WebElement newWindowMessageButton;
-
+    private WebElement newWindowMessageButton;
     @FindBy(id = "sampleHeading")
-    WebElement textTab;
-
+    private WebElement textTab;
     @FindBy(tagName = "body")
-    WebElement newMessageText;
+    private WebElement newMessageText;
 
     public BrowserWindows(WebDriver driver) {
         super(driver);
@@ -29,6 +27,7 @@ public class BrowserWindows extends BasePages {
     }
 
     final String urlOfNewTab = "https://demoqa.com/sample";
+
     final String textOfNewWindowMessage = "Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization.";
 
     public void clickOnNewTabButton(){

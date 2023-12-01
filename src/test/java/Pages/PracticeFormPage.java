@@ -11,86 +11,85 @@ import java.util.List;
 
 public class PracticeFormPage extends BasePages {
     @FindBy(css = "div.practice-form-wrapper > h5")
-    WebElement titleForm;
+    private WebElement titleForm;
     @FindBy(id = "userName-label")
-    WebElement nameLabel;
+    private WebElement nameLabel;
     @FindBy(id = "firstName")
-    WebElement firstNameField;
+    private WebElement firstNameField;
     @FindBy(id = "lastName")
-    WebElement lastNameField;
+    private WebElement lastNameField;
     @FindBy(id = "userEmail-label")
-    WebElement emailLabel;
+    private WebElement emailLabel;
     @FindBy(id = "userEmail")
-    WebElement emailField;
+    private WebElement emailField;
     @FindBy(css = "div#genterWrapper > div:nth-child(1)")
-    WebElement genderLabel;
+    private WebElement genderLabel;
     @FindBy(css = "div#genterWrapper > div:nth-child(2) > div > label")
-    List<WebElement> radioButtonGenders;
+    private List<WebElement> radioButtonGenders;
     @FindBy(id = "userNumber-label")
-    WebElement mobileLabel;
+    private WebElement mobileLabel;
     @FindBy(id = "userNumber")
-    WebElement mobileField;
+    private WebElement mobileField;
     @FindBy(id = "dateOfBirth-label")
-    WebElement birthDateLabel;
+    private WebElement birthDateLabel;
     @FindBy(id = "dateOfBirthInput")
-    WebElement birthDateField;
+    private WebElement birthDateField;
     @FindBy(css = ".react-datepicker__month-select > option")
-    List<WebElement> months;
+    private List<WebElement> months;
     @FindBy(css = ".react-datepicker__year-select > option")
-    List<WebElement> years;
+    private List<WebElement> years;
     @FindBy(className = "react-datepicker__day")
-    List<WebElement> calendarDays;
+    private List<WebElement> calendarDays;
     @FindBy(css = "#subjects-label:nth-child(1)")
-    List<WebElement> threeLabelsBeforeCurrentAddressLabel;
+    private List<WebElement> threeLabelsBeforeCurrentAddressLabel;
     @FindBy(id = "subjectsInput")
-    WebElement subjectField;
+    private WebElement subjectField;
     @FindBy(css = ".custom-checkbox > label")
-    List<WebElement> checkboxes;
+    private List<WebElement> checkboxes;
     @FindBy(id = "uploadPicture")
-    WebElement selectFieldButton;
+    private WebElement selectFieldButton;
     @FindBy(id = "currentAddress-label")
-    WebElement currentAddressLabel;
+    private WebElement currentAddressLabel;
     @FindBy(id = "currentAddress")
-    WebElement currentAddressField;
+    private WebElement currentAddressField;
     @FindBy(id = "stateCity-label")
-    WebElement stateCityLabel;
+    private WebElement stateCityLabel;
     @FindBy(id = "state")
-    WebElement listStatesBox;
+    private WebElement listStatesBox;
     @FindBy(id = "city")
-    WebElement listCitiesBox;
+    private WebElement listCitiesBox;
     @FindBy(css = ".css-1wa3eu0-placeholder")
-    List<WebElement> placeholdersStateAndCity;
+    private List<WebElement> placeholdersStateAndCity;
     @FindBy(id = "submit")
-    WebElement submitButton;
+    private WebElement submitButton;
 
     //Form submitted
     @FindBy(id = "example-modal-sizes-title-lg")
-    WebElement titleOfSubmitForm;
+    private WebElement titleOfSubmitForm;
     @FindBy(css = "thead > tr > th")
-    List<WebElement> tableTitles;
+    private List<WebElement> tableTitles;
     @FindBy(css = "tbody > tr:nth-child(1) > td")
-    List<WebElement> firstRowOfFormTable;
+    private List<WebElement> firstRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(2) > td")
-    List<WebElement> secondRowOfFormTable;
+    private List<WebElement> secondRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(3) > td")
-    List<WebElement> thirdRowOfFormTable;
+    private List<WebElement> thirdRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(4) > td")
-    List<WebElement> fourthRowOfFormTable;
+    private List<WebElement> fourthRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(5) > td")
-    List<WebElement> fifthRowOfFormTable;
+    private List<WebElement> fifthRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(6) > td")
-    List<WebElement> sixthRowOfFormTable;
+    private List<WebElement> sixthRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(7) > td")
-    List<WebElement> seventhRowOfFormTable;
+    private List<WebElement> seventhRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(8) > td")
-    List<WebElement> eighthRowOfFormTable;
+    private List<WebElement> eighthRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(9) > td")
-    List<WebElement> ninthRowOfFormTable;
+    private List<WebElement> ninthRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(10) > td")
-    List<WebElement> tenthRowOfFormTable;
+    private List<WebElement> tenthRowOfFormTable;
     @FindBy(id = "closeLargeModal")
-    WebElement closeButton;
-
+    private WebElement closeButton;
 
     public PracticeFormPage(WebDriver driver) {
         super(driver);

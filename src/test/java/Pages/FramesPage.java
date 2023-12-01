@@ -7,13 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class FramesPage extends BasePages {
-
     @FindBy(id = "frame1")
-    WebElement bigFrame;
+    private WebElement bigFrame;
     @FindBy(id = "frame2")
-    WebElement shortFrame;
+    private WebElement shortFrame;
     @FindBy(id = "sampleHeading")
-    WebElement text;
+    private WebElement text;
 
     public FramesPage(WebDriver driver) {
         super(driver);
@@ -37,7 +36,5 @@ public class FramesPage extends BasePages {
     public boolean validateTextFrames(){
         return text.getText().contains(textFrame);
     }
-
-
 
 }

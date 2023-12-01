@@ -85,5 +85,131 @@
         </classes>
     </test>
 
+    <test name = "Broken Links - Images">
+        <classes>
+            <class name = "org.Tests.BrokenLinksTest" />
+        </classes>
+    </test>
+
+    <test name = "Upload and Download">
+        <classes>
+            <class name = "org.Tests.UploadDownloadTest" />
+        </classes>
+    </test>
+
+    <test name = "Dynamic Properties">
+        <classes>
+            <class name = "org.Tests.DynamicPropertiesTest" />
+        </classes>
+    </test>
+
+    <test name = "Alerts">
+        <classes>
+            <class name = "org.Tests.AlertsTest" />
+        </classes>
+    </test>
+
+    <test name = "Frames">
+        <classes>
+            <class name = "org.Tests.FramesPageTest" />
+        </classes>
+    </test>
+
+    <test name = "Nested Frames">
+        <classes>
+            <class name = "org.Tests.NestedFramesTest" />
+        </classes>
+    </test>
+
+    <test name = "Modal Dialogs">
+        <classes>
+            <class name = "org.Tests.ModalDialogsTest" />
+        </classes>
+    </test>
+
+    <test name = "Accordian">
+        <classes>
+            <class name = "org.Tests.AccordianTest" />
+        </classes>
+    </test>
+
+    <test name = "Auto Complete">
+        <classes>
+            <class name = "org.Tests.AutoCompleteTest" />
+        </classes>
+    </test>
+
+    <test name = "Date Picker">
+        <classes>
+            <class name = "org.Tests.DatePickerTest" />
+        </classes>
+    </test>
+
+    <test name = "Slider">
+        <classes>
+            <class name = "org.Tests.SliderTest" />
+        </classes>
+    </test>
+
+    <test name = "Progress Bar">
+        <classes>
+            <class name = "org.Tests.ProgressBarTest" />
+        </classes>
+    </test>
+
+    <test name = "Tabs">
+        <classes>
+            <class name = "org.Tests.TabsTest" />
+        </classes>
+    </test>
+
+    <test name = "Tool tips">
+        <classes>
+            <class name = "org.Tests.ToolTipsTest" />
+        </classes>
+    </test>
+
+    <test name = "Menu">
+        <classes>
+            <class name = "org.Tests.MenuTest" />
+        </classes>
+    </test>
+
+    <test name = "Select Menu">
+        <classes>
+            <class name = "org.Tests.SelectMenuTest" />
+        </classes>
+    </test>
+
+    <test name = "Sortable">
+        <classes>
+            <class name = "org.Tests.SortableTest" />
+        </classes>
+    </test>
+
+    <test name = "Selectable">
+        <classes>
+            <class name = "org.Tests.SelectableTest" />
+        </classes>
+    </test>
+
+    <test name = "Resizable">
+        <classes>
+            <class name = "org.Tests.ResizableTest" />
+        </classes>
+    </test>
+
+    <test name = "Droppable">
+        <classes>
+            <class name = "org.Tests.DroppableTest" />
+        </classes>
+    </test>
+
+    <test name = "Draggable">
+        <classes>
+            <class name = "org.Tests.DraggableTest" />
+        </classes>
+    </test>
+
 </suite>
 

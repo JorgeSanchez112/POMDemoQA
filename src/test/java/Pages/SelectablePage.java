@@ -10,13 +10,13 @@ import java.util.List;
 
 public class SelectablePage extends BasePages {
     @FindBy(id = "demo-tab-list")
-    WebElement tabList;
+    private WebElement tabList;
     @FindBy(id = "demo-tab-grid")
-    WebElement tabGrid;
+    private WebElement tabGrid;
     @FindBy(css = ".mt-2.list-group-item")
-    List<WebElement> elementsList;
+    private List<WebElement> elementsList;
     @FindBy(css = "#gridContainer >* li.list-group-item")
-    List<WebElement> elementsGrid;
+    private List<WebElement> elementsGrid;
 
     public SelectablePage(WebDriver driver) {
         super(driver);

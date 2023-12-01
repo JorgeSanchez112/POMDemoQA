@@ -8,41 +8,41 @@ import org.openqa.selenium.support.PageFactory;
 
 public class DroppablePage extends BasePages {
     @FindBy(id = "droppableExample-tab-simple")
-    WebElement tabSimple;
+    private WebElement tabSimple;
     @FindBy(id = "droppableExample-tab-accept")
-    WebElement tabAccept;
+    private WebElement tabAccept;
     @FindBy(id = "droppableExample-tab-preventPropogation")
-    WebElement tabPreventPropogation;
+    private WebElement tabPreventPropogation;
     @FindBy(id = "droppableExample-tab-revertable")
-    WebElement tabRevert;
+    private WebElement tabRevert;
     @FindBy(id = "draggable")
-    WebElement draggable;
+    private WebElement draggable;
     @FindBy(id = "droppable")
-    WebElement simpleTarget;
+    private WebElement simpleTarget;
     @FindBy(id = "acceptable")
-    WebElement dragAcceptable;
+    private WebElement dragAcceptable;
     @FindBy(id = "notAcceptable")
-    WebElement dragNotAcceptable;
+    private WebElement dragNotAcceptable;
     @FindBy(css = "#droppableExample-tabpane-accept >* #droppable")
-    WebElement acceptTarget;
+    private WebElement acceptTarget;
     @FindBy(id = "dragBox")
-    WebElement dragPrevent;
+    private WebElement dragPrevent;
     @FindBy(id = "notGreedyDropBox")
-    WebElement notGreedyTarget;
+    private WebElement notGreedyTarget;
     @FindBy(id = "notGreedyInnerDropBox")
-    WebElement notGreedyInnerTarget;
+    private WebElement notGreedyInnerTarget;
     @FindBy(id = "greedyDropBox")
-    WebElement greedyTarget;
+    private WebElement greedyTarget;
     @FindBy(css = "#greedyDropBox > p")
-    WebElement greedyTargetSubtitle;
+    private WebElement greedyTargetSubtitle;
     @FindBy(id = "greedyDropBoxInner")
-    WebElement greedyInnerTarget;
+    private WebElement greedyInnerTarget;
     @FindBy(id = "revertable")
-    WebElement dragRevertable;
+    private WebElement dragRevertable;
     @FindBy(id = "notRevertable")
-    WebElement dragNotRevertable;
+    private WebElement dragNotRevertable;
     @FindBy(css = "#droppableExample-tabpane-revertable >* #droppable")
-    WebElement revertTarget;
+    private WebElement revertTarget;
 
     public DroppablePage(WebDriver driver) {
         super(driver);

@@ -9,15 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class SortablePage extends BasePages {
-
     @FindBy(id = "demo-tab-list")
-    WebElement tabList;
+    private WebElement tabList;
     @FindBy(id = "demo-tab-grid")
-    WebElement tabGrid;
+    private WebElement tabGrid;
     @FindBy(css = "#demo-tabpane-list >* .list-group-item-action")
-    List<WebElement> elementsList;
+    private List<WebElement> elementsList;
     @FindBy(css = "#demo-tabpane-grid >* .list-group-item-action")
-    List<WebElement> elementsGrid;
+    private List<WebElement> elementsGrid;
 
     public SortablePage(WebDriver driver) {
         super(driver);

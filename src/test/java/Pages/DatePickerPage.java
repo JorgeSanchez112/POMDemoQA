@@ -10,25 +10,25 @@ import java.util.List;
 
 public class DatePickerPage extends BasePages {
     @FindBy(id = "datePickerMonthYearInput")
-    WebElement dateInput;
+    private WebElement dateInput;
     @FindBy(css = ".react-datepicker__month-select > option")
-    List<WebElement> monthOfDateInput;
+    private List<WebElement> monthOfDateInput;
     @FindBy(css = ".react-datepicker__year-select > option")
-    List<WebElement> yearOfDateInput;
+    private List<WebElement> yearOfDateInput;
     @FindBy(className = "react-datepicker__day")
-    List<WebElement> days;
+    private List<WebElement> days;
     @FindBy(id = "dateAndTimePickerInput")
-    WebElement dateAndTimeInput;
+    private WebElement dateAndTimeInput;
     @FindBy(className = "react-datepicker__month-dropdown-container")
-    WebElement monthContainer;
+    private WebElement monthContainer;
     @FindBy(className = "react-datepicker__month-option")
-    List<WebElement> monthsOfDateTimeInput;
+    private List<WebElement> monthsOfDateTimeInput;
     @FindBy(className = "react-datepicker__year-dropdown-container")
-    WebElement yearDateTimeContainer;
+    private WebElement yearDateTimeContainer;
     @FindBy(className = "react-datepicker__year-option")
-    List<WebElement> yearsOfDateTimeInput;
+    private List<WebElement> yearsOfDateTimeInput;
     @FindBy(className = "react-datepicker__time-list-item")
-    List<WebElement> timeOfDateTimeInput;
+    private List<WebElement> timeOfDateTimeInput;
 
     public DatePickerPage(WebDriver driver) {
         super(driver);
@@ -65,6 +65,5 @@ public class DatePickerPage extends BasePages {
     public String getDateTimeValueText(){
         return dateAndTimeInput.getAttribute("value");
     }
-
 
 }

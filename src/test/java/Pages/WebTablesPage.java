@@ -9,49 +9,34 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class WebTablesPage extends BasePages {
-
     @FindBy (id = "addNewRecordButton")
-    WebElement addButton;
-
+    private WebElement addButton;
     @FindBy (id = "searchBox")
-    WebElement searchBox;
-
+    private  WebElement searchBox;
     @FindBy (id = "delete-record-1")
-    WebElement deleteFirstRow;
-
+    private WebElement deleteFirstRow;
     @FindBy (id = "delete-record-2")
-    WebElement deleteSecondRow;
-
+    private WebElement deleteSecondRow;
     @FindBy (id = "delete-record-3")
-    WebElement deleteThirdRow;
-
+    private WebElement deleteThirdRow;
     @FindBy (css = ".rt-tr-group:nth-child(1) > .rt-tr > .rt-td")
-    List<WebElement> fourthRowFields;
-
+    private List<WebElement> fourthRowFields;
     @FindBy (className = "rt-noData")
-    WebElement noData;
-
-
+    private WebElement noData;
     @FindBy (id = "firstName")
-    WebElement firstNameForm;
-
+    private WebElement firstNameForm;
     @FindBy (id = "lastName")
-    WebElement lastNameForm;
-
+    private WebElement lastNameForm;
     @FindBy (id = "userEmail")
-    WebElement emailForm;
-
+    private WebElement emailForm;
     @FindBy (id = "age")
-    WebElement ageForm;
-
+    private WebElement ageForm;
     @FindBy (id = "salary")
-    WebElement salaryForm;
-
+    private WebElement salaryForm;
     @FindBy (id = "department")
-    WebElement departmentForm;
-
+    private WebElement departmentForm;
     @FindBy (id = "submit")
-    WebElement submitButton;
+    private WebElement submitButton;
 
     public WebTablesPage(WebDriver driver) {
         super(driver);
@@ -110,22 +95,25 @@ public class WebTablesPage extends BasePages {
     public String getFirstName(){
        return fourthRowFields.get(0).getText();
     }
+
     public String getLastName(){
         return fourthRowFields.get(1).getText();
     }
+
     public String getAge(){
         return fourthRowFields.get(2).getText();
     }
+
     public String getEmail(){
         return fourthRowFields.get(3).getText();
     }
+
     public String getSalary(){
         return fourthRowFields.get(4).getText();
     }
+
     public String getDepartment(){
         return fourthRowFields.get(5).getText();
     }
-
-
 
 }

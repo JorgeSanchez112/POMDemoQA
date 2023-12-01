@@ -8,17 +8,17 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ModalDialogsPage extends BasePages {
     @FindBy(id = "showSmallModal")
-    WebElement smallModalButton;
+    private WebElement smallModalButton;
     @FindBy(id = "showLargeModal")
-    WebElement largeModalButton;
+    private WebElement largeModalButton;
     @FindBy(css = ".modal-body")
-    WebElement smallModalText;
+    private WebElement smallModalText;
     @FindBy(id = "closeSmallModal")
-    WebElement closeSmallModalButton;
+    private WebElement closeSmallModalButton;
     @FindBy(tagName = "p")
-    WebElement largeModalText;
+    private WebElement largeModalText;
     @FindBy(id = "closeLargeModal")
-    WebElement closeLargeModalButton;
+    private WebElement closeLargeModalButton;
 
     public ModalDialogsPage(WebDriver driver) {
         super(driver);
@@ -48,4 +48,5 @@ public class ModalDialogsPage extends BasePages {
     public String getLargeModalText(){
         return largeModalText.getText();
     }
+
 }

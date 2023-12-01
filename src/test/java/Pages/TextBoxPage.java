@@ -1,7 +1,6 @@
 package Pages;
 
 import TestComponents.BasePages;
-import org.bouncycastle.oer.Switch;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,34 +11,24 @@ import java.time.Duration;
 
 
 public class TextBoxPage extends BasePages {
-
     @FindBy(id = "userName")
-    WebElement fullNameField;
-
+    private WebElement fullNameField;
     @FindBy(id = "userEmail")
-    WebElement emailField;
-
+    private WebElement emailField;
     @FindBy(id = "currentAddress")
-    WebElement addressField;
-
+    private WebElement addressField;
     @FindBy(id = "permanentAddress")
-    WebElement permanentAddressField;
-
+    private WebElement permanentAddressField;
     @FindBy(id = "submit")
-    WebElement submitButton;
-
+    private WebElement submitButton;
     @FindBy (id = "name")
-    WebElement nameTextAnswer;
-
+    private WebElement nameTextAnswer;
     @FindBy (id = "email")
-    WebElement emailTextAnswer;
-
+    private WebElement emailTextAnswer;
     @FindBy (css = "#currentAddress.mb-1")
-    WebElement addressTextAnswer;
-
+    private WebElement addressTextAnswer;
     @FindBy (css = "#permanentAddress.mb-1")
-    WebElement permanentAddressTextAnswer;
-
+    private WebElement permanentAddressTextAnswer;
 
     public TextBoxPage(WebDriver driver) {
         super(driver);
@@ -89,9 +78,5 @@ public class TextBoxPage extends BasePages {
         scroll(permanentAddressTextAnswer);
         return permanentAddressTextAnswer.getText();
     }
-
-
-
-
 
 }

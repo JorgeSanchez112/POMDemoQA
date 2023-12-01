@@ -10,7 +10,7 @@ import java.util.List;
 
 public class InteractionsPage extends BasePages {
     @FindBy(css = ".collapse.show > .menu-list > *")
-    List<WebElement> deployed_form_exercise;
+    private List<WebElement> deployed_form_exercise;
 
     public InteractionsPage(WebDriver driver) {
         super(driver);
@@ -51,4 +51,5 @@ public class InteractionsPage extends BasePages {
         deployed_form_exercise.get(4).click();
         return new DraggablePage(driver);
     }
+
 }

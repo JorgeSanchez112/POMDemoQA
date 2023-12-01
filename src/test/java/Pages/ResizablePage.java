@@ -8,13 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ResizablePage extends BasePages {
     @FindBy(id = "resizableBoxWithRestriction")
-    WebElement resizableBoxRestricted;
+    private WebElement resizableBoxRestricted;
     @FindBy(css = "#resizableBoxWithRestriction > .react-resizable-handle")
-    WebElement resizeIconOfBoxRestricted;
+    private WebElement resizeIconOfBoxRestricted;
     @FindBy(id = "resizable")
-    WebElement resizableBox;
+    private WebElement resizableBox;
     @FindBy(css = "#resizable > .react-resizable-handle")
-    WebElement resizeIcon;
+    private WebElement resizeIcon;
 
     public ResizablePage(WebDriver driver) {
         super(driver);
@@ -48,4 +48,5 @@ public class ResizablePage extends BasePages {
     public String getHeightOfResizeBox(){
         return resizableBox.getCssValue("height");
     }
+
 }

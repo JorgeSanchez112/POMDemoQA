@@ -9,23 +9,22 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class TabsPage extends BasePages {
-
     @FindBy(className = "mb-3")
-    WebElement subTitle;
+    private WebElement subTitle;
     @FindBy(id = "demo-tab-what")
-    WebElement tabWhat;
+    private WebElement tabWhat;
     @FindBy(id = "demo-tabpane-what")
-    WebElement paragraphOfWhat;
+    private WebElement paragraphOfWhat;
     @FindBy(id = "demo-tab-origin")
-    WebElement tabOrigin;
+    private WebElement tabOrigin;
     @FindBy(css = "#demo-tabpane-origin > p")
-    List<WebElement> paragraphsOfOrigin;
+    private List<WebElement> paragraphsOfOrigin;
     @FindBy(id = "demo-tab-use")
-    WebElement tabUse;
+    private WebElement tabUse;
     @FindBy(id = "demo-tabpane-use")
-    WebElement paragraphOfUse;
+    private WebElement paragraphOfUse;
     @FindBy(id = "demo-tab-more")
-    WebElement tabMore;
+    private WebElement tabMore;
 
     public TabsPage(WebDriver driver) {
         super(driver);
@@ -67,4 +66,5 @@ public class TabsPage extends BasePages {
     public boolean isMoreTabEnabled(){
         return tabMore.isEnabled();
     }
+
 }

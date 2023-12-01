@@ -9,11 +9,12 @@ import org.testng.Assert;
 
 public class NestedFramesPage extends BasePages {
     @FindBy(id = "frame1")
-    WebElement parentFrame;
+    private WebElement parentFrame;
     @FindBy(tagName = "body")
-    WebElement textParent;
+    private WebElement textParent;
     @FindBy(tagName = "p")
-    WebElement textChild;
+    private WebElement textChild;
+
     public NestedFramesPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
@@ -29,9 +30,11 @@ public class NestedFramesPage extends BasePages {
     public void switchToParentFrame(){
         driver.switchTo().frame(parentFrame);
     }
+
     public void switchToChildFrame(){
         driver.switchTo().frame(0);
     }
+
     public boolean validateParentText(){
         return textParent.getText().contains(textParentFrame);
     }

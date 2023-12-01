@@ -6,20 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.Objects;
-
 public class DynamicProperties extends BasePages {
     @FindBy (css = "div.col-md-6 > div > p")
-    WebElement randomIdText;
-
+    private WebElement randomIdText;
     @FindBy(id = "enableAfter")
-    WebElement willEnableButton;
-
+    private WebElement willEnableButton;
     @FindBy(id = "colorChange")
-    WebElement colorChangeButton;
-
+    private WebElement colorChangeButton;
     @FindBy(id = "visibleAfter")
-    WebElement visibleAfterButton;
+    private WebElement visibleAfterButton;
 
     public DynamicProperties(WebDriver driver) {
         super(driver);
@@ -43,4 +38,5 @@ public class DynamicProperties extends BasePages {
         waitForVisibleElement(visibleAfterButton);
         return visibleAfterButton.isDisplayed();
     }
+
 }

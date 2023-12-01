@@ -9,36 +9,26 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class LinksPage extends BasePages {
-
     @FindBy (linkText = "Home")
-    WebElement  linkToHomePage;
-
+    private WebElement  linkToHomePage;
     @FindBy (css = "#linkWrapper > P:nth-child(3) > a")
-    WebElement secondLinkToHomePage;
-
+    private WebElement secondLinkToHomePage;
     @FindBy (linkText = "Created")
-    WebElement http201;
-
+    private WebElement http201;
     @FindBy (linkText = "No Content")
-    WebElement http204;
-
+    private WebElement http204;
     @FindBy (linkText = "Moved")
-    WebElement http301;
-
+    private WebElement http301;
     @FindBy (linkText = "Bad Request")
-    WebElement http400;
-
+    private WebElement http400;
     @FindBy (linkText = "Unauthorized")
-    WebElement http401;
-
+    private WebElement http401;
     @FindBy (linkText = "Forbidden")
-    WebElement http403;
-
+    private WebElement http403;
     @FindBy (linkText = "Not Found")
-    WebElement http404;
-
+    private WebElement http404;
     @FindBy (css = "#linkResponse > b")
-    List<WebElement> messageResponse;
+    private List<WebElement> messageResponse;
 
     public LinksPage(WebDriver driver) {
         super(driver);

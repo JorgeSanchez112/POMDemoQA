@@ -10,7 +10,7 @@ import java.util.List;
 
 public class WidgetsPage extends BasePages {
     @FindBy(css = ".collapse.show > .menu-list > *")
-    List<WebElement> deployed_form_exercise;
+    private List<WebElement> deployed_form_exercise;
 
     public WidgetsPage(WebDriver driver) {
         super(driver);

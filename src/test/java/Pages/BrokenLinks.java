@@ -11,10 +11,10 @@ import java.util.List;
 
 public class BrokenLinks extends BasePages {
     @FindBy (css = ".col-md-6 > div:nth-child(2) > img")
-    List<WebElement> images;
+    private List<WebElement> images;
 
     @FindBy (tagName = "a")
-    List<WebElement> links;
+    private List<WebElement> links;
 
     public BrokenLinks(WebDriver driver) {
         super(driver);
@@ -36,4 +36,5 @@ public class BrokenLinks extends BasePages {
     public boolean isABrokenLink() throws IOException {
         return validateHTTPS_Response(links.get(3).getAttribute("href"));
     }
+
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ElementsPage extends BasePages {
     @FindBy (css = ".collapse.show > .menu-list > *")
-    List<WebElement> deployed_element_exercises;
+    private List<WebElement> deployed_element_exercises;
 
     public ElementsPage(WebDriver driver) {
         super(driver);

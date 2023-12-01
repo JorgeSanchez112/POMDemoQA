@@ -9,11 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class MenuPage extends BasePages {
-
     @FindBy(css = "#nav > li > a")
-    List<WebElement> mainMenus;
+    private List<WebElement> mainMenus;
     @FindBy(css = "a ~ ul > li > a")
-    List<WebElement> subMenus;
+    private List<WebElement> subMenus;
 
     public MenuPage(WebDriver driver) {
         super(driver);
@@ -59,4 +58,5 @@ public class MenuPage extends BasePages {
     public boolean isSubSubItem2Displayed(){
         return subMenus.get(4).isDisplayed();
     }
+
 }

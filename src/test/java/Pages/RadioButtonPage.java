@@ -8,16 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class RadioButtonPage extends BasePages {
     @FindBy (css = "label[for='yesRadio']")
-    WebElement yesRadioButton;
-
+    private WebElement yesRadioButton;
     @FindBy (css = "label[for='impressiveRadio']")
-    WebElement impressiveRadioButton;
-
+    private WebElement impressiveRadioButton;
     @FindBy (id = "noRadio")
-    WebElement disabledRadioButton;
-
+    private WebElement disabledRadioButton;
     @FindBy (css = "p.mt-3 >span")
-    WebElement responseText;
+    private WebElement responseText;
 
     public RadioButtonPage(WebDriver driver) {
         super(driver);
@@ -41,4 +38,5 @@ public class RadioButtonPage extends BasePages {
     public String response(){
         return responseText.getText();
     }
+
 }

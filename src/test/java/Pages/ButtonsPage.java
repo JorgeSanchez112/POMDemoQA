@@ -8,25 +8,18 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class ButtonsPage extends BasePages {
-
     @FindBy (id = "doubleClickBtn")
-    WebElement doubleClickBtn;
-
+    private WebElement doubleClickBtn;
     @FindBy (id = "rightClickBtn")
-    WebElement rightClickBtn;
-
+    private WebElement rightClickBtn;
     @FindBy (css = "div.mt-4:nth-child(3) > button")
-    WebElement clickMe;
-
+    private WebElement clickMe;
     @FindBy (id = "doubleClickMessage")
-    WebElement doubleClickMessage;
-
+    private WebElement doubleClickMessage;
     @FindBy (id = "rightClickMessage")
-    WebElement rightClickMessage;
-
+    private WebElement rightClickMessage;
     @FindBy (id = "dynamicClickMessage")
-    WebElement clickMeMessage;
-
+    private WebElement clickMeMessage;
 
     public ButtonsPage(WebDriver driver) {
         super(driver);
@@ -56,4 +49,5 @@ public class ButtonsPage extends BasePages {
     public String getClickMeMessage(){
         return clickMeMessage.getText();
     }
+
 }
