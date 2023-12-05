@@ -53,6 +53,8 @@ public class BaseTest {
     protected ResizablePage resizablePage;
     protected DroppablePage droppablePage;
     protected DraggablePage draggablePage;
+    protected BSLoginPage bsLoginPage;
+    protected BSRegisterPage bsRegisterPage;
 
 
     public WebDriver initializeDriver(){

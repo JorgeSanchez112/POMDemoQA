@@ -31,6 +31,10 @@ public class BasePages {
         driver.navigate().refresh();
     }
 
+    public void backToPage(){
+        driver.navigate().back();
+    }
+
     public void scroll(WebElement element){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
