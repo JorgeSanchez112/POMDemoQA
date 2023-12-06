@@ -55,6 +55,8 @@ public class BaseTest {
     protected DraggablePage draggablePage;
     protected BSLoginPage bsLoginPage;
     protected BSRegisterPage bsRegisterPage;
+    protected BSProfilePage bsProfilePage;
+    protected BSAPIPage bsapiPage;
 
 
     public WebDriver initializeDriver(){

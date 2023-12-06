@@ -228,4 +228,18 @@ public class BookStoreTest extends BaseTest {
         Assert.assertEquals(bookStorePage.getPublisherOfEighthBookText(),"No Starch Press");
     }
 
+    @Test
+    public void isSearchBarPlaceholderCorrect(){
+        bookStorePage.scrollToSearchBar();
+        Assert.assertEquals(bookStorePage.getSearchBarPlaceholder(),"Type to search");
+    }
+
+    @Test
+    public void isBookSearchedBySearchBar(){
+        bookStorePage.scrollToSearchBar();
+        bookStorePage.typeOnSearchBar("GIT");
+        Assert.assertTrue(bookStorePage.isBookTitleFound(bookStorePage.getTitleOfFirstBookText(),"Git"));
+        bookStorePage.refreshPage();
+    }
+
 }
