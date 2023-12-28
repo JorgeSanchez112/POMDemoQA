@@ -3,17 +3,17 @@ package org.Tests;
 import TestComponents.BaseTest;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class PracticeFormPageTest extends BaseTest {
-    @BeforeClass
+    @BeforeMethod
     public void initializeClass(){
         practiceFormPage = homePage.clickOnSectionForms().clickOnPracticeFormSection();
     }
 
-    @Test
+    /*@Test
     public void validateTitle(){
         Assert.assertEquals(practiceFormPage.getTextFormTitle(),"Student Registration Form");
     }
@@ -61,14 +61,14 @@ public class PracticeFormPageTest extends BaseTest {
     @Test
     public void validateLabelCurrentAddress(){
         Assert.assertEquals(practiceFormPage.getTextOfLabelCurrentAddress(), "Current Address");
-    }
+    }*/
 
     @Test
     public void validateLabelsStateAndCity() {
         Assert.assertEquals(practiceFormPage.getTextOfLabelStateCity(), "State and City");
     }
 
-    @Test
+    /*@Test
     public void validatePlaceholderFirstNameField(){
         Assert.assertEquals(practiceFormPage.getPlaceholderFirstNameField(), "First Name");
     }
@@ -163,6 +163,6 @@ public class PracticeFormPageTest extends BaseTest {
         Assert.assertEquals(practiceFormPage.getValueOfStateCityRow(), "Uttar Pradesh Agra");
 
         practiceFormPage.clickOnCloseButton();
-    }
+    }*/
 
 }

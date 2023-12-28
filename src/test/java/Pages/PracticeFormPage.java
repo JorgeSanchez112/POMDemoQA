@@ -52,7 +52,7 @@ public class PracticeFormPage extends BasePages {
     private WebElement currentAddressLabel;
     @FindBy(id = "currentAddress")
     private WebElement currentAddressField;
-    @FindBy(id = "stateCity-label")
+    @FindBy(id = "stateCity-labe")
     private WebElement stateCityLabel;
     @FindBy(id = "state")
     private WebElement listStatesBox;

@@ -17,9 +17,9 @@
     <classes>
       <class name="org.Tests.PracticeFormPageTest">
         <methods>
-          <include name="fillTheFormCorrectly" invocation-numbers="0"/>
-          <include name="homePage"/>
           <include name="close"/>
+          <include name="homePage"/>
+          <include name="validateLabelsStateAndCity"/>
           <include name="initializeClass"/>
         </methods>
       </class> <!-- org.Tests.PracticeFormPageTest -->

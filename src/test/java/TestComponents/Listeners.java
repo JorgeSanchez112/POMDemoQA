@@ -3,6 +3,7 @@ package TestComponents;
 import Resources.ExtentReporterNG;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.model.Log;
 import org.openqa.selenium.WebDriver;
@@ -35,13 +36,11 @@ public class Listeners extends BaseTest implements ITestListener {
         Object testClass = result.getInstance();
         WebDriver driver = ((BaseTest) testClass).driver;
 
-        String filePath = null;
         try {
-            filePath = getScreenShot(result.getMethod().getMethodName(), driver);
-        } catch (IOException e){
-            e.printStackTrace();
+            test.fail(MediaEntityBuilder.createScreenCaptureFromBase64String(getScreenShot(result.getMethod().getMethodName(), driver), result.getMethod().getMethodName()).build());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
     }
 
     @Override

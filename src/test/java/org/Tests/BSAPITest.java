@@ -3,10 +3,11 @@ package org.Tests;
 import TestComponents.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class BSAPITest extends BaseTest {
-    @BeforeClass
+    @BeforeMethod
     public void initializeClass(){
         bsapiPage = homePage.clickOnSectionBookStoreApplication().clickOnBookstoreApi();
     }

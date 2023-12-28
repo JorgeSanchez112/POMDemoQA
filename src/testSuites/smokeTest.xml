@@ -4,7 +4,7 @@
 <suite name = "Suite1">
     
     <listeners>
-        <listener class-name="TestComponents.Listeners"></listener>
+        <listener class-name="TestComponents.Listeners"/>
     </listeners>
 
     <test name = "home">

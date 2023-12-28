@@ -1,17 +1,16 @@
 package TestComponents;
 
 import Pages.*;
-import org.apache.commons.io.FileUtils;
+import org.apache.hc.client5.http.utils.Base64;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
-import java.io.File;
 import java.io.IOException;
 
 public class BaseTest {
@@ -66,25 +65,24 @@ public class BaseTest {
 
     public String getScreenShot(String testCaseName, WebDriver driver) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
-        File source = (ts.getScreenshotAs(OutputType.FILE));
+        byte[] screenshotBytes = ts.getScreenshotAs(OutputType.BYTES);
 
-        String reportsDirectory = System.getProperty("user.dir") + "\\reports\\" ;
-        File file = new File(reportsDirectory + testCaseName + ".png");
-        FileUtils.copyFile(source, file);
+        // Convert the byte array to Base64
+        byte[] base64Bytes = Base64.encodeBase64(screenshotBytes);
 
-        return reportsDirectory + testCaseName + ".png";
+        // Return the Base64 encoded string
+        return "data:image/png;base64," + new String(base64Bytes);
     }
 
-    @BeforeTest
-    public HomePage homePage(){
+    @BeforeMethod
+    public void homePage(){
         driver = initializeDriver();
         homePage = new HomePage(driver);
         homePage.goTo();
         homePage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
-        return homePage;
     }
 
-    @AfterTest
+    @AfterMethod
     public void close(){
         driver.close();
     }

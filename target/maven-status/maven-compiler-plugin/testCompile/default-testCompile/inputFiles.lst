@@ -8,6 +8,7 @@ C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\BrokenLinksTe
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\ElementsPageTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\LinksPageTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\ElementsPage.java
+C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\BSAPITest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\DynamicPropertiesTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\BaseHomeTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\AccordianPage.java
@@ -20,6 +21,8 @@ C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Resources\ExtentReporte
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\AutoCompleteTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\AutoCompletePage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\MenuPage.java
+C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\BSAPIPage.java
+C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\BSRegisterPage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\WidgetsPageTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\CheckBoxPageTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\SliderPage.java
@@ -37,6 +40,8 @@ C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\TestComponents\BasePage
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\DroppableTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\TabsTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\FormsPage.java
+C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\BSProfileTest.java
+C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\BSRegisterTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\ResizablePage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\RadioButtonPageTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\ProgressBarPage.java
@@ -49,6 +54,8 @@ C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\BrokenLinks.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\FormsPageTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\ButtonsPage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\RadioButtonPage.java
+C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\BookStoreTest.java
+C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\BSLoginTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\AlertsFrameWindowsPage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\AccordianTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\SortableTest.java
@@ -56,6 +63,7 @@ C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\TabsPage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\WebTablesPage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\AlertsFrameWindowsPageTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\DynamicProperties.java
+C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\BSProfilePage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\PracticeFormPageTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\CheckBoxPage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\BookStorePageTest.java
@@ -68,6 +76,7 @@ C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\ModalDialogsT
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\org\Tests\ToolTipsTest.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\FramesPage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\TestComponents\Listeners.java
+C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\BSLoginPage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\BrowserWindows.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\Pages\TextBoxPage.java
 C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\test\java\TestComponents\Retry.java
