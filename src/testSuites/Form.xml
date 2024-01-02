@@ -4,7 +4,8 @@
 <suite name = "Suite2">
 
     <listeners>
-        <listener class-name="TestComponents.Listeners"/>
+        <listener class-name="Resources.Listeners"/>
+        <listener class-name="Resources.MyTransformer"/>
     </listeners>
 
     <test name = "Form">

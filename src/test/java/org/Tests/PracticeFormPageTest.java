@@ -1,7 +1,6 @@
 package org.Tests;
 
 import TestComponents.BaseTest;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -13,7 +12,7 @@ public class PracticeFormPageTest extends BaseTest {
         practiceFormPage = homePage.clickOnSectionForms().clickOnPracticeFormSection();
     }
 
-    /*@Test
+    @Test
     public void validateTitle(){
         Assert.assertEquals(practiceFormPage.getTextFormTitle(),"Student Registration Form");
     }
@@ -61,14 +60,14 @@ public class PracticeFormPageTest extends BaseTest {
     @Test
     public void validateLabelCurrentAddress(){
         Assert.assertEquals(practiceFormPage.getTextOfLabelCurrentAddress(), "Current Address");
-    }*/
+    }
 
     @Test
     public void validateLabelsStateAndCity() {
         Assert.assertEquals(practiceFormPage.getTextOfLabelStateCity(), "State and City");
     }
 
-    /*@Test
+    @Test
     public void validatePlaceholderFirstNameField(){
         Assert.assertEquals(practiceFormPage.getPlaceholderFirstNameField(), "First Name");
     }
@@ -105,7 +104,6 @@ public class PracticeFormPageTest extends BaseTest {
 
     @Test
     public void validateMandatoryFields(){
-        driver.navigate().refresh();//refresh the page of previous actions
         practiceFormPage.enterToSubmitButton();
         Assert.assertEquals(practiceFormPage.getCssAttributeFirstNameField(), "rgb(220, 53, 69)");
         Assert.assertEquals(practiceFormPage.getCssAttributeLastNameField(), "rgb(220, 53, 69)");
@@ -123,7 +121,6 @@ public class PracticeFormPageTest extends BaseTest {
     @Test
     @Parameters({"name","lastname","email","gender","phone","month","day","year","text"})
     public void fillTheFormCorrectly(String name, String lastname,String email, String gender, String phone, String month, String day, String year, String text) {
-        practiceFormPage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
         practiceFormPage.typeInFirstNameField(name);
         practiceFormPage.typeInLastNameField(lastname);
         practiceFormPage.typeInEmailField(email);
@@ -161,8 +158,6 @@ public class PracticeFormPageTest extends BaseTest {
         Assert.assertEquals(practiceFormPage.getValueOfAddressRow(),text);
         Assert.assertEquals(practiceFormPage.getStateCityText(),"State and City");
         Assert.assertEquals(practiceFormPage.getValueOfStateCityRow(), "Uttar Pradesh Agra");
-
-        practiceFormPage.clickOnCloseButton();
-    }*/
+    }
 
 }

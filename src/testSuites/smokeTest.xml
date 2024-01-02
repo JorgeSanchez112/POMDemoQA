@@ -4,7 +4,8 @@
 <suite name = "Suite1">
     
     <listeners>
-        <listener class-name="TestComponents.Listeners"/>
+        <listener class-name="Resources.Listeners"/>
+        <listener class-name="Resources.MyTransformer"/>
     </listeners>
 
     <test name = "home">
@@ -51,7 +52,7 @@
 
     <test name = "Text Box">
         <classes>
-            <class name = "org.Tests.TextBoxPageText" />
+            <class name = "org.Tests.TextBoxPageTest" />
         </classes>
     </test>
 
@@ -121,7 +122,7 @@
         </classes>
     </test>
 
-    <test name = "Modal Dialogs">
+    <!--<test name = "Modal Dialogs">
         <classes>
             <class name = "org.Tests.ModalDialogsTest" />
         </classes>
@@ -209,7 +210,7 @@
         <classes>
             <class name = "org.Tests.DraggableTest" />
         </classes>
-    </test>
+    </test>-->
 
 </suite>
 

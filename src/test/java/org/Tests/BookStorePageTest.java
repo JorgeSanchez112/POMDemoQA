@@ -13,7 +13,7 @@ public class BookStorePageTest extends BaseTest {
 
     @Test
     public void validateURL(){
-        Assert.assertEquals(driver.getCurrentUrl(),"https://demoqa.com/books");
+        Assert.assertEquals(bookStorePage.getBookStoreUrlText(),"https://demoqa.com/books");
     }
 
     @Test

@@ -2,7 +2,6 @@ package org.Tests;
 
 import TestComponents.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -14,7 +13,12 @@ public class ElementsPageTest extends BaseTest {
 
     @Test
     public void validateURL(){
-        Assert.assertEquals(driver.getCurrentUrl(),"https://demoqa.com/elements");
+        Assert.assertEquals(elementsPage.getElementUrlText(),"https://demoqa.com/elements");
+    }
+
+    @Test
+    public void validatePageTitle(){
+        Assert.assertEquals(elementsPage.getPageTitleText(),"Elements");
     }
 
     @Test

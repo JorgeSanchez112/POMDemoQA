@@ -1,7 +1,7 @@
 package org.Tests;
 
 import TestComponents.BaseTest;
-import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -14,24 +14,24 @@ public class ToolTipsTest extends BaseTest {
     @Test
     public void validateButtonHover(){
         toolTipsPage.moveClickerTOHoverButton();
-        toolTipsPage.isHoverButtonVisible();
+        Assert.assertEquals(toolTipsPage.getTextFromButtonHoverAttribute(), "buttonToolTip");
     }
 
     @Test
     public void validateInputHover(){
         toolTipsPage.moveClickerTOHoverInput();
-        toolTipsPage.isHoverInputVisible();
+        Assert.assertEquals(toolTipsPage.getTextFromInputHoverAttribute(), "textFieldToolTip");
     }
 
     @Test
     public void validateContraryLinkHover(){
         toolTipsPage.moveClickerTOContraryLink();
-        toolTipsPage.isHoverContraryLinkVisible();
+        Assert.assertEquals(toolTipsPage.getTextFromHoverContraryLinkAttribute(), "contraryTexToolTip");
     }
 
     @Test
     public void validateVersionLinkHover()  {
         toolTipsPage.moveClickerTOVersionLink();
-        toolTipsPage.isHoverVersionLinkVisible();
+        Assert.assertEquals(toolTipsPage.getTextFromHoverVersionLinkAttribute(), "sectionToolTip");
     }
 }

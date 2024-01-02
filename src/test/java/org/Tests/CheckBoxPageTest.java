@@ -2,7 +2,6 @@ package org.Tests;
 
 import TestComponents.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,34 +9,34 @@ public class CheckBoxPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
       checkBoxPage = homePage.clickOnSectionElements().clickOnCheckBoxSection();
-      checkBoxPage.clickOnExpandButton();
     }
 
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(checkBoxPage.getPageTitleText(),"Check Box");
+
+    }
 
     @Test
     public void ValidateDesktopIsClicked(){
-        checkBoxPage.clickOnNotes();
-        checkBoxPage.clickOnCommand();
+        checkBoxPage.clickOnExpandButton();
+        checkBoxPage.clickInDesktopElements();
         Assert.assertTrue(checkBoxPage.checkBoxDesktopIsClicked());
 
     }
 
     @Test
     public void validateDocumentsIsClicked(){
-        checkBoxPage.clickOnReact();
-        checkBoxPage.clickOnAngular();
-        checkBoxPage.clickOnVeu();
-        checkBoxPage.clickOnPublic();
-        checkBoxPage.clickOnPrivate();
-        checkBoxPage.clickOnClassified();
-        checkBoxPage.clickOnGeneral();
+        checkBoxPage.clickOnExpandButton();
+        checkBoxPage.clickInWorkspaceElements();
+        checkBoxPage.clickInOfficeElements();
         Assert.assertTrue(checkBoxPage.checkDocumentsClicked());
     }
 
     @Test
     public void validateDownloadsIsClicked(){
-        checkBoxPage.clickOnWordFile();
-        checkBoxPage.clickOnExcelFile();
+        checkBoxPage.clickOnExpandButton();
+        checkBoxPage.clickInDownloadElements();
         Assert.assertTrue(checkBoxPage.checkDownloadsClicked());
     }
 

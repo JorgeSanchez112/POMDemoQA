@@ -1,9 +1,7 @@
 package org.Tests;
 
 import TestComponents.BaseTest;
-import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -11,7 +9,6 @@ public class SortableTest extends BaseTest {
     @BeforeMethod
     public void initializeClassAndHidePublicity(){
         sortablePage = homePage.clickOnSectionInteractions().clickOnSortable();
-        sortablePage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
     }
 
     @Test

@@ -2,7 +2,6 @@ package org.Tests;
 
 import TestComponents.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -11,6 +10,11 @@ public class ButtonsPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
        buttonsPage = homePage.clickOnSectionElements().clickOnButtonsSection();
+    }
+
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(buttonsPage.getPageTitleText(),"Buttons");
     }
 
     @Test

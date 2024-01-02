@@ -2,7 +2,6 @@ package org.Tests;
 
 import TestComponents.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,7 +23,6 @@ public class NestedFramesTest extends BaseTest {
         nestedFramesPage.switchToParentFrame();
         nestedFramesPage.switchToChildFrame();
         Assert.assertTrue(nestedFramesPage.validateChildText());
-        nestedFramesPage.switchToDefaultContent();
     }
 
 }

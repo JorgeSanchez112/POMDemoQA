@@ -1,28 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite2]" guice-stage="DEVELOPMENT" verbose="0">
+<suite name="Failed suite [Suite1]" guice-stage="DEVELOPMENT" verbose="0">
   <listeners>
-    <listener class-name="TestComponents.Listeners"/>
+    <listener class-name="Resources.Listeners"/>
+    <listener class-name="Resources.MyTransformer"/>
   </listeners>
-  <test thread-count="5" name="Form(failed)" verbose="0">
-    <parameter name="gender" value="Other"/>
-    <parameter name="month" value="February"/>
-    <parameter name="phone" value="1234567891"/>
-    <parameter name="year" value="2004"/>
-    <parameter name="name" value="name"/>
-    <parameter name="text" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
-    <parameter name="day" value="11"/>
-    <parameter name="email" value="email@test.qaz"/>
-    <parameter name="lastname" value="lastname"/>
+  <test thread-count="5" name="Text Box(failed)" verbose="0">
     <classes>
-      <class name="org.Tests.PracticeFormPageTest">
+      <class name="org.Tests.TextBoxPageTest">
         <methods>
+          <include name="validateAnswer"/>
           <include name="close"/>
           <include name="homePage"/>
-          <include name="validateLabelsStateAndCity"/>
           <include name="initializeClass"/>
         </methods>
-      </class> <!-- org.Tests.PracticeFormPageTest -->
+      </class> <!-- org.Tests.TextBoxPageTest -->
     </classes>
-  </test> <!-- Form(failed) -->
-</suite> <!-- Failed suite [Suite2] -->
+  </test> <!-- Text Box(failed) -->
+  <test thread-count="5" name="Web Tables(failed)" verbose="0">
+    <classes>
+      <class name="org.Tests.WebTablesPageTest">
+        <methods>
+          <include name="homePage"/>
+          <include name="validateCorrectNewRow"/>
+          <include name="close"/>
+          <include name="initializeClass"/>
+        </methods>
+      </class> <!-- org.Tests.WebTablesPageTest -->
+    </classes>
+  </test> <!-- Web Tables(failed) -->
+  <test thread-count="5" name="Links(failed)" verbose="0">
+    <classes>
+      <class name="org.Tests.LinksPageTest">
+        <methods>
+          <include name="homePage"/>
+          <include name="close"/>
+          <include name="validateMovedLink"/>
+          <include name="initializeClass"/>
+        </methods>
+      </class> <!-- org.Tests.LinksPageTest -->
+    </classes>
+  </test> <!-- Links(failed) -->
+  <test thread-count="5" name="Dynamic Properties(failed)" verbose="0">
+    <classes>
+      <class name="org.Tests.DynamicPropertiesTest">
+        <methods>
+          <include name="validateSecondButtonTextColorChange"/>
+          <include name="close"/>
+          <include name="homePage"/>
+          <include name="initializeClass"/>
+        </methods>
+      </class> <!-- org.Tests.DynamicPropertiesTest -->
+    </classes>
+  </test> <!-- Dynamic Properties(failed) -->
+  <test thread-count="5" name="Alerts(failed)" verbose="0">
+    <classes>
+      <class name="org.Tests.AlertsTest">
+        <methods>
+          <include name="validateInputAlert"/>
+          <include name="close"/>
+          <include name="homePage"/>
+          <include name="initializeClass"/>
+          <include name="validateDismissAlert"/>
+          <include name="validateAlertAppear"/>
+        </methods>
+      </class> <!-- org.Tests.AlertsTest -->
+    </classes>
+  </test> <!-- Alerts(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

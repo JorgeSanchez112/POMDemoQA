@@ -2,7 +2,6 @@ package org.Tests;
 
 import TestComponents.BaseTest;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,6 +9,16 @@ public class RadioButtonPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         radioButtonPage = homePage.clickOnSectionElements().clickOnRadioButtonSection();
+    }
+
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(radioButtonPage.getPageTitleText(), "Radio Button");
+    }
+
+    @Test
+    public void validateSubtitleIsVisible(){
+        Assert.assertTrue(radioButtonPage.isSubtitleVisible());
     }
 
     @Test
@@ -26,7 +35,7 @@ public class RadioButtonPageTest extends BaseTest {
 
     @Test
     public void validateDisabledRadioButton(){
-        Assert.assertFalse(radioButtonPage.radioButtonIsEnabled());
+        Assert.assertFalse(radioButtonPage.isRadioButtonEnabled());
     }
 
 }

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Suite2" class="navigator-link">
-              <span class="suite-name border-failed">Suite2</span>
+            <a href="#" panel-name="suite-Suite1" class="navigator-link">
+              <span class="suite-name border-failed">Suite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Suite2" class="navigator-link ">
-                    <span>C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\testSuites\Form.xml</span>
+                  <a href="#" panel-name="test-xml-Suite1" class="navigator-link ">
+                    <span>C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\testSuites\smokeTest.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Suite2" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" panel-name="testlist-Suite1" class="navigator-link ">
+                    <span class="test-stats">19 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Suite2" class="navigator-link ">
+                  <a href="#" panel-name="group-Suite1" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Suite2" class="navigator-link ">
+                  <a href="#" panel-name="times-Suite1" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Suite2" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Suite1" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Suite2" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Suite1" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Suite2" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Suite1" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,21 +92,358 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">63 methods, 4 failed,  15 skipped,  44 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
                     <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite2" class="hide-methods failed suite-Suite2"> (hide)</a> <!-- hide-methods failed suite-Suite2 -->
-                      <a href="#" panel-name="suite-Suite2" class="show-methods failed suite-Suite2"> (show)</a> <!-- show-methods failed suite-Suite2 -->
+                      <a href="#" panel-name="suite-Suite1" class="hide-methods failed suite-Suite1"> (hide)</a> <!-- hide-methods failed suite-Suite1 -->
+                      <a href="#" panel-name="suite-Suite1" class="show-methods failed suite-Suite1"> (show)</a> <!-- show-methods failed suite-Suite1 -->
                     </span>
-                    <div class="method-list-content failed suite-Suite2">
+                    <div class="method-list-content failed suite-Suite1">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite2" title="org.Tests.PracticeFormPageTest" class="method navigator-link" hash-for-method="validateLabelsStateAndCity">validateLabelsStateAndCity</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.TextBoxPageTest" class="method navigator-link" hash-for-method="validateAnswer">validateAnswer</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite2 -->
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.WebTablesPageTest" class="method navigator-link" hash-for-method="validateCorrectNewRow">validateCorrectNewRow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateMovedLink">validateMovedLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.DynamicPropertiesTest" class="method navigator-link" hash-for-method="validateSecondButtonTextColorChange">validateSecondButtonTextColorChange</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite1 -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite1" class="hide-methods skipped suite-Suite1"> (hide)</a> <!-- hide-methods skipped suite-Suite1 -->
+                      <a href="#" panel-name="suite-Suite1" class="show-methods skipped suite-Suite1"> (show)</a> <!-- show-methods skipped suite-Suite1 -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite1">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.AlertsTest" class="method navigator-link" hash-for-method="validateAlertAppear">validateAlertAppear</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.AlertsTest" class="method navigator-link" hash-for-method="validateDismissAlert">validateDismissAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.AlertsTest" class="method navigator-link" hash-for-method="validateInputAlert">validateInputAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite1 -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite1" class="hide-methods skipped suite-Suite1"> (hide)</a> <!-- hide-methods skipped suite-Suite1 -->
+                      <a href="#" panel-name="suite-Suite1" class="show-methods skipped suite-Suite1"> (show)</a> <!-- show-methods skipped suite-Suite1 -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite1">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.TextBoxPageTest" class="method navigator-link" hash-for-method="validateAnswer">validateAnswer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.TextBoxPageTest" class="method navigator-link" hash-for-method="validateAnswer">validateAnswer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.TextBoxPageTest" class="method navigator-link" hash-for-method="validateAnswer">validateAnswer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.WebTablesPageTest" class="method navigator-link" hash-for-method="validateCorrectNewRow">validateCorrectNewRow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.WebTablesPageTest" class="method navigator-link" hash-for-method="validateCorrectNewRow">validateCorrectNewRow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.WebTablesPageTest" class="method navigator-link" hash-for-method="validateCorrectNewRow">validateCorrectNewRow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateMovedLink">validateMovedLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateMovedLink">validateMovedLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateMovedLink">validateMovedLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.DynamicPropertiesTest" class="method navigator-link" hash-for-method="validateSecondButtonTextColorChange">validateSecondButtonTextColorChange</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.DynamicPropertiesTest" class="method navigator-link" hash-for-method="validateSecondButtonTextColorChange">validateSecondButtonTextColorChange</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.DynamicPropertiesTest" class="method navigator-link" hash-for-method="validateSecondButtonTextColorChange">validateSecondButtonTextColorChange</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite1 -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite1" class="hide-methods passed suite-Suite1"> (hide)</a> <!-- hide-methods passed suite-Suite1 -->
+                      <a href="#" panel-name="suite-Suite1" class="show-methods passed suite-Suite1"> (show)</a> <!-- show-methods passed suite-Suite1 -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite1">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.CheckBoxPageTest" class="method navigator-link" hash-for-method="ValidateDesktopIsClicked">ValidateDesktopIsClicked</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.TextBoxPageTest" class="method navigator-link" hash-for-method="typingFieldsForm">typingFieldsForm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.AlertsTest" class="method navigator-link" hash-for-method="validateAlert">validateAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.WebTablesPageTest" class="method navigator-link" hash-for-method="validateAllRowsEmpty">validateAllRowsEmpty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.UploadDownloadTest" class="method navigator-link" hash-for-method="validateArchiveDownloaded">validateArchiveDownloaded</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateBadRequestLink">validateBadRequestLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.BrokenLinksTest" class="method navigator-link" hash-for-method="validateBrokeImage">validateBrokeImage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.BrokenLinksTest" class="method navigator-link" hash-for-method="validateBrokenLink">validateBrokenLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.FramesPageTest" class="method navigator-link" hash-for-method="validateChangeToBigFrame">validateChangeToBigFrame</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.FramesPageTest" class="method navigator-link" hash-for-method="validateChangeToShortFrame">validateChangeToShortFrame</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.ButtonsPageTest" class="method navigator-link" hash-for-method="validateClickInABtn">validateClickInABtn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateCreatedLink">validateCreatedLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.RadioButtonPageTest" class="method navigator-link" hash-for-method="validateDisabledRadioButton">validateDisabledRadioButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.CheckBoxPageTest" class="method navigator-link" hash-for-method="validateDocumentsIsClicked">validateDocumentsIsClicked</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.ButtonsPageTest" class="method navigator-link" hash-for-method="validateDoubleClickInABtn">validateDoubleClickInABtn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.CheckBoxPageTest" class="method navigator-link" hash-for-method="validateDownloadsIsClicked">validateDownloadsIsClicked</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.DynamicPropertiesTest" class="method navigator-link" hash-for-method="validateFirstButtonIsEnable">validateFirstButtonIsEnable</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateForbiddenLink">validateForbiddenLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateHomeETgEzLink">validateHomeETgEzLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateHomeLink">validateHomeLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.BrokenLinksTest" class="method navigator-link" hash-for-method="validateImage">validateImage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.RadioButtonPageTest" class="method navigator-link" hash-for-method="validateImpressiveRadioButton">validateImpressiveRadioButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.BrokenLinksTest" class="method navigator-link" hash-for-method="validateLink">validateLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateNoContentLink">validateNoContentLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateNotFoundLink">validateNotFoundLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.ButtonsPageTest" class="method navigator-link" hash-for-method="validateRightClickInABtn">validateRightClickInABtn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.FormsPageTest" class="method navigator-link" hash-for-method="validateSectionsSize">validateSectionsSize</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.AlertsFrameWindowsPageTest" class="method navigator-link" hash-for-method="validateSectionsSize">validateSectionsSize</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.WidgetsPageTest" class="method navigator-link" hash-for-method="validateSectionsSize">validateSectionsSize</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.InteractionsPageTest" class="method navigator-link" hash-for-method="validateSectionsSize">validateSectionsSize</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.BookStorePageTest" class="method navigator-link" hash-for-method="validateSectionsSize">validateSectionsSize</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.ElementsPageTest" class="method navigator-link" hash-for-method="validateSizeElements">validateSizeElements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.NestedFramesTest" class="method navigator-link" hash-for-method="validateSwitchToChildFrame">validateSwitchToChildFrame</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.NestedFramesTest" class="method navigator-link" hash-for-method="validateSwitchToParentFrame">validateSwitchToParentFrame</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.DynamicPropertiesTest" class="method navigator-link" hash-for-method="validateThirdButtonIsVisible">validateThirdButtonIsVisible</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.BaseHomeTest" class="method navigator-link" hash-for-method="validateURL">validateURL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.ElementsPageTest" class="method navigator-link" hash-for-method="validateURL">validateURL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.FormsPageTest" class="method navigator-link" hash-for-method="validateURL">validateURL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.AlertsFrameWindowsPageTest" class="method navigator-link" hash-for-method="validateURL">validateURL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.WidgetsPageTest" class="method navigator-link" hash-for-method="validateURL">validateURL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.InteractionsPageTest" class="method navigator-link" hash-for-method="validateURL">validateURL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.BookStorePageTest" class="method navigator-link" hash-for-method="validateURL">validateURL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.LinksPageTest" class="method navigator-link" hash-for-method="validateUnauthorizedLink">validateUnauthorizedLink</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1" title="org.Tests.RadioButtonPageTest" class="method navigator-link" hash-for-method="validateYesRadioButton">validateYesRadioButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite1 -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,27 +454,107 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Suite2" class="panel Suite2">
-          <div class="suite-Suite2-class-failed">
+        <div panel-name="suite-Suite1" class="panel Suite1">
+          <div class="suite-Suite1-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">org.Tests.PracticeFormPageTest</span>
+              <span class="class-name">org.Tests.WebTablesPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateLabelsStateAndCity">
-                  </a> <!-- validateLabelsStateAndCity -->
-                  <span class="method-name">validateLabelsStateAndCity</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#stateCity\-labe&quot;}
+                  <a name="validateCorrectNewRow">
+                  </a> <!-- validateCorrectNewRow -->
+                  <span class="method-name">validateCorrectNewRow</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Aleatorio] but found [Cierra]
+	at org.Tests.WebTablesPageTest.validateCorrectNewRow(WebTablesPageTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-failed -->
+          <div class="suite-Suite1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.Tests.LinksPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateMovedLink">
+                  </a> <!-- validateMovedLink -->
+                  <span class="method-name">validateMovedLink</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;moved&quot; href=&quot;javascript:void(0)&quot;&gt;...&lt;/a&gt; is not clickable at point (298, 552). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.71)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1bd4abb236df219130b44e3b0aeaa463, clickElement {id=D79584BBDF23C8BD423032120B1CA8F0_element_41}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63298}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63298/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1bd4abb236df219130b44e3b0aeaa463)] -&gt; link text: Moved]
+Session ID: 1bd4abb236df219130b44e3b0aeaa463
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy34.click(Unknown Source)
+	at Pages.LinksPage.clickOnMovedLink(LinksPage.java:52)
+	at org.Tests.LinksPageTest.validateMovedLink(LinksPageTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-failed -->
+          <div class="suite-Suite1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.Tests.DynamicPropertiesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSecondButtonTextColorChange">
+                  </a> <!-- validateSecondButtonTextColorChange -->
+                  <span class="method-name">validateSecondButtonTextColorChange</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [rgba(220, 53, 69, 1)] but found [rgba(255, 255, 255, 1)]
+	at org.Tests.DynamicPropertiesTest.validateSecondButtonTextColorChange(DynamicPropertiesTest.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-failed -->
+          <div class="suite-Suite1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">org.Tests.TextBoxPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateAnswer">
+                  </a> <!-- validateAnswer -->
+                  <span class="method-name">validateAnswer</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#name&quot;}
   (Session info: chrome=120.0.6099.71)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [03e2c7bf75d60634b2e6a3c4b0a9a8e6, findElement {using=id, value=stateCity-labe}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55086}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55086/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 03e2c7bf75d60634b2e6a3c4b0a9a8e6
+Command: [f29980e87ef200a3abf270e81a1ab3c1, findElement {using=id, value=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60453}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60453/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f29980e87ef200a3abf270e81a1ab3c1
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -151,133 +568,2458 @@ Session ID: 03e2c7bf75d60634b2e6a3c4b0a9a8e6
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy34.getText(Unknown Source)
-	at Pages.PracticeFormPage.getTextOfLabelStateCity(PracticeFormPage.java:251)
-	at org.Tests.PracticeFormPageTest.validateLabelsStateAndCity(PracticeFormPageTest.java:68)
+	at com.sun.proxy.$Proxy34.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
+	at TestComponents.BasePages.scroll(BasePages.java:39)
+	at Pages.TextBoxPage.getTextNameAnswer(TextBoxPage.java:63)
+	at org.Tests.TextBoxPageTest.validateAnswer(TextBoxPageTest.java:25)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 ... Removed 35 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite2-class-failed -->
-        </div> <!-- panel Suite2 -->
-        <div panel-name="test-xml-Suite2" class="panel">
+          </div> <!-- suite-Suite1-class-failed -->
+          <div class="suite-Suite1-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">org.Tests.WebTablesPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateCorrectNewRow">
+                  </a> <!-- validateCorrectNewRow -->
+                  <span class="method-name">validateCorrectNewRow</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Aleatorio] but found [Cierra]
+	at org.Tests.WebTablesPageTest.validateCorrectNewRow(WebTablesPageTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateCorrectNewRow">
+                  </a> <!-- validateCorrectNewRow -->
+                  <span class="method-name">validateCorrectNewRow</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Aleatorio] but found [Cierra]
+	at org.Tests.WebTablesPageTest.validateCorrectNewRow(WebTablesPageTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateCorrectNewRow">
+                  </a> <!-- validateCorrectNewRow -->
+                  <span class="method-name">validateCorrectNewRow</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Aleatorio] but found [Cierra]
+	at org.Tests.WebTablesPageTest.validateCorrectNewRow(WebTablesPageTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-skipped -->
+          <div class="suite-Suite1-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">org.Tests.LinksPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateMovedLink">
+                  </a> <!-- validateMovedLink -->
+                  <span class="method-name">validateMovedLink</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;moved&quot; href=&quot;javascript:void(0)&quot;&gt;...&lt;/a&gt; is not clickable at point (298, 552). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.71)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [675f53cc9daafb635a073047228b5752, clickElement {id=665873FB3B06B89899614EF306122E3B_element_44}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62929}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62929/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (675f53cc9daafb635a073047228b5752)] -&gt; link text: Moved]
+Session ID: 675f53cc9daafb635a073047228b5752
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy34.click(Unknown Source)
+	at Pages.LinksPage.clickOnMovedLink(LinksPage.java:52)
+	at org.Tests.LinksPageTest.validateMovedLink(LinksPageTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateMovedLink">
+                  </a> <!-- validateMovedLink -->
+                  <span class="method-name">validateMovedLink</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;moved&quot; href=&quot;javascript:void(0)&quot;&gt;...&lt;/a&gt; is not clickable at point (298, 552). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.71)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5964e50259cb131218b64403f194f0c1, clickElement {id=0A0B526821F5920E08ED6B967302C229_element_39}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63062}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63062/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5964e50259cb131218b64403f194f0c1)] -&gt; link text: Moved]
+Session ID: 5964e50259cb131218b64403f194f0c1
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy34.click(Unknown Source)
+	at Pages.LinksPage.clickOnMovedLink(LinksPage.java:52)
+	at org.Tests.LinksPageTest.validateMovedLink(LinksPageTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateMovedLink">
+                  </a> <!-- validateMovedLink -->
+                  <span class="method-name">validateMovedLink</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;moved&quot; href=&quot;javascript:void(0)&quot;&gt;...&lt;/a&gt; is not clickable at point (298, 552). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.71)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [29d71aa8fcf39429ee0896cc87539d49, clickElement {id=C3FBE1A70CC7AABE43F7AB5AD59EE709_element_41}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63188}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63188/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (29d71aa8fcf39429ee0896cc87539d49)] -&gt; link text: Moved]
+Session ID: 29d71aa8fcf39429ee0896cc87539d49
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy34.click(Unknown Source)
+	at Pages.LinksPage.clickOnMovedLink(LinksPage.java:52)
+	at org.Tests.LinksPageTest.validateMovedLink(LinksPageTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-skipped -->
+          <div class="suite-Suite1-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">org.Tests.DynamicPropertiesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSecondButtonTextColorChange">
+                  </a> <!-- validateSecondButtonTextColorChange -->
+                  <span class="method-name">validateSecondButtonTextColorChange</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [rgba(220, 53, 69, 1)] but found [rgba(255, 255, 255, 1)]
+	at org.Tests.DynamicPropertiesTest.validateSecondButtonTextColorChange(DynamicPropertiesTest.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSecondButtonTextColorChange">
+                  </a> <!-- validateSecondButtonTextColorChange -->
+                  <span class="method-name">validateSecondButtonTextColorChange</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [rgba(220, 53, 69, 1)] but found [rgba(255, 255, 255, 1)]
+	at org.Tests.DynamicPropertiesTest.validateSecondButtonTextColorChange(DynamicPropertiesTest.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSecondButtonTextColorChange">
+                  </a> <!-- validateSecondButtonTextColorChange -->
+                  <span class="method-name">validateSecondButtonTextColorChange</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [rgba(220, 53, 69, 1)] but found [rgba(255, 255, 255, 1)]
+	at org.Tests.DynamicPropertiesTest.validateSecondButtonTextColorChange(DynamicPropertiesTest.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-skipped -->
+          <div class="suite-Suite1-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">org.Tests.TextBoxPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateAnswer">
+                  </a> <!-- validateAnswer -->
+                  <span class="method-name">validateAnswer</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#name&quot;}
+  (Session info: chrome=120.0.6099.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f9d5aaa7b1cfa1a131841ec6b8c9bd11, findElement {using=id, value=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60367}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60367/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f9d5aaa7b1cfa1a131841ec6b8c9bd11
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy34.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
+	at TestComponents.BasePages.scroll(BasePages.java:39)
+	at Pages.TextBoxPage.getTextNameAnswer(TextBoxPage.java:63)
+	at org.Tests.TextBoxPageTest.validateAnswer(TextBoxPageTest.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateAnswer">
+                  </a> <!-- validateAnswer -->
+                  <span class="method-name">validateAnswer</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#name&quot;}
+  (Session info: chrome=120.0.6099.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [afce733f98edfe0c02a1da5dc9f81771, findElement {using=id, value=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60274}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60274/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: afce733f98edfe0c02a1da5dc9f81771
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy34.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
+	at TestComponents.BasePages.scroll(BasePages.java:39)
+	at Pages.TextBoxPage.getTextNameAnswer(TextBoxPage.java:63)
+	at org.Tests.TextBoxPageTest.validateAnswer(TextBoxPageTest.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateAnswer">
+                  </a> <!-- validateAnswer -->
+                  <span class="method-name">validateAnswer</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#name&quot;}
+  (Session info: chrome=120.0.6099.71)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [db269c9732ff07cb2838dd7ca51af5df, findElement {using=id, value=name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60176}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60176/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db269c9732ff07cb2838dd7ca51af5df
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy34.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:465)
+	at TestComponents.BasePages.scroll(BasePages.java:39)
+	at Pages.TextBoxPage.getTextNameAnswer(TextBoxPage.java:63)
+	at org.Tests.TextBoxPageTest.validateAnswer(TextBoxPageTest.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-skipped -->
+          <div class="suite-Suite1-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">org.Tests.AlertsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateAlertAppear">
+                  </a> <!-- validateAlertAppear -->
+                  <span class="method-name">validateAlertAppear</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li class=&quot;btn btn-light &quot; id=&quot;item-1&quot;&gt;...&lt;/li&gt; is not clickable at point (133, 510). Other element would receive the click: &lt;footer&gt;...&lt;/footer&gt;
+  (Session info: chrome=120.0.6099.71)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [335f397e31594db104fe51ae654c7a98, clickElement {id=F2BE4C0B6E25958BA8E9ACCB113C8A7D_element_27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65103}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65103/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (335f397e31594db104fe51ae654c7a98)] -&gt; css selector: .collapse.show &gt; .menu-list &gt; *]
+Session ID: 335f397e31594db104fe51ae654c7a98
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Pages.AlertsFrameWindowsPage.clickOnAlerts(AlertsFrameWindowsPage.java:36)
+	at org.Tests.AlertsTest.initializeClass(AlertsTest.java:11)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDismissAlert">
+                  </a> <!-- validateDismissAlert -->
+                  <span class="method-name">validateDismissAlert</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li class=&quot;btn btn-light &quot; id=&quot;item-1&quot;&gt;...&lt;/li&gt; is not clickable at point (133, 510). Other element would receive the click: &lt;footer&gt;...&lt;/footer&gt;
+  (Session info: chrome=120.0.6099.71)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [335f397e31594db104fe51ae654c7a98, clickElement {id=F2BE4C0B6E25958BA8E9ACCB113C8A7D_element_27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65103}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65103/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (335f397e31594db104fe51ae654c7a98)] -&gt; css selector: .collapse.show &gt; .menu-list &gt; *]
+Session ID: 335f397e31594db104fe51ae654c7a98
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Pages.AlertsFrameWindowsPage.clickOnAlerts(AlertsFrameWindowsPage.java:36)
+	at org.Tests.AlertsTest.initializeClass(AlertsTest.java:11)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateInputAlert">
+                  </a> <!-- validateInputAlert -->
+                  <span class="method-name">validateInputAlert</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li class=&quot;btn btn-light &quot; id=&quot;item-1&quot;&gt;...&lt;/li&gt; is not clickable at point (133, 510). Other element would receive the click: &lt;footer&gt;...&lt;/footer&gt;
+  (Session info: chrome=120.0.6099.71)
+Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [335f397e31594db104fe51ae654c7a98, clickElement {id=F2BE4C0B6E25958BA8E9ACCB113C8A7D_element_27}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65103}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65103/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (335f397e31594db104fe51ae654c7a98)] -&gt; css selector: .collapse.show &gt; .menu-list &gt; *]
+Session ID: 335f397e31594db104fe51ae654c7a98
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Pages.AlertsFrameWindowsPage.clickOnAlerts(AlertsFrameWindowsPage.java:36)
+	at org.Tests.AlertsTest.initializeClass(AlertsTest.java:11)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-skipped -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.NestedFramesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSwitchToChildFrame">
+                  </a> <!-- validateSwitchToChildFrame -->
+                  <span class="method-name">validateSwitchToChildFrame</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSwitchToParentFrame">
+                  </a> <!-- validateSwitchToParentFrame -->
+                  <span class="method-name">validateSwitchToParentFrame</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.BrokenLinksTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateBrokeImage">
+                  </a> <!-- validateBrokeImage -->
+                  <span class="method-name">validateBrokeImage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateBrokenLink">
+                  </a> <!-- validateBrokenLink -->
+                  <span class="method-name">validateBrokenLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateImage">
+                  </a> <!-- validateImage -->
+                  <span class="method-name">validateImage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateLink">
+                  </a> <!-- validateLink -->
+                  <span class="method-name">validateLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.FramesPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateChangeToBigFrame">
+                  </a> <!-- validateChangeToBigFrame -->
+                  <span class="method-name">validateChangeToBigFrame</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateChangeToShortFrame">
+                  </a> <!-- validateChangeToShortFrame -->
+                  <span class="method-name">validateChangeToShortFrame</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.WidgetsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSectionsSize">
+                  </a> <!-- validateSectionsSize -->
+                  <span class="method-name">validateSectionsSize</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateURL">
+                  </a> <!-- validateURL -->
+                  <span class="method-name">validateURL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.ElementsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSizeElements">
+                  </a> <!-- validateSizeElements -->
+                  <span class="method-name">validateSizeElements</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateURL">
+                  </a> <!-- validateURL -->
+                  <span class="method-name">validateURL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.RadioButtonPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDisabledRadioButton">
+                  </a> <!-- validateDisabledRadioButton -->
+                  <span class="method-name">validateDisabledRadioButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateImpressiveRadioButton">
+                  </a> <!-- validateImpressiveRadioButton -->
+                  <span class="method-name">validateImpressiveRadioButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateYesRadioButton">
+                  </a> <!-- validateYesRadioButton -->
+                  <span class="method-name">validateYesRadioButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.TextBoxPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="typingFieldsForm">
+                  </a> <!-- typingFieldsForm -->
+                  <span class="method-name">typingFieldsForm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.BaseHomeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateURL">
+                  </a> <!-- validateURL -->
+                  <span class="method-name">validateURL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.AlertsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateAlert">
+                  </a> <!-- validateAlert -->
+                  <span class="method-name">validateAlert</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.InteractionsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSectionsSize">
+                  </a> <!-- validateSectionsSize -->
+                  <span class="method-name">validateSectionsSize</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateURL">
+                  </a> <!-- validateURL -->
+                  <span class="method-name">validateURL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.BookStorePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSectionsSize">
+                  </a> <!-- validateSectionsSize -->
+                  <span class="method-name">validateSectionsSize</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateURL">
+                  </a> <!-- validateURL -->
+                  <span class="method-name">validateURL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.UploadDownloadTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateArchiveDownloaded">
+                  </a> <!-- validateArchiveDownloaded -->
+                  <span class="method-name">validateArchiveDownloaded</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.WebTablesPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateAllRowsEmpty">
+                  </a> <!-- validateAllRowsEmpty -->
+                  <span class="method-name">validateAllRowsEmpty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.LinksPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateBadRequestLink">
+                  </a> <!-- validateBadRequestLink -->
+                  <span class="method-name">validateBadRequestLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateCreatedLink">
+                  </a> <!-- validateCreatedLink -->
+                  <span class="method-name">validateCreatedLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateForbiddenLink">
+                  </a> <!-- validateForbiddenLink -->
+                  <span class="method-name">validateForbiddenLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateHomeETgEzLink">
+                  </a> <!-- validateHomeETgEzLink -->
+                  <span class="method-name">validateHomeETgEzLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateHomeLink">
+                  </a> <!-- validateHomeLink -->
+                  <span class="method-name">validateHomeLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateNoContentLink">
+                  </a> <!-- validateNoContentLink -->
+                  <span class="method-name">validateNoContentLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateNotFoundLink">
+                  </a> <!-- validateNotFoundLink -->
+                  <span class="method-name">validateNotFoundLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateUnauthorizedLink">
+                  </a> <!-- validateUnauthorizedLink -->
+                  <span class="method-name">validateUnauthorizedLink</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.AlertsFrameWindowsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSectionsSize">
+                  </a> <!-- validateSectionsSize -->
+                  <span class="method-name">validateSectionsSize</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateURL">
+                  </a> <!-- validateURL -->
+                  <span class="method-name">validateURL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.FormsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSectionsSize">
+                  </a> <!-- validateSectionsSize -->
+                  <span class="method-name">validateSectionsSize</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateURL">
+                  </a> <!-- validateURL -->
+                  <span class="method-name">validateURL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.DynamicPropertiesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateFirstButtonIsEnable">
+                  </a> <!-- validateFirstButtonIsEnable -->
+                  <span class="method-name">validateFirstButtonIsEnable</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateThirdButtonIsVisible">
+                  </a> <!-- validateThirdButtonIsVisible -->
+                  <span class="method-name">validateThirdButtonIsVisible</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.ButtonsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateClickInABtn">
+                  </a> <!-- validateClickInABtn -->
+                  <span class="method-name">validateClickInABtn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDoubleClickInABtn">
+                  </a> <!-- validateDoubleClickInABtn -->
+                  <span class="method-name">validateDoubleClickInABtn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateRightClickInABtn">
+                  </a> <!-- validateRightClickInABtn -->
+                  <span class="method-name">validateRightClickInABtn</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+          <div class="suite-Suite1-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.Tests.CheckBoxPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ValidateDesktopIsClicked">
+                  </a> <!-- ValidateDesktopIsClicked -->
+                  <span class="method-name">ValidateDesktopIsClicked</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDocumentsIsClicked">
+                  </a> <!-- validateDocumentsIsClicked -->
+                  <span class="method-name">validateDocumentsIsClicked</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDownloadsIsClicked">
+                  </a> <!-- validateDownloadsIsClicked -->
+                  <span class="method-name">validateDownloadsIsClicked</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1-class-passed -->
+        </div> <!-- panel Suite1 -->
+        <div panel-name="test-xml-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\testSuites\Form.xml</span>
+            <span class="header-content">C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\testSuites\smokeTest.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite2&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite name=&quot;Suite1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;TestComponents.Listeners&quot;/&gt;
+    &lt;listener class-name=&quot;Resources.Listeners&quot;/&gt;
+    &lt;listener class-name=&quot;Resources.MyTransformer&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Form&quot; verbose=&quot;0&quot;&gt;
-    &lt;parameter name=&quot;gender&quot; value=&quot;Other&quot;/&gt;
-    &lt;parameter name=&quot;month&quot; value=&quot;February&quot;/&gt;
-    &lt;parameter name=&quot;phone&quot; value=&quot;1234567891&quot;/&gt;
-    &lt;parameter name=&quot;year&quot; value=&quot;2004&quot;/&gt;
-    &lt;parameter name=&quot;name&quot; value=&quot;name&quot;/&gt;
-    &lt;parameter name=&quot;text&quot; value=&quot;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&quot;/&gt;
-    &lt;parameter name=&quot;day&quot; value=&quot;11&quot;/&gt;
-    &lt;parameter name=&quot;email&quot; value=&quot;email@test.qaz&quot;/&gt;
-    &lt;parameter name=&quot;lastname&quot; value=&quot;lastname&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;home&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.Tests.PracticeFormPageTest&quot;/&gt;
+      &lt;class name=&quot;org.Tests.BaseHomeTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Form --&gt;
-&lt;/suite&gt; &lt;!-- Suite2 --&gt;
+  &lt;/test&gt; &lt;!-- home --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;elements&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.ElementsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- elements --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;forms&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.FormsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- forms --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;alerts,frame and windows&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.AlertsFrameWindowsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- alerts,frame and windows --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;widgets&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.WidgetsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- widgets --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;interactions&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.InteractionsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- interactions --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Book Store Application&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.BookStorePageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Book Store Application --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Text Box&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.TextBoxPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Text Box --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Check Box&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.CheckBoxPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Check Box --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Radio Button&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.RadioButtonPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Radio Button --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Web Tables&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.WebTablesPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Web Tables --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Buttons&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.ButtonsPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Buttons --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Links&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.LinksPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Links --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Broken Links - Images&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.BrokenLinksTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Broken Links - Images --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Upload and Download&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.UploadDownloadTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Upload and Download --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Dynamic Properties&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.DynamicPropertiesTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Dynamic Properties --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Alerts&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.AlertsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Alerts --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Frames&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.FramesPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Frames --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Nested Frames&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.Tests.NestedFramesTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Nested Frames --&gt;
+&lt;/suite&gt; &lt;!-- Suite1 --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Suite2" class="panel">
+        <div panel-name="testlist-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Suite2</span>
+            <span class="header-content">Tests for Suite1</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Form (1 class)</span>
+                <span class="test-name">home (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">elements (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">forms (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">alerts,frame and windows (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">widgets (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">interactions (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Book Store Application (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Text Box (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Check Box (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Radio Button (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Web Tables (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Buttons (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Links (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Broken Links - Images (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Upload and Download (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Dynamic Properties (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Alerts (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Frames (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Nested Frames (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Suite2" class="panel">
+        <div panel-name="group-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Suite2</span>
+            <span class="header-content">Groups for Suite1</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Suite2" class="panel">
+        <div panel-name="times-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Suite2</span>
+            <span class="header-content">Times for Suite1</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Suite2');
-function tableData_Suite2() {
+suiteTableInitFunctions.push('tableData_Suite1');
+function tableData_Suite1() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(63);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateLabelsStateAndCity')
-data.setCell(0, 2, 'org.Tests.PracticeFormPageTest')
-data.setCell(0, 3, 240);
-window.suiteTableData['Suite2']= { tableData: data, tableDiv: 'times-div-Suite2'}
+data.setCell(0, 1, 'validateSwitchToParentFrame')
+data.setCell(0, 2, 'org.Tests.NestedFramesTest')
+data.setCell(0, 3, 9380);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validateCorrectNewRow')
+data.setCell(1, 2, 'org.Tests.WebTablesPageTest')
+data.setCell(1, 3, 7999);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validateCorrectNewRow')
+data.setCell(2, 2, 'org.Tests.WebTablesPageTest')
+data.setCell(2, 3, 7308);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validateCorrectNewRow')
+data.setCell(3, 2, 'org.Tests.WebTablesPageTest')
+data.setCell(3, 3, 6949);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateDoubleClickInABtn')
+data.setCell(4, 2, 'org.Tests.ButtonsPageTest')
+data.setCell(4, 3, 6845);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'validateChangeToShortFrame')
+data.setCell(5, 2, 'org.Tests.FramesPageTest')
+data.setCell(5, 3, 5648);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'validateThirdButtonIsVisible')
+data.setCell(6, 2, 'org.Tests.DynamicPropertiesTest')
+data.setCell(6, 3, 5368);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'validateFirstButtonIsEnable')
+data.setCell(7, 2, 'org.Tests.DynamicPropertiesTest')
+data.setCell(7, 3, 5358);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'validateCorrectNewRow')
+data.setCell(8, 2, 'org.Tests.WebTablesPageTest')
+data.setCell(8, 3, 5322);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'validateNotFoundLink')
+data.setCell(9, 2, 'org.Tests.LinksPageTest')
+data.setCell(9, 3, 5203);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'validateMovedLink')
+data.setCell(10, 2, 'org.Tests.LinksPageTest')
+data.setCell(10, 3, 4983);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'validateAllRowsEmpty')
+data.setCell(11, 2, 'org.Tests.WebTablesPageTest')
+data.setCell(11, 3, 4897);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'typingFieldsForm')
+data.setCell(12, 2, 'org.Tests.TextBoxPageTest')
+data.setCell(12, 3, 4877);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'validateBrokeImage')
+data.setCell(13, 2, 'org.Tests.BrokenLinksTest')
+data.setCell(13, 3, 4097);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'validateDocumentsIsClicked')
+data.setCell(14, 2, 'org.Tests.CheckBoxPageTest')
+data.setCell(14, 3, 3912);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'validateSwitchToChildFrame')
+data.setCell(15, 2, 'org.Tests.NestedFramesTest')
+data.setCell(15, 3, 3221);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'validateURL')
+data.setCell(16, 2, 'org.Tests.ElementsPageTest')
+data.setCell(16, 3, 3122);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'validateYesRadioButton')
+data.setCell(17, 2, 'org.Tests.RadioButtonPageTest')
+data.setCell(17, 3, 2526);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'validateHomeLink')
+data.setCell(18, 2, 'org.Tests.LinksPageTest')
+data.setCell(18, 3, 2483);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'validateImpressiveRadioButton')
+data.setCell(19, 2, 'org.Tests.RadioButtonPageTest')
+data.setCell(19, 3, 2248);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'validateUnauthorizedLink')
+data.setCell(20, 2, 'org.Tests.LinksPageTest')
+data.setCell(20, 3, 2088);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'validateForbiddenLink')
+data.setCell(21, 2, 'org.Tests.LinksPageTest')
+data.setCell(21, 3, 1990);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'validateCreatedLink')
+data.setCell(22, 2, 'org.Tests.LinksPageTest')
+data.setCell(22, 3, 1879);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'validateMovedLink')
+data.setCell(23, 2, 'org.Tests.LinksPageTest')
+data.setCell(23, 3, 1847);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'validateURL')
+data.setCell(24, 2, 'org.Tests.BookStorePageTest')
+data.setCell(24, 3, 1803);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'validateNoContentLink')
+data.setCell(25, 2, 'org.Tests.LinksPageTest')
+data.setCell(25, 3, 1765);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'validateBadRequestLink')
+data.setCell(26, 2, 'org.Tests.LinksPageTest')
+data.setCell(26, 3, 1761);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'validateMovedLink')
+data.setCell(27, 2, 'org.Tests.LinksPageTest')
+data.setCell(27, 3, 1673);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'validateMovedLink')
+data.setCell(28, 2, 'org.Tests.LinksPageTest')
+data.setCell(28, 3, 1630);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'validateAlert')
+data.setCell(29, 2, 'org.Tests.AlertsTest')
+data.setCell(29, 3, 1511);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'validateAnswer')
+data.setCell(30, 2, 'org.Tests.TextBoxPageTest')
+data.setCell(30, 3, 1506);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'validateDownloadsIsClicked')
+data.setCell(31, 2, 'org.Tests.CheckBoxPageTest')
+data.setCell(31, 3, 1404);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'validateRightClickInABtn')
+data.setCell(32, 2, 'org.Tests.ButtonsPageTest')
+data.setCell(32, 3, 1384);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'validateAnswer')
+data.setCell(33, 2, 'org.Tests.TextBoxPageTest')
+data.setCell(33, 3, 1279);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'validateChangeToBigFrame')
+data.setCell(34, 2, 'org.Tests.FramesPageTest')
+data.setCell(34, 3, 1263);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'validateSectionsSize')
+data.setCell(35, 2, 'org.Tests.WidgetsPageTest')
+data.setCell(35, 3, 1226);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'validateClickInABtn')
+data.setCell(36, 2, 'org.Tests.ButtonsPageTest')
+data.setCell(36, 3, 1183);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'validateSectionsSize')
+data.setCell(37, 2, 'org.Tests.BookStorePageTest')
+data.setCell(37, 3, 1143);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'ValidateDesktopIsClicked')
+data.setCell(38, 2, 'org.Tests.CheckBoxPageTest')
+data.setCell(38, 3, 1122);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'validateImage')
+data.setCell(39, 2, 'org.Tests.BrokenLinksTest')
+data.setCell(39, 3, 1021);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'validateAnswer')
+data.setCell(40, 2, 'org.Tests.TextBoxPageTest')
+data.setCell(40, 3, 936);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'validateArchiveDownloaded')
+data.setCell(41, 2, 'org.Tests.UploadDownloadTest')
+data.setCell(41, 3, 730);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'validateLink')
+data.setCell(42, 2, 'org.Tests.BrokenLinksTest')
+data.setCell(42, 3, 642);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'validateBrokenLink')
+data.setCell(43, 2, 'org.Tests.BrokenLinksTest')
+data.setCell(43, 3, 562);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'validateHomeETgEzLink')
+data.setCell(44, 2, 'org.Tests.LinksPageTest')
+data.setCell(44, 3, 300);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'validateAnswer')
+data.setCell(45, 2, 'org.Tests.TextBoxPageTest')
+data.setCell(45, 3, 243);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'validateSecondButtonTextColorChange')
+data.setCell(46, 2, 'org.Tests.DynamicPropertiesTest')
+data.setCell(46, 3, 179);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'validateSecondButtonTextColorChange')
+data.setCell(47, 2, 'org.Tests.DynamicPropertiesTest')
+data.setCell(47, 3, 141);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'validateDisabledRadioButton')
+data.setCell(48, 2, 'org.Tests.RadioButtonPageTest')
+data.setCell(48, 3, 135);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'validateSectionsSize')
+data.setCell(49, 2, 'org.Tests.AlertsFrameWindowsPageTest')
+data.setCell(49, 3, 131);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'validateSecondButtonTextColorChange')
+data.setCell(50, 2, 'org.Tests.DynamicPropertiesTest')
+data.setCell(50, 3, 120);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'validateSecondButtonTextColorChange')
+data.setCell(51, 2, 'org.Tests.DynamicPropertiesTest')
+data.setCell(51, 3, 88);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'validateURL')
+data.setCell(52, 2, 'org.Tests.AlertsFrameWindowsPageTest')
+data.setCell(52, 3, 87);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'validateSizeElements')
+data.setCell(53, 2, 'org.Tests.ElementsPageTest')
+data.setCell(53, 3, 77);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'validateURL')
+data.setCell(54, 2, 'org.Tests.BaseHomeTest')
+data.setCell(54, 3, 68);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'validateSectionsSize')
+data.setCell(55, 2, 'org.Tests.FormsPageTest')
+data.setCell(55, 3, 56);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'validateSectionsSize')
+data.setCell(56, 2, 'org.Tests.InteractionsPageTest')
+data.setCell(56, 3, 49);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'validateURL')
+data.setCell(57, 2, 'org.Tests.InteractionsPageTest')
+data.setCell(57, 3, 42);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'validateURL')
+data.setCell(58, 2, 'org.Tests.WidgetsPageTest')
+data.setCell(58, 3, 26);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'validateURL')
+data.setCell(59, 2, 'org.Tests.FormsPageTest')
+data.setCell(59, 3, 24);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'validateInputAlert')
+data.setCell(60, 2, 'org.Tests.AlertsTest')
+data.setCell(60, 3, 1);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'validateDismissAlert')
+data.setCell(61, 2, 'org.Tests.AlertsTest')
+data.setCell(61, 3, 0);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'validateAlertAppear')
+data.setCell(62, 2, 'org.Tests.AlertsTest')
+data.setCell(62, 3, 0);
+window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 240 ms</span>
-              <div id="times-div-Suite2">
-              </div> <!-- times-div-Suite2 -->
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-Suite1">
+              </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Suite2" class="panel">
+        <div panel-name="reporter-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Suite2</span>
+            <span class="header-content">Reporter output for Suite1</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Suite2" class="panel">
+        <div panel-name="ignored-methods-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Suite2" class="panel">
+        <div panel-name="chronological-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.Tests.PracticeFormPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">org.Tests.BaseHomeTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">homePage</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateURL</span>
+                <span class="method-start">25605 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">25691 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.ElementsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">29217 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeClass</span>
-                <span class="method-start">20078 ms</span>
+                <span class="method-start">61708 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSizeElements</span>
+                <span class="method-start">63315 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">63401 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">64692 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">80388 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateURL</span>
+                <span class="method-start">81014 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">84141 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.FormsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">85153 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">102222 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSectionsSize</span>
+                <span class="method-start">103115 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">103181 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">104273 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">121427 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateURL</span>
+                <span class="method-start">125714 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">125744 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.AlertsFrameWindowsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">127074 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">143136 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSectionsSize</span>
+                <span class="method-start">144238 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">144375 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">146036 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">161750 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateURL</span>
+                <span class="method-start">162235 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">162328 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.WidgetsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">163127 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">177596 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSectionsSize</span>
+                <span class="method-start">178059 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">179287 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">179990 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">195180 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateURL</span>
+                <span class="method-start">195590 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">195617 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.InteractionsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">196199 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">210878 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSectionsSize</span>
+                <span class="method-start">211635 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">211685 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">212381 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">226105 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateURL</span>
+                <span class="method-start">226699 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">226742 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.BookStorePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">227708 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">243239 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSectionsSize</span>
+                <span class="method-start">244185 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">245329 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">245994 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">260646 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateURL</span>
+                <span class="method-start">261161 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">262970 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.TextBoxPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">263763 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">279242 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">typingFieldsForm</span>
+                <span class="method-start">280398 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">285276 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">285977 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">300775 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateAnswer</span>
+                <span class="method-start">302659 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">303953 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">304454 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">322848 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateAnswer</span>
+                <span class="method-start">323789 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">324728 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">326645 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">344012 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateAnswer</span>
+                <span class="method-start">346009 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">347518 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">348170 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">366780 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validateLabelsStateAndCity</span>
-                <span class="method-start">21242 ms</span>
+                <span class="method-name">validateAnswer</span>
+                <span class="method-start">369182 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">close</span>
-                <span class="method-start">23755 ms</span>
+                <span class="method-start">379848 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.CheckBoxPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">380886 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">409308 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">ValidateDesktopIsClicked</span>
+                <span class="method-start">414582 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">415707 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">417760 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">437533 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateDocumentsIsClicked</span>
+                <span class="method-start">442850 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">446766 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">447541 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">464728 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateDownloadsIsClicked</span>
+                <span class="method-start">468448 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">469853 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.RadioButtonPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">470736 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">495031 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateDisabledRadioButton</span>
+                <span class="method-start">501304 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">501443 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">502280 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">519933 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateImpressiveRadioButton</span>
+                <span class="method-start">521393 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">523643 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">524792 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">541743 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateYesRadioButton</span>
+                <span class="method-start">547415 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">549942 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.WebTablesPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">552374 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">577147 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateAllRowsEmpty</span>
+                <span class="method-start">579830 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">584729 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">586763 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">623316 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateCorrectNewRow</span>
+                <span class="method-start">626067 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">633380 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">634650 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">656780 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateCorrectNewRow</span>
+                <span class="method-start">658796 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">666796 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">667491 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">691431 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateCorrectNewRow</span>
+                <span class="method-start">693459 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">700409 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">701342 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">721671 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateCorrectNewRow</span>
+                <span class="method-start">727362 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">750376 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.ButtonsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">754172 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">790283 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateClickInABtn</span>
+                <span class="method-start">799538 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">800730 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">801773 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">857785 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateDoubleClickInABtn</span>
+                <span class="method-start">859315 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">866187 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">867631 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">962999 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateRightClickInABtn</span>
+                <span class="method-start">978778 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">980163 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.LinksPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">994894 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1076419 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateBadRequestLink</span>
+                <span class="method-start">1090348 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1092110 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1096579 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1113741 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateCreatedLink</span>
+                <span class="method-start">1116969 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1118849 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1119398 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1134024 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateForbiddenLink</span>
+                <span class="method-start">1136399 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1138391 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1138931 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1157007 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateHomeETgEzLink</span>
+                <span class="method-start">1161355 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1161662 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1162951 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1199839 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateHomeLink</span>
+                <span class="method-start">1201953 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1204437 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1209033 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1234844 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateMovedLink</span>
+                <span class="method-start">1243388 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1245238 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1247849 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1274640 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateMovedLink</span>
+                <span class="method-start">1276964 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1281948 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1282900 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1300366 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateMovedLink</span>
+                <span class="method-start">1304247 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1305878 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1309294 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1328378 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateMovedLink</span>
+                <span class="method-start">1333565 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1343287 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1343647 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1363616 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateNoContentLink</span>
+                <span class="method-start">1368841 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1370608 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1372649 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1391694 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateNotFoundLink</span>
+                <span class="method-start">1394538 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1399742 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1400664 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1418709 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateUnauthorizedLink</span>
+                <span class="method-start">1424792 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1426882 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.BrokenLinksTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1428827 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1458973 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateBrokeImage</span>
+                <span class="method-start">1466542 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1470640 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1471394 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1487853 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateBrokenLink</span>
+                <span class="method-start">1492505 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1493068 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1493688 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1509109 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateImage</span>
+                <span class="method-start">1511239 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1512262 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1512907 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1527802 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateLink</span>
+                <span class="method-start">1531492 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1532135 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.UploadDownloadTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1532851 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1548686 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateArchiveDownloaded</span>
+                <span class="method-start">1550539 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1551270 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.DynamicPropertiesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1552196 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1570399 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateFirstButtonIsEnable</span>
+                <span class="method-start">1573856 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1579216 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1579815 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1596370 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSecondButtonTextColorChange</span>
+                <span class="method-start">1598325 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1598505 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1599054 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1614445 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSecondButtonTextColorChange</span>
+                <span class="method-start">1616708 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1616797 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1617284 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1631775 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSecondButtonTextColorChange</span>
+                <span class="method-start">1635865 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1636011 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1636603 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1653897 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateSecondButtonTextColorChange</span>
+                <span class="method-start">1656306 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1664843 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1666031 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1683242 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateThirdButtonIsVisible</span>
+                <span class="method-start">1687847 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1693216 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.AlertsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1694006 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1710248 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateAlert</span>
+                <span class="method-start">1713006 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1714525 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1715252 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1730990 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1733972 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1733976 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1733976 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1733978 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1733981 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1733982 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1733986 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.FramesPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1734866 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1754412 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateChangeToBigFrame</span>
+                <span class="method-start">1761764 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1763029 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1770378 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1803149 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateChangeToShortFrame</span>
+                <span class="method-start">1806577 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1812226 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.Tests.NestedFramesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1817733 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1840526 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSwitchToChildFrame</span>
+                <span class="method-start">1843320 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1846542 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">homePage</span>
+                <span class="method-start">1848517 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">1872210 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateSwitchToParentFrame</span>
+                <span class="method-start">1873975 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">close</span>
+                <span class="method-start">1883357 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
