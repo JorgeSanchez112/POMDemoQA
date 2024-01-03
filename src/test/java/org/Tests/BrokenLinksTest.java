@@ -13,6 +13,12 @@ public class BrokenLinksTest extends BaseTest {
         brokenLinks = homePage.clickOnSectionElements().clickOnBrokenLinksImageSection();
     }
 
+
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(brokenLinks.getPageTitleText(),"Broken Links - Images");
+    }
+
     @Test
     public void validateImage() throws IOException {
         Assert.assertTrue(brokenLinks.isDisplayedValidImage());

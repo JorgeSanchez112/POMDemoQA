@@ -46,9 +46,14 @@ public class BasePages {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public void waitForCSS(WebElement element){
+    public void waitForCSSRedElementRGB(WebElement element){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.attributeContains(element,"border-color","rgb(220, 53, 69)"));
+    }
+
+    public void waitForCSSRedElementRGBAColor(WebElement element){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.attributeContains(element,"color","rgba(220, 53, 69, 1)"));
     }
 
     public void waitForAttributeAriaDescribedbyEqualToValue(WebElement element, String value){

@@ -10,15 +10,20 @@ import java.io.IOException;
 import java.util.List;
 
 public class BrokenLinks extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy (css = ".col-md-6 > div:nth-child(2) > img")
     private List<WebElement> images;
-
     @FindBy (tagName = "a")
     private List<WebElement> links;
 
     public BrokenLinks(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
     }
 
     public boolean isDisplayedValidImage() throws IOException {

@@ -12,13 +12,23 @@ public class DynamicPropertiesTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(dynamicProperties.getPageTitleText(),"Dynamic Properties");
+    }
+
+    @Test
+    public void validateDynamicTextIsVisible(){
+        Assert.assertTrue(dynamicProperties.isRandomIdVisible());
+    }
+
+    @Test
     public void validateFirstButtonIsEnable(){
-        Assert.assertTrue(dynamicProperties.buttonIsEnable());
+        Assert.assertTrue(dynamicProperties.isButtonEnable());
     }
 
     @Test
     public void validateSecondButtonTextColorChange(){
-        Assert.assertEquals(dynamicProperties.getButtonTextColor(), "rgba(220, 53, 69, 1)");
+        Assert.assertEquals(dynamicProperties.getButtonTextColor(), prop.getProperty("RGBARedColor"));
     }
 
     @Test

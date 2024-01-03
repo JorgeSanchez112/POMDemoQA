@@ -12,6 +12,11 @@ public class UploadDownloadTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(uploadDownload.getPageTitleText(),"Upload and Download");
+    }
+
+    @Test
     public void validateArchiveDownloaded(){
         uploadDownload.clickOnDownloadButton();
         uploadDownload.searchFileInSelectFile();

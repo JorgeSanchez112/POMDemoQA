@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class UploadDownload extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(id = "downloadButton")
     private WebElement downloadButton;
 
@@ -27,6 +29,10 @@ public class UploadDownload extends BasePages {
 
     public void searchFileInSelectFile(){
         uploadFileButton.sendKeys("C:\\Users\\Jorge\\Downloads\\sampleFile.jpeg");
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
     }
 
     public String getFilePathText(){

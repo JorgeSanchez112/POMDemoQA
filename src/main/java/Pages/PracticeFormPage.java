@@ -110,7 +110,7 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeFirstNameField(){
-        waitForCSS(firstNameField);
+        waitForCSSRedElementRGB(firstNameField);
         return firstNameField.getCssValue("border-color");
     }
 

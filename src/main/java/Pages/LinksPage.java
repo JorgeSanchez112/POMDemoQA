@@ -9,26 +9,30 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class LinksPage extends BasePages {
-    @FindBy (linkText = "Home")
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(linkText = "Home")
     private WebElement  linkToHomePage;
-    @FindBy (css = "#linkWrapper > P:nth-child(3) > a")
+    @FindBy(css = "#linkWrapper > P:nth-child(3) > a")
     private WebElement secondLinkToHomePage;
-    @FindBy (linkText = "Created")
+    @FindBy(linkText = "Created")
     private WebElement http201;
-    @FindBy (linkText = "No Content")
+    @FindBy(linkText = "No Content")
     private WebElement http204;
-    @FindBy (linkText = "Moved")
+    @FindBy(linkText = "Moved")
     private WebElement http301;
-    @FindBy (linkText = "Bad Request")
+    @FindBy(linkText = "Bad Request")
     private WebElement http400;
-    @FindBy (linkText = "Unauthorized")
+    @FindBy(linkText = "Unauthorized")
     private WebElement http401;
-    @FindBy (linkText = "Forbidden")
+    @FindBy(linkText = "Forbidden")
     private WebElement http403;
-    @FindBy (linkText = "Not Found")
+    @FindBy(linkText = "Not Found")
     private WebElement http404;
-    @FindBy (css = "#linkResponse > b")
-    private List<WebElement> messageResponse;
+    @FindBy(css = "#linkResponse > b:nth-child(1)")
+    private WebElement httpMessage;
+    @FindBy(css = "#linkResponse > b:nth-child(2)")
+    private WebElement linkMessage;
 
     public LinksPage(WebDriver driver) {
         super(driver);
@@ -46,6 +50,7 @@ public class LinksPage extends BasePages {
     }
 
     public void clickOnMovedLink(){
+        scroll(http301);
         clickWithWait(http301);
     }
 
@@ -69,6 +74,10 @@ public class LinksPage extends BasePages {
         clickWithWait(http404);
     }
 
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
     public String getHrefOfHomeLink(){
         return linkToHomePage.getAttribute("href");
     }
@@ -77,12 +86,13 @@ public class LinksPage extends BasePages {
         return secondLinkToHomePage.getAttribute("href");
     }
 
-    public String getHttpMessage(){
-        return messageResponse.get(0).getText();
+    public String getHttpMessage() throws InterruptedException {
+        Thread.sleep(500);
+        return httpMessage.getText();
     }
 
     public String getNameLinkMessage(){
-        return messageResponse.get(1).getText();
+        return linkMessage.getText();
     }
 
 }

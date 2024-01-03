@@ -7,7 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DynamicProperties extends BasePages {
-    @FindBy (css = "div.col-md-6 > div > p")
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(css = "div.col-md-6 > div > p")
     private WebElement randomIdText;
     @FindBy(id = "enableAfter")
     private WebElement willEnableButton;
@@ -21,16 +23,21 @@ public class DynamicProperties extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
-    public String getRandomIdText(){
-        return randomIdText.getText();
+    public boolean isRandomIdVisible(){
+        return randomIdText.isDisplayed();
     }
 
-    public boolean buttonIsEnable(){
+    public boolean isButtonEnable(){
         waitForEnableElement(willEnableButton);
         return willEnableButton.isEnabled();
     }
 
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
     public String getButtonTextColor(){
+        waitForCSSRedElementRGBAColor(colorChangeButton);
         return colorChangeButton.getCssValue("color");
     }
 

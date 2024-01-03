@@ -12,6 +12,11 @@ public class LinksPageTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectedTitle(){
+        Assert.assertEquals(linksPage.getPageTitleText(),"Links");
+    }
+
+    @Test
     public void validateHomeLink() {
         Assert.assertEquals(linksPage.getHrefOfHomeLink(),"https://demoqa.com/");
     }
@@ -32,7 +37,6 @@ public class LinksPageTest extends BaseTest {
     @Test
     public void validateNoContentLink() throws InterruptedException {
         linksPage.clickOnNoContentLink();
-        Thread.sleep(1000);
         Assert.assertEquals(linksPage.getHttpMessage(),"204");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"No Content");
     }
@@ -40,7 +44,6 @@ public class LinksPageTest extends BaseTest {
     @Test
     public void validateMovedLink() throws InterruptedException {
         linksPage.clickOnMovedLink();
-        Thread.sleep(1000);
         Assert.assertEquals(linksPage.getHttpMessage(),"301");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Moved Permanently");
     }
@@ -48,7 +51,6 @@ public class LinksPageTest extends BaseTest {
     @Test
     public void validateBadRequestLink() throws InterruptedException {
         linksPage.clickOnBadRequestLink();
-        Thread.sleep(1000);
         Assert.assertEquals(linksPage.getHttpMessage(),"400");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Bad Request");
     }
@@ -56,7 +58,6 @@ public class LinksPageTest extends BaseTest {
     @Test
     public void validateUnauthorizedLink() throws InterruptedException {
         linksPage.clickOnUnauthorizedLink();
-        Thread.sleep(1000);
         Assert.assertEquals(linksPage.getHttpMessage(),"401");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Unauthorized");
     }
@@ -64,7 +65,6 @@ public class LinksPageTest extends BaseTest {
     @Test
     public void validateForbiddenLink() throws InterruptedException {
         linksPage.clickOnForbiddenLink();
-        Thread.sleep(1000);
         Assert.assertEquals(linksPage.getHttpMessage(),"403");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Forbidden");
     }
@@ -72,7 +72,6 @@ public class LinksPageTest extends BaseTest {
     @Test
     public void validateNotFoundLink() throws InterruptedException {
         linksPage.clickOnNotFoundLink();
-        Thread.sleep(1000);
         Assert.assertEquals(linksPage.getHttpMessage(),"404");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Not Found");
     }
