@@ -7,6 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ModalDialogsPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(css = "#modalWrapper >* > div")
+    private WebElement instructionText;
     @FindBy(id = "showSmallModal")
     private WebElement smallModalButton;
     @FindBy(id = "showLargeModal")
@@ -26,27 +30,26 @@ public class ModalDialogsPage extends BasePages {
     }
 
     public void clickOnSmallModalButton(){
-        smallModalButton.click();
+        clickWithWait(smallModalButton);
     }
 
     public void clickOnLargeModalButton(){
-        largeModalButton.click();
+        clickWithWait(largeModalButton);
     }
 
-    public void clickOnCloseSmallButton(){
-        closeSmallModalButton.click();
+    public String getPageTitleText(){
+        return pageTitle.getText();
     }
-
-    public void clickOnCloseLargeButton(){
-        closeLargeModalButton.click();
-    }
-
     public String getSmallModalText(){
         return smallModalText.getText();
     }
 
     public String getLargeModalText(){
         return largeModalText.getText();
+    }
+
+    public boolean isInstructionsTextVisible(){
+        return instructionText.isDisplayed();
     }
 
 }

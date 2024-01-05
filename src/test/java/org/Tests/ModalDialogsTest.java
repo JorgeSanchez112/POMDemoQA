@@ -12,6 +12,16 @@ public class ModalDialogsTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(modalDialogsPage.getPageTitleText(),"Modal Dialogs");
+    }
+
+    @Test
+    public void validateInstructionTextIsVisible(){
+        Assert.assertTrue(modalDialogsPage.isInstructionsTextVisible());
+    }
+
+    @Test
     public void validateSmallModalShowed(){
         modalDialogsPage.clickOnSmallModalButton();
         Assert.assertEquals(modalDialogsPage.getSmallModalText(), "This is a small modal. It has very less content");
@@ -22,4 +32,5 @@ public class ModalDialogsTest extends BaseTest {
         modalDialogsPage.clickOnLargeModalButton();
         Assert.assertEquals(modalDialogsPage.getLargeModalText(), "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
     }
+        
 }

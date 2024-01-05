@@ -6,12 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+import java.util.List;
 
-public class Alerts extends BasePages {
+public class AlertsPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(className = "mr-3")
+    private List<WebElement> labels;
     @FindBy(id = "alertButton")
     private WebElement alertButton;
     @FindBy(id = "timerAlertButton")
@@ -25,39 +27,36 @@ public class Alerts extends BasePages {
     @FindBy(id = "promptResult")
     private WebElement inputAlertButtonText;
 
-    public Alerts(WebDriver driver) {
+    public AlertsPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
     }
 
     public void clickOnFirstButton(){
-        alertButton.click();
+        clickWithWait(alertButton);
     }
 
     public void clickOnSecondButton(){
-        afterFiveSecButton.click();
+        clickWithWait(afterFiveSecButton);
     }
 
     public void clickOnThirdButton(){
         scroll(confirmAlertButton);
-        confirmAlertButton.click();
+        clickWithWait(confirmAlertButton);
     }
 
     public void clickOnFourthButton(){
         scroll(inputAlertButton);
-        inputAlertButton.click();
+        clickWithWait(inputAlertButton);
     }
 
     public void acceptAlert(){
+        waitAlert();
         driver.switchTo().alert().accept();
     }
 
-    public void waitAlert(){
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(6));
-        wait.until(ExpectedConditions.alertIsPresent());
-    }
-
     public void dismissAlert(){
+        waitAlert();
         driver.switchTo().alert().dismiss();
     }
 
@@ -68,12 +67,32 @@ public class Alerts extends BasePages {
 
     }
 
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
     public String getConfirmResultText(){
         return confirmAlertButtonResult.getText();
     }
 
     public String getInputAlertText(){
         return inputAlertButtonText.getText();
+    }
+
+    public boolean isFirstLabelVisible(){
+        return labels.get(0).isDisplayed();
+    }
+
+    public boolean isSecondLabelVisible(){
+        return labels.get(1).isDisplayed();
+    }
+
+    public boolean isThirdLabelVisible(){
+        return labels.get(2).isDisplayed();
+    }
+
+    public boolean isFourthLabelVisible(){
+        return labels.get(3).isDisplayed();
     }
 
 }

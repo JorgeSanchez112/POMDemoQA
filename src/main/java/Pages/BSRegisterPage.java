@@ -81,22 +81,22 @@ public class BSRegisterPage extends BasePages {
     }
 
     public String getFirstNameInputBorderColor(){
-        waitForCSSRedElementRGB(firstNameInput);
+        waitForElementContainRedRGBValue(firstNameInput,"border-color");
         return firstNameInput.getCssValue("border-color");
     }
 
     public String getLastNameInputBorderColor(){
-        waitForCSSRedElementRGB(lastNameInput);
+        waitForElementContainRedRGBValue(lastNameInput,"border-color");
         return lastNameInput.getCssValue("border-color");
     }
 
     public String getUsernameInputBorderColor(){
-        waitForCSSRedElementRGB(usernameInput);
+        waitForElementContainRedRGBValue(usernameInput,"border-color");
         return usernameInput.getCssValue("border-color");
     }
 
     public String getPasswordInputBorderColor(){
-        waitForCSSRedElementRGB(passwordInput);
+        waitForElementContainRedRGBValue(passwordInput,"border-color");
         return passwordInput.getCssValue("border-color");
     }
 

@@ -12,6 +12,16 @@ public class FramesPageTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(framesPage.getPageTitleText(),"Frames");
+    }
+
+    @Test
+    public void validateUseAdviceTextIsVisible(){
+        Assert.assertTrue(framesPage.isUseAdvicesTextVisible());
+    }
+
+    @Test
     public void validateChangeToBigFrame(){
         framesPage.switchToBigFrame();
         Assert.assertTrue(framesPage.validateTextFrames());

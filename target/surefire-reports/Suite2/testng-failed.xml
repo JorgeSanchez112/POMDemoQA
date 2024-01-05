@@ -3,12 +3,14 @@
 <suite name="Failed suite [Suite2]" guice-stage="DEVELOPMENT" verbose="0">
   <listeners>
     <listener class-name="Resources.Listeners"/>
+    <listener class-name="Resources.MyTransformer"/>
   </listeners>
   <test thread-count="5" name="Form(failed)" verbose="0">
     <parameter name="gender" value="Other"/>
     <parameter name="month" value="February"/>
     <parameter name="phone" value="1234567891"/>
     <parameter name="year" value="2004"/>
+    <parameter name="subject" value="Maths"/>
     <parameter name="name" value="name"/>
     <parameter name="text" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
     <parameter name="day" value="11"/>
@@ -17,9 +19,10 @@
     <classes>
       <class name="org.Tests.PracticeFormPageTest">
         <methods>
+          <include name="validateBorderColorOfBirthDateField"/>
           <include name="homePage"/>
           <include name="close"/>
-          <include name="validateLabelsStateAndCity"/>
+          <include name="validateBorderColorOfLastNameField"/>
           <include name="initializeClass"/>
         </methods>
       </class> <!-- org.Tests.PracticeFormPageTest -->

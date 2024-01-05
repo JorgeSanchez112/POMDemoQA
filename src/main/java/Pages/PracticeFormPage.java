@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class PracticeFormPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(css = "div.practice-form-wrapper > h5")
     private WebElement titleForm;
     @FindBy(id = "userName-label")
@@ -88,12 +90,89 @@ public class PracticeFormPage extends BasePages {
     private List<WebElement> ninthRowOfFormTable;
     @FindBy(css = "tbody > tr:nth-child(10) > td")
     private List<WebElement> tenthRowOfFormTable;
-    @FindBy(id = "closeLargeModal")
-    private WebElement closeButton;
 
     public PracticeFormPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
+    }
+
+    public void typeInFirstNameField(String firstName){
+        firstNameField.sendKeys(firstName);
+    }
+
+    public void typeInLastNameField(String lastName){
+        lastNameField.sendKeys(lastName);
+    }
+
+    public void typeInEmailField(String email){
+        emailField.sendKeys(email);
+    }
+
+    public void selectOneGender(String nameRadioButton){
+        selectOneRadioButton(radioButtonGenders,nameRadioButton);
+    }
+
+    public void typeInMobileField(String phoneNumber){
+        mobileField.sendKeys(phoneNumber);
+    }
+
+    public void selectDate( String month, String day, String year){
+        scroll(birthDateField);
+        clickWithWait(birthDateField);
+        selectMonth(months,month);
+        selectYear(years,year);
+        selectDay(calendarDays,day);
+    }
+
+    public void typeInSubjectField(String subject){
+        clickWithWait(subjectField);
+        subjectField.sendKeys(subject);
+        subjectField.sendKeys(Keys.ENTER);
+    }
+
+    public void clickOnMusicCheckBoxButton(){
+        scroll(checkboxes.get(2));
+        clickWithWait(checkboxes.get(2));
+    }
+
+    public void selectAPicture(String picturePath){
+        selectFieldButton.sendKeys(picturePath);
+    }
+
+    public void typeInCurrentAddressField(String text){
+        currentAddressField.sendKeys(text);
+    }
+
+    public void typeInStateListBox(){
+        doubleClick(listStatesBox);
+    }
+
+    public void typeInCityListBox(){
+        doubleClick(listCitiesBox);
+    }
+
+    public void enterToSubmitButton(){
+        submitButton.sendKeys(Keys.ENTER);
+    }
+
+    public void fillAllFormFields(String name, String lastname,String email, String gender, String phone, String month, String day, String year, String subject, String picturePath, String text){
+        typeInFirstNameField(name);
+        typeInLastNameField(lastname);
+        typeInEmailField(email);
+        selectOneGender(gender);
+        typeInMobileField(phone);
+        selectDate(month, day, year);
+        typeInSubjectField(subject);
+        clickOnMusicCheckBoxButton();
+        selectAPicture(picturePath);
+        typeInCurrentAddressField(text);
+        typeInStateListBox();
+        typeInCityListBox();
+        enterToSubmitButton();
+    }
+
+    public String  getPageTitleText(){
+        return pageTitle.getText();
     }
 
     public String getTextFormTitle(){
@@ -110,12 +189,8 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeFirstNameField(){
-        waitForCSSRedElementRGB(firstNameField);
+        waitForElementContainRedRGBValue(firstNameField,"border-color");
         return firstNameField.getCssValue("border-color");
-    }
-
-    public void typeInFirstNameField(String firstName){
-        firstNameField.sendKeys(firstName);
     }
 
     public String getPlaceholderLastNameField(){
@@ -123,11 +198,8 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeLastNameField(){
+        waitForElementContainRedRGBAValue(lastNameField,"border-color");
         return lastNameField.getCssValue("border-color");
-    }
-
-    public void typeInLastNameField(String lastName){
-        lastNameField.sendKeys(lastName);
     }
 
     public String getTextOfLabelEmail(){
@@ -140,22 +212,16 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeEmailField(){
+        waitForElementContainGreenRGBValue(emailField,"border-color");
         return emailField.getCssValue("border-color");
-    }
-
-    public void typeInEmailField(String email){
-        emailField.sendKeys(email);
     }
 
     public String getTextOfLabelGender(){
         return genderLabel.getText();
     }
 
-    public void selectOneGender(String nameRadioButton){
-        selectOneRadioButton(radioButtonGenders,nameRadioButton);
-    }
-
     public String getCssAttributeGenderRadioButtons(){
+        waitForElementContainRedRGBAValue(radioButtonGenders.get(0),"color");
         return radioButtonGenders.get(0).getCssValue("color");
     }
 
@@ -168,11 +234,8 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeMobileField(){
+        waitForElementContainRedRGBValue(mobileField,"border-color");
         return mobileField.getCssValue("border-color");
-    }
-
-    public void typeInMobileField(String phoneNumber){
-        mobileField.sendKeys(phoneNumber);
     }
 
     public String getTextOfLabelDateOfBirth(){
@@ -180,25 +243,12 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeBirthDateField(){
+        waitForElementContainRedRGBValue(emailField,"border-color");
         return emailField.getCssValue("border-color");
-    }
-
-    public void selectDate( String month, String day, String year){
-        scroll(birthDateField);
-        birthDateField.click();
-        selectMonth(months,month);
-        selectYear(years,year);
-        selectDay(calendarDays,day);
     }
 
     public String getTextOfLabelSubjects(){
         return threeLabelsBeforeCurrentAddressLabel.get(0).getText();
-    }
-
-    public void typeInSubjectField(String subject){
-        subjectField.click();
-        subjectField.sendKeys(subject);
-        subjectField.sendKeys(Keys.ENTER);
     }
 
     public String getTextOfLabelHobbies(){
@@ -206,29 +256,22 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeSportsCheckboxButton(){
+        waitForElementContainGreenRGBValue(checkboxes.get(0),"border-color");
         return checkboxes.get(0).getCssValue("border-color").intern();
     }
 
     public String getCssAttributeReadingCheckboxButton(){
+        waitForElementContainGreenRGBValue(checkboxes.get(1),"border-color");
         return checkboxes.get(1).getCssValue("border-color").intern();
     }
 
     public String getCssAttributeMusicCheckboxButton(){
+        waitForElementContainGreenRGBValue(checkboxes.get(2),"border-color");
         return checkboxes.get(2).getCssValue("border-color").intern();
-    }
-
-    public void clickOnMusicCheckBoxButton(){
-        scroll(checkboxes.get(2));
-        waitForClick(checkboxes.get(2));
-        checkboxes.get(2).click();
     }
 
     public String getTextOfLabelPicture(){
         return threeLabelsBeforeCurrentAddressLabel.get(2).getText();
-    }
-
-    public void selectAPicture(String picturePath){
-        selectFieldButton.sendKeys(picturePath);
     }
 
     public String getTextOfLabelCurrentAddress(){
@@ -240,11 +283,8 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeCurrentAddressField(){
+        waitForElementContainGreenRGBValue(currentAddressField,"border-color");
         return currentAddressField.getCssValue("border-color");
-    }
-
-    public void typeInCurrentAddressField(String text){
-        currentAddressField.sendKeys(text);
     }
 
     public String getTextOfLabelStateCity(){
@@ -257,18 +297,6 @@ public class PracticeFormPage extends BasePages {
 
     public String getPlaceholderCitiesListBox(){
         return placeholdersStateAndCity.get(2).getText();
-    }
-
-    public void typeInStateListBox(){
-        doubleClick(listStatesBox);
-    }
-
-    public void typeInCityListBox(){
-        doubleClick(listCitiesBox);
-    }
-
-    public void enterToSubmitButton(){
-        submitButton.sendKeys(Keys.ENTER);
     }
 
     public boolean isVisibleTitleSubmitForm(){
@@ -361,12 +389,6 @@ public class PracticeFormPage extends BasePages {
 
     public String getValueOfStateCityRow(){
         return tenthRowOfFormTable.get(1).getText();
-    }
-
-    public void clickOnCloseButton(){
-        scroll(closeButton);
-        waitForClick(closeButton);
-        closeButton.click();
     }
 
 }

@@ -64,10 +64,10 @@ public class ElementsPage extends BasePages {
         return new LinksPage(driver);
     }
 
-    public BrokenLinks clickOnBrokenLinksImageSection(){
+    public BrokenLinksPage clickOnBrokenLinksImageSection(){
         scroll(deployed_element_exercises.get(6));
         clickWithWait(deployed_element_exercises.get(6));
-        return new BrokenLinks(driver);
+        return new BrokenLinksPage(driver);
     }
 
     public UploadDownload clickOnUploadDownloadSection(){

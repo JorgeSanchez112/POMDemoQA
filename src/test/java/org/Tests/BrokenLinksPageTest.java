@@ -7,35 +7,35 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class BrokenLinksTest extends BaseTest {
+public class BrokenLinksPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
-        brokenLinks = homePage.clickOnSectionElements().clickOnBrokenLinksImageSection();
+        brokenLinksPage = homePage.clickOnSectionElements().clickOnBrokenLinksImageSection();
     }
 
 
     @Test
     public void validateCorrectPageTitle(){
-        Assert.assertEquals(brokenLinks.getPageTitleText(),"Broken Links - Images");
+        Assert.assertEquals(brokenLinksPage.getPageTitleText(),"Broken Links - Images");
     }
 
     @Test
     public void validateImage() throws IOException {
-        Assert.assertTrue(brokenLinks.isDisplayedValidImage());
+        Assert.assertTrue(brokenLinksPage.isDisplayedValidImage());
     }
 
     @Test
     public void validateBrokeImage() throws IOException {
-        Assert.assertTrue(brokenLinks.isDisplayedBrokenImage());
+        Assert.assertTrue(brokenLinksPage.isDisplayedBrokenImage());
     }
 
     @Test
     public void validateLink() throws IOException {
-        Assert.assertFalse(brokenLinks.isAValidLink());
+        Assert.assertFalse(brokenLinksPage.isAValidLink());
     }
 
     @Test
     public void validateBrokenLink() throws IOException {
-        Assert.assertFalse(brokenLinks.isABrokenLink());
+        Assert.assertFalse(brokenLinksPage.isABrokenLink());
     }
 }

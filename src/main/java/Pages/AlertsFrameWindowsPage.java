@@ -31,10 +31,10 @@ public class AlertsFrameWindowsPage extends BasePages {
         return new BrowserWindows(driver);
     }
 
-    public Alerts clickOnAlerts(){
+    public AlertsPage clickOnAlerts(){
         scroll(deployed_form_exercise.get(1));
         deployed_form_exercise.get(1).click();
-        return new Alerts(driver);
+        return new AlertsPage(driver);
     }
 
     public FramesPage clickOnFrames(){

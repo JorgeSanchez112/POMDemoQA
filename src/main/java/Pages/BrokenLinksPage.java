@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.IOException;
 import java.util.List;
 
-public class BrokenLinks extends BasePages {
+public class BrokenLinksPage extends BasePages {
     @FindBy(className = "main-header")
     private WebElement pageTitle;
     @FindBy (css = ".col-md-6 > div:nth-child(2) > img")
@@ -17,7 +17,7 @@ public class BrokenLinks extends BasePages {
     @FindBy (tagName = "a")
     private List<WebElement> links;
 
-    public BrokenLinks(WebDriver driver) {
+    public BrokenLinksPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
     }

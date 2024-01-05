@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class BrowserWindows extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(id = "tabButton")
     private WebElement newTabButton;
     @FindBy(id = "windowButton")
@@ -27,42 +29,25 @@ public class BrowserWindows extends BasePages {
 
 
     public void clickOnNewTabButton(){
-        waitForClick(newTabButton);
-        newTabButton.click();
+        clickWithWait(newTabButton);
     }
 
     public void clickOnNewWindowButton(){
-        newWindowButton.click();
+        clickWithWait(newWindowButton);
     }
 
     public void clickOnNewWindowMessageButton(){
         scroll(newWindowMessageButton);
-        newWindowMessageButton.click();
+        clickWithWait(newWindowMessageButton);
     }
 
-    public void switchToTab(){
-        String mainWindowHandle = driver.getWindowHandle();
-        for (String windowHandle : driver.getWindowHandles()) {
-            if (!windowHandle.equals(mainWindowHandle)) {
-                driver.switchTo().window(windowHandle);
-                break;
-            }
-        }
-    }
-
-    public boolean newTabTextIsVisible(){
-       return textTab.isDisplayed();
+    public String getPageTitleText(){
+        return pageTitle.getText();
     }
 
     public String getMessageOfNewWindow(){
-        try {
             waitForVisibleElement(newMessageText);
             return newMessageText.getText();
-
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        return null;
     }
 
     public String getBrowserWindowsUrlText(){
@@ -71,6 +56,10 @@ public class BrowserWindows extends BasePages {
 
     public String getUrlOfNewTabAndWindow(){
         return URLOFNEWTAB;
+    }
+
+    public boolean newTabTextIsVisible(){
+        return textTab.isDisplayed();
     }
 
 }

@@ -37,7 +37,7 @@ public class DynamicProperties extends BasePages {
     }
 
     public String getButtonTextColor(){
-        waitForCSSRedElementRGBAColor(colorChangeButton);
+        waitForElementContainRedRGBAValue(colorChangeButton,"color");
         return colorChangeButton.getCssValue("color");
     }
 

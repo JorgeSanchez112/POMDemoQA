@@ -13,6 +13,11 @@ public class PracticeFormPageTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(practiceFormPage.getPageTitleText(),"Practice Form");
+    }
+
+    @Test
     public void validateTitle(){
         Assert.assertEquals(practiceFormPage.getTextFormTitle(),"Student Registration Form");
     }
@@ -103,37 +108,70 @@ public class PracticeFormPageTest extends BaseTest {
     }
 
     @Test
-    public void validateMandatoryFields(){
+    public void validateBorderColorOfFirstNameField(){
         practiceFormPage.enterToSubmitButton();
-        Assert.assertEquals(practiceFormPage.getCssAttributeFirstNameField(), "rgb(220, 53, 69)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeLastNameField(), "rgb(220, 53, 69)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeEmailField(), "rgb(40, 167, 69)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeGenderRadioButtons(), "rgba(220, 53, 69, 1)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeMobileField(), "rgb(220, 53, 69)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeBirthDateField(), "rgb(40, 167, 69)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeSportsCheckboxButton(), "rgb(40, 167, 69)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeReadingCheckboxButton(), "rgb(40, 167, 69)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeMusicCheckboxButton(), "rgb(40, 167, 69)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeMusicCheckboxButton(), "rgb(40, 167, 69)");
-        Assert.assertEquals(practiceFormPage.getCssAttributeCurrentAddressField(), "rgb(40, 167, 69)");
+        Assert.assertEquals(practiceFormPage.getCssAttributeFirstNameField(), prop.getProperty("RGBRedColor"));
     }
 
     @Test
-    @Parameters({"name","lastname","email","gender","phone","month","day","year","text"})
-    public void fillTheFormCorrectly(String name, String lastname,String email, String gender, String phone, String month, String day, String year, String text) {
-        practiceFormPage.typeInFirstNameField(name);
-        practiceFormPage.typeInLastNameField(lastname);
-        practiceFormPage.typeInEmailField(email);
-        practiceFormPage.selectOneGender(gender);
-        practiceFormPage.typeInMobileField(phone);
-        practiceFormPage.selectDate(month, day,year);
-        practiceFormPage.typeInSubjectField("Maths");
-        practiceFormPage.clickOnMusicCheckBoxButton();
-        practiceFormPage.selectAPicture("C:\\Users\\Jorge\\Pictures\\Captura.png");
-        practiceFormPage.typeInCurrentAddressField(text);
-        practiceFormPage.typeInStateListBox();
-        practiceFormPage.typeInCityListBox();
+    public void validateBorderColorOfLastNameField(){
         practiceFormPage.enterToSubmitButton();
+        Assert.assertEquals(practiceFormPage.getCssAttributeLastNameField(), prop.getProperty("RGBRedColor"));
+    }
+
+    @Test
+    public void validateBorderColorOfEmailField(){
+        practiceFormPage.enterToSubmitButton();
+        Assert.assertEquals(practiceFormPage.getCssAttributeEmailField(), prop.getProperty("RGBGreenColor"));
+    }
+
+    @Test
+    public void validateBorderColorOfGenderRadioButtonsField(){
+        practiceFormPage.enterToSubmitButton();
+        Assert.assertEquals(practiceFormPage.getCssAttributeGenderRadioButtons(), prop.getProperty("RGBARedColor"));
+    }
+
+    @Test
+    public void validateBorderColorOfMobileField(){
+        practiceFormPage.enterToSubmitButton();
+        Assert.assertEquals(practiceFormPage.getCssAttributeMobileField(), prop.getProperty("RGBRedColor"));
+    }
+
+    @Test
+    public void validateBorderColorOfBirthDateField(){
+        practiceFormPage.enterToSubmitButton();
+        Assert.assertEquals(practiceFormPage.getCssAttributeBirthDateField(), prop.getProperty("RGBGreenColor"));
+    }
+
+    @Test
+    public void validateBorderColorOfSportsCheckboxButton(){
+        practiceFormPage.enterToSubmitButton();
+        Assert.assertEquals(practiceFormPage.getCssAttributeSportsCheckboxButton(), prop.getProperty("RGBGreenColor"));
+    }
+
+    @Test
+    public void validateBorderColorOfReadingCheckboxButton(){
+        practiceFormPage.enterToSubmitButton();
+        Assert.assertEquals(practiceFormPage.getCssAttributeReadingCheckboxButton(), prop.getProperty("RGBGreenColor"));
+    }
+
+    @Test
+    public void validateBorderColorOfMusicCheckboxButton(){
+        practiceFormPage.enterToSubmitButton();
+        Assert.assertEquals(practiceFormPage.getCssAttributeMusicCheckboxButton(), prop.getProperty("RGBGreenColor"));
+    }
+
+    @Test
+    public void validateBorderColorOfCurrentAddressField(){
+        practiceFormPage.enterToSubmitButton();
+        Assert.assertEquals(practiceFormPage.getCssAttributeCurrentAddressField(), prop.getProperty("RGBGreenColor"));
+    }
+
+    @Test
+    @Parameters({"name","lastname","email","gender","phone","month","day","year","subject","text"})
+    public void validateCorrectRegisterValues(String name, String lastname,String email, String gender, String phone, String month, String day, String year, String subject,String text) {
+
+        practiceFormPage.fillAllFormFields(name, lastname, email, gender, phone, month, day, year, subject,"C:\\Users\\Jorge\\Pictures\\Captura.png", text);
 
         Assert.assertTrue(practiceFormPage.isVisibleTitleSubmitForm());
         Assert.assertEquals(practiceFormPage.getTitleLabelFieldsText(),"Label");

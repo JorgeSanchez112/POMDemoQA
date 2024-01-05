@@ -7,6 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class NestedFramesPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(css = "#framesWrapper > div:nth-child(1)")
+    private WebElement useAdvices;
     @FindBy(id = "frame1")
     private WebElement parentFrame;
     @FindBy(tagName = "body")
@@ -19,13 +23,6 @@ public class NestedFramesPage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
-    private final String textParentFrame = "Parent frame";
-    private final String textChildFrame = "Child Iframe";
-
-    public void switchToDefaultContent(){
-        driver.switchTo().defaultContent();
-    }
-
     public void switchToParentFrame(){
         driver.switchTo().frame(parentFrame);
     }
@@ -34,12 +31,19 @@ public class NestedFramesPage extends BasePages {
         driver.switchTo().frame(0);
     }
 
-    public boolean validateParentText(){
-        return textParent.getText().contains(textParentFrame);
+    public String getPageTitleText(){
+        return pageTitle.getText();
     }
 
-    public boolean validateChildText(){
-        return textChild.getText().equals(textChildFrame);
+    public String getParentText(){
+        return textParent.getText();
     }
 
+    public String getChildText(){
+        return textChild.getText();
+    }
+
+    public boolean isUseAdvicesVisible(){
+        return useAdvices.isDisplayed();
+    }
 }

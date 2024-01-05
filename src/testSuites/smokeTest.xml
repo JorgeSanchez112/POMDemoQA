@@ -28,7 +28,7 @@
 
     <test name = "alerts,frame and windows">
         <classes>
-            <class name = "org.Tests.AlertsFrameWindowsPageTest" />
+            <class name = "org.Tests.AlertsPageFrameWindowsPageTest" />
         </classes>
     </test>
 
@@ -88,7 +88,7 @@
 
     <test name = "Broken Links - Images">
         <classes>
-            <class name = "org.Tests.BrokenLinksTest" />
+            <class name = "org.Tests.BrokenLinksPageTest" />
         </classes>
     </test>
 
@@ -106,7 +106,7 @@
 
     <test name = "Alerts">
         <classes>
-            <class name = "org.Tests.AlertsTest" />
+            <class name = "org.Tests.AlertsPageTest" />
         </classes>
     </test>
 
@@ -118,7 +118,7 @@
 
     <test name = "Nested Frames">
         <classes>
-            <class name = "org.Tests.NestedFramesTest" />
+            <class name = "org.Tests.NestedFramesPageTest" />
         </classes>
     </test>
 
@@ -130,13 +130,13 @@
 
     <test name = "Accordian">
         <classes>
-            <class name = "org.Tests.AccordianTest" />
+            <class name = "org.Tests.AccordianPageTest" />
         </classes>
     </test>
 
     <test name = "Auto Complete">
         <classes>
-            <class name = "org.Tests.AutoCompleteTest" />
+            <class name = "org.Tests.AutoCompletePageTest" />
         </classes>
     </test>
 

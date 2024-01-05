@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AccordianPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(id = "section1Heading")
     private WebElement card1;
     @FindBy(id = "section1Content")
@@ -28,18 +30,34 @@ public class AccordianPage extends BasePages {
     public void clickOnFirstCard(){
         scroll(card1);
         if (!firstContentIsVisible()){
-            card1.click();
+            clickWithWait(card1);
         }
     }
 
     public void clickOnSecondCard(){
         scroll(card2);
-        card2.click();
+        clickWithWait(card2);
     }
 
     public void clickOnThirdCard(){
         scroll(card3);
-        card3.click();
+        clickWithWait(card3);
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
+    public String getCard1TopicText(){
+        return card1.getText();
+    }
+
+    public String getCard2TopicText(){
+        return card2.getText();
+    }
+
+    public String getCard3TopicText(){
+        return card3.getText();
     }
 
     public boolean firstContentIsVisible(){

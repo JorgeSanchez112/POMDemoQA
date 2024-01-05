@@ -67,7 +67,7 @@ public class BSLoginPage extends BasePages {
     }
 
     public String getUsernameInputBorderColor(){
-        waitForCSSRedElementRGB(usernameInput);
+        waitForElementContainRedRGBValue(usernameInput,"border-color");
         return usernameInput.getCssValue("border-color");
     }
 

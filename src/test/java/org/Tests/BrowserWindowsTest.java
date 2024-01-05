@@ -13,6 +13,12 @@ public class BrowserWindowsTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(browserWindows.getPageTitleText(), "Browser Windows");
+
+    }
+
+    @Test
     public void validateChangeOfTab(){
         browserWindows.clickOnNewTabButton();
         browserWindows.switchToTab();

@@ -14,14 +14,10 @@ import org.testng.ITestResult;
 
 import java.io.IOException;
 
-public class Listeners extends BasePages implements ITestListener {
+public class Listeners extends BaseTest implements ITestListener {
     ExtentTest test;
     ExtentReports extent = ExtentReporterNG.getReportObject();
     ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
-
-    public Listeners(WebDriver driver) {
-        super(driver);
-    }
 
     @Override
     public void onTestStart(ITestResult result) {

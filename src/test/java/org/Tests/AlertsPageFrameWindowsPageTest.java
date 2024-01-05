@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AlertsFrameWindowsPageTest extends BaseTest {
+public class AlertsPageFrameWindowsPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         alertsFrameWindowsPage = homePage.clickOnSectionAlerts_Frame_Windows();
