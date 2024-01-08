@@ -109,7 +109,7 @@ public class PracticeFormPage extends BasePages {
     }
 
     public void selectOneGender(String nameRadioButton){
-        selectOneRadioButton(radioButtonGenders,nameRadioButton);
+        selectListValue(radioButtonGenders,nameRadioButton);
     }
 
     public void typeInMobileField(String phoneNumber){
@@ -119,8 +119,8 @@ public class PracticeFormPage extends BasePages {
     public void selectDate( String month, String day, String year){
         scroll(birthDateField);
         clickWithWait(birthDateField);
-        selectMonth(months,month);
-        selectYear(years,year);
+        selectListValue(months,month);
+        selectListValue(years,year);
         selectDay(calendarDays,day);
     }
 

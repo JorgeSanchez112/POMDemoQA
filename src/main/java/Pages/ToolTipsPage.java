@@ -9,6 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class ToolTipsPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(tagName = "p")
+    private WebElement label;
     @FindBy(id = "toolTipButton")
     private WebElement hoverMeButton;
     @FindBy(id = "toolTipTextField")
@@ -44,6 +48,14 @@ public class ToolTipsPage extends BasePages {
         scroll(hoverLink.get(1));
         moveClickerToElement(hoverLink.get(1));
         waitForAttributeAriaDescribedbyEqualToValue(hoverLink.get(1), "sectionToolTip");
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
+    public String getLabelText(){
+        return label.getText();
     }
 
     public String getTextFromButtonHoverAttribute(){

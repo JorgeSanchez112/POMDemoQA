@@ -7,6 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ProgressBarPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(className = "mb-3")
+    private WebElement label;
     @FindBy(id = "progressBar")
     private WebElement progressBar;
     @FindBy(id = "startStopButton")
@@ -20,15 +24,23 @@ public class ProgressBarPage extends BasePages {
     }
 
     public void clickOnStartButton(){
-        startButton.click();
+        clickWithWait(startButton);
     }
 
     public void clickOnResetButton(){
-        resetButton.click();
+        clickWithWait(resetButton);
     }
 
     public void waitForResetButton(){
         waitForVisibleElement(resetButton);
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
+    public String getLabelText(){
+        return label.getText();
     }
 
     public String getPercentText(){

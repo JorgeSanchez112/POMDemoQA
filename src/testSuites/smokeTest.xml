@@ -94,7 +94,7 @@
 
     <test name = "Upload and Download">
         <classes>
-            <class name = "org.Tests.UploadDownloadTest" />
+            <class name = "org.Tests.UploadDownloadPageTest" />
         </classes>
     </test>
 
@@ -142,31 +142,31 @@
 
     <test name = "Date Picker">
         <classes>
-            <class name = "org.Tests.DatePickerTest" />
+            <class name = "org.Tests.DatePickerPageTest" />
         </classes>
     </test>
 
     <test name = "Slider">
         <classes>
-            <class name = "org.Tests.SliderTest" />
+            <class name = "org.Tests.SliderPageTest" />
         </classes>
     </test>
 
     <test name = "Progress Bar">
         <classes>
-            <class name = "org.Tests.ProgressBarTest" />
+            <class name = "org.Tests.ProgressBarPageTest" />
         </classes>
     </test>
 
     <test name = "Tabs">
         <classes>
-            <class name = "org.Tests.TabsTest" />
+            <class name = "org.Tests.TabsPageTest" />
         </classes>
     </test>
 
     <test name = "Tool tips">
         <classes>
-            <class name = "org.Tests.ToolTipsTest" />
+            <class name = "org.Tests.ToolTipsPageTest" />
         </classes>
     </test>
 

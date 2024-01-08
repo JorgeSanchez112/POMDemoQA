@@ -5,10 +5,25 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class DatePickerTest extends BaseTest {
+public class DatePickerPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         datePickerPage = homePage.clickOnSectionWidgets().clickOnDatePicker();
+    }
+
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(datePickerPage.getPageTitleText(),"Date Picker");
+    }
+    
+    @Test
+    public void validateCorrectDateLabel(){
+        Assert.assertEquals(datePickerPage.getDateLabelText(),"Select Date");
+    }
+
+    @Test
+    public void validateCorrectDateTimeLabel(){
+        Assert.assertEquals(datePickerPage.getDateTimeLabelText(),"Date And Time");
     }
 
     @Test

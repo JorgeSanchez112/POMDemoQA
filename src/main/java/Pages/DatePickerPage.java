@@ -9,6 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class DatePickerPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(css = ".col-md-3.col-sm-12")
+    private List<WebElement> labels;
     @FindBy(id = "datePickerMonthYearInput")
     private WebElement dateInput;
     @FindBy(css = ".react-datepicker__month-select > option")
@@ -44,18 +48,30 @@ public class DatePickerPage extends BasePages {
     }
 
     public void selectDate(String month, String day, String year){
-        selectMonth(monthOfDateInput,month);
-        selectYear(yearOfDateInput,year);
+        selectListValue(monthOfDateInput,month);
+        selectListValue(yearOfDateInput,year);
         selectDay(days,day);
     }
 
     public void selectDateAndTime(String month, String day, String year, String time){
-        monthContainer.click();
-        selectMonth(monthsOfDateTimeInput,month);
-        yearDateTimeContainer.click();
-        selectYear(yearsOfDateTimeInput,year);
+        clickWithWait(monthContainer);
+        selectListValue(monthsOfDateTimeInput,month);
+        clickWithWait(yearDateTimeContainer);
+        selectListValue(yearsOfDateTimeInput,year);
         selectDay(days,day);
-        selectTime(timeOfDateTimeInput,time);
+        selectListValue(timeOfDateTimeInput,time);
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
+    public String getDateLabelText(){
+        return labels.get(0).getText();
+    }
+
+    public String getDateTimeLabelText(){
+        return labels.get(1).getText();
     }
 
     public String getDateValueText(){

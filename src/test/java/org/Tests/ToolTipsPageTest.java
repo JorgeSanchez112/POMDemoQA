@@ -5,10 +5,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ToolTipsTest extends BaseTest {
+public class ToolTipsPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         toolTipsPage = homePage.clickOnSectionWidgets().clickOnToolTips();
+    }
+
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(toolTipsPage.getPageTitleText(),"Tool Tips");
+    }
+
+    @Test
+    public void validateCorrectLabel(){
+        Assert.assertEquals(toolTipsPage.getLabelText(),"Practice Tool Tips");
     }
 
     @Test

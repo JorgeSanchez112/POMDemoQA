@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class UploadDownload extends BasePages {
+public class UploadDownloadPage extends BasePages {
     @FindBy(className = "main-header")
     private WebElement pageTitle;
     @FindBy(id = "downloadButton")
@@ -18,7 +18,7 @@ public class UploadDownload extends BasePages {
     @FindBy(id = "uploadedFilePath")
     private WebElement FilePathText;
 
-    public UploadDownload(WebDriver driver) {
+    public UploadDownloadPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
     }

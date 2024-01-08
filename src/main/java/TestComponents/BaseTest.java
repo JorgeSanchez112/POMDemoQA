@@ -33,7 +33,7 @@ public class BaseTest {
     protected ButtonsPage buttonsPage;
     protected LinksPage linksPage;
     protected BrokenLinksPage brokenLinksPage;
-    protected UploadDownload uploadDownload;
+    protected UploadDownloadPage uploadDownloadPage;
     protected DynamicProperties dynamicProperties;
     protected PracticeFormPage practiceFormPage;
     protected BrowserWindows browserWindows;

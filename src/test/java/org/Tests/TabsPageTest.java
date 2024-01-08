@@ -5,15 +5,36 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TabsTest extends BaseTest {
+public class TabsPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         tabsPage = homePage.clickOnSectionWidgets().clickOnTabs();
     }
 
+
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(tabsPage.getPageTitleText(),"Tabs");
+    }
+
     @Test
     public void subtitleIsShowed(){
         Assert.assertTrue(tabsPage.isSubTitleDisplayed());
+    }
+
+    @Test
+    public void validateCorrectTitleOfFirstTab(){
+        Assert.assertEquals(tabsPage.getFirstTitleTab(),"What");
+    }
+
+    @Test
+    public void validateCorrectTitleOfSecondTab(){
+        Assert.assertEquals(tabsPage.getSecondTitleTab(),"Origin");
+    }
+
+    @Test
+    public void validateCorrectTitleOfThirdTab(){
+        Assert.assertEquals(tabsPage.getThirdTitleTab(),"Use");
     }
 
     @Test

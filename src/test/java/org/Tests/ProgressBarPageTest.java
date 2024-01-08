@@ -5,10 +5,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ProgressBarTest extends BaseTest {
+public class ProgressBarPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         progressBarPage = homePage.clickOnSectionWidgets().clickOnProgressBar();
+    }
+
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(progressBarPage.getPageTitleText(),"Progress Bar");
+    }
+
+    @Test
+    public void validateCorrectLabelText(){
+        Assert.assertEquals(progressBarPage.getLabelText(), "Progress Bar");
     }
 
     @Test

@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class TabsPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(className = "mb-3")
     private WebElement subTitle;
     @FindBy(id = "demo-tab-what")
@@ -31,20 +33,32 @@ public class TabsPage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
-    public boolean isSubTitleDisplayed(){
-        return subTitle.isDisplayed();
-    }
-
     public void clickOnTabWhat(){
-        tabWhat.click();
+        clickWithWait(tabWhat);
     }
 
     public void clickOnTabOrigin(){
-        tabOrigin.click();
+        clickWithWait(tabOrigin);
     }
 
     public void clickOnTabUse(){
-        tabUse.click();
+        clickWithWait(tabUse);
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
+    public String getFirstTitleTab(){
+        return tabWhat.getText();
+    }
+
+    public String getSecondTitleTab(){
+        return tabOrigin.getText();
+    }
+
+    public String getThirdTitleTab(){
+        return tabUse.getText();
     }
 
     public String getParagraphOfWhatText(){
@@ -67,4 +81,7 @@ public class TabsPage extends BasePages {
         return tabMore.isEnabled();
     }
 
+    public boolean isSubTitleDisplayed(){
+        return subTitle.isDisplayed();
+    }
 }
