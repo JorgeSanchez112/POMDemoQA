@@ -6,16 +6,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 
 public class BaseTest {
+
+    private static final ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
 
     protected WebDriver driver;
     protected Properties prop;
@@ -70,6 +75,8 @@ public class BaseTest {
         }
     }
 
+    private String hubUrl = "http://172.17.48.1:4444";
+
     public String getScreenShot(WebDriver driver) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
         byte[] screenshotBytes = ts.getScreenshotAs(OutputType.BYTES);
@@ -82,22 +89,38 @@ public class BaseTest {
     }
 
 
-    public WebDriver initializeDriver(){
+    public WebDriver initializeDriver() throws MalformedURLException {
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         ChromeOptions options = new ChromeOptions();
-        return driver = new ChromeDriver(options);
+        options.merge(desiredCapabilities);
+
+        driver = new RemoteWebDriver(new URL(hubUrl), options);
+        driver.manage().window().maximize();
+        webDriverThreadLocal.set(driver);
+
+        return driver;
     }
 
     @BeforeMethod
-    public void homePage(){
-        driver = initializeDriver();
+    public void homePage() throws MalformedURLException {
+        driver = webDriverThreadLocal.get();
+        if (driver == null) {
+            driver = initializeDriver();
+        }
+
         homePage = new HomePage(driver);
         homePage.goTo();
+        homePage.waitForVisibleElement(driver.findElement(By.cssSelector("#adplus-anchor > div")));
         homePage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
     }
 
     @AfterMethod
     public void close(){
-        driver.quit();
+        driver = webDriverThreadLocal.get();
+        if (driver != null) {
+            driver.quit();
+            webDriverThreadLocal.remove();
+        }
     }
 
 }

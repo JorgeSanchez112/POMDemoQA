@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class MenuPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(css = "#nav > li > a")
     private List<WebElement> mainMenus;
     @FindBy(css = "a ~ ul > li > a")
@@ -25,6 +27,10 @@ public class MenuPage extends BasePages {
 
     public void moveClickerToSubSubList(){
         moveClickerToElement(subMenus.get(2));
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
     }
 
     public boolean isMainItem1Displayed(){

@@ -172,31 +172,31 @@
 
     <test name = "Menu">
         <classes>
-            <class name = "org.Tests.MenuTest" />
+            <class name = "org.Tests.MenuPageTest" />
         </classes>
     </test>
 
     <test name = "Select Menu">
         <classes>
-            <class name = "org.Tests.SelectMenuTest" />
+            <class name = "org.Tests.SelectMenuPageTest" />
         </classes>
     </test>
 
     <test name = "Sortable">
         <classes>
-            <class name = "org.Tests.SortableTest" />
+            <class name = "org.Tests.SortablePageTest" />
         </classes>
     </test>
 
     <test name = "Selectable">
         <classes>
-            <class name = "org.Tests.SelectableTest" />
+            <class name = "org.Tests.SelectablePageTest" />
         </classes>
     </test>
 
     <test name = "Resizable">
         <classes>
-            <class name = "org.Tests.ResizableTest" />
+            <class name = "org.Tests.ResizablePageTest" />
         </classes>
     </test>
 

@@ -5,10 +5,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SelectMenuTest extends BaseTest {
+public class SelectMenuPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         selectMenuPage = homePage.clickOnSectionWidgets().clickOnSelectMenu();
+    }
+
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(selectMenuPage.getPageTitleText(),"Select Menu");
+    }
+
+    @Test
+    public void validateCorrectSelectValueLabel(){
+        Assert.assertEquals(selectMenuPage.getValueLabelText(),"Select Value");
     }
 
     @Test
@@ -21,6 +31,11 @@ public class SelectMenuTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectSelectOneLabel(){
+        Assert.assertEquals(selectMenuPage.getOneLabelText(),"Select One");
+    }
+
+    @Test
     public void selectOneByDropdown(){
         selectMenuPage.clickOnSelectOneContainer();
         selectMenuPage.downOneOptionInSelectOneDropDown();
@@ -30,9 +45,20 @@ public class SelectMenuTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectOldStyleSelectLabel(){
+        Assert.assertEquals(selectMenuPage.getOldStyleSelectLabelText(),"Old Style Select Menu");
+    }
+
+    @Test
     public void selectValueInOldSelectMenu(){
         selectMenuPage.selectValueOnOldStyleSelectMenu();
         Assert.assertEquals(selectMenuPage.getSelectValueOnOldStyleSelectMenuText(),"6");
+    }
+
+    @Test
+    public void validateCorrectMultiselectDropdownLabel(){
+        Assert.assertEquals(selectMenuPage.getMultiSelectDropdownLabelText(),"Multiselect drop down");
+
     }
 
     @Test
@@ -50,12 +76,16 @@ public class SelectMenuTest extends BaseTest {
     }
 
     @Test
+    public void validateCorrectStandardMultiSelectLabel(){
+        Assert.assertEquals(selectMenuPage.getStandardMultiSelectLabelText(),"Standard multi select");
+    }
+
+    @Test
     public void selectMultiplyValuesOnStandardMultiSelect(){
         selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Volvo");
         selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Saab");
         selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Opel");
         selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Audi");
-
         Assert.assertTrue(selectMenuPage.isVolvoSelectedOfStandardMultiSelect());
         Assert.assertTrue(selectMenuPage.isSaabSelectedOfStandardMultiSelect());
         Assert.assertTrue(selectMenuPage.isOpelSelectedOfStandardMultiSelect());

@@ -28,7 +28,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.12.1</version>
+      <version>4.16.0</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -91,6 +91,24 @@
             <configuration>
               <suiteXmlFiles>
                 <suiteXmlFile>src/testSuites/smokeTest.xml</suiteXmlFile>
+              </suiteXmlFiles>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>integrationTest</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>src/testSuites/IntegrationTest.xml</suiteXmlFile>
               </suiteXmlFiles>
             </configuration>
           </plugin>

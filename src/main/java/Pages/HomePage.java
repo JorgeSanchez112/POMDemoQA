@@ -28,36 +28,36 @@ public class HomePage extends BasePages {
 
     public ElementsPage clickOnSectionElements(){
         scroll(sections.get(0));
-        sections.get(0).click();
+        clickWithWait(sections.get(0));
         return new ElementsPage(driver);
     }
 
     public FormsPage clickOnSectionForms(){
         scroll(sections.get(1));
-        sections.get(1).click();
+        clickWithWait(sections.get(1));
         return new FormsPage(driver);
     }
     public AlertsFrameWindowsPage clickOnSectionAlerts_Frame_Windows(){
         scroll(sections.get(2));
-        sections.get(2).click();
+        clickWithWait(sections.get(2));
         return new AlertsFrameWindowsPage(driver);
     }
 
     public WidgetsPage clickOnSectionWidgets(){
         scroll(sections.get(3));
-        sections.get(3).click();
+        clickWithWait(sections.get(3));
         return new WidgetsPage(driver);
     }
 
     public InteractionsPage clickOnSectionInteractions(){
         scroll(sections.get(4));
-        sections.get(4).click();
+        clickWithWait(sections.get(4));
         return new InteractionsPage(driver);
     }
 
     public BookStorePage clickOnSectionBookStoreApplication(){
         scroll(sections.get(5));
-        sections.get(5).click();
+        clickWithWait(sections.get(5));
         return new BookStorePage(driver);
     }
 

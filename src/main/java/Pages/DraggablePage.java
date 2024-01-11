@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DraggablePage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(id = "draggableExample-tab-simple")
     private WebElement tabSimple;
     @FindBy(id = "draggableExample-tab-axisRestriction")

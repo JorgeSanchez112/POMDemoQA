@@ -5,36 +5,37 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SelectableTest extends BaseTest {
+public class SelectablePageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         selectablePage = homePage.clickOnSectionInteractions().clickOnSelectable();
     }
 
     @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(selectablePage.getPageTitleText(),"Selectable");
+
+    }
+    @Test
     public void validateCrasJustoOdioListElementIsSelectable(){
-        selectablePage.clickOnTabList();
         selectablePage.clickOnCrasJustoOdioListElement();
         Assert.assertTrue(selectablePage.isCrasJustoOdioListElementSelected());
     }
 
     @Test
     public void validateDapibusAcFacilisisInListElementIsSelectable(){
-        selectablePage.clickOnTabList();
         selectablePage.clickOnDapibusAcFacilisisInListElement();
         Assert.assertTrue(selectablePage.isDapibusAcFacilisisInListElementSelected());
     }
 
     @Test
     public void validateMorbiLeoRisusListElementIsSelectable(){
-        selectablePage.clickOnTabList();
         selectablePage.clickOnMorbiLeoRisusListElement();
         Assert.assertTrue(selectablePage.isMorbiLeoRisusListElementSelected());
     }
 
     @Test
     public void validatePortaAcConsecteturAcListElementIsSelectable(){
-        selectablePage.clickOnTabList();
         selectablePage.clickOnPortaAcConsecteturAcListElement();
         Assert.assertTrue(selectablePage.isPortaAcConsecteturAcListElementSelected());
     }

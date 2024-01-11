@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class SelectablePage extends BasePages {
-    @FindBy(id = "demo-tab-list")
-    private WebElement tabList;
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(id = "demo-tab-grid")
     private WebElement tabGrid;
     @FindBy(css = ".mt-2.list-group-item")
@@ -23,68 +23,77 @@ public class SelectablePage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
-    public void clickOnTabList(){
-        tabList.click();
-    }
-
     public void clickOnTabGrid(){
-        tabGrid.click();
+        clickWithWait(tabGrid);
     }
 
     public void clickOnCrasJustoOdioListElement(){
         scroll(elementsList.get(0));
-        elementsList.get(0).click();
+        clickWithWait(elementsList.get(0));
     }
 
     public void clickOnDapibusAcFacilisisInListElement(){
         scroll(elementsList.get(1));
-        elementsList.get(1).click();
+        clickWithWait(elementsList.get(1));
     }
 
     public void clickOnMorbiLeoRisusListElement(){
         scroll(elementsList.get(2));
-        elementsList.get(2).click();
+        clickWithWait(elementsList.get(2));
     }
 
     public void clickOnPortaAcConsecteturAcListElement(){
         scroll(elementsList.get(3));
-        elementsList.get(3).click();
+        clickWithWait(elementsList.get(3));
     }
 
     public void clickOnOneGridElement(){
-        elementsGrid.get(0).click();
+        scroll(elementsGrid.get(0));
+        clickWithWait(elementsGrid.get(0));
     }
 
     public void clickOnTwoGridElement(){
-        elementsGrid.get(1).click();
+        scroll(elementsGrid.get(1));
+        clickWithWait(elementsGrid.get(1));
     }
 
     public void clickOnThreeGridElement(){
-        elementsGrid.get(2).click();
+        scroll(elementsGrid.get(2));
+        clickWithWait(elementsGrid.get(2));
     }
 
     public void clickOnFourGridElement(){
-        elementsGrid.get(3).click();
+        scroll(elementsGrid.get(3));
+        clickWithWait(elementsGrid.get(3));
     }
 
     public void clickOnFiveGridElement(){
-        elementsGrid.get(4).click();
+        scroll(elementsGrid.get(4));
+        clickWithWait(elementsGrid.get(4));
     }
 
     public void clickOnSixGridElement(){
-        elementsGrid.get(5).click();
+        scroll(elementsGrid.get(5));
+        clickWithWait(elementsGrid.get(5));
     }
 
     public void clickOnSevenGridElement(){
-        elementsGrid.get(6).click();
+        scroll(elementsGrid.get(6));
+        clickWithWait(elementsGrid.get(6));
     }
 
     public void clickOnEightGridElement(){
-        elementsGrid.get(7).click();
+        scroll(elementsGrid.get(7));
+        clickWithWait(elementsGrid.get(7));
     }
 
     public void clickOnNineGridElement(){
-        elementsGrid.get(8).click();
+        scroll(elementsGrid.get(8));
+        clickWithWait(elementsGrid.get(8));
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
     }
 
     public boolean isCrasJustoOdioListElementSelected(){

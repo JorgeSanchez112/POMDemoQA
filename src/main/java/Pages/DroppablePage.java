@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DroppablePage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(id = "droppableExample-tab-simple")
     private WebElement tabSimple;
     @FindBy(id = "droppableExample-tab-accept")

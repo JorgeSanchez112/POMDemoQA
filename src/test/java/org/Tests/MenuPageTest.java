@@ -5,10 +5,15 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class MenuTest extends BaseTest {
+public class MenuPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClassAndHideAdvertising(){
         menuPage = homePage.clickOnSectionWidgets().clickOnMenu();
+    }
+
+    @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(menuPage.getPageTitleText(),"Menu");
     }
 
     @Test

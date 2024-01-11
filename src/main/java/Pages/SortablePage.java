@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class SortablePage extends BasePages {
-    @FindBy(id = "demo-tab-list")
-    private WebElement tabList;
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(id = "demo-tab-grid")
     private WebElement tabGrid;
     @FindBy(css = "#demo-tabpane-list >* .list-group-item-action")
@@ -24,10 +24,7 @@ public class SortablePage extends BasePages {
     }
 
     public void clickOnTabGrid(){
-        tabGrid.click();
-    }
-    public void clickOnTabList(){
-        tabList.click();
+        clickWithWait(tabGrid);
     }
 
     public void moveFirstElementListToLastElement(){
@@ -40,18 +37,6 @@ public class SortablePage extends BasePages {
 
     public void moveTheThirdElementListToTheSecondToLastElement(){
         dragDropMoveElementToTarget(elementsList.get(2), elementsList.get(3));
-    }
-
-    public void moveLastElementListToFirstElement(){
-        dragDropMoveElementToTarget(elementsList.get(5), elementsList.get(0));
-    }
-
-    public void movePenultimateElementListToSecondElement(){
-        dragDropMoveElementToTarget(elementsList.get(4), elementsList.get(1));
-    }
-
-    public void moveTheSecondToLastElementListToTheThirdElement(){
-        dragDropMoveElementToTarget(elementsList.get(3), elementsList.get(2));
     }
 
     public void moveFirstElementGridToLastElement(){
@@ -78,36 +63,16 @@ public class SortablePage extends BasePages {
         dragDropMoveElementToTarget(elementsGrid.get(2), elementsGrid.get(6));
     }
 
-    public void moveLastElementGridToFirstElement(){
-        dragDropMoveElementToTarget(elementsGrid.get(8), elementsGrid.get(0));
-    }
-
-    public void moveFourthElementGridToFirstElement(){
-        dragDropMoveElementToTarget(elementsGrid.get(3), elementsGrid.get(0));
-    }
-
-    public void moveFifthElementGridToFirstElement(){
-        dragDropMoveElementToTarget(elementsGrid.get(4), elementsGrid.get(0));
-    }
-
-    public void moveSixthElementGridToFirstElement(){
-        dragDropMoveElementToTarget(elementsGrid.get(5), elementsGrid.get(0));
-    }
-
-    public void movePenultimateElementGridToSecondElement(){
-        dragDropMoveElementToTarget(elementsGrid.get(7), elementsGrid.get(1));
-    }
-
-    public void moveTheSecondToLastElementGridToTheThirdElement(){
-        dragDropMoveElementToTarget(elementsGrid.get(6), elementsGrid.get(2));
-    }
-
     public void scrollToLastElementList(){
         scroll(elementsList.get(5));
     }
 
     public void scrollToLastElementGrid(){
         scroll(elementsGrid.get(8));
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
     }
 
     public String getTextOfFirstElementValueOfElementsList(){

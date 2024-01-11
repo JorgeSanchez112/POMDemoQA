@@ -13,6 +13,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 public class Listeners extends BaseTest implements ITestListener {
     ExtentTest test;
@@ -35,7 +36,12 @@ public class Listeners extends BaseTest implements ITestListener {
         extentTest.get().fail(result.getThrowable());
 
         Object testClass = result.getInstance();
-        WebDriver driver = ((BaseTest) testClass).initializeDriver();
+        WebDriver driver = null;
+        try {
+            driver = ((BaseTest) testClass).initializeDriver();
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        }
 
         try {
             test.fail(MediaEntityBuilder.createScreenCaptureFromBase64String(getScreenShot(driver), result.getMethod().getMethodName()).build());

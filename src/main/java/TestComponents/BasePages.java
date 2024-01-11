@@ -2,6 +2,7 @@ package TestComponents;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -37,7 +38,12 @@ public class BasePages {
     }
 
     public void hidePublicity(WebElement element){
-        ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'none';", element);
+        try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'none';", element);
+        }catch (StaleElementReferenceException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void waitForClick(WebElement element){
@@ -102,7 +108,12 @@ public class BasePages {
     }
 
     public void clickWithWait(WebElement element){
-        waitForVisibleElement(element);
+        try {
+            waitForVisibleElement(element);
+        }catch (StaleElementReferenceException e){
+            e.printStackTrace();
+        }
+
         try {
             waitForClick(element);
             element.click();
@@ -235,11 +246,16 @@ public class BasePages {
 
     public void resizeElement(WebElement element, int sizeX, int sizeY){
         Actions actions = new Actions(driver);
-        actions.clickAndHold(element)
-                .moveByOffset(sizeX, sizeY)
-                .release()
-                .build()
-                .perform();
+        try {
+            actions.clickAndHold(element)
+                    .moveByOffset(sizeX, sizeY)
+                    .release()
+                    .build()
+                    .perform();
+        }catch (MoveTargetOutOfBoundsException e){
+            e.printStackTrace();
+        }
+
     }
 
     public boolean validateHTTPS_Response(String src) throws IOException {

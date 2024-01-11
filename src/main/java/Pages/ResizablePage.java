@@ -7,12 +7,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ResizablePage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
     @FindBy(id = "resizableBoxWithRestriction")
     private WebElement resizableBoxRestricted;
+    @FindBy(css = "#resizableBoxWithRestriction > .text")
+    private WebElement resizableRestrictedText;
     @FindBy(css = "#resizableBoxWithRestriction > .react-resizable-handle")
     private WebElement resizeIconOfBoxRestricted;
     @FindBy(id = "resizable")
     private WebElement resizableBox;
+    @FindBy(css = "#resizable > .text")
+    private WebElement resizableText;
     @FindBy(css = "#resizable > .react-resizable-handle")
     private WebElement resizeIcon;
 
@@ -33,6 +39,10 @@ public class ResizablePage extends BasePages {
         resizeElement(resizeIcon, 300, 100);
     }
 
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
     public String getWeightOfBoxRestricted(){
         return resizableBoxRestricted.getCssValue("width");
     }
@@ -49,4 +59,11 @@ public class ResizablePage extends BasePages {
         return resizableBox.getCssValue("height");
     }
 
+    public boolean isResizableRestrictedTextVisible(){
+        return resizableRestrictedText.isDisplayed();
+    }
+
+    public boolean isResizableTextVisible(){
+        return resizableText.isDisplayed();
+    }
 }

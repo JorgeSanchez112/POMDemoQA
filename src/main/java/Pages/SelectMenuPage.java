@@ -11,16 +11,26 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class SelectMenuPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(css = "#selectMenuContainer > div:nth-child(1) > div")
+    private WebElement valueLabel;
     @FindBy(id = "withOptGroup")
     private WebElement selectValueContainer;
     @FindBy(id = "react-select-2-input")
     private WebElement selectValueInput;
+    @FindBy(css = "#selectMenuContainer > div:nth-child(3) > div")
+    private WebElement oneLabel;
     @FindBy(id = "selectOne")
     private WebElement selectOneContainer;
     @FindBy(id = "react-select-3-input")
     private WebElement selectOneInput;
+    @FindBy(css = "#selectMenuContainer > div:nth-child(5) > div")
+    private WebElement oldStyleSelectLabel;
     @FindBy(id = "oldSelectMenu")
     private WebElement oldStyleSelectMenu;
+    @FindBy(css = ".col-md-6.col-sm-12 > p")
+    private List<WebElement> fourthAndFifthLabels;
     @FindBy(css = "#selectMenuContainer > .row:nth-child(7) > .col-sm-12 > .css-2b097c-container")
     private WebElement multiSelectDropDownContainer;
     @FindBy(css = "#react-select-4-input")
@@ -42,14 +52,12 @@ public class SelectMenuPage extends BasePages {
     }
     public void clickOnSelectOneContainer(){
         scroll(selectOneContainer);
-        waitForClick(selectOneContainer);
-        selectOneContainer.click();
+        clickWithWait(selectOneContainer);
     }
 
     public void clickOnMultiSelectDropdownContainer(){
         scroll(multiSelectDropDownContainer);
-        waitForClick(multiSelectDropDownContainer);
-        multiSelectDropDownContainer.click();
+        clickWithWait(multiSelectDropDownContainer);
     }
 
     public void downOneOptionInSelectValueDropDown(){
@@ -87,16 +95,36 @@ public class SelectMenuPage extends BasePages {
         select.selectByVisibleText(value);
     }
 
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
+    public String getValueLabelText(){
+        return valueLabel.getText();
+    }
+
     public String getSelectValueContainerText(){
         return selectValueContainer.getText();
+    }
+
+    public String getOneLabelText(){
+        return oneLabel.getText();
     }
 
     public String getSelectOneContainerText() {
         return selectOneContainer.getText();
     }
 
+    public String getOldStyleSelectLabelText(){
+        return oldStyleSelectLabel.getText();
+    }
+
     public String getSelectValueOnOldStyleSelectMenuText(){
         return oldStyleSelectMenu.getAttribute("value");
+    }
+
+    public String getMultiSelectDropdownLabelText(){
+        return fourthAndFifthLabels.get(0).getText();
     }
 
     public String getGreenValueTextOfMultiplyDropdown(){
@@ -113,6 +141,10 @@ public class SelectMenuPage extends BasePages {
 
     public String getRedValueTextOfMultiplyDropdown(){
         return multiSelectDropDownValues.get(3).getText();
+    }
+
+    public String getStandardMultiSelectLabelText(){
+        return fourthAndFifthLabels.get(1).getText();
     }
 
     public boolean isVolvoSelectedOfStandardMultiSelect(){
