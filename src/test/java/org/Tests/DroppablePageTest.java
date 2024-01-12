@@ -5,29 +5,52 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class DroppableTest extends BaseTest {
+public class DroppablePageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         droppablePage = homePage.clickOnSectionInteractions().clickOnDroppable();
     }
 
     @Test
+    public void validateCorrectPageTitle(){
+        Assert.assertEquals(droppablePage.getPageTitleText(),"Droppable");
+    }
+
+    @Test
+    public void validateSimpleTabIsVisible(){
+        Assert.assertTrue(droppablePage.isSimpleTabVisible());
+    }
+
+    @Test
+    public void validateAcceptTabIsVisible(){
+        Assert.assertTrue(droppablePage.isAcceptTabVisible());
+    }
+
+    @Test
+    public void validatePreventTabIsVisible(){
+        Assert.assertTrue(droppablePage.isPreventTabVisible());
+    }
+
+    @Test
+    public void validateRevertTabIsVisible(){
+        Assert.assertTrue(droppablePage.isRevertTabVisible());
+    }
+
+    @Test
     public void isSimpleDraggableDroppedToTarget(){
-        droppablePage.clickOnTabSimple();
         droppablePage.moveSimpleDraggableToTarget();
         Assert.assertTrue(droppablePage.isSimpleDraggableDropped());
     }
 
     @Test
-    public void isDraggableAcceptableDroppedToTarget(){
+    public void isAcceptableDraggableDroppedToTarget(){
         droppablePage.clickOnTabAccept();
         droppablePage.moveDraggableAcceptableToTarget();
         Assert.assertTrue(droppablePage.isAcceptDraggableDropped());
     }
 
     @Test
-    public void isDraggableNotAcceptableDroppedToTarget(){
-        droppablePage.refreshPage();
+    public void isNotAcceptableDraggableDroppedToTarget(){
         droppablePage.clickOnTabAccept();
         droppablePage.moveDraggableNotAcceptableToTarget();
         Assert.assertFalse(droppablePage.isNotAcceptDraggableDropped());

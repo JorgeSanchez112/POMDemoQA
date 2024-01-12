@@ -40,20 +40,16 @@ public class DraggablePage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
-    public void clickOnTabSimple(){
-        tabSimple.click();
-    }
-
     public void clickOnTabAxisRestricted(){
-        tabAxisRestricted.click();
+        clickWithWait(tabAxisRestricted);
     }
 
     public void clickOnTabContainerRestricted(){
-        tabContainerRestricted.click();
+        clickWithWait(tabContainerRestricted);
     }
 
     public void clickOnTabCursorStyle(){
-        tabCursorStyle.click();
+        clickWithWait(tabCursorStyle);
     }
 
     public void moveSimpleElement(){
@@ -89,6 +85,10 @@ public class DraggablePage extends BasePages {
     public void moveBottomCursorOfCursorStyle(){
         scroll(bottomStyleCursor);
         moveElementToCoordinates(bottomStyleCursor, 150, 50);
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
     }
 
     public String getSimpleBoxXPosition(){
@@ -147,4 +147,19 @@ public class DraggablePage extends BasePages {
         return bottomStyleCursor.getCssValue("top");
     }
 
+    public boolean isSimpleTabVisible(){
+        return tabSimple.isDisplayed();
+    }
+
+    public boolean isAxisTabVisible(){
+        return tabAxisRestricted.isDisplayed();
+    }
+
+    public boolean isContainerTabVisible(){
+        return tabContainerRestricted.isDisplayed();
+    }
+
+    public boolean isCursorTabVisible(){
+        return tabCursorStyle.isDisplayed();
+    }
 }

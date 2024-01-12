@@ -202,13 +202,13 @@
 
     <test name = "Droppable">
         <classes>
-            <class name = "org.Tests.DroppableTest" />
+            <class name = "org.Tests.DroppablePageTest" />
         </classes>
     </test>
 
     <test name = "Draggable">
         <classes>
-            <class name = "org.Tests.DraggableTest" />
+            <class name = "org.Tests.DraggablePageTest" />
         </classes>
     </test>-->
 

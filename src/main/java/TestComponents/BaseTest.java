@@ -75,8 +75,6 @@ public class BaseTest {
         }
     }
 
-    private String hubUrl = "http://172.17.48.1:4444";
-
     public String getScreenShot(WebDriver driver) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
         byte[] screenshotBytes = ts.getScreenshotAs(OutputType.BYTES);
@@ -94,7 +92,7 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.merge(desiredCapabilities);
 
-        driver = new RemoteWebDriver(new URL(hubUrl), options);
+        driver = new RemoteWebDriver(new URL(prop.getProperty("urlServer")), options);
         driver.manage().window().maximize();
         webDriverThreadLocal.set(driver);
 

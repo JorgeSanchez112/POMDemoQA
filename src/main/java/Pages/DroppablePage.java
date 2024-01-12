@@ -51,20 +51,16 @@ public class DroppablePage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
-    public void clickOnTabSimple(){
-        tabSimple.click();
-    }
-
     public void clickOnTabAccept(){
-        tabAccept.click();
+        clickWithWait(tabAccept);
     }
 
     public void clickOnTabPrevent(){
-        tabPreventPropogation.click();
+        clickWithWait(tabPreventPropogation);
     }
 
     public void clickOnTabRevert(){
-        tabRevert.click();
+        clickWithWait(tabRevert);
     }
 
     public void moveSimpleDraggableToTarget(){
@@ -108,6 +104,26 @@ public class DroppablePage extends BasePages {
     public void moveNoRevertDraggableToTarget(){
         scroll(dragNotRevertable);
         dragDropMoveElementToTarget(dragNotRevertable,revertTarget);
+    }
+
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
+    public boolean isSimpleTabVisible(){
+        return tabSimple.isDisplayed();
+    }
+
+    public boolean isAcceptTabVisible(){
+        return tabAccept.isDisplayed();
+    }
+
+    public boolean isPreventTabVisible(){
+        return tabPreventPropogation.isDisplayed();
+    }
+
+    public boolean isRevertTabVisible(){
+        return tabRevert.isDisplayed();
     }
 
     public boolean isSimpleDraggableDropped(){
