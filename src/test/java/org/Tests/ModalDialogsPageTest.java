@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class ModalDialogsTest extends BaseTest {
+public class ModalDialogsPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         modalDialogsPage = homePage.clickOnSectionAlerts_Frame_Windows().clickOnModalDialogs();

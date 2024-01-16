@@ -33,7 +33,7 @@ public class InteractionsPage extends BasePages {
 
     public SelectablePage clickOnSelectable(){
         scroll(deployed_form_exercise.get(1));
-        deployed_form_exercise.get(1).click();
+        clickWithWait(deployed_form_exercise.get(1));
         return new SelectablePage(driver);
     }
 

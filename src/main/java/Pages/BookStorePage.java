@@ -27,27 +27,23 @@ public class BookStorePage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
-    public int getSizeSections(){
-        return deployed_form_exercise.size();
-    }
-
     public BSLoginPage clickOnLoginTab(){
         scroll(deployed_form_exercise.get(0));
-        deployed_form_exercise.get(0).click();
+        clickWithWait(deployed_form_exercise.get(0));
         return new BSLoginPage(driver);
     }
 
     public BSProfilePage clickOnProfile(){
         waitForVisibleElement(deployed_form_exercise.get(2));
         scroll(deployed_form_exercise.get(2));
-        deployed_form_exercise.get(2).click();
+        clickWithWait(deployed_form_exercise.get(2));
         return new BSProfilePage(driver);
     }
 
     public BSAPIPage clickOnBookstoreApi(){
         waitForVisibleElement(deployed_form_exercise.get(3));
         scroll(deployed_form_exercise.get(3));
-        deployed_form_exercise.get(3).click();
+        clickWithWait(deployed_form_exercise.get(3));
         return new BSAPIPage(driver);
     }
 
@@ -87,53 +83,6 @@ public class BookStorePage extends BasePages {
     public void typeOnSearchBar(String text){
         searchBox.sendKeys(text);
     }
-
-    public boolean isTitleVisible(){
-        return title.isDisplayed();
-    }
-
-    public boolean isVisibleFirstImage(){
-        return bookData.get(0).isDisplayed();
-    }
-
-    public boolean isVisibleSecondImage(){
-        return bookData.get(4).isDisplayed();
-    }
-
-    public boolean isVisibleThirdImage(){
-        return bookData.get(8).isDisplayed();
-    }
-
-    public boolean isVisibleFourthImage(){
-        return bookData.get(12).isDisplayed();
-    }
-
-    public boolean isVisibleFifthImage(){
-        return bookData.get(16).isDisplayed();
-    }
-
-    public boolean isVisibleSixthImage(){
-        return bookData.get(20).isDisplayed();
-    }
-
-    public boolean isVisibleSeventhImage(){
-        return bookData.get(24).isDisplayed();
-    }
-
-    public boolean isVisibleEighthImage(){
-        return bookData.get(28).isDisplayed();
-    }
-
-    public boolean isBookTitleFound(String bookTitle, String textExpected){
-        String regex = ".*"+textExpected+".*";
-        if (bookTitle.matches(regex)){
-            return true;
-        }else {
-            System.out.println("book doesn't exist");
-            return false;
-        }
-    }
-
 
     public String getSearchBarPlaceholder(){
         return searchBox.getAttribute("placeholder");
@@ -253,6 +202,56 @@ public class BookStorePage extends BasePages {
 
     public String getBookStoreUrlText(){
         return driver.getCurrentUrl();
+    }
+
+    public boolean isTitleVisible(){
+        return title.isDisplayed();
+    }
+
+    public boolean isVisibleFirstImage(){
+        return bookData.get(0).isDisplayed();
+    }
+
+    public boolean isVisibleSecondImage(){
+        return bookData.get(4).isDisplayed();
+    }
+
+    public boolean isVisibleThirdImage(){
+        return bookData.get(8).isDisplayed();
+    }
+
+    public boolean isVisibleFourthImage(){
+        return bookData.get(12).isDisplayed();
+    }
+
+    public boolean isVisibleFifthImage(){
+        return bookData.get(16).isDisplayed();
+    }
+
+    public boolean isVisibleSixthImage(){
+        return bookData.get(20).isDisplayed();
+    }
+
+    public boolean isVisibleSeventhImage(){
+        return bookData.get(24).isDisplayed();
+    }
+
+    public boolean isVisibleEighthImage(){
+        return bookData.get(28).isDisplayed();
+    }
+
+    public boolean isBookTitleFound(String bookTitle, String textExpected){
+        String regex = ".*"+textExpected+".*";
+        if (bookTitle.matches(regex)){
+            return true;
+        }else {
+            System.out.println("book doesn't exist");
+            return false;
+        }
+    }
+
+    public int getSizeSections(){
+        return deployed_form_exercise.size();
     }
 
 }

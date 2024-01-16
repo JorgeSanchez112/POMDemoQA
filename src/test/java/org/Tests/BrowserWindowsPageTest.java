@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class BrowserWindowsTest extends BaseTest {
+public class BrowserWindowsPageTest extends BaseTest {
     @BeforeMethod
     public void InitializeClass(){
         browserWindows = homePage.clickOnSectionAlerts_Frame_Windows().clickOnBrowserWindows();

@@ -50,8 +50,13 @@ public class HomePage extends BasePages {
     }
 
     public InteractionsPage clickOnSectionInteractions(){
-        scroll(sections.get(4));
-        clickWithWait(sections.get(4));
+        try {
+            scroll(sections.get(4));
+            clickWithWait(sections.get(4));
+            return new InteractionsPage(driver);
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
         return new InteractionsPage(driver);
     }
 

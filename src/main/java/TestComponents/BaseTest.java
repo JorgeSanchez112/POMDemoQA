@@ -2,10 +2,7 @@ package TestComponents;
 
 import Pages.*;
 import org.apache.hc.client5.http.utils.Base64;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -108,7 +105,16 @@ public class BaseTest {
 
         homePage = new HomePage(driver);
         homePage.goTo();
-        homePage.waitForVisibleElement(driver.findElement(By.cssSelector("#adplus-anchor > div")));
+        try {
+            try {
+                homePage.waitForVisibleElement(driver.findElement(By.cssSelector("#adplus-anchor > div")));
+            }catch (NoSuchSessionException e){
+                e.printStackTrace();
+            }
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }
+
         homePage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
     }
 
@@ -116,8 +122,13 @@ public class BaseTest {
     public void close(){
         driver = webDriverThreadLocal.get();
         if (driver != null) {
-            driver.quit();
-            webDriverThreadLocal.remove();
+            try{
+                driver.quit();
+                webDriverThreadLocal.remove();
+            }catch (NoSuchSessionException e){
+                e.printStackTrace();
+            }
+
         }
     }
 

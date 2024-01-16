@@ -10,7 +10,7 @@
 
     <test name = "home">
         <classes>
-            <class name = "org.Tests.BaseHomeTest" />
+            <class name = "org.Tests.BaseHomePageTest" />
         </classes>
     </test>
 
@@ -100,7 +100,7 @@
 
     <test name = "Dynamic Properties">
         <classes>
-            <class name = "org.Tests.DynamicPropertiesTest" />
+            <class name = "org.Tests.DynamicPropertiesPageTest" />
         </classes>
     </test>
 
@@ -124,7 +124,7 @@
 
     <!--<test name = "Modal Dialogs">
         <classes>
-            <class name = "org.Tests.ModalDialogsTest" />
+            <class name = "org.Tests.ModalDialogsPageTest" />
         </classes>
     </test>
 

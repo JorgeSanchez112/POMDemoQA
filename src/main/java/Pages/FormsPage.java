@@ -26,7 +26,8 @@ public class FormsPage extends BasePages {
     }
 
     public PracticeFormPage clickOnPracticeFormSection(){
-        deployed_form_exercise.get(0).click();
+        scroll(deployed_form_exercise.get(0));
+        clickWithWait(deployed_form_exercise.get(0));
         return new PracticeFormPage(driver);
     }
 

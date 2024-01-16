@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class DynamicPropertiesTest extends BaseTest {
+public class DynamicPropertiesPageTest extends BaseTest {
     @BeforeMethod
     public void initializeClass(){
         dynamicProperties = homePage.clickOnSectionElements().clickOnDynamicPropertiesSection();

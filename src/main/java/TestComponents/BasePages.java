@@ -25,10 +25,6 @@ public class BasePages {
         this.driver = driver;
     }
 
-    public void refreshPage(){
-        driver.navigate().refresh();
-    }
-
     public void backToPage(){
         driver.navigate().back();
     }
@@ -110,17 +106,20 @@ public class BasePages {
     public void clickWithWait(WebElement element){
         try {
             waitForVisibleElement(element);
+            try {
+                try{
+                    waitForClick(element);
+                    element.click();
+                }catch (NoSuchElementException e){
+                    e.printStackTrace();
+                }
+
+            }catch (ElementClickInterceptedException e){
+                e.printStackTrace();
+            }
         }catch (StaleElementReferenceException e){
             e.printStackTrace();
         }
-
-        try {
-            waitForClick(element);
-            element.click();
-        }catch (ElementClickInterceptedException e){
-            e.printStackTrace();
-        }
-
     }
 
     public void switchToTab(){

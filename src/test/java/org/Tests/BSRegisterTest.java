@@ -49,33 +49,28 @@ public class BSRegisterTest extends BaseTest {
         bsRegisterPage.typeOnPasswordInput("a");
         bsRegisterPage.clickOnRegisterButton();
         Assert.assertTrue(bsRegisterPage.isRecaptchaMessageVisible());
-        bsRegisterPage.refreshPage();
     }
 
     @Test
     public void isActiveRedBorderColorToNotFilledFirstNameInput(){
-        bsRegisterPage.refreshPage();
         bsRegisterPage.clickOnRegisterButton();
         Assert.assertEquals(bsRegisterPage.getFirstNameInputBorderColor(),"rgb(220, 53, 69)");
     }
 
     @Test
     public void isActiveRedBorderColorToNotFilledLastNameInput(){
-        bsRegisterPage.refreshPage();
         bsRegisterPage.clickOnRegisterButton();
         Assert.assertEquals(bsRegisterPage.getLastNameInputBorderColor(),"rgb(220, 53, 69)");
     }
 
     @Test
     public void isActiveRedBorderColorToNotFilledUserNameInput(){
-        bsRegisterPage.refreshPage();
         bsRegisterPage.clickOnRegisterButton();
         Assert.assertEquals(bsRegisterPage.getUsernameInputBorderColor(),"rgb(220, 53, 69)");
     }
 
     @Test
     public void isActiveRedBorderColorToNotFilledPasswordInput(){
-        bsRegisterPage.refreshPage();
         bsRegisterPage.clickOnRegisterButton();
         Assert.assertEquals(bsRegisterPage.getPasswordInputBorderColor(),"rgb(220, 53, 69)");
     }
@@ -84,7 +79,6 @@ public class BSRegisterTest extends BaseTest {
     public void isRecaptchaChecked(){
         bsRegisterPage.clickOnRecaptcha();
         Assert.assertFalse(bsRegisterPage.isRecaptchaClicked()); //in this line the code should be true but there is the recaptcha where I can't solve it.
-        bsRegisterPage.refreshPage();
     }
 
     @Test

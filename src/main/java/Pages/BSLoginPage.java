@@ -33,13 +33,17 @@ public class BSLoginPage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
-    public boolean isTitleVisible(){
-        return title.isDisplayed();
+    public void typeOnUsernameInput(String name){
+        usernameInput.sendKeys(name);
     }
 
-    public boolean isErrorMessageVisible(){
-        waitForVisibleElement(errorCredentialsMessage);
-        return errorCredentialsMessage.isDisplayed();
+    public void typeOnPasswordInput(String password){
+        passwordInput.sendKeys(password);
+    }
+
+    public void clickOnLoginButton(){
+        scroll(loginButton);
+        clickWithWait(loginButton);
     }
 
     public String getSubTitleText(){
@@ -79,22 +83,18 @@ public class BSLoginPage extends BasePages {
         return driver.getCurrentUrl();
     }
 
-    public void typeOnUsernameInput(String name){
-        usernameInput.sendKeys(name);
+    public boolean isTitleVisible(){
+        return title.isDisplayed();
     }
 
-    public void typeOnPasswordInput(String password){
-        passwordInput.sendKeys(password);
-    }
-
-    public void clickOnLoginButton(){
-        scroll(loginButton);
-        loginButton.click();
+    public boolean isErrorMessageVisible(){
+        waitForVisibleElement(errorCredentialsMessage);
+        return errorCredentialsMessage.isDisplayed();
     }
 
     public BSRegisterPage clickOnNewUserButton(){
         scroll(newUserButton);
-        newUserButton.click();
+        clickWithWait(newUserButton);
         return new BSRegisterPage(driver);
     }
 
