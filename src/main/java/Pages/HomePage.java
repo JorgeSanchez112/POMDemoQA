@@ -23,7 +23,11 @@ public class HomePage extends BasePages {
     }
 
     public void goTo(){
-        driver.get("https://demoqa.com/");
+        try {
+            driver.get("https://demoqa.com/");
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }
     }
 
     public ElementsPage clickOnSectionElements(){

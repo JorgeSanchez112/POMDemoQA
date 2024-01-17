@@ -32,7 +32,7 @@ public class BookStorePageTest extends BaseTest {
     }
 
     @Test
-    public void isThirdTitleOfTableCorrect(){
+    public void isThirdTitleOfTableCorrect() throws InterruptedException {
         Assert.assertEquals(bookStorePage.getThirdTitleTableText(),"Author");
     }
 

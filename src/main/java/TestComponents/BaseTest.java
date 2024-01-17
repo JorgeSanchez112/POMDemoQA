@@ -107,15 +107,26 @@ public class BaseTest {
         homePage.goTo();
         try {
             try {
-                homePage.waitForVisibleElement(driver.findElement(By.cssSelector("#adplus-anchor > div")));
-            }catch (NoSuchSessionException e){
-                e.printStackTrace();
+                try{
+                    try{
+                        homePage.waitForVisibleElement(driver.findElement(By.cssSelector("#adplus-anchor > div")));
+                        homePage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
+                    }catch (TimeoutException e3){
+                        e3.printStackTrace();
+                    }
+
+                }catch (NoSuchElementException e2){
+                    e2.printStackTrace();
+                }
+
+            }catch (NoSuchSessionException e1){
+                e1.printStackTrace();
             }
-        }catch (NullPointerException e){
-            e.printStackTrace();
+        }catch (NullPointerException e0){
+            e0.printStackTrace();
         }
 
-        homePage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
+
     }
 
     @AfterMethod
@@ -123,12 +134,15 @@ public class BaseTest {
         driver = webDriverThreadLocal.get();
         if (driver != null) {
             try{
-                driver.quit();
-                webDriverThreadLocal.remove();
+                try {
+                    driver.quit();
+                    webDriverThreadLocal.remove();
+                }catch (TimeoutException e){
+                    e.printStackTrace();
+                }
             }catch (NoSuchSessionException e){
                 e.printStackTrace();
             }
-
         }
     }
 

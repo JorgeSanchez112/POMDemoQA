@@ -27,57 +27,77 @@ public class BookStorePage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
-    public BSLoginPage clickOnLoginTab(){
-        scroll(deployed_form_exercise.get(0));
-        clickWithWait(deployed_form_exercise.get(0));
-        return new BSLoginPage(driver);
-    }
-
-    public BSProfilePage clickOnProfile(){
-        waitForVisibleElement(deployed_form_exercise.get(2));
-        scroll(deployed_form_exercise.get(2));
-        clickWithWait(deployed_form_exercise.get(2));
-        return new BSProfilePage(driver);
-    }
-
-    public BSAPIPage clickOnBookstoreApi(){
-        waitForVisibleElement(deployed_form_exercise.get(3));
-        scroll(deployed_form_exercise.get(3));
-        clickWithWait(deployed_form_exercise.get(3));
-        return new BSAPIPage(driver);
-    }
-
     public void scrollToSearchBar(){
         waitForVisibleElement(searchBox);
         scroll(searchBox);
     }
 
     public void scrollToFirstRow(){
-        scroll(bookRow.get(0));
+        try {
+            waitForVisibleElement(bookRow.get(0));
+            scroll(bookRow.get(0));
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
     }
 
     public void scrollToSecondRow(){
-        scroll(bookRow.get(1));
+        try {
+            waitForVisibleElement(bookRow.get(1));
+            scroll(bookRow.get(1));
+        }catch (IndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
     }
 
     public void scrollToThirdRow(){
-        scroll(bookRow.get(2));
+        try {
+            waitForVisibleElement(bookRow.get(2));
+            scroll(bookRow.get(2));
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void scrollToFourthRow(){
-        scroll(bookRow.get(3));
+        try {
+            waitForVisibleElement(bookRow.get(3));
+            scroll(bookRow.get(3));
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void scrollToFifthRow(){
-        scroll(bookRow.get(4));
+        try {
+            waitForVisibleElement(bookRow.get(4));
+            scroll(bookRow.get(4));
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void scrollToSixthRow(){
-        scroll(bookRow.get(5));
+        try{
+            waitForVisibleElement(bookRow.get(5));
+            scroll(bookRow.get(5));
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void scrollToSeventhRow(){
-        scroll(bookRow.get(6));
+        try{
+            waitForVisibleElement(bookRow.get(6));
+            scroll(bookRow.get(6));
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void typeOnSearchBar(String text){
@@ -89,115 +109,257 @@ public class BookStorePage extends BasePages {
     }
 
     public String getFirstTitleTableText(){
-        return tableTitles.get(0).getText();
+        waitForVisibleElement(tableTitles.get(0));
+        try{
+            return tableTitles.get(0).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getSecondTitleTableText(){
-        return tableTitles.get(1).getText();
+        waitForVisibleElement(tableTitles.get(0));
+        try{
+            return tableTitles.get(1).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
-    public String getThirdTitleTableText(){
-        return tableTitles.get(2).getText();
+    public String getThirdTitleTableText() throws InterruptedException {
+        Thread.sleep(2000);
+        try{
+            return tableTitles.get(2).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getFourthTitleTableText(){
-        return tableTitles.get(3).getText();
+        try{
+            return tableTitles.get(3).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getTitleOfFirstBookText(){
-        return bookData.get(1).getText();
+        try{
+            return bookData.get(1).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getAuthorOfFirstBookText(){
-        return bookData.get(2).getText();
+        try{
+            return bookData.get(2).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getPublisherOfFirstBookText(){
-        return bookData.get(3).getText();
+        try{
+            return bookData.get(3).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getTitleOfSecondBookText(){
-        return bookData.get(5).getText();
+        try{
+            return bookData.get(5).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getAuthorOfSecondBookText(){
-        return bookData.get(6).getText();
+        try{
+            return bookData.get(6).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getPublisherOfSecondBookText(){
-        return bookData.get(7).getText();
+        try{
+            return bookData.get(7).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getTitleOfThirdBookText(){
-        return bookData.get(9).getText();
+        try{
+            return bookData.get(9).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getAuthorOfThirdBookText(){
-        return bookData.get(10).getText();
+        try{
+            return bookData.get(10).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getPublisherOfThirdBookText(){
-        return bookData.get(11).getText();
+        try{
+            return bookData.get(11).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getTitleOfFourthBookText(){
-        return bookData.get(13).getText();
+        try{
+            return bookData.get(13).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getAuthorOfFourthBookText(){
-        return bookData.get(14).getText();
+        try{
+            return bookData.get(14).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getPublisherOfFourthBookText(){
-        return bookData.get(15).getText();
+        try{
+            return bookData.get(15).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getTitleOfFifthBookText(){
-        return bookData.get(17).getText();
+        try{
+            return bookData.get(17).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getAuthorOfFifthBookText(){
-        return bookData.get(18).getText();
+        try{
+            return bookData.get(18).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getPublisherOfFifthBookText(){
+        try{
+            return bookData.get(19).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
         return bookData.get(19).getText();
     }
 
     public String getTitleOfSixthBookText(){
-        return bookData.get(21).getText();
+        try{
+            return bookData.get(21).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getAuthorOfSixthBookText(){
-        return bookData.get(22).getText();
+        try{
+            return bookData.get(22).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getPublisherOfSixthBookText(){
-        return bookData.get(23).getText();
+        try{
+            return bookData.get(23).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getTitleOfSeventhBookText(){
-        return bookData.get(25).getText();
+        try{
+            return bookData.get(25).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getAuthorOfSeventhBookText(){
-        return bookData.get(26).getText();
+        try{
+            return bookData.get(26).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getPublisherOfSeventhBookText(){
-        return bookData.get(27).getText();
+        try{
+            return bookData.get(27).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getTitleOfEighthBookText(){
-        return bookData.get(29).getText();
+        try{
+            return bookData.get(29).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getAuthorOfEighthBookText(){
-        return bookData.get(30).getText();
+        try{
+            return bookData.get(30).getText();
+        }catch (IndexOutOfBoundsException e){
+            return "an error has happened" + e.getMessage();
+        }
     }
 
     public String getPublisherOfEighthBookText(){
-        return bookData.get(31).getText();
+        try{
+            return bookData.get(31).getText();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return "an error has happened";
     }
 
     public String getBookStoreUrlText(){
@@ -209,35 +371,75 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleFirstImage(){
-        return bookData.get(0).isDisplayed();
+        try{
+            return bookData.get(0).isDisplayed();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isVisibleSecondImage(){
-        return bookData.get(4).isDisplayed();
+        try{
+            return bookData.get(4).isDisplayed();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isVisibleThirdImage(){
-        return bookData.get(8).isDisplayed();
+        try{
+            return bookData.get(8).isDisplayed();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isVisibleFourthImage(){
-        return bookData.get(12).isDisplayed();
+        try{
+            return bookData.get(12).isDisplayed();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isVisibleFifthImage(){
-        return bookData.get(16).isDisplayed();
+        try{
+            return bookData.get(16).isDisplayed();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isVisibleSixthImage(){
-        return bookData.get(20).isDisplayed();
+        try{
+            return bookData.get(20).isDisplayed();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isVisibleSeventhImage(){
-        return bookData.get(24).isDisplayed();
+        try{
+            return bookData.get(24).isDisplayed();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isVisibleEighthImage(){
-        return bookData.get(28).isDisplayed();
+        try{
+            return bookData.get(28).isDisplayed();
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isBookTitleFound(String bookTitle, String textExpected){
@@ -252,6 +454,24 @@ public class BookStorePage extends BasePages {
 
     public int getSizeSections(){
         return deployed_form_exercise.size();
+    }
+
+    public BSLoginPage clickOnLoginTab(){
+        scroll(deployed_form_exercise.get(0));
+        clickWithWait(deployed_form_exercise.get(0));
+        return new BSLoginPage(driver);
+    }
+
+    public BSProfilePage clickOnProfile(){
+        scroll(deployed_form_exercise.get(2));
+        clickWithWait(deployed_form_exercise.get(2));
+        return new BSProfilePage(driver);
+    }
+
+    public BSAPIPage clickOnBookstoreApi(){
+        scroll(deployed_form_exercise.get(3));
+        clickWithWait(deployed_form_exercise.get(3));
+        return new BSAPIPage(driver);
     }
 
 }

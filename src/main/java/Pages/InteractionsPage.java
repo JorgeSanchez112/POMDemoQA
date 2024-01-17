@@ -27,7 +27,7 @@ public class InteractionsPage extends BasePages {
 
     public SortablePage clickOnSortable(){
         scroll(deployed_form_exercise.get(0));
-        deployed_form_exercise.get(0).click();
+        clickWithWait(deployed_form_exercise.get(0));
         return new SortablePage(driver);
     }
 
@@ -39,20 +39,19 @@ public class InteractionsPage extends BasePages {
 
     public ResizablePage clickOnResizable(){
         scroll(deployed_form_exercise.get(2));
-        deployed_form_exercise.get(2).click();
+        clickWithWait(deployed_form_exercise.get(2));
         return new ResizablePage(driver);
     }
 
     public DroppablePage clickOnDroppable(){
         scroll(deployed_form_exercise.get(3));
-        deployed_form_exercise.get(3).click();
+        clickWithWait(deployed_form_exercise.get(3));
         return new DroppablePage(driver);
     }
 
     public DraggablePage clickOnDragabble(){
-        waitForVisibleElement(deployed_form_exercise.get(4));
         scroll(deployed_form_exercise.get(4));
-        deployed_form_exercise.get(4).click();
+        clickWithWait(deployed_form_exercise.get(4));
         return new DraggablePage(driver);
     }
 

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class FormsPage extends BasePages {
     @FindBy(css = ".collapse.show > .menu-list > *")
-    private List<WebElement> deployed_form_exercise;
+    private WebElement deployed_form_exercise;
 
     public FormsPage(WebDriver driver) {
         super(driver);
@@ -21,13 +21,13 @@ public class FormsPage extends BasePages {
         return driver.getCurrentUrl();
     }
 
-    public int getSizeSections(){
-        return deployed_form_exercise.size();
+    public String getMenuListText(){
+        return deployed_form_exercise.getText();
     }
 
     public PracticeFormPage clickOnPracticeFormSection(){
-        scroll(deployed_form_exercise.get(0));
-        clickWithWait(deployed_form_exercise.get(0));
+        scroll(deployed_form_exercise);
+        clickWithWait(deployed_form_exercise);
         return new PracticeFormPage(driver);
     }
 

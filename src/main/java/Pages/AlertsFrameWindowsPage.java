@@ -27,31 +27,31 @@ public class AlertsFrameWindowsPage extends BasePages {
 
     public BrowserWindows clickOnBrowserWindows(){
         scroll(deployed_form_exercise.get(0));
-        deployed_form_exercise.get(0).click();
+        clickWithWait(deployed_form_exercise.get(0));
         return new BrowserWindows(driver);
     }
 
     public AlertsPage clickOnAlerts(){
         scroll(deployed_form_exercise.get(1));
-        deployed_form_exercise.get(1).click();
+        clickWithWait(deployed_form_exercise.get(1));
         return new AlertsPage(driver);
     }
 
     public FramesPage clickOnFrames(){
         scroll(deployed_form_exercise.get(2));
-        deployed_form_exercise.get(2).click();
+        clickWithWait(deployed_form_exercise.get(2));
         return new FramesPage(driver);
     }
 
     public NestedFramesPage clickOnNestedFrames(){
         scroll(deployed_form_exercise.get(3));
-        deployed_form_exercise.get(3).click();
+        clickWithWait(deployed_form_exercise.get(3));
         return new NestedFramesPage(driver);
     }
 
     public ModalDialogsPage clickOnModalDialogs(){
         scroll(deployed_form_exercise.get(4));
-        deployed_form_exercise.get(4).click();
+        clickWithWait(deployed_form_exercise.get(4));
         return new ModalDialogsPage(driver);
     }
 

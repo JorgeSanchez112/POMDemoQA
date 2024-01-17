@@ -17,9 +17,8 @@ public class FormsPageTest extends BaseTest {
     }
 
     @Test
-    public void validateSectionsSize(){
-        Assert.assertEquals(formsPage.getSizeSections(),1);
+    public void validateCorrectMenuListVisible(){
+        Assert.assertEquals(formsPage.getMenuListText(),"Practice Form");
     }
-
 
 }
