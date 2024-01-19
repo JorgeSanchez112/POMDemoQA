@@ -93,6 +93,11 @@ public class BasePages {
         }
     }
 
+    public void waitForPageToLoad(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.jsReturnsValue("return document.readyState == 'complete';"));
+    }
+
     public void waitAlert(){
         try {
             WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(6));

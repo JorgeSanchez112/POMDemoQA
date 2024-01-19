@@ -32,7 +32,9 @@ public class BookStorePage extends BasePages {
         scroll(searchBox);
     }
 
-    public void scrollToFirstRow(){
+    public void scrollToFirstRow() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try {
             waitForVisibleElement(bookRow.get(0));
             scroll(bookRow.get(0));
@@ -41,7 +43,9 @@ public class BookStorePage extends BasePages {
         }
     }
 
-    public void scrollToSecondRow(){
+    public void scrollToSecondRow() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try {
             waitForVisibleElement(bookRow.get(1));
             scroll(bookRow.get(1));
@@ -50,17 +54,20 @@ public class BookStorePage extends BasePages {
         }
     }
 
-    public void scrollToThirdRow(){
+    public void scrollToThirdRow() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try {
             waitForVisibleElement(bookRow.get(2));
             scroll(bookRow.get(2));
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
         }
-
     }
 
-    public void scrollToFourthRow(){
+    public void scrollToFourthRow() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try {
             waitForVisibleElement(bookRow.get(3));
             scroll(bookRow.get(3));
@@ -70,7 +77,9 @@ public class BookStorePage extends BasePages {
 
     }
 
-    public void scrollToFifthRow(){
+    public void scrollToFifthRow() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try {
             waitForVisibleElement(bookRow.get(4));
             scroll(bookRow.get(4));
@@ -80,7 +89,9 @@ public class BookStorePage extends BasePages {
 
     }
 
-    public void scrollToSixthRow(){
+    public void scrollToSixthRow() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             waitForVisibleElement(bookRow.get(5));
             scroll(bookRow.get(5));
@@ -90,7 +101,9 @@ public class BookStorePage extends BasePages {
 
     }
 
-    public void scrollToSeventhRow(){
+    public void scrollToSeventhRow() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             waitForVisibleElement(bookRow.get(6));
             scroll(bookRow.get(6));
@@ -108,258 +121,313 @@ public class BookStorePage extends BasePages {
         return searchBox.getAttribute("placeholder");
     }
 
-    public String getFirstTitleTableText(){
-        waitForVisibleElement(tableTitles.get(0));
+    public String getFirstTitleTableText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
+            waitForVisibleElement(tableTitles.get(0));
             return tableTitles.get(0).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getSecondTitleTableText(){
-        waitForVisibleElement(tableTitles.get(0));
+    public String getSecondTitleTableText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
+            waitForVisibleElement(tableTitles.get(0));
             return tableTitles.get(1).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
     public String getThirdTitleTableText() throws InterruptedException {
-        Thread.sleep(2000);
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return tableTitles.get(2).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getFourthTitleTableText(){
+    public String getFourthTitleTableText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return tableTitles.get(3).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getTitleOfFirstBookText(){
+    public String getTitleOfFirstBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(1).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getAuthorOfFirstBookText(){
+    public String getAuthorOfFirstBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(2).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getPublisherOfFirstBookText(){
+    public String getPublisherOfFirstBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(3).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getTitleOfSecondBookText(){
+    public String getTitleOfSecondBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(5).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getAuthorOfSecondBookText(){
+    public String getAuthorOfSecondBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(6).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getPublisherOfSecondBookText(){
+    public String getPublisherOfSecondBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(7).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getTitleOfThirdBookText(){
+    public String getTitleOfThirdBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(9).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getAuthorOfThirdBookText(){
+    public String getAuthorOfThirdBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(10).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getPublisherOfThirdBookText(){
+    public String getPublisherOfThirdBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(11).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getTitleOfFourthBookText(){
+    public String getTitleOfFourthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(13).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getAuthorOfFourthBookText(){
+    public String getAuthorOfFourthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(14).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getPublisherOfFourthBookText(){
+    public String getPublisherOfFourthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(15).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getTitleOfFifthBookText(){
+    public String getTitleOfFifthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(17).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getAuthorOfFifthBookText(){
+    public String getAuthorOfFifthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(18).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getPublisherOfFifthBookText(){
+    public String getPublisherOfFifthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(19).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return bookData.get(19).getText();
     }
 
-    public String getTitleOfSixthBookText(){
+    public String getTitleOfSixthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(21).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getAuthorOfSixthBookText(){
+    public String getAuthorOfSixthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(22).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getPublisherOfSixthBookText(){
+    public String getPublisherOfSixthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(23).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getTitleOfSeventhBookText(){
+    public String getTitleOfSeventhBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(25).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getAuthorOfSeventhBookText(){
+    public String getAuthorOfSeventhBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(26).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getPublisherOfSeventhBookText(){
+    public String getPublisherOfSeventhBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(27).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getTitleOfEighthBookText(){
+    public String getTitleOfEighthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(29).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
-    public String getAuthorOfEighthBookText(){
+    public String getAuthorOfEighthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(30).getText();
         }catch (IndexOutOfBoundsException e){
-            return "an error has happened" + e.getMessage();
+            return e.getMessage();
         }
     }
 
-    public String getPublisherOfEighthBookText(){
+    public String getPublisherOfEighthBookText() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(31).getText();
         }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
+            return e.getMessage();
         }
-        return "an error has happened";
     }
 
     public String getBookStoreUrlText(){
@@ -370,7 +438,9 @@ public class BookStorePage extends BasePages {
         return title.isDisplayed();
     }
 
-    public boolean isVisibleFirstImage(){
+    public boolean isVisibleFirstImage() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(0).isDisplayed();
         }catch (IndexOutOfBoundsException e){
@@ -379,7 +449,9 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleSecondImage(){
+    public boolean isVisibleSecondImage() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(4).isDisplayed();
         }catch (IndexOutOfBoundsException e){
@@ -388,7 +460,9 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleThirdImage(){
+    public boolean isVisibleThirdImage() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(8).isDisplayed();
         }catch (IndexOutOfBoundsException e){
@@ -397,7 +471,9 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleFourthImage(){
+    public boolean isVisibleFourthImage() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(12).isDisplayed();
         }catch (IndexOutOfBoundsException e){
@@ -406,7 +482,9 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleFifthImage(){
+    public boolean isVisibleFifthImage() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(16).isDisplayed();
         }catch (IndexOutOfBoundsException e){
@@ -415,7 +493,9 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleSixthImage(){
+    public boolean isVisibleSixthImage() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(20).isDisplayed();
         }catch (IndexOutOfBoundsException e){
@@ -424,7 +504,9 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleSeventhImage(){
+    public boolean isVisibleSeventhImage() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(24).isDisplayed();
         }catch (IndexOutOfBoundsException e){
@@ -433,7 +515,9 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleEighthImage(){
+    public boolean isVisibleEighthImage() throws InterruptedException {
+        waitForPageToLoad();
+        Thread.sleep(1000);
         try{
             return bookData.get(28).isDisplayed();
         }catch (IndexOutOfBoundsException e){

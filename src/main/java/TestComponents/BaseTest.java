@@ -104,11 +104,11 @@ public class BaseTest {
         }
 
         homePage = new HomePage(driver);
-        homePage.goTo();
         try {
             try {
                 try{
                     try{
+                        homePage.goTo();
                         homePage.waitForVisibleElement(driver.findElement(By.cssSelector("#adplus-anchor > div")));
                         homePage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
                     }catch (TimeoutException e3){

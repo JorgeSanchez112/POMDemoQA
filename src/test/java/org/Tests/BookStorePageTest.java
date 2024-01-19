@@ -22,12 +22,12 @@ public class BookStorePageTest extends BaseTest {
     }
 
     @Test
-    public void isFirstTitleOfTableCorrect(){
+    public void isFirstTitleOfTableCorrect() throws InterruptedException {
         Assert.assertEquals(bookStorePage.getFirstTitleTableText(), "Image");
     }
 
     @Test
-    public void isSecondTitleOfTableCorrect(){
+    public void isSecondTitleOfTableCorrect() throws InterruptedException {
         Assert.assertEquals(bookStorePage.getSecondTitleTableText(),"Title");
     }
 
@@ -37,198 +37,198 @@ public class BookStorePageTest extends BaseTest {
     }
 
     @Test
-    public void isFourthTitleOfTableCorrect(){
+    public void isFourthTitleOfTableCorrect() throws InterruptedException {
         Assert.assertEquals(bookStorePage.getFourthTitleTableText(),"Publisher");
     }
 
     @Test
-    public void isFirstBookImageVisible(){
+    public void isFirstBookImageVisible() throws InterruptedException {
         bookStorePage.scrollToFirstRow();
         Assert.assertTrue(bookStorePage.isVisibleFirstImage());
     }
 
     @Test
-    public void isFirstBookTitleCorrect(){
+    public void isFirstBookTitleCorrect() throws InterruptedException {
         bookStorePage.scrollToFirstRow();
         Assert.assertEquals(bookStorePage.getTitleOfFirstBookText(),"Git Pocket Guide");
     }
 
     @Test
-    public void isFirstBookAuthorCorrect(){
+    public void isFirstBookAuthorCorrect() throws InterruptedException {
         bookStorePage.scrollToFirstRow();
         Assert.assertEquals(bookStorePage.getAuthorOfFirstBookText(),"Richard E. Silverman");
     }
 
     @Test
-    public void isFirstBookPublisherCorrect(){
+    public void isFirstBookPublisherCorrect() throws InterruptedException {
         bookStorePage.scrollToFirstRow();
         Assert.assertEquals(bookStorePage.getPublisherOfFirstBookText(),"O'Reilly Media");
     }
 
     @Test
-    public void isSecondBookImageVisible(){
+    public void isSecondBookImageVisible() throws InterruptedException {
         bookStorePage.scrollToSecondRow();
         Assert.assertTrue(bookStorePage.isVisibleSecondImage());
     }
 
     @Test
-    public void isSecondBookTitleCorrect(){
+    public void isSecondBookTitleCorrect() throws InterruptedException {
         bookStorePage.scrollToSecondRow();
         Assert.assertEquals(bookStorePage.getTitleOfSecondBookText(),"Learning JavaScript Design Patterns");
     }
 
     @Test
-    public void isSecondBookAuthorCorrect(){
+    public void isSecondBookAuthorCorrect() throws InterruptedException {
         bookStorePage.scrollToSecondRow();
         Assert.assertEquals(bookStorePage.getAuthorOfSecondBookText(),"Addy Osmani");
     }
 
     @Test
-    public void isSecondBookPublisherCorrect(){
+    public void isSecondBookPublisherCorrect() throws InterruptedException {
         bookStorePage.scrollToSecondRow();
         Assert.assertEquals(bookStorePage.getPublisherOfSecondBookText(),"O'Reilly Media");
     }
 
     @Test
-    public void isThirdBookImageVisible(){
+    public void isThirdBookImageVisible() throws InterruptedException {
         bookStorePage.scrollToThirdRow();
         Assert.assertTrue(bookStorePage.isVisibleThirdImage());
     }
 
     @Test
-    public void isThirdBookTitleCorrect(){
+    public void isThirdBookTitleCorrect() throws InterruptedException {
         bookStorePage.scrollToThirdRow();
         Assert.assertEquals(bookStorePage.getTitleOfThirdBookText(),"Designing Evolvable Web APIs with ASP.NET");
     }
 
     @Test
-    public void isThirdBookAuthorCorrect(){
+    public void isThirdBookAuthorCorrect() throws InterruptedException {
         bookStorePage.scrollToThirdRow();
         Assert.assertEquals(bookStorePage.getAuthorOfThirdBookText(),"Glenn Block et al.");
     }
 
     @Test
-    public void isThirdBookPublisherCorrect(){
+    public void isThirdBookPublisherCorrect() throws InterruptedException {
         bookStorePage.scrollToThirdRow();
         Assert.assertEquals(bookStorePage.getPublisherOfThirdBookText(),"O'Reilly Media");
     }
 
     @Test
-    public void isFourthBookImageVisible(){
+    public void isFourthBookImageVisible() throws InterruptedException {
         bookStorePage.scrollToFourthRow();
         Assert.assertTrue(bookStorePage.isVisibleFourthImage());
     }
 
     @Test
-    public void isFourthBookTitleCorrect(){
+    public void isFourthBookTitleCorrect() throws InterruptedException {
         bookStorePage.scrollToFourthRow();
         Assert.assertEquals(bookStorePage.getTitleOfFourthBookText(),"Speaking JavaScript");
     }
 
     @Test
-    public void isFourthBookAuthorCorrect(){
+    public void isFourthBookAuthorCorrect() throws InterruptedException {
         bookStorePage.scrollToFourthRow();
         Assert.assertEquals(bookStorePage.getAuthorOfFourthBookText(),"Axel Rauschmayer");
     }
 
     @Test
-    public void isFourthBookPublisherCorrect(){
+    public void isFourthBookPublisherCorrect() throws InterruptedException {
         bookStorePage.scrollToFourthRow();
         Assert.assertEquals(bookStorePage.getPublisherOfFourthBookText(),"O'Reilly Media");
     }
 
     @Test
-    public void isFifthBookImageVisible(){
+    public void isFifthBookImageVisible() throws InterruptedException {
         bookStorePage.scrollToFifthRow();
         Assert.assertTrue(bookStorePage.isVisibleFifthImage());
     }
 
     @Test
-    public void isFifthBookTitleCorrect(){
+    public void isFifthBookTitleCorrect() throws InterruptedException {
         bookStorePage.scrollToFifthRow();
         Assert.assertEquals(bookStorePage.getTitleOfFifthBookText(),"You Don't Know JS");
     }
 
     @Test
-    public void isFifthBookAuthorCorrect(){
+    public void isFifthBookAuthorCorrect() throws InterruptedException {
         bookStorePage.scrollToFifthRow();
         Assert.assertEquals(bookStorePage.getAuthorOfFifthBookText(),"Kyle Simpson");
     }
 
     @Test
-    public void isFifthBookPublisherCorrect(){
+    public void isFifthBookPublisherCorrect() throws InterruptedException {
         bookStorePage.scrollToFifthRow();
         Assert.assertEquals(bookStorePage.getPublisherOfFifthBookText(),"O'Reilly Media");
     }
 
     @Test
-    public void isSixthBookImageVisible(){
+    public void isSixthBookImageVisible() throws InterruptedException {
         bookStorePage.scrollToSixthRow();
         Assert.assertTrue(bookStorePage.isVisibleSixthImage());
     }
 
     @Test
-    public void isSixthBookTitleCorrect(){
+    public void isSixthBookTitleCorrect() throws InterruptedException {
         bookStorePage.scrollToSixthRow();
         Assert.assertEquals(bookStorePage.getTitleOfSixthBookText(),"Programming JavaScript Applications");
     }
 
     @Test
-    public void isSixthBookAuthorCorrect(){
+    public void isSixthBookAuthorCorrect() throws InterruptedException {
         bookStorePage.scrollToSixthRow();
         Assert.assertEquals(bookStorePage.getAuthorOfSixthBookText(),"Eric Elliott");
     }
 
     @Test
-    public void isSixthBookPublisherCorrect(){
+    public void isSixthBookPublisherCorrect() throws InterruptedException {
         bookStorePage.scrollToSixthRow();
         Assert.assertEquals(bookStorePage.getPublisherOfSixthBookText(),"O'Reilly Media");
     }
 
     @Test
-    public void isSeventhBookImageVisible(){
+    public void isSeventhBookImageVisible() throws InterruptedException {
         bookStorePage.scrollToSeventhRow();
         Assert.assertTrue(bookStorePage.isVisibleSeventhImage());
     }
 
     @Test
-    public void isSeventhBookTitleCorrect(){
+    public void isSeventhBookTitleCorrect() throws InterruptedException {
         bookStorePage.scrollToSeventhRow();
         Assert.assertEquals(bookStorePage.getTitleOfSeventhBookText(),"Eloquent JavaScript, Second Edition");
     }
 
     @Test
-    public void isSeventhBookAuthorCorrect(){
+    public void isSeventhBookAuthorCorrect() throws InterruptedException {
         bookStorePage.scrollToSeventhRow();
         Assert.assertEquals(bookStorePage.getAuthorOfSeventhBookText(),"Marijn Haverbeke");
     }
 
     @Test
-    public void isSeventhBookPublisherCorrect(){
+    public void isSeventhBookPublisherCorrect() throws InterruptedException {
         bookStorePage.scrollToSeventhRow();
         Assert.assertEquals(bookStorePage.getPublisherOfSeventhBookText(),"No Starch Press");
     }
 
     @Test
-    public void isEighthBookImageVisible(){
+    public void isEighthBookImageVisible() throws InterruptedException {
         bookStorePage.scrollToSeventhRow();
         Assert.assertTrue(bookStorePage.isVisibleEighthImage());
     }
 
     @Test
-    public void isEighthBookTitleCorrect(){
+    public void isEighthBookTitleCorrect() throws InterruptedException {
         bookStorePage.scrollToSeventhRow();
         Assert.assertEquals(bookStorePage.getTitleOfEighthBookText(),"Understanding ECMAScript 6");
     }
 
     @Test
-    public void isEighthBookAuthorCorrect(){
+    public void isEighthBookAuthorCorrect() throws InterruptedException {
         bookStorePage.scrollToSeventhRow();
         Assert.assertEquals(bookStorePage.getAuthorOfEighthBookText(),"Nicholas C. Zakas");
     }
 
     @Test
-    public void isEighthBookPublisherCorrect(){
+    public void isEighthBookPublisherCorrect() throws InterruptedException {
         bookStorePage.scrollToSeventhRow();
         Assert.assertEquals(bookStorePage.getPublisherOfEighthBookText(),"No Starch Press");
     }
@@ -240,7 +240,7 @@ public class BookStorePageTest extends BaseTest {
     }
 
     @Test
-    public void isBookSearchedBySearchBar(){
+    public void isBookSearchedBySearchBar() throws InterruptedException {
         bookStorePage.scrollToSearchBar();
         bookStorePage.typeOnSearchBar("GIT");
         Assert.assertTrue(bookStorePage.isBookTitleFound(bookStorePage.getTitleOfFirstBookText(),"Git"));
