@@ -93,6 +93,11 @@ public class BasePages {
         }
     }
 
+    public void waitForPresenceToElement(){
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+    }
+
     public void waitForPageToLoad(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.jsReturnsValue("return document.readyState == 'complete';"));

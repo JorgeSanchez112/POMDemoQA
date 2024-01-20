@@ -1,6 +1,7 @@
 package Pages;
 
 import TestComponents.BasePages;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,22 +13,13 @@ public class HomePage extends BasePages {
     @FindBy (className = "top-card")
     private List<WebElement> sections;
 
-    public HomePage(WebDriver driver)
-    {
+    public HomePage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
 
     public String getHomePageUrlText(){
         return driver.getCurrentUrl();
-    }
-
-    public void goTo(){
-        try {
-            driver.get("https://demoqa.com/");
-        }catch (NullPointerException e){
-            e.printStackTrace();
-        }
     }
 
     public ElementsPage clickOnSectionElements(){

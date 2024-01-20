@@ -13,6 +13,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.Properties;
 
 public class BaseTest {
@@ -83,67 +84,43 @@ public class BaseTest {
         return "data:image/png;base64," + new String(base64Bytes);
     }
 
-
-    public WebDriver initializeDriver() throws MalformedURLException {
+    public WebDriver initialization() throws MalformedURLException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         ChromeOptions options = new ChromeOptions();
         options.merge(desiredCapabilities);
 
         driver = new RemoteWebDriver(new URL(prop.getProperty("urlServer")), options);
         driver.manage().window().maximize();
-        webDriverThreadLocal.set(driver);
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
+        driver.get(prop.getProperty("url"));
 
+        webDriverThreadLocal.set(driver);
         return driver;
     }
 
+
     @BeforeMethod
-    public void homePage() throws MalformedURLException {
-        driver = webDriverThreadLocal.get();
-        if (driver == null) {
-            driver = initializeDriver();
+    public void setUp() throws MalformedURLException {
+        homePage = new HomePage(initialization());
+        try{
+            homePage.waitForVisibleElement(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
+            homePage.hidePublicity(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
+        }catch (TimeoutException e){
+            e.printStackTrace();
         }
-
-        homePage = new HomePage(driver);
-        try {
-            try {
-                try{
-                    try{
-                        homePage.goTo();
-                        homePage.waitForVisibleElement(driver.findElement(By.cssSelector("#adplus-anchor > div")));
-                        homePage.hidePublicity(driver.findElement(By.cssSelector("#adplus-anchor > div")));
-                    }catch (TimeoutException e3){
-                        e3.printStackTrace();
-                    }
-
-                }catch (NoSuchElementException e2){
-                    e2.printStackTrace();
-                }
-
-            }catch (NoSuchSessionException e1){
-                e1.printStackTrace();
-            }
-        }catch (NullPointerException e0){
-            e0.printStackTrace();
-        }
-
-
     }
 
     @AfterMethod
-    public void close(){
+    public void tearDown(){
         driver = webDriverThreadLocal.get();
         if (driver != null) {
-            try{
-                try {
-                    driver.quit();
-                    webDriverThreadLocal.remove();
-                }catch (TimeoutException e){
-                    e.printStackTrace();
-                }
-            }catch (NoSuchSessionException e){
+            try {
+                driver.quit();
+            }catch (SessionNotCreatedException e){
                 e.printStackTrace();
+            }finally {
+                webDriverThreadLocal.remove();
             }
         }
     }
-
 }

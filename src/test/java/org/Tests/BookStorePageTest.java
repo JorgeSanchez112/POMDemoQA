@@ -234,7 +234,7 @@ public class BookStorePageTest extends BaseTest {
     }
 
     @Test
-    public void isSearchBarPlaceholderCorrect(){
+    public void isSearchBarPlaceholderCorrect() throws InterruptedException {
         bookStorePage.scrollToSearchBar();
         Assert.assertEquals(bookStorePage.getSearchBarPlaceholder(),"Type to search");
     }
