@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "Suite1">
+<suite name = "Suite1" parallel="tests" thread-count="2">
     
     <listeners>
         <listener class-name="Resources.Listeners"/>
@@ -122,7 +122,7 @@
         </classes>
     </test>
 
-    <!--<test name = "Modal Dialogs">
+    <test name = "Modal Dialogs">
         <classes>
             <class name = "org.Tests.ModalDialogsPageTest" />
         </classes>
@@ -210,7 +210,7 @@
         <classes>
             <class name = "org.Tests.DraggablePageTest" />
         </classes>
-    </test>-->
+    </test>
 
 </suite>
 

@@ -91,7 +91,7 @@ public class BaseTest {
 
         driver = new RemoteWebDriver(new URL(prop.getProperty("urlServer")), options);
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(50));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
         driver.get(prop.getProperty("url"));
 
         webDriverThreadLocal.set(driver);

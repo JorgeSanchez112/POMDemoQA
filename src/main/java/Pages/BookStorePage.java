@@ -33,6 +33,7 @@ public class BookStorePage extends BasePages {
     }
 
     public void scrollToFirstRow() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookRow.size() != 0){
             try {
@@ -45,7 +46,8 @@ public class BookStorePage extends BasePages {
 
     }
 
-    public void scrollToSecondRow() throws InterruptedException {
+    public void scrollToSecondRow() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookRow.size() != 0){
             try {
@@ -58,7 +60,8 @@ public class BookStorePage extends BasePages {
 
     }
 
-    public void scrollToThirdRow() throws InterruptedException {
+    public void scrollToThirdRow() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookRow.size() != 0){
             try {
@@ -71,7 +74,8 @@ public class BookStorePage extends BasePages {
 
     }
 
-    public void scrollToFourthRow() throws InterruptedException {
+    public void scrollToFourthRow() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookRow.size() != 0){
             try {
@@ -84,7 +88,8 @@ public class BookStorePage extends BasePages {
 
     }
 
-    public void scrollToFifthRow() throws InterruptedException {
+    public void scrollToFifthRow() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookRow.size() != 0){
             try {
@@ -98,7 +103,8 @@ public class BookStorePage extends BasePages {
 
     }
 
-    public void scrollToSixthRow() throws InterruptedException {
+    public void scrollToSixthRow() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookRow.size() != 0){
             try{
@@ -112,7 +118,8 @@ public class BookStorePage extends BasePages {
 
     }
 
-    public void scrollToSeventhRow() throws InterruptedException {
+    public void scrollToSeventhRow() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookRow.size() != 0){
             try{
@@ -134,7 +141,8 @@ public class BookStorePage extends BasePages {
         return searchBox.getAttribute("placeholder");
     }
 
-    public String getFirstTitleTableText() throws InterruptedException {
+    public String getFirstTitleTableText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (tableTitles.size() != 0){
             try{
@@ -148,7 +156,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getSecondTitleTableText() throws InterruptedException {
+    public String getSecondTitleTableText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (tableTitles.size() != 0){
             try{
@@ -163,6 +172,7 @@ public class BookStorePage extends BasePages {
     }
 
     public String getThirdTitleTableText() throws InterruptedException {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (tableTitles.size() != 0){
             try{
@@ -177,7 +187,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getFourthTitleTableText() throws InterruptedException {
+    public String getFourthTitleTableText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (tableTitles.size() != 0){
             try{
@@ -190,7 +201,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getTitleOfFirstBookText() throws InterruptedException {
+    public String getTitleOfFirstBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -203,7 +215,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getAuthorOfFirstBookText() throws InterruptedException {
+    public String getAuthorOfFirstBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -216,7 +229,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getPublisherOfFirstBookText() throws InterruptedException {
+    public String getPublisherOfFirstBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -229,7 +243,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getTitleOfSecondBookText() throws InterruptedException {
+    public String getTitleOfSecondBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -242,7 +257,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getAuthorOfSecondBookText() throws InterruptedException {
+    public String getAuthorOfSecondBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -255,10 +271,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getPublisherOfSecondBookText() throws InterruptedException {
-        System.out.println("1." + driver.manage().timeouts().getPageLoadTimeout());
-        waitForPageToLoad();
-        System.out.println("2." + driver.manage().timeouts().getPageLoadTimeout());
+    public String getPublisherOfSecondBookText() {
+        waitForVisibleElement(title);
         if (bookData.size() != 0){
             try{
                 return bookData.get(7).getText();
@@ -270,7 +284,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getTitleOfThirdBookText() throws InterruptedException {
+    public String getTitleOfThirdBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -283,7 +298,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getAuthorOfThirdBookText() throws InterruptedException {
+    public String getAuthorOfThirdBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -296,7 +312,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getPublisherOfThirdBookText() throws InterruptedException {
+    public String getPublisherOfThirdBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -309,7 +326,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getTitleOfFourthBookText() throws InterruptedException {
+    public String getTitleOfFourthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -322,7 +340,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getAuthorOfFourthBookText() throws InterruptedException {
+    public String getAuthorOfFourthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -331,13 +350,12 @@ public class BookStorePage extends BasePages {
                 e.printStackTrace();
                 return e.getMessage();
             }
-        }else {
-            Thread.sleep(1000);
         }
         return "an error has happened";
     }
 
-    public String getPublisherOfFourthBookText() throws InterruptedException {
+    public String getPublisherOfFourthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -350,7 +368,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getTitleOfFifthBookText() throws InterruptedException {
+    public String getTitleOfFifthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -363,7 +382,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getAuthorOfFifthBookText() throws InterruptedException {
+    public String getAuthorOfFifthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -376,7 +396,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getPublisherOfFifthBookText() throws InterruptedException {
+    public String getPublisherOfFifthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -389,7 +410,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getTitleOfSixthBookText() throws InterruptedException {
+    public String getTitleOfSixthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -402,7 +424,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getAuthorOfSixthBookText() throws InterruptedException {
+    public String getAuthorOfSixthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -415,7 +438,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getPublisherOfSixthBookText() throws InterruptedException {
+    public String getPublisherOfSixthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -428,7 +452,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getTitleOfSeventhBookText() throws InterruptedException {
+    public String getTitleOfSeventhBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -441,7 +466,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getAuthorOfSeventhBookText() throws InterruptedException {
+    public String getAuthorOfSeventhBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -454,7 +480,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getPublisherOfSeventhBookText() throws InterruptedException {
+    public String getPublisherOfSeventhBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -467,7 +494,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getTitleOfEighthBookText() throws InterruptedException {
+    public String getTitleOfEighthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -480,7 +508,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getAuthorOfEighthBookText() throws InterruptedException {
+    public String getAuthorOfEighthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -492,7 +521,8 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getPublisherOfEighthBookText() throws InterruptedException {
+    public String getPublisherOfEighthBookText() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -513,7 +543,8 @@ public class BookStorePage extends BasePages {
         return title.isDisplayed();
     }
 
-    public boolean isVisibleFirstImage() throws InterruptedException {
+    public boolean isVisibleFirstImage() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -526,7 +557,8 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleSecondImage() throws InterruptedException {
+    public boolean isVisibleSecondImage() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -539,7 +571,8 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleThirdImage() throws InterruptedException {
+    public boolean isVisibleThirdImage() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -552,7 +585,8 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleFourthImage() throws InterruptedException {
+    public boolean isVisibleFourthImage() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -565,7 +599,8 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleFifthImage() throws InterruptedException {
+    public boolean isVisibleFifthImage() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -578,7 +613,8 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleSixthImage() throws InterruptedException {
+    public boolean isVisibleSixthImage() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -591,7 +627,8 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleSeventhImage() throws InterruptedException {
+    public boolean isVisibleSeventhImage() {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
@@ -605,6 +642,7 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleEighthImage() throws InterruptedException {
+        waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
             try{
