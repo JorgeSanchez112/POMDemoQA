@@ -171,7 +171,7 @@ public class BookStorePage extends BasePages {
         return "an error has happened";
     }
 
-    public String getThirdTitleTableText() throws InterruptedException {
+    public String getThirdTitleTableText() {
         waitForVisibleElement(title);
         waitForPageToLoad();
         if (tableTitles.size() != 0){
@@ -181,8 +181,6 @@ public class BookStorePage extends BasePages {
                 e.printStackTrace();
                 return e.getMessage();
             }
-        }else {
-            Thread.sleep(1000);
         }
         return "an error has happened";
     }
@@ -641,7 +639,7 @@ public class BookStorePage extends BasePages {
         return false;
     }
 
-    public boolean isVisibleEighthImage() throws InterruptedException {
+    public boolean isVisibleEighthImage() {
         waitForVisibleElement(title);
         waitForPageToLoad();
         if (bookData.size() != 0){
@@ -650,8 +648,6 @@ public class BookStorePage extends BasePages {
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
             }
-        }else {
-            Thread.sleep(1000);
         }
         return false;
     }

@@ -18,7 +18,7 @@ import java.util.Properties;
 
 public class BaseTest {
 
-    private static final ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
+    private final ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
 
     protected WebDriver driver;
     protected Properties prop;
@@ -94,33 +94,43 @@ public class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
         driver.get(prop.getProperty("url"));
 
-        webDriverThreadLocal.set(driver);
         return driver;
     }
 
 
     @BeforeMethod
     public void setUp() throws MalformedURLException {
-        homePage = new HomePage(initialization());
-        try{
+        driver = webDriverThreadLocal.get();
+        if (driver == null) {
+            webDriverThreadLocal.set(initialization());
+            driver = webDriverThreadLocal.get();
+        }
+
+        homePage = new HomePage(driver);
+
+        System.out.println("Thread ID: " + Thread.currentThread().getId() +
+                " Session ID: " + ((RemoteWebDriver) driver).getSessionId());
+
+        try {
             homePage.waitForVisibleElement(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
             homePage.hidePublicity(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
-        }catch (TimeoutException e){
+        } catch (TimeoutException e) {
             e.printStackTrace();
         }
+
     }
 
     @AfterMethod
     public void tearDown(){
-        driver = webDriverThreadLocal.get();
-        if (driver != null) {
-            try {
+        try {
+            driver = webDriverThreadLocal.get();
+            if (driver != null) {
                 driver.quit();
-            }catch (SessionNotCreatedException e){
-                e.printStackTrace();
-            }finally {
-                webDriverThreadLocal.remove();
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            webDriverThreadLocal.remove();
         }
     }
 }
