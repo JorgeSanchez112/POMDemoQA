@@ -74,7 +74,7 @@ public class BasePages {
         }
     }
 
-    public void waitForAttributeAriaDescribedbyEqualToValue(WebElement element, String value){
+    public void waitForAttributeAriaDescribedByEqualToValue(WebElement element, String value){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.attributeContains(element,"aria-describedby", value));
     }
@@ -91,11 +91,6 @@ public class BasePages {
         }catch (TimeoutException e){
             e.printStackTrace();
         }
-    }
-
-    public void waitForPresenceToElement(){
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
     }
 
     public void waitForPageToLoad(){
@@ -152,6 +147,15 @@ public class BasePages {
         String expectedClass = "ui-state-highlight";
         String actualClass = listItem.getAttribute("class");
         return actualClass.contains(expectedClass);
+    }
+
+    public boolean searchForVisibleElement(List<WebElement> elementsList, String value){
+        for (WebElement element: elementsList) {
+            if (Objects.equals(element.getText(), value)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public int searchNumberOne(List<WebElement> dateOfDaysList){

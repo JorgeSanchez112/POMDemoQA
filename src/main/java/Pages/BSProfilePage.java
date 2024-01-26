@@ -9,11 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class BSProfilePage extends BasePages {
-    @FindBy(className = "main-header")
+    @FindBy(className = "main-header") //not login
     WebElement title;
     @FindBy(id = "notLoggin-label")
     WebElement doNotLoginMessage;
-    @FindBy(id = "userName-label")
+    @FindBy(css = "#notLoggin-wrapper >* a")
+    List<WebElement> linkRegisterAndLogin;
+    @FindBy(id = "userName-label") //logged in
     WebElement booksLabel;
     @FindBy(id = "searchBox")
     WebElement searchBox;
@@ -59,12 +61,143 @@ public class BSProfilePage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
+    public void typeOnSearchBox(String text){
+        searchBox.sendKeys(text);
+    }
+
+    public void clickOnPreviousButton(){
+        clickWithWait(previousButton);
+    }
+
+    public void clickOnNextButton(){
+        clickWithWait(nextButton);
+    }
+
+    public void clickOnDeleteAccountButton(){
+        clickWithWait(deleteAccountButton);
+    }
+
+    public void clickOnDeleteAllBooksButton(){
+        clickWithWait(deleteAllBooksButton);
+    }
+
+    public void acceptAlert(){
+        waitAlert();
+        driver.switchTo().alert().accept();
+    }
+
+    public void dismissAlert(){
+        waitAlert();
+        driver.switchTo().alert().dismiss();
+    }
+
+
+    public String getBooksLabelText(){
+        waitForVisibleElement(booksLabel);
+        return booksLabel.getText();
+    }
+
+    public String getSearchBoxPlaceholderText(){
+        waitForVisibleElement(searchBox);
+        return searchBox.getAttribute("placeholder");
+    }
+
+    public String getUserNameLabelText(){
+        waitForVisibleElement(usernameLabel);
+        return usernameLabel.getText();
+    }
+
+    public String getUserNameValueText(){
+        waitForVisibleElement(usernameValue);
+        return usernameValue.getText();
+    }
+
+    public String getTableTitleImageText(){
+        return tableHeaderTitles.get(0).getText();
+    }
+
+    public String getTableTitleTitleText(){
+        return tableHeaderTitles.get(1).getText();
+    }
+
+    public String getTableTitleAuthorText(){
+        return tableHeaderTitles.get(2).getText();
+    }
+
+    public String getTableTitlePublisherText(){
+        return tableHeaderTitles.get(3).getText();
+    }
+
+    public String getTableTitleActionText(){
+        return tableHeaderTitles.get(4).getText();
+    }
+
+    public String getPageText(){
+        return pageTextOfCenterTable.getText();
+    }
+
+    public String getPageNumber(){
+        return pageValue.getText();
+    }
+
+    public String getTotalOfPagesText(){
+        return totalPagesNumber.getText();
+    }
+
+
     public boolean isTitleVisible(){
         return title.isDisplayed();
     }
 
     public boolean isMessageDoNotLoginShowed(){
         return doNotLoginMessage.isDisplayed();
+    }
+
+    public boolean isImageInTableOfBooksCollection(String value){
+        return searchForVisibleElement(columnImages,value);
+    }
+
+    public boolean isTitleInTableOfBooksCollection(String value){
+        return searchForVisibleElement(columnTitles,value);
+    }
+
+    public boolean isAuthorInTableOfBooksCollection(String value){
+        return searchForVisibleElement(columnAuthors,value);
+    }
+
+    public boolean isPublisherInTableOfBooksCollection(String value){
+        return searchForVisibleElement(columnPublishers,value);
+    }
+
+    public boolean isMessageNoDataVisible(){
+        waitForVisibleElement(messageNoData);
+        return messageNoData.isDisplayed();
+    }
+
+
+    public BSLoginPage clickOnLoginLink(){
+        scroll(linkRegisterAndLogin.get(0));
+        clickWithWait(linkRegisterAndLogin.get(0));
+        return new BSLoginPage(driver);
+    }
+
+    public BSRegisterPage clickOnRegisterLink(){
+        scroll(linkRegisterAndLogin.get(1));
+        clickWithWait(linkRegisterAndLogin.get(1));
+        return new BSRegisterPage(driver);
+    }
+
+    public BSLoginPage clickOnLogOutButton(){
+        waitForVisibleElement(logOutButton);
+        scroll(logOutButton);
+        clickWithWait(logOutButton);
+        return new BSLoginPage(driver);
+    }
+
+    public BookStorePage clickOnGoToBookStoreButton(){
+        scroll(goToBookStoreButton);
+        clickWithWait(goToBookStoreButton);
+        return new BookStorePage(driver);
     }
 
 }

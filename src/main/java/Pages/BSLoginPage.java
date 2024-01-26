@@ -98,4 +98,11 @@ public class BSLoginPage extends BasePages {
         return new BSRegisterPage(driver);
     }
 
+    public BSProfilePage userLogin(String username,String password){
+        typeOnUsernameInput(username);
+        typeOnPasswordInput(password);
+        clickOnLoginButton();
+        return new BSProfilePage(driver);
+    }
+
 }
