@@ -51,5 +51,97 @@ public class BSProfileTest extends BaseTest {
         Assert.assertEquals(bsProfilePage.clickOnLogOutButton().getCurrentUrl(),"https://demoqa.com/login");
     }
 
+    @Test
+    public void validateCorrectImageTitleText(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsProfilePage.getTableTitleImageText(),"Image");
+    }
+
+    @Test
+    public void validateCorrectTitleOfTitleTableText(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsProfilePage.getTableTitleTitleText(),"Title");
+    }
+
+    @Test
+    public void validateCorrectAuthorTitleOfTableText(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsProfilePage.getTableTitleAuthorText(),"Author");
+    }
+
+    @Test
+    public void validateCorrectPublisherTitleOfTableText(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsProfilePage.getTableTitlePublisherText(),"Publisher");
+    }
+
+    @Test
+    public void validateCorrectActionTitleOfTableText(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsProfilePage.getTableTitleActionText(),"Action");
+    }
+
+    @Test
+    public void validateNoDataMessageIsVisible(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertTrue(bsProfilePage.isMessageNoDataVisible());
+    }
+
+    @Test
+    public void validatePreviousButtonIsEnabled(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertTrue(bsProfilePage.isPreviousButtonEnabled());
+    }
+
+    @Test
+    public void validateNextButtonIsEnabled(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertTrue(bsProfilePage.isNextButtonEnabled());
+    }
+
+    @Test
+    public void isBookFoundBySearchBox(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        bsProfilePage.typeOnSearchBox("Speaking");
+        Assert.assertTrue(bsProfilePage.isTitleInTableOfBooksCollection("Speaking JavaScript"));
+    }
+
+    @Test
+    public void validateCorrectPageLabelText(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsProfilePage.getPageText(),"Page");
+    }
+
+    @Test
+    public void validateCorrectTotalOfPages(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsProfilePage.getTotalOfPagesText(),"1");
+    }
+
+    @Test
+    public void wereAllBooksDeleted(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        bsProfilePage.clickOnDeleteAllBooksButton();
+        bsProfilePage.acceptAlert();
+        Assert.assertTrue(bsProfilePage.isMessageNoDataVisible());
+    }
+
+    @Test
+    public void validateGoToBookStoreRedirectToBookStorePage(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsProfilePage.clickOnGoToBookStoreButton().getBookStoreUrlText(),"https://demoqa.com/books");
+    }
+
+    /*@Test
+    public void IsAddedABookInTable(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+    }*/
+
+    /*@Test
+    public void validateAccountIsDeleted(){
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        bsProfilePage.deleteAccount().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertTrue(bsProfilePage.isTitleVisible());
+    }*/
 
 }

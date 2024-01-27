@@ -62,18 +62,26 @@ public class BSProfilePage extends BasePages {
     }
 
     public void typeOnSearchBox(String text){
-        searchBox.sendKeys(text);
+        waitForVisibleElement(messageNoData);
+        if (messageNoData.isDisplayed()){
+            System.out.println("There aren't books, Add to collection");
+        }else{
+            searchBox.sendKeys(text);
+        }
     }
 
     public void clickOnPreviousButton(){
+        scroll(previousButton);
         clickWithWait(previousButton);
     }
 
     public void clickOnNextButton(){
+        scroll(nextButton);
         clickWithWait(nextButton);
     }
 
     public void clickOnDeleteAccountButton(){
+        scroll(deleteAccountButton);
         clickWithWait(deleteAccountButton);
     }
 
@@ -113,26 +121,32 @@ public class BSProfilePage extends BasePages {
     }
 
     public String getTableTitleImageText(){
+        waitForVisibleElement(tableHeaderTitles.get(0));
         return tableHeaderTitles.get(0).getText();
     }
 
     public String getTableTitleTitleText(){
+        waitForVisibleElement(tableHeaderTitles.get(1));
         return tableHeaderTitles.get(1).getText();
     }
 
     public String getTableTitleAuthorText(){
+        waitForVisibleElement(tableHeaderTitles.get(2));
         return tableHeaderTitles.get(2).getText();
     }
 
     public String getTableTitlePublisherText(){
+        waitForVisibleElement(tableHeaderTitles.get(3));
         return tableHeaderTitles.get(3).getText();
     }
 
     public String getTableTitleActionText(){
+        waitForVisibleElement(tableHeaderTitles.get(4));
         return tableHeaderTitles.get(4).getText();
     }
 
     public String getPageText(){
+        waitForVisibleElement(pageTextOfCenterTable);
         return pageTextOfCenterTable.getText();
     }
 
@@ -141,11 +155,12 @@ public class BSProfilePage extends BasePages {
     }
 
     public String getTotalOfPagesText(){
+        waitForVisibleElement(totalPagesNumber);
         return totalPagesNumber.getText();
     }
 
-
     public boolean isTitleVisible(){
+        waitForVisibleElement(title);
         return title.isDisplayed();
     }
 
@@ -174,6 +189,15 @@ public class BSProfilePage extends BasePages {
         return messageNoData.isDisplayed();
     }
 
+    public boolean isPreviousButtonEnabled(){
+        scroll(previousButton);
+        return previousButton.isEnabled();
+    }
+
+    public boolean isNextButtonEnabled(){
+        scroll(nextButton);
+        return nextButton.isEnabled();
+    }
 
     public BSLoginPage clickOnLoginLink(){
         scroll(linkRegisterAndLogin.get(0));
@@ -198,6 +222,12 @@ public class BSProfilePage extends BasePages {
         scroll(goToBookStoreButton);
         clickWithWait(goToBookStoreButton);
         return new BookStorePage(driver);
+    }
+
+    public BSLoginPage deleteAccount(){
+        clickOnDeleteAccountButton();
+        acceptAlert();
+        return new BSLoginPage(driver);
     }
 
 }

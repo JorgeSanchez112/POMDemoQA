@@ -21,6 +21,10 @@ public class BookStorePage extends BasePages {
     private List<WebElement> bookRow;
     @FindBy(className = "rt-td")
     private List<WebElement> bookData;
+    @FindBy(id = ".text-right > #addNewRecordButton")
+    private WebElement backToBookStoreButton;
+    @FindBy(css = ".text-left > #addNewRecordButton")
+    private WebElement addToYourCollectionButton;
 
     public BookStorePage(WebDriver driver) {
         super(driver);
@@ -682,6 +686,18 @@ public class BookStorePage extends BasePages {
         scroll(deployed_form_exercise.get(3));
         clickWithWait(deployed_form_exercise.get(3));
         return new BSAPIPage(driver);
+    }
+
+    //Books Interface
+
+    public void clickOnBackToBookStoreBookButton(){
+        scroll(backToBookStoreButton);
+        waitForClick(backToBookStoreButton);
+    }
+
+    public void clickOnAddToYourCollectionButton(){
+        System.out.println(addToYourCollectionButton);
+        waitForClick(addToYourCollectionButton);
     }
 
 }
