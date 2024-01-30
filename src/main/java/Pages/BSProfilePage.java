@@ -62,12 +62,8 @@ public class BSProfilePage extends BasePages {
     }
 
     public void typeOnSearchBox(String text){
-        waitForVisibleElement(messageNoData);
-        if (messageNoData.isDisplayed()){
-            System.out.println("There aren't books, Add to collection");
-        }else{
-            searchBox.sendKeys(text);
-        }
+        waitForVisibleElement(searchBox);
+        searchBox.sendKeys(text);
     }
 
     public void clickOnPreviousButton(){
@@ -121,26 +117,31 @@ public class BSProfilePage extends BasePages {
     }
 
     public String getTableTitleImageText(){
-        waitForVisibleElement(tableHeaderTitles.get(0));
+        waitForPageToLoad(tableHeaderTitles);
+        scroll(tableHeaderTitles.get(0));
         return tableHeaderTitles.get(0).getText();
     }
 
     public String getTableTitleTitleText(){
+        waitForPageToLoad(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(1));
         return tableHeaderTitles.get(1).getText();
     }
 
     public String getTableTitleAuthorText(){
+        waitForPageToLoad(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(2));
         return tableHeaderTitles.get(2).getText();
     }
 
     public String getTableTitlePublisherText(){
+        waitForPageToLoad(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(3));
         return tableHeaderTitles.get(3).getText();
     }
 
     public String getTableTitleActionText(){
+        waitForPageToLoad(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(4));
         return tableHeaderTitles.get(4).getText();
     }
@@ -200,19 +201,20 @@ public class BSProfilePage extends BasePages {
     }
 
     public BSLoginPage clickOnLoginLink(){
+        waitForPageToLoad(linkRegisterAndLogin);
         scroll(linkRegisterAndLogin.get(0));
         clickWithWait(linkRegisterAndLogin.get(0));
         return new BSLoginPage(driver);
     }
 
     public BSRegisterPage clickOnRegisterLink(){
+        waitForPageToLoad(linkRegisterAndLogin);
         scroll(linkRegisterAndLogin.get(1));
         clickWithWait(linkRegisterAndLogin.get(1));
         return new BSRegisterPage(driver);
     }
 
     public BSLoginPage clickOnLogOutButton(){
-        waitForVisibleElement(logOutButton);
         scroll(logOutButton);
         clickWithWait(logOutButton);
         return new BSLoginPage(driver);

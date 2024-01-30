@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
@@ -30,6 +31,7 @@ public class BasePages {
     }
 
     public void scroll(WebElement element){
+        waitForVisibleElement(element);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
@@ -93,9 +95,12 @@ public class BasePages {
         }
     }
 
-    public void waitForPageToLoad(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.jsReturnsValue("return document.readyState == 'complete';"));
+    public void waitForPageToLoad(List<WebElement> list){
+        FluentWait wait = new FluentWait(driver);
+        wait.withTimeout(Duration.ofSeconds(10));
+        wait.pollingEvery(Duration.ofMillis(250));
+        wait.ignoring(NoSuchElementException.class);
+        wait.until(ExpectedConditions.visibilityOfAllElements(list));
     }
 
     public void waitAlert(){
@@ -110,7 +115,6 @@ public class BasePages {
 
     public void clickWithWait(WebElement element){
         try {
-            waitForVisibleElement(element);
             try {
                 try{
                     waitForClick(element);

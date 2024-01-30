@@ -19,8 +19,15 @@ public class BookStorePage extends BasePages {
     private List<WebElement> tableTitles;
     @FindBy(className = "rt-tr-group")
     private List<WebElement> bookRow;
-    @FindBy(className = "rt-td")
-    private List<WebElement> bookData;
+    @FindBy(css = ".rt-tr > .rt-td:nth-child(1)")
+    private List<WebElement> columnImages;
+    @FindBy(css = ".rt-tr > .rt-td:nth-child(2)")
+    private List<WebElement> columnTitle;
+    @FindBy(css = ".rt-tr > .rt-td:nth-child(3)")
+    private List<WebElement> columnAuthor;
+    @FindBy(css = ".rt-tr > .rt-td:nth-child(4)")
+    private List<WebElement> columnPublisher;
+    //Book
     @FindBy(id = ".text-right > #addNewRecordButton")
     private WebElement backToBookStoreButton;
     @FindBy(css = ".text-left > #addNewRecordButton")
@@ -32,13 +39,12 @@ public class BookStorePage extends BasePages {
     }
 
     public void scrollToSearchBar() {
-        waitForVisibleElement(searchBox);
         scroll(searchBox);
     }
 
     public void scrollToFirstRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(0));
@@ -52,7 +58,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToSecondRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(1));
@@ -66,7 +72,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToThirdRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(2));
@@ -80,7 +86,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToFourthRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(3));
@@ -94,7 +100,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToFifthRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(4));
@@ -109,7 +115,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToSixthRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(bookRow);
         if (bookRow.size() != 0){
             try{
                 waitForVisibleElement(bookRow.get(5));
@@ -124,7 +130,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToSeventhRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(bookRow);
         if (bookRow.size() != 0){
             try{
                 waitForVisibleElement(bookRow.get(6));
@@ -147,7 +153,7 @@ public class BookStorePage extends BasePages {
 
     public String getFirstTitleTableText() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(tableTitles);
         if (tableTitles.size() != 0){
             try{
                 waitForVisibleElement(tableTitles.get(0));
@@ -162,7 +168,7 @@ public class BookStorePage extends BasePages {
 
     public String getSecondTitleTableText() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(tableTitles);
         if (tableTitles.size() != 0){
             try{
                 waitForVisibleElement(tableTitles.get(0));
@@ -177,7 +183,7 @@ public class BookStorePage extends BasePages {
 
     public String getThirdTitleTableText() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(tableTitles);
         if (tableTitles.size() != 0){
             try{
                 return tableTitles.get(2).getText();
@@ -191,7 +197,7 @@ public class BookStorePage extends BasePages {
 
     public String getFourthTitleTableText() {
         waitForVisibleElement(title);
-        waitForPageToLoad();
+        waitForPageToLoad(tableTitles);
         if (tableTitles.size() != 0){
             try{
                 return tableTitles.get(3).getText();
@@ -204,11 +210,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfFirstBookText() {
+        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnTitle.size() != 0){
             try{
-                return bookData.get(1).getText();
+                scroll(columnTitle.get(0));
+                return columnTitle.get(0).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -218,11 +225,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfFirstBookText() {
+        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnAuthor.size() != 0){
             try{
-                return bookData.get(2).getText();
+                scroll(columnAuthor.get(0));
+                return columnAuthor.get(0).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -232,11 +240,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfFirstBookText() {
+        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnPublisher.size() != 0){
             try{
-                return bookData.get(3).getText();
+                scroll(columnPublisher.get(0));
+                return columnPublisher.get(0).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -246,11 +255,13 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfSecondBookText() {
+        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+
+        if (columnTitle.size() != 0){
             try{
-                return bookData.get(5).getText();
+                scroll(columnTitle.get(1));
+                return columnTitle.get(1).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -260,11 +271,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfSecondBookText() {
+        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnAuthor.size() != 0){
             try{
-                return bookData.get(6).getText();
+                scroll(columnAuthor.get(1));
+                return columnAuthor.get(1).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -274,10 +286,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfSecondBookText() {
+        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
-        if (bookData.size() != 0){
+        if (columnPublisher.size() != 0){
             try{
-                return bookData.get(7).getText();
+                scroll(columnPublisher.get(1));
+                return columnPublisher.get(1).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -287,11 +301,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfThirdBookText() {
+        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnTitle.size() != 0){
             try{
-                return bookData.get(9).getText();
+                scroll(columnTitle.get(2));
+                return columnTitle.get(2).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -301,11 +316,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfThirdBookText() {
+        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnAuthor.size() != 0){
             try{
-                return bookData.get(10).getText();
+                scroll(columnAuthor.get(2));
+                return columnAuthor.get(2).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -315,11 +331,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfThirdBookText() {
+        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnPublisher.size() != 0){
             try{
-                return bookData.get(11).getText();
+                scroll(columnPublisher.get(2));
+                return columnPublisher.get(2).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -329,11 +346,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfFourthBookText() {
+        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnTitle.size() != 0){
             try{
-                return bookData.get(13).getText();
+                scroll(columnTitle.get(3));
+                return columnTitle.get(3).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -343,11 +361,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfFourthBookText() {
+        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnAuthor.size() != 0){
             try{
-                return bookData.get(14).getText();
+                scroll(columnAuthor.get(3));
+                return columnAuthor.get(3).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -357,11 +376,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfFourthBookText() {
+        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnPublisher.size() != 0){
             try{
-                return bookData.get(15).getText();
+                scroll(columnPublisher.get(3));
+                return columnPublisher.get(3).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -371,11 +391,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfFifthBookText() {
+        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnTitle.size() != 0){
             try{
-                return bookData.get(17).getText();
+                scroll(columnTitle.get(4));
+                return columnTitle.get(4).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -385,11 +406,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfFifthBookText() {
+        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnAuthor.size() != 0){
             try{
-                return bookData.get(18).getText();
+                scroll(columnAuthor.get(4));
+                return columnAuthor.get(4).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -399,11 +421,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfFifthBookText() {
+        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnPublisher.size() != 0){
             try{
-                return bookData.get(19).getText();
+                scroll(columnPublisher.get(4));
+                return columnPublisher.get(4).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -413,11 +436,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfSixthBookText() {
+        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnTitle.size() != 0){
             try{
-                return bookData.get(21).getText();
+                scroll(columnTitle.get(5));
+                return columnTitle.get(5).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -427,11 +451,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfSixthBookText() {
+        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnAuthor.size() != 0){
             try{
-                return bookData.get(22).getText();
+                scroll(columnAuthor.get(5));
+                return columnAuthor.get(5).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -441,11 +466,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfSixthBookText() {
+        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnPublisher.size() != 0){
             try{
-                return bookData.get(23).getText();
+                scroll(columnPublisher.get(5));
+                return columnPublisher.get(5).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -455,11 +481,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfSeventhBookText() {
+        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnTitle.size() != 0){
             try{
-                return bookData.get(25).getText();
+                scroll(columnTitle.get(6));
+                return columnTitle.get(6).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -469,11 +496,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfSeventhBookText() {
+        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnAuthor.size() != 0){
             try{
-                return bookData.get(26).getText();
+                scroll(columnAuthor.get(6));
+                return columnAuthor.get(6).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -483,11 +511,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfSeventhBookText() {
+        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnPublisher.size() != 0){
             try{
-                return bookData.get(27).getText();
+                scroll(columnPublisher.get(6));
+                return columnPublisher.get(6).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -497,11 +526,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfEighthBookText() {
+        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnTitle.size() != 0){
             try{
-                return bookData.get(29).getText();
+                scroll(columnTitle.get(7));
+                return columnTitle.get(7).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -511,11 +541,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfEighthBookText() {
+        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnAuthor.size() != 0){
             try{
-                return bookData.get(30).getText();
+                scroll(columnAuthor.get(7));
+                return columnAuthor.get(7).getText();
             }catch (IndexOutOfBoundsException e){
                 return e.getMessage();
             }
@@ -524,11 +555,12 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfEighthBookText() {
+        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnPublisher.size() != 0){
             try{
-                return bookData.get(31).getText();
+                scroll(columnPublisher.get(7));
+                return columnPublisher.get(7).getText();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
                 return e.getMessage();
@@ -546,11 +578,12 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleFirstImage() {
+        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnImages.size() != 0){
             try{
-                return bookData.get(0).isDisplayed();
+                scroll(columnImages.get(0));
+                return columnImages.get(0).isDisplayed();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
             }
@@ -560,11 +593,12 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleSecondImage() {
+        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnImages.size() != 0){
             try{
-                return bookData.get(4).isDisplayed();
+                scroll(columnImages.get(1));
+                return columnImages.get(1).isDisplayed();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
             }
@@ -574,11 +608,12 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleThirdImage() {
+        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnImages.size() != 0){
             try{
-                return bookData.get(8).isDisplayed();
+                scroll(columnImages.get(2));
+                return columnImages.get(2).isDisplayed();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
             }
@@ -588,11 +623,12 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleFourthImage() {
+        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnImages.size() != 0){
             try{
-                return bookData.get(12).isDisplayed();
+                scroll(columnImages.get(3));
+                return columnImages.get(3).isDisplayed();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
             }
@@ -602,11 +638,12 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleFifthImage() {
+        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnImages.size() != 0){
             try{
-                return bookData.get(16).isDisplayed();
+                scroll(columnImages.get(4));
+                return columnImages.get(4).isDisplayed();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
             }
@@ -616,11 +653,12 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleSixthImage() {
+        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnImages.size() != 0){
             try{
-                return bookData.get(20).isDisplayed();
+                scroll(columnImages.get(5));
+                return columnImages.get(5).isDisplayed();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
             }
@@ -630,11 +668,12 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleSeventhImage() {
+        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnImages.size() != 0){
             try{
-                return bookData.get(24).isDisplayed();
+                scroll(columnImages.get(6));
+                return columnImages.get(6).isDisplayed();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
             }
@@ -644,11 +683,12 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleEighthImage() {
+        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
-        waitForPageToLoad();
-        if (bookData.size() != 0){
+        if (columnImages.size() != 0){
             try{
-                return bookData.get(28).isDisplayed();
+                scroll(columnImages.get(7));
+                return columnImages.get(7).isDisplayed();
             }catch (IndexOutOfBoundsException e){
                 e.printStackTrace();
             }
