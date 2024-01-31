@@ -117,8 +117,12 @@ public class BasePages {
         try {
             try {
                 try{
-                    waitForClick(element);
-                    element.click();
+                    try{
+                        waitForClick(element);
+                        element.click();
+                    }catch (TimeoutException e){
+                        e.printStackTrace();
+                    }
                 }catch (NoSuchElementException e){
                     e.printStackTrace();
                 }

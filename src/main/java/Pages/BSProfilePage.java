@@ -1,6 +1,7 @@
 package Pages;
 
 import TestComponents.BasePages;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -55,6 +56,10 @@ public class BSProfilePage extends BasePages {
     WebElement deleteAccountButton;
     @FindBy(css = ".text-right.di > button")
     WebElement deleteAllBooksButton;
+    @FindBy(id = "closeSmallModal-ok")
+    WebElement okButtonOfAlertDeleteAccountAndBooks;
+    @FindBy(id = "closeSmallModal-cancel")
+    WebElement cancelButtonOfAlertDeleteAccountAndBooks;
 
     public BSProfilePage(WebDriver driver) {
         super(driver);
@@ -82,17 +87,21 @@ public class BSProfilePage extends BasePages {
     }
 
     public void clickOnDeleteAllBooksButton(){
+        scroll(deleteAllBooksButton);
         clickWithWait(deleteAllBooksButton);
+    }
+
+    public void acceptDeleteAccountOrBooks(){
+        clickWithWait(okButtonOfAlertDeleteAccountAndBooks);
+    }
+
+    public void cancelDeleteAccountOrBooks(){
+        clickWithWait(cancelButtonOfAlertDeleteAccountAndBooks);
     }
 
     public void acceptAlert(){
         waitAlert();
         driver.switchTo().alert().accept();
-    }
-
-    public void dismissAlert(){
-        waitAlert();
-        driver.switchTo().alert().dismiss();
     }
 
 
@@ -186,8 +195,13 @@ public class BSProfilePage extends BasePages {
     }
 
     public boolean isMessageNoDataVisible(){
-        waitForVisibleElement(messageNoData);
-        return messageNoData.isDisplayed();
+        try {
+            waitForVisibleElement(messageNoData);
+            return messageNoData.isDisplayed();
+        }catch (TimeoutException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isPreviousButtonEnabled(){
@@ -203,6 +217,7 @@ public class BSProfilePage extends BasePages {
     public BSLoginPage clickOnLoginLink(){
         waitForPageToLoad(linkRegisterAndLogin);
         scroll(linkRegisterAndLogin.get(0));
+
         clickWithWait(linkRegisterAndLogin.get(0));
         return new BSLoginPage(driver);
     }

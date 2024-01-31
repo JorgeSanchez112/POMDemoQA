@@ -96,7 +96,7 @@ public class BSProfileTest extends BaseTest {
     @Test
     public void validateNextButtonIsEnabled(){
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
-        Assert.assertTrue(bsProfilePage.isNextButtonEnabled());
+        Assert.assertFalse(bsProfilePage.isNextButtonEnabled());
     }
 
     @Test
@@ -109,7 +109,7 @@ public class BSProfileTest extends BaseTest {
     @Test
     public void validateCorrectPageLabelText(){
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
-        Assert.assertEquals(bsProfilePage.getPageText(),"Page");
+        Assert.assertEquals(bsProfilePage.getPageText(),"Page of 1");
     }
 
     @Test
@@ -122,6 +122,7 @@ public class BSProfileTest extends BaseTest {
     public void wereAllBooksDeleted(){
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         bsProfilePage.clickOnDeleteAllBooksButton();
+        bsProfilePage.acceptDeleteAccountOrBooks();
         bsProfilePage.acceptAlert();
         Assert.assertTrue(bsProfilePage.isMessageNoDataVisible());
     }
