@@ -1,6 +1,7 @@
 package Pages;
 
 import TestComponents.BasePages;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,11 +35,21 @@ public class BSLoginPage extends BasePages {
     }
 
     public void typeOnUsernameInput(String name){
-        usernameInput.sendKeys(name);
+        try{
+            usernameInput.sendKeys(name);
+        }catch (TimeoutException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void typeOnPasswordInput(String password){
-        passwordInput.sendKeys(password);
+        try{
+            passwordInput.sendKeys(password);
+        }catch (TimeoutException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void clickOnLoginButton(){

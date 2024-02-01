@@ -6,8 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,8 +17,7 @@ import java.util.Properties;
 
 public class BaseTest {
 
-    private final ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
-
+    private ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
     protected WebDriver driver;
     protected Properties prop;
     protected HomePage homePage;
@@ -89,10 +87,12 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.merge(desiredCapabilities);
 
-        driver = new RemoteWebDriver(new URL(prop.getProperty("urlServer")), options);
+        WebDriver driver = new RemoteWebDriver(new URL(prop.getProperty("urlServer")), options);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
         driver.get(prop.getProperty("url"));
+
+        webDriverThreadLocal.set(driver); // Set the driver in ThreadLocal
 
         return driver;
     }
@@ -100,24 +100,22 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() throws MalformedURLException {
-        driver = webDriverThreadLocal.get();
+        WebDriver driver = webDriverThreadLocal.get();
         if (driver == null) {
             webDriverThreadLocal.set(initialization());
-            driver = webDriverThreadLocal.get();
         }
+        driver = webDriverThreadLocal.get();
+        System.out.println(driver);
 
         homePage = new HomePage(driver);
 
-        System.out.println("Thread ID: " + Thread.currentThread().getId() +
-                " Session ID: " + ((RemoteWebDriver) driver).getSessionId());
-
+        System.out.println("Thread ID: " + Thread.currentThread().getId() + " Session ID: " + ((RemoteWebDriver) driver).getSessionId());
         try {
             homePage.waitForVisibleElement(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
             homePage.hidePublicity(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
         } catch (TimeoutException e) {
             e.printStackTrace();
         }
-
     }
 
     @AfterMethod

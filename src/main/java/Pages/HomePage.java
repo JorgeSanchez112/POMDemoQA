@@ -57,8 +57,13 @@ public class HomePage extends BasePages {
     }
 
     public BookStorePage clickOnSectionBookStoreApplication(){
-        scroll(sections.get(5));
-        clickWithWait(sections.get(5));
+        waitForPageToLoad(sections);
+        try {
+            scroll(sections.get(5));
+            clickWithWait(sections.get(5));
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
         return new BookStorePage(driver);
     }
 

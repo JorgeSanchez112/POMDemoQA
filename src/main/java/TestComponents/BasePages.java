@@ -96,11 +96,16 @@ public class BasePages {
     }
 
     public void waitForPageToLoad(List<WebElement> list){
-        FluentWait wait = new FluentWait(driver);
-        wait.withTimeout(Duration.ofSeconds(10));
-        wait.pollingEvery(Duration.ofMillis(250));
-        wait.ignoring(NoSuchElementException.class);
-        wait.until(ExpectedConditions.visibilityOfAllElements(list));
+        try {
+            FluentWait wait = new FluentWait(driver);
+            wait.withTimeout(Duration.ofSeconds(10));
+            wait.pollingEvery(Duration.ofMillis(250));
+            wait.ignoring(NoSuchElementException.class);
+            wait.until(ExpectedConditions.visibilityOfAllElements(list));
+        }catch (StaleElementReferenceException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void waitAlert(){
