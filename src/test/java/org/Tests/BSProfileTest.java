@@ -22,104 +22,104 @@ public class BSProfileTest extends BaseTest {
     }
 
     @Test
-    public void isUserNameValueCorrect(){
+    public void isUserNameValueCorrect() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getUserNameValueText(),prop.getProperty("BSUsername"));
     }
 
     @Test
-    public void validateCorrectBooksLabelText(){
+    public void validateCorrectBooksLabelText() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getBooksLabelText(),"Books :");
     }
 
     @Test
-    public void validateCorrectPlaceHolderInSearchBook() {
+    public void validateCorrectPlaceHolderInSearchBook() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"), prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getSearchBoxPlaceholderText(), "Type to search");
     }
 
     @Test
-    public void validateCorrectUsernameLabelText(){
+    public void validateCorrectUsernameLabelText() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getUserNameLabelText(),"User Name :");
     }
 
     @Test
-    public void validateLogOutButtonRedirectToLogin(){
+    public void validateLogOutButtonRedirectToLogin() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.clickOnLogOutButton().getCurrentUrl(),"https://demoqa.com/login");
     }
 
     @Test
-    public void validateCorrectImageTitleText(){
+    public void validateCorrectImageTitleText() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getTableTitleImageText(),"Image");
     }
 
     @Test
-    public void validateCorrectTitleOfTitleTableText(){
+    public void validateCorrectTitleOfTitleTableText() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getTableTitleTitleText(),"Title");
     }
 
     @Test
-    public void validateCorrectAuthorTitleOfTableText(){
+    public void validateCorrectAuthorTitleOfTableText() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getTableTitleAuthorText(),"Author");
     }
 
     @Test
-    public void validateCorrectPublisherTitleOfTableText(){
+    public void validateCorrectPublisherTitleOfTableText() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getTableTitlePublisherText(),"Publisher");
     }
 
     @Test
-    public void validateCorrectActionTitleOfTableText(){
+    public void validateCorrectActionTitleOfTableText() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getTableTitleActionText(),"Action");
     }
 
     @Test
-    public void validateNoDataMessageIsVisible(){
+    public void validateNoDataMessageIsVisible() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertTrue(bsProfilePage.isMessageNoDataVisible());
     }
 
     @Test
-    public void validatePreviousButtonIsEnabled(){
+    public void validatePreviousButtonIsEnabled() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
-        Assert.assertTrue(bsProfilePage.isPreviousButtonEnabled());
+        Assert.assertFalse(bsProfilePage.isPreviousButtonEnabled());
     }
 
     @Test
-    public void validateNextButtonIsEnabled(){
+    public void validateNextButtonIsEnabled() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertFalse(bsProfilePage.isNextButtonEnabled());
     }
 
     @Test
-    public void isBookFoundBySearchBox(){
+    public void isBookFoundBySearchBox() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         bsProfilePage.typeOnSearchBox("Speaking");
         Assert.assertTrue(bsProfilePage.isTitleInTableOfBooksCollection("Speaking JavaScript"));
     }
 
     @Test
-    public void validateCorrectPageLabelText(){
+    public void validateCorrectPageLabelText() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getPageText(),"Page of 1");
     }
 
     @Test
-    public void validateCorrectTotalOfPages(){
+    public void validateCorrectTotalOfPages() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.getTotalOfPagesText(),"1");
     }
 
     @Test
-    public void wereAllBooksDeleted(){
+    public void wereAllBooksDeleted() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         bsProfilePage.clickOnDeleteAllBooksButton();
         bsProfilePage.acceptDeleteAccountOrBooks();
@@ -128,7 +128,7 @@ public class BSProfileTest extends BaseTest {
     }
 
     @Test
-    public void validateGoToBookStoreRedirectToBookStorePage(){
+    public void validateGoToBookStoreRedirectToBookStorePage() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertEquals(bsProfilePage.clickOnGoToBookStoreButton().getBookStoreUrlText(),"https://demoqa.com/books");
     }

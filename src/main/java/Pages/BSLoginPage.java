@@ -1,7 +1,7 @@
 package Pages;
 
 import TestComponents.BasePages;
-import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,6 +28,8 @@ public class BSLoginPage extends BasePages {
     private WebElement newUserButton;
     @FindBy(id = "name")
     private WebElement errorCredentialsMessage;
+    @FindBy(css = "#adplus-anchor > div")
+    private WebElement privacity;
 
     public BSLoginPage(WebDriver driver) {
         super(driver);
@@ -35,21 +37,15 @@ public class BSLoginPage extends BasePages {
     }
 
     public void typeOnUsernameInput(String name){
-        try{
-            usernameInput.sendKeys(name);
-        }catch (TimeoutException e){
-            e.printStackTrace();
-        }
-
+        waitForVisibleElement(usernameInput);
+        scroll(usernameInput);
+        typingInInput(usernameInput,name);
     }
 
     public void typeOnPasswordInput(String password){
-        try{
-            passwordInput.sendKeys(password);
-        }catch (TimeoutException e){
-            e.printStackTrace();
-        }
-
+        waitForVisibleElement(passwordInput);
+        scroll(passwordInput);
+        typingInInput(passwordInput,password);
     }
 
     public void clickOnLoginButton(){
@@ -109,11 +105,12 @@ public class BSLoginPage extends BasePages {
         return new BSRegisterPage(driver);
     }
 
-    public BSProfilePage userLogin(String username,String password){
+    public void userLogin(String username,String password) throws InterruptedException {
+        Thread.sleep(2000);
+        hidePublicity(privacity);
         typeOnUsernameInput(username);
         typeOnPasswordInput(password);
         clickOnLoginButton();
-        return new BSProfilePage(driver);
     }
 
 }

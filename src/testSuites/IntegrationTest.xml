@@ -4,6 +4,7 @@
 <suite name="crazy things" parallel="methods" thread-count="3">
     <listeners>
         <listener class-name="Resources.Listeners"/>
+        <listener class-name="Resources.MyTransformer"></listener>
     </listeners>
 
     <test name="test">

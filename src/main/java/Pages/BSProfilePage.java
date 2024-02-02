@@ -16,7 +16,7 @@ public class BSProfilePage extends BasePages {
     WebElement doNotLoginMessage;
     @FindBy(css = "#notLoggin-wrapper >* a")
     List<WebElement> linkRegisterAndLogin;
-    @FindBy(id = "userName-label") //logged in
+    @FindBy(css = ".text-left > #userName-label ") //logged in
     WebElement booksLabel;
     @FindBy(id = "searchBox")
     WebElement searchBox;
@@ -127,6 +127,7 @@ public class BSProfilePage extends BasePages {
 
     public String getTableTitleImageText(){
         waitForPageToLoad(tableHeaderTitles);
+        waitForVisibleElement(tableHeaderTitles.get(0));
         scroll(tableHeaderTitles.get(0));
         return tableHeaderTitles.get(0).getText();
     }
@@ -134,29 +135,34 @@ public class BSProfilePage extends BasePages {
     public String getTableTitleTitleText(){
         waitForPageToLoad(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(1));
+        scroll(tableHeaderTitles.get(1));
         return tableHeaderTitles.get(1).getText();
     }
 
     public String getTableTitleAuthorText(){
         waitForPageToLoad(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(2));
+        scroll(tableHeaderTitles.get(2));
         return tableHeaderTitles.get(2).getText();
     }
 
     public String getTableTitlePublisherText(){
         waitForPageToLoad(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(3));
+        scroll(tableHeaderTitles.get(3));
         return tableHeaderTitles.get(3).getText();
     }
 
     public String getTableTitleActionText(){
         waitForPageToLoad(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(4));
+        scroll(tableHeaderTitles.get(4));
         return tableHeaderTitles.get(4).getText();
     }
 
     public String getPageText(){
         waitForVisibleElement(pageTextOfCenterTable);
+        scroll(pageTextOfCenterTable);
         return pageTextOfCenterTable.getText();
     }
 
@@ -166,6 +172,7 @@ public class BSProfilePage extends BasePages {
 
     public String getTotalOfPagesText(){
         waitForVisibleElement(totalPagesNumber);
+        scroll(totalPagesNumber);
         return totalPagesNumber.getText();
     }
 
@@ -210,6 +217,7 @@ public class BSProfilePage extends BasePages {
     }
 
     public boolean isNextButtonEnabled(){
+        waitForVisibleElement(nextButton);
         scroll(nextButton);
         return nextButton.isEnabled();
     }
@@ -217,7 +225,6 @@ public class BSProfilePage extends BasePages {
     public BSLoginPage clickOnLoginLink(){
         waitForPageToLoad(linkRegisterAndLogin);
         scroll(linkRegisterAndLogin.get(0));
-
         clickWithWait(linkRegisterAndLogin.get(0));
         return new BSLoginPage(driver);
     }
@@ -230,12 +237,14 @@ public class BSProfilePage extends BasePages {
     }
 
     public BSLoginPage clickOnLogOutButton(){
+        waitForVisibleElement(logOutButton);
         scroll(logOutButton);
         clickWithWait(logOutButton);
         return new BSLoginPage(driver);
     }
 
     public BookStorePage clickOnGoToBookStoreButton(){
+        waitForVisibleElement(goToBookStoreButton);
         scroll(goToBookStoreButton);
         clickWithWait(goToBookStoreButton);
         return new BookStorePage(driver);

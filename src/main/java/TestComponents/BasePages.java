@@ -37,11 +37,22 @@ public class BasePages {
 
     public void hidePublicity(WebElement element){
         try {
-            ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'none';", element);
+            try {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'none';", element);
+            }catch (TimeoutException e){
+                e.printStackTrace();
+            }
         }catch (StaleElementReferenceException e){
             e.printStackTrace();
         }
+    }
 
+    public void typingInInput(WebElement input,String text){
+        try {
+            input.sendKeys(text);
+        }catch (TimeoutException e){
+            e.printStackTrace();
+        }
     }
 
     public void waitForClick(WebElement element){
@@ -96,12 +107,16 @@ public class BasePages {
     }
 
     public void waitForPageToLoad(List<WebElement> list){
+        FluentWait wait = new FluentWait(driver);
         try {
-            FluentWait wait = new FluentWait(driver);
-            wait.withTimeout(Duration.ofSeconds(10));
-            wait.pollingEvery(Duration.ofMillis(250));
-            wait.ignoring(NoSuchElementException.class);
-            wait.until(ExpectedConditions.visibilityOfAllElements(list));
+            try {
+                wait.withTimeout(Duration.ofSeconds(10));
+                wait.pollingEvery(Duration.ofMillis(250));
+                wait.ignoring(NoSuchElementException.class);
+                wait.until(ExpectedConditions.visibilityOfAllElements(list));
+            }catch (TimeoutException e){
+                e.printStackTrace();
+            }
         }catch (StaleElementReferenceException e){
             e.printStackTrace();
         }

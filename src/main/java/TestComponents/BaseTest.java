@@ -91,6 +91,7 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
         driver.get(prop.getProperty("url"));
+        driver.manage().deleteAllCookies();
 
         webDriverThreadLocal.set(driver); // Set the driver in ThreadLocal
 

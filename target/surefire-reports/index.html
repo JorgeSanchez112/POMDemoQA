@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Integration" class="navigator-link">
-              <span class="suite-name border-skipped">Integration</span>
+            <a href="#" panel-name="suite-crazy_things" class="navigator-link">
+              <span class="suite-name border-failed">crazy things</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Integration" class="navigator-link ">
-                    <span>C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\testSuites\IntegrationTest.xml</span>
+                  <a href="#" panel-name="test-xml-crazy_things" class="navigator-link ">
+                    <span>C:\Users\Jorge\IdeaProjects\POMDemoQA\src\testSuites\IntegrationTest.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Integration" class="navigator-link ">
+                  <a href="#" panel-name="testlist-crazy_things" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Integration" class="navigator-link ">
+                  <a href="#" panel-name="group-crazy_things" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Integration" class="navigator-link ">
+                  <a href="#" panel-name="times-crazy_things" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Integration" class="navigator-link ">
+                  <a href="#" panel-name="reporter-crazy_things" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Integration" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-crazy_things" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Integration" class="navigator-link ">
+                  <a href="#" panel-name="chronological-crazy_things" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,86 +92,125 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods,  14 skipped,  </span>
+                    <span class="method-stats">20 methods, 2 failed,  18 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-crazy_things" class="hide-methods failed suite-crazy_things"> (hide)</a> <!-- hide-methods failed suite-crazy_things -->
+                      <a href="#" panel-name="suite-crazy_things" class="show-methods failed suite-crazy_things"> (show)</a> <!-- show-methods failed suite-crazy_things -->
+                    </span>
+                    <div class="method-list-content failed suite-crazy_things">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="isBookFoundBySearchBox">isBookFoundBySearchBox</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="isMessageDoNotLoginShowed">isMessageDoNotLoginShowed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-crazy_things -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
                     <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Integration" class="hide-methods skipped suite-Integration"> (hide)</a> <!-- hide-methods skipped suite-Integration -->
-                      <a href="#" panel-name="suite-Integration" class="show-methods skipped suite-Integration"> (show)</a> <!-- show-methods skipped suite-Integration -->
+                      <a href="#" panel-name="suite-crazy_things" class="hide-methods skipped suite-crazy_things"> (hide)</a> <!-- hide-methods skipped suite-crazy_things -->
+                      <a href="#" panel-name="suite-crazy_things" class="show-methods skipped suite-crazy_things"> (show)</a> <!-- show-methods skipped suite-crazy_things -->
                     </span>
-                    <div class="method-list-content skipped suite-Integration">
+                    <div class="method-list-content skipped suite-crazy_things">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateCorrectPageTitle">validateCorrectPageTitle</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="isProfileTitleVisible">isProfileTitleVisible</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateCrasJustoOdioListElementIsSelectable">validateCrasJustoOdioListElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="isUserNameValueCorrect">isUserNameValueCorrect</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateDapibusAcFacilisisInListElementIsSelectable">validateDapibusAcFacilisisInListElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectActionTitleOfTableText">validateCorrectActionTitleOfTableText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateEightGridElementIsSelectable">validateEightGridElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectAuthorTitleOfTableText">validateCorrectAuthorTitleOfTableText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateFiveGridElementIsSelectable">validateFiveGridElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectBooksLabelText">validateCorrectBooksLabelText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateFourGridElementIsSelectable">validateFourGridElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectImageTitleText">validateCorrectImageTitleText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateMorbiLeoRisusListElementIsSelectable">validateMorbiLeoRisusListElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectPageLabelText">validateCorrectPageLabelText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateNineGridElementIsSelectable">validateNineGridElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectPlaceHolderInSearchBook">validateCorrectPlaceHolderInSearchBook</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateOneGridElementIsSelectable">validateOneGridElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectPublisherTitleOfTableText">validateCorrectPublisherTitleOfTableText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validatePortaAcConsecteturAcListElementIsSelectable">validatePortaAcConsecteturAcListElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectTitleOfTitleTableText">validateCorrectTitleOfTitleTableText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateSevenGridElementIsSelectable">validateSevenGridElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectTotalOfPages">validateCorrectTotalOfPages</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateSixGridElementIsSelectable">validateSixGridElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateCorrectUsernameLabelText">validateCorrectUsernameLabelText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateThreeGridElementIsSelectable">validateThreeGridElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateGoToBookStoreRedirectToBookStorePage">validateGoToBookStoreRedirectToBookStorePage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Integration" title="org.Tests.SelectablePageTest" class="method navigator-link" hash-for-method="validateTwoGridElementIsSelectable">validateTwoGridElementIsSelectable</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateLogOutButtonRedirectToLogin">validateLogOutButtonRedirectToLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Integration -->
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateNextButtonIsEnabled">validateNextButtonIsEnabled</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validateNoDataMessageIsVisible">validateNoDataMessageIsVisible</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="validatePreviousButtonIsEnabled">validatePreviousButtonIsEnabled</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-crazy_things" title="org.Tests.BSProfileTest" class="method navigator-link" hash-for-method="wereAllBooksDeleted">wereAllBooksDeleted</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-crazy_things -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -182,28 +221,29 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Integration" class="panel Integration">
-          <div class="suite-Integration-class-skipped">
+        <div panel-name="suite-crazy_things" class="panel crazy_things">
+          <div class="suite-crazy_things-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">org.Tests.SelectablePageTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">org.Tests.BSProfileTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateCorrectPageTitle">
-                  </a> <!-- validateCorrectPageTitle -->
-                  <span class="method-name">validateCorrectPageTitle</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="isBookFoundBySearchBox">
+                  </a> <!-- isBookFoundBySearchBox -->
+                  <span class="method-name">isBookFoundBySearchBox</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, clickElement {id=A1C024F4A25A72033DEDE5806646D9BD_element_62}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on Windows 10 (9461cd2ee8869e475bef35e5605d88f7)] -&gt; css selector: #notLoggin-wrapper &gt;* a]
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -212,9 +252,88 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at TestComponents.BasePages.clickWithWait(BasePages.java:138)
+	at Pages.BSProfilePage.clickOnLoginLink(BSProfilePage.java:220)
+	at org.Tests.BSProfileTest.isBookFoundBySearchBox(BSProfileTest.java:104)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+... Removed 16 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isMessageDoNotLoginShowed">
+                  </a> <!-- isMessageDoNotLoginShowed -->
+                  <span class="method-name">isMessageDoNotLoginShowed</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to route (POST) /session/c4ca22e128ba17a17ffd4905b150b53c/window/maximize
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [c4ca22e128ba17a17ffd4905b150b53c, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50959}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4ca22e128ba17a17ffd4905b150b53c
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1039)
+	at TestComponents.BaseTest.initialization(BaseTest.java:91)
+	at Resources.Listeners.onTestFailure(Listeners.java:41)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-crazy_things-class-failed -->
+          <div class="suite-crazy_things-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">org.Tests.BSProfileTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="isProfileTitleVisible">
+                  </a> <!-- isProfileTitleVisible -->
+                  <span class="method-name">isProfileTitleVisible</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -224,30 +343,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateCrasJustoOdioListElementIsSelectable">
-                  </a> <!-- validateCrasJustoOdioListElementIsSelectable -->
-                  <span class="method-name">validateCrasJustoOdioListElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="isUserNameValueCorrect">
+                  </a> <!-- isUserNameValueCorrect -->
+                  <span class="method-name">isUserNameValueCorrect</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -257,30 +384,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateDapibusAcFacilisisInListElementIsSelectable">
-                  </a> <!-- validateDapibusAcFacilisisInListElementIsSelectable -->
-                  <span class="method-name">validateDapibusAcFacilisisInListElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectActionTitleOfTableText">
+                  </a> <!-- validateCorrectActionTitleOfTableText -->
+                  <span class="method-name">validateCorrectActionTitleOfTableText</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -290,30 +425,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateEightGridElementIsSelectable">
-                  </a> <!-- validateEightGridElementIsSelectable -->
-                  <span class="method-name">validateEightGridElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectAuthorTitleOfTableText">
+                  </a> <!-- validateCorrectAuthorTitleOfTableText -->
+                  <span class="method-name">validateCorrectAuthorTitleOfTableText</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -323,30 +466,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateFiveGridElementIsSelectable">
-                  </a> <!-- validateFiveGridElementIsSelectable -->
-                  <span class="method-name">validateFiveGridElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectBooksLabelText">
+                  </a> <!-- validateCorrectBooksLabelText -->
+                  <span class="method-name">validateCorrectBooksLabelText</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -356,30 +507,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateFourGridElementIsSelectable">
-                  </a> <!-- validateFourGridElementIsSelectable -->
-                  <span class="method-name">validateFourGridElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectImageTitleText">
+                  </a> <!-- validateCorrectImageTitleText -->
+                  <span class="method-name">validateCorrectImageTitleText</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -389,30 +548,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateMorbiLeoRisusListElementIsSelectable">
-                  </a> <!-- validateMorbiLeoRisusListElementIsSelectable -->
-                  <span class="method-name">validateMorbiLeoRisusListElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectPageLabelText">
+                  </a> <!-- validateCorrectPageLabelText -->
+                  <span class="method-name">validateCorrectPageLabelText</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -422,30 +589,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateNineGridElementIsSelectable">
-                  </a> <!-- validateNineGridElementIsSelectable -->
-                  <span class="method-name">validateNineGridElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectPlaceHolderInSearchBook">
+                  </a> <!-- validateCorrectPlaceHolderInSearchBook -->
+                  <span class="method-name">validateCorrectPlaceHolderInSearchBook</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -455,30 +630,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateOneGridElementIsSelectable">
-                  </a> <!-- validateOneGridElementIsSelectable -->
-                  <span class="method-name">validateOneGridElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectPublisherTitleOfTableText">
+                  </a> <!-- validateCorrectPublisherTitleOfTableText -->
+                  <span class="method-name">validateCorrectPublisherTitleOfTableText</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -488,30 +671,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validatePortaAcConsecteturAcListElementIsSelectable">
-                  </a> <!-- validatePortaAcConsecteturAcListElementIsSelectable -->
-                  <span class="method-name">validatePortaAcConsecteturAcListElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectTitleOfTitleTableText">
+                  </a> <!-- validateCorrectTitleOfTitleTableText -->
+                  <span class="method-name">validateCorrectTitleOfTitleTableText</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -521,30 +712,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateSevenGridElementIsSelectable">
-                  </a> <!-- validateSevenGridElementIsSelectable -->
-                  <span class="method-name">validateSevenGridElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectTotalOfPages">
+                  </a> <!-- validateCorrectTotalOfPages -->
+                  <span class="method-name">validateCorrectTotalOfPages</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -554,30 +753,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateSixGridElementIsSelectable">
-                  </a> <!-- validateSixGridElementIsSelectable -->
-                  <span class="method-name">validateSixGridElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateCorrectUsernameLabelText">
+                  </a> <!-- validateCorrectUsernameLabelText -->
+                  <span class="method-name">validateCorrectUsernameLabelText</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -587,30 +794,38 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateThreeGridElementIsSelectable">
-                  </a> <!-- validateThreeGridElementIsSelectable -->
-                  <span class="method-name">validateThreeGridElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateGoToBookStoreRedirectToBookStorePage">
+                  </a> <!-- validateGoToBookStoreRedirectToBookStorePage -->
+                  <span class="method-name">validateGoToBookStoreRedirectToBookStorePage</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -620,30 +835,202 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="validateTwoGridElementIsSelectable">
-                  </a> <!-- validateTwoGridElementIsSelectable -->
-                  <span class="method-name">validateTwoGridElementIsSelectable</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=120.0.6099.71)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <a name="validateLogOutButtonRedirectToLogin">
+                  </a> <!-- validateLogOutButtonRedirectToLogin -->
+                  <span class="method-name">validateLogOutButtonRedirectToLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
 Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [008886b35590a9911a2ce560a4174fb4, clickElement {id=AC73CF066087445253134BDE652D7618_element_39}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.48.1:4444/sessi..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[RemoteWebDriver: chrome on Windows 10 (008886b35590a9911a2ce560a4174fb4)] -&gt; class name: top-card]
-Session ID: 008886b35590a9911a2ce560a4174fb4
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at TestComponents.BasePages.clickWithWait(BasePages.java:113)
-	at Pages.HomePage.clickOnSectionInteractions(HomePage.java:54)
-	at org.Tests.SelectablePageTest.initializeClass(SelectablePageTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateNextButtonIsEnabled">
+                  </a> <!-- validateNextButtonIsEnabled -->
+                  <span class="method-name">validateNextButtonIsEnabled</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateNoDataMessageIsVisible">
+                  </a> <!-- validateNoDataMessageIsVisible -->
+                  <span class="method-name">validateNoDataMessageIsVisible</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatePreviousButtonIsEnabled">
+                  </a> <!-- validatePreviousButtonIsEnabled -->
+                  <span class="method-name">validatePreviousButtonIsEnabled</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="wereAllBooksDeleted">
+                  </a> <!-- wereAllBooksDeleted -->
+                  <span class="method-name">wereAllBooksDeleted</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Unable to execute request for an existing session: java.net.http.HttpTimeoutException: request timed out
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: unknown
+Build info: version: &apos;4.16.0&apos;, revision: &apos;15400459dd*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [9461cd2ee8869e475bef35e5605d88f7, findElements {using=class name, value=top-card}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Jorge\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50643}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.100.102:4444/s..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9461cd2ee8869e475bef35e5605d88f7
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:373)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:367)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy11.size(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:268)
+	at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at TestComponents.BasePages.waitForPageToLoad(BasePages.java:112)
+	at Pages.HomePage.clickOnSectionBookStoreApplication(HomePage.java:60)
+	at org.Tests.BSProfileTest.initializeClass(BSProfileTest.java:11)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
@@ -652,263 +1039,347 @@ Session ID: 008886b35590a9911a2ce560a4174fb4
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Integration-class-skipped -->
-        </div> <!-- panel Integration -->
-        <div panel-name="test-xml-Integration" class="panel">
+          </div> <!-- suite-crazy_things-class-skipped -->
+        </div> <!-- panel crazy_things -->
+        <div panel-name="test-xml-crazy_things" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Jorge\IdeaProjects\PracticeDemoQA\src\testSuites\IntegrationTest.xml</span>
+            <span class="header-content">C:\Users\Jorge\IdeaProjects\POMDemoQA\src\testSuites\IntegrationTest.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;Integration&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;crazy things&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Resources.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;interactions&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.Tests.SelectablePageTest&quot;/&gt;
+      &lt;class name=&quot;org.Tests.BSProfileTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- interactions --&gt;
-&lt;/suite&gt; &lt;!-- Integration --&gt;
+  &lt;/test&gt; &lt;!-- test --&gt;
+&lt;/suite&gt; &lt;!-- crazy things --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Integration" class="panel">
+        <div panel-name="testlist-crazy_things" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Integration</span>
+            <span class="header-content">Tests for crazy things</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">interactions (1 class)</span>
+                <span class="test-name">test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Integration" class="panel">
+        <div panel-name="group-crazy_things" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Integration</span>
+            <span class="header-content">Groups for crazy things</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Integration" class="panel">
+        <div panel-name="times-crazy_things" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Integration</span>
+            <span class="header-content">Times for crazy things</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Integration');
-function tableData_Integration() {
+suiteTableInitFunctions.push('tableData_crazy_things');
+function tableData_crazy_things() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(14);
+data.addRows(20);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateOneGridElementIsSelectable')
-data.setCell(0, 2, 'org.Tests.SelectablePageTest')
-data.setCell(0, 3, 26);
+data.setCell(0, 1, 'isMessageDoNotLoginShowed')
+data.setCell(0, 2, 'org.Tests.BSProfileTest')
+data.setCell(0, 3, 149653);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateCrasJustoOdioListElementIsSelectable')
-data.setCell(1, 2, 'org.Tests.SelectablePageTest')
-data.setCell(1, 3, 1);
+data.setCell(1, 1, 'isBookFoundBySearchBox')
+data.setCell(1, 2, 'org.Tests.BSProfileTest')
+data.setCell(1, 3, 61861);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validateEightGridElementIsSelectable')
-data.setCell(2, 2, 'org.Tests.SelectablePageTest')
-data.setCell(2, 3, 1);
+data.setCell(2, 1, 'validateCorrectActionTitleOfTableText')
+data.setCell(2, 2, 'org.Tests.BSProfileTest')
+data.setCell(2, 3, 6);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'validateTwoGridElementIsSelectable')
-data.setCell(3, 2, 'org.Tests.SelectablePageTest')
+data.setCell(3, 1, 'validateNoDataMessageIsVisible')
+data.setCell(3, 2, 'org.Tests.BSProfileTest')
 data.setCell(3, 3, 1);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'validateCorrectPageTitle')
-data.setCell(4, 2, 'org.Tests.SelectablePageTest')
+data.setCell(4, 1, 'validateLogOutButtonRedirectToLogin')
+data.setCell(4, 2, 'org.Tests.BSProfileTest')
 data.setCell(4, 3, 1);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'validateSixGridElementIsSelectable')
-data.setCell(5, 2, 'org.Tests.SelectablePageTest')
+data.setCell(5, 1, 'validateCorrectPageLabelText')
+data.setCell(5, 2, 'org.Tests.BSProfileTest')
 data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'validateFiveGridElementIsSelectable')
-data.setCell(6, 2, 'org.Tests.SelectablePageTest')
+data.setCell(6, 1, 'isUserNameValueCorrect')
+data.setCell(6, 2, 'org.Tests.BSProfileTest')
 data.setCell(6, 3, 0);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'validateThreeGridElementIsSelectable')
-data.setCell(7, 2, 'org.Tests.SelectablePageTest')
+data.setCell(7, 1, 'validateGoToBookStoreRedirectToBookStorePage')
+data.setCell(7, 2, 'org.Tests.BSProfileTest')
 data.setCell(7, 3, 0);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'validateFourGridElementIsSelectable')
-data.setCell(8, 2, 'org.Tests.SelectablePageTest')
+data.setCell(8, 1, 'wereAllBooksDeleted')
+data.setCell(8, 2, 'org.Tests.BSProfileTest')
 data.setCell(8, 3, 0);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'validatePortaAcConsecteturAcListElementIsSelectable')
-data.setCell(9, 2, 'org.Tests.SelectablePageTest')
+data.setCell(9, 1, 'validateCorrectAuthorTitleOfTableText')
+data.setCell(9, 2, 'org.Tests.BSProfileTest')
 data.setCell(9, 3, 0);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'validateDapibusAcFacilisisInListElementIsSelectable')
-data.setCell(10, 2, 'org.Tests.SelectablePageTest')
+data.setCell(10, 1, 'validateCorrectBooksLabelText')
+data.setCell(10, 2, 'org.Tests.BSProfileTest')
 data.setCell(10, 3, 0);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'validateNineGridElementIsSelectable')
-data.setCell(11, 2, 'org.Tests.SelectablePageTest')
+data.setCell(11, 1, 'validateCorrectPublisherTitleOfTableText')
+data.setCell(11, 2, 'org.Tests.BSProfileTest')
 data.setCell(11, 3, 0);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'validateSevenGridElementIsSelectable')
-data.setCell(12, 2, 'org.Tests.SelectablePageTest')
+data.setCell(12, 1, 'validateCorrectTitleOfTitleTableText')
+data.setCell(12, 2, 'org.Tests.BSProfileTest')
 data.setCell(12, 3, 0);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'validateMorbiLeoRisusListElementIsSelectable')
-data.setCell(13, 2, 'org.Tests.SelectablePageTest')
+data.setCell(13, 1, 'validateCorrectImageTitleText')
+data.setCell(13, 2, 'org.Tests.BSProfileTest')
 data.setCell(13, 3, 0);
-window.suiteTableData['Integration']= { tableData: data, tableDiv: 'times-div-Integration'}
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'validateCorrectUsernameLabelText')
+data.setCell(14, 2, 'org.Tests.BSProfileTest')
+data.setCell(14, 3, 0);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'validateCorrectPlaceHolderInSearchBook')
+data.setCell(15, 2, 'org.Tests.BSProfileTest')
+data.setCell(15, 3, 0);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'validateCorrectTotalOfPages')
+data.setCell(16, 2, 'org.Tests.BSProfileTest')
+data.setCell(16, 3, 0);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'validatePreviousButtonIsEnabled')
+data.setCell(17, 2, 'org.Tests.BSProfileTest')
+data.setCell(17, 3, 0);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'isProfileTitleVisible')
+data.setCell(18, 2, 'org.Tests.BSProfileTest')
+data.setCell(18, 3, 0);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'validateNextButtonIsEnabled')
+data.setCell(19, 2, 'org.Tests.BSProfileTest')
+data.setCell(19, 3, 0);
+window.suiteTableData['crazy_things']= { tableData: data, tableDiv: 'times-div-crazy_things'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 ms</span>
-              <div id="times-div-Integration">
-              </div> <!-- times-div-Integration -->
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-crazy_things">
+              </div> <!-- times-div-crazy_things -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Integration" class="panel">
+        <div panel-name="reporter-crazy_things" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Integration</span>
+            <span class="header-content">Reporter output for crazy things</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Integration" class="panel">
+        <div panel-name="ignored-methods-crazy_things" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Integration" class="panel">
+        <div panel-name="chronological-crazy_things" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.Tests.SelectablePageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">homePage</span>
+              <div class="chronological-class-name">org.Tests.BSProfileTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">isMessageDoNotLoginShowed</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">42 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">9 ms</span>
+                <span class="method-name">setUp</span>
+                <span class="method-start">42 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">43 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">21916 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">21970 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">initializeClass</span>
-                <span class="method-start">36508 ms</span>
+                <span class="method-start">22998 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">isBookFoundBySearchBox</span>
+                <span class="method-start">24095 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">85973 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeClass</span>
-                <span class="method-start">36531 ms</span>
+                <span class="method-start">85975 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39790 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initializeClass</span>
-                <span class="method-start">39795 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39824 ms</span>
+                <span class="method-name">setUp</span>
+                <span class="method-start">85983 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeClass</span>
-                <span class="method-start">39826 ms</span>
+                <span class="method-start">85985 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39843 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initializeClass</span>
-                <span class="method-start">39845 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39851 ms</span>
+                <span class="method-name">setUp</span>
+                <span class="method-start">85998 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeClass</span>
-                <span class="method-start">39854 ms</span>
+                <span class="method-start">85999 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39864 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initializeClass</span>
-                <span class="method-start">39876 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39887 ms</span>
+                <span class="method-name">setUp</span>
+                <span class="method-start">86002 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeClass</span>
-                <span class="method-start">39888 ms</span>
+                <span class="method-start">86003 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39898 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initializeClass</span>
-                <span class="method-start">39901 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39946 ms</span>
+                <span class="method-name">setUp</span>
+                <span class="method-start">86005 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeClass</span>
-                <span class="method-start">39947 ms</span>
+                <span class="method-start">86006 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39959 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initializeClass</span>
-                <span class="method-start">39961 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39979 ms</span>
+                <span class="method-name">setUp</span>
+                <span class="method-start">86016 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeClass</span>
-                <span class="method-start">39980 ms</span>
+                <span class="method-start">86018 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">39988 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initializeClass</span>
-                <span class="method-start">39989 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">homePage</span>
-                <span class="method-start">40006 ms</span>
+                <span class="method-name">setUp</span>
+                <span class="method-start">86023 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initializeClass</span>
-                <span class="method-start">40007 ms</span>
+                <span class="method-start">86024 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86034 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86035 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86041 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86042 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86045 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86045 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86048 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86049 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86052 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86053 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86059 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86061 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86074 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86075 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86081 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86082 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86100 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86101 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">86105 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeClass</span>
+                <span class="method-start">86106 ms</span>
               </div> <!-- configuration-method before -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
