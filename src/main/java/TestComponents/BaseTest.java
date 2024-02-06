@@ -59,6 +59,7 @@ public class BaseTest {
     protected BSLoginPage bsLoginPage;
     protected BSRegisterPage bsRegisterPage;
     protected BSProfilePage bsProfilePage;
+    protected BSIBookPage bsiBookPage;
     protected BSAPIPage bsapiPage;
 
     public BaseTest() {

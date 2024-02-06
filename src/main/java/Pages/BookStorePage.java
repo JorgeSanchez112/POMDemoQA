@@ -1,8 +1,8 @@
 package Pages;
 
 import TestComponents.BasePages;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.beust.jcommander.IParameterizedParser;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -704,6 +704,25 @@ public class BookStorePage extends BasePages {
 
     public int getSizeSections(){
         return deployed_form_exercise.size();
+    }
+
+    public BSIBookPage searchAndClickOnATitle(String bookTitle){
+        waitForVisibleElement(title);
+        waitForPageToLoad(columnTitle);
+        try {
+            WebElement tryOne = driver.findElement(By.linkText(bookTitle));
+            scroll(tryOne);
+            clickWithWait(tryOne);
+            return new BSIBookPage(driver);
+        }catch (NoSuchElementException e){
+            e.printStackTrace();
+            System.out.println("Error on line 719 BookstorePage" + e.getMessage());
+            return null;
+        }
+    }
+
+    public void a(){
+        clickWithWait(columnTitle.get(1));
     }
 
     public BSLoginPage clickOnLoginTab(){

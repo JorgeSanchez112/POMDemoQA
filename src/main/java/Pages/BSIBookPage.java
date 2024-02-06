@@ -4,8 +4,13 @@ import TestComponents.BasePages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class BSIBookPage extends BasePages {
+    @FindBy(className = "main-header")
+    private WebElement pageTitle;
+    @FindBy(id = "login")
+    private WebElement loginButton;
     @FindBy(id = "userName-label")
     private WebElement  userNameLabel;
     @FindBy(css = ".text-right > #userName-value")
@@ -51,6 +56,7 @@ public class BSIBookPage extends BasePages {
 
     public BSIBookPage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(driver,this);
     }
 
     public void clickOnBackToBookStoreBookButton(){
@@ -63,6 +69,113 @@ public class BSIBookPage extends BasePages {
         clickWithWait(addToYourCollectionButton);
     }
 
+    public String getPageTitleText(){
+        return pageTitle.getText();
+    }
+
+    public String getUsernameValueText(){
+        waitForVisibleElement(userNameValue);
+        return userNameValue.getText();
+    }
+
+    public String getIsbnValueText(){
+        waitForVisibleElement(isbnValue);
+        return isbnValue.getText();
+    }
+
+    public String getTitleValueText(){
+        waitForVisibleElement(titleValue);
+        return titleValue.getText();
+    }
+
+    public String getSubTitleValueText(){
+        waitForVisibleElement(subtitleValue);
+        scroll(subtitleValue);
+        return subtitleValue.getText();
+    }
+
+    public String getAuthorValueText(){
+        waitForVisibleElement(authorValue);
+        scroll(authorValue);
+        return authorValue.getText();
+    }
+
+    public String getPublisherValueText(){
+        waitForVisibleElement(publisherValue);
+        scroll(publisherValue);
+        return publisherValue.getText();
+    }
+
+    public String getTotalPagesValueText(){
+        return totalPagesValue.getText();
+    }
+
+    public String getDescriptionValueText(){
+        return descriptionValue.getText();
+    }
+
+    public String getWebSiteValueLink(){
+        waitForVisibleElement(websiteLink);
+        scroll(websiteLink);
+        return websiteLink.getAttribute("href");
+    }
+
+    public boolean usernameLabelIsVisible(){
+        waitForVisibleElement(userNameLabel);
+        return userNameLabel.isDisplayed();
+    }
+
+    public boolean isbnLabelIsVisible(){
+        waitForVisibleElement(isbnLabel);
+        return isbnLabel.isDisplayed();
+    }
+
+    public boolean titleLabelIsVisible(){
+        waitForVisibleElement(titleLabel);
+        return titleLabel.isDisplayed();
+    }
+
+    public boolean subtitleLabelIsVisible(){
+        waitForVisibleElement(subtitleLabel);
+        scroll(subtitleLabel);
+        return subtitleLabel.isDisplayed();
+    }
+
+    public boolean authorLabelIsVisible(){
+        waitForVisibleElement(authorLabel);
+        scroll(authorLabel);
+        return authorLabel.isDisplayed();
+    }
+
+    public boolean publisherLabelIsVisible(){
+        waitForVisibleElement(publisherLabel);
+        scroll(publisherLabel);
+        return publisherLabel.isDisplayed();
+    }
+
+    public boolean pagesLabelIsVisible(){
+        waitForVisibleElement(pagesLabel);
+        scroll(pagesLabel);
+        return pagesLabel.isDisplayed();
+    }
+
+    public boolean descriptionLabelIsVisible(){
+        waitForVisibleElement(descriptionLabel);
+        scroll(descriptionLabel);
+        return descriptionLabel.isDisplayed();
+    }
+
+    public boolean websiteLabelIsVisible(){
+        waitForVisibleElement(websiteLabel);
+        scroll(websiteLabel);
+        return websiteLabel.isDisplayed();
+    }
+
+    public BSLoginPage clickOnLogin(){
+        scroll(loginButton);
+        clickWithWait(loginButton);
+        return new BSLoginPage(driver);
+    }
 
     public BSLoginPage clickOnLogOutButton(){
         clickWithWait(logOutButton);
