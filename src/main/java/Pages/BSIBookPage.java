@@ -1,6 +1,7 @@
 package Pages;
 
 import TestComponents.BasePages;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -49,7 +50,7 @@ public class BSIBookPage extends BasePages {
     private WebElement websiteLabel;
     @FindBy(css = "#website-wrapper >* #userName-value")
     private WebElement websiteLink;
-    @FindBy(id = ".text-right > #addNewRecordButton")
+    @FindBy(css = ".text-left > #addNewRecordButton")
     private WebElement backToBookStoreButton;
     @FindBy(css = ".text-left > #addNewRecordButton")
     private WebElement addToYourCollectionButton;
@@ -57,11 +58,6 @@ public class BSIBookPage extends BasePages {
     public BSIBookPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
-    }
-
-    public void clickOnBackToBookStoreBookButton(){
-        scroll(backToBookStoreButton);
-        clickWithWait(backToBookStoreButton);
     }
 
     public void clickOnAddToYourCollectionButton(){
@@ -114,15 +110,14 @@ public class BSIBookPage extends BasePages {
         return descriptionValue.getText();
     }
 
-    public String getWebSiteValueLink(){
-        waitForVisibleElement(websiteLink);
-        scroll(websiteLink);
-        return websiteLink.getAttribute("href");
-    }
-
     public boolean usernameLabelIsVisible(){
         waitForVisibleElement(userNameLabel);
-        return userNameLabel.isDisplayed();
+        try{
+            return userNameLabel.isDisplayed();
+        }catch (NoSuchElementException e){
+            e.printStackTrace();
+        }
+        return false;
     }
 
     public boolean isbnLabelIsVisible(){
@@ -171,6 +166,22 @@ public class BSIBookPage extends BasePages {
         return websiteLabel.isDisplayed();
     }
 
+    public boolean logOutButtonIsVisible(){
+        waitForVisibleElement(logOutButton);
+        try {
+            return logOutButton.isDisplayed();
+        }catch (NoSuchElementException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean websiteValueLinkIsVisible(){
+        waitForVisibleElement(websiteLink);
+        scroll(websiteLink);
+        return websiteLink.isDisplayed();
+    }
+
     public BSLoginPage clickOnLogin(){
         scroll(loginButton);
         clickWithWait(loginButton);
@@ -180,5 +191,11 @@ public class BSIBookPage extends BasePages {
     public BSLoginPage clickOnLogOutButton(){
         clickWithWait(logOutButton);
         return new BSLoginPage(driver);
+    }
+
+    public BookStorePage clickOnBackToBookStoreBookButton(){
+        scroll(backToBookStoreButton);
+        clickWithWait(backToBookStoreButton);
+        return new BookStorePage(driver);
     }
 }

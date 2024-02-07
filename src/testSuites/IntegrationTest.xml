@@ -1,15 +1,15 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="crazy things" parallel="methods" thread-count="3">
+<suite name="crazy things" parallel="methods" thread-count="2">
     <listeners>
         <listener class-name="Resources.Listeners"/>
-        <listener class-name="Resources.MyTransformer"></listener>
+        <listener class-name="Resources.MyTransformer"/>
     </listeners>
 
     <test name="test">
         <classes>
-            <class name="org.Tests.BSProfileTest"/>
+            <class name="org.Tests.BSIBookPageTest"/>
         </classes>
     </test>
 </suite>

@@ -27,50 +27,49 @@ public class LinksPageTest extends BaseTest {
     }
 
     @Test
-    public void validateCreatedLink() throws InterruptedException {
+    public void validateCreatedLink() {
         linksPage.clickOnCreatedLink();
-        Thread.sleep(1000);
         Assert.assertEquals(linksPage.getHttpMessage(),"201");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Created");
     }
 
     @Test
-    public void validateNoContentLink() throws InterruptedException {
+    public void validateNoContentLink() {
         linksPage.clickOnNoContentLink();
         Assert.assertEquals(linksPage.getHttpMessage(),"204");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"No Content");
     }
 
     @Test
-    public void validateMovedLink() throws InterruptedException {
+    public void validateMovedLink() {
         linksPage.clickOnMovedLink();
         Assert.assertEquals(linksPage.getHttpMessage(),"301");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Moved Permanently");
     }
 
     @Test
-    public void validateBadRequestLink() throws InterruptedException {
+    public void validateBadRequestLink() {
         linksPage.clickOnBadRequestLink();
         Assert.assertEquals(linksPage.getHttpMessage(),"400");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Bad Request");
     }
 
     @Test
-    public void validateUnauthorizedLink() throws InterruptedException {
+    public void validateUnauthorizedLink() {
         linksPage.clickOnUnauthorizedLink();
         Assert.assertEquals(linksPage.getHttpMessage(),"401");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Unauthorized");
     }
 
     @Test
-    public void validateForbiddenLink() throws InterruptedException {
+    public void validateForbiddenLink() {
         linksPage.clickOnForbiddenLink();
         Assert.assertEquals(linksPage.getHttpMessage(),"403");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Forbidden");
     }
 
     @Test
-    public void validateNotFoundLink() throws InterruptedException {
+    public void validateNotFoundLink() {
         linksPage.clickOnNotFoundLink();
         Assert.assertEquals(linksPage.getHttpMessage(),"404");
         Assert.assertEquals(linksPage.getNameLinkMessage(),"Not Found");

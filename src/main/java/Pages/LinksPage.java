@@ -86,12 +86,13 @@ public class LinksPage extends BasePages {
         return secondLinkToHomePage.getAttribute("href");
     }
 
-    public String getHttpMessage() throws InterruptedException {
-        Thread.sleep(500);
+    public String getHttpMessage() {
+        waitForVisibleElement(httpMessage);
         return httpMessage.getText();
     }
 
     public String getNameLinkMessage(){
+        waitForVisibleElement(linkMessage);
         return linkMessage.getText();
     }
 
