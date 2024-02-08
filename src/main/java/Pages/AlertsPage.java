@@ -80,18 +80,22 @@ public class AlertsPage extends BasePages {
     }
 
     public boolean isFirstLabelVisible(){
+        waitForChargedElementsOfAWebElementList(labels);
         return labels.get(0).isDisplayed();
     }
 
     public boolean isSecondLabelVisible(){
+        waitForChargedElementsOfAWebElementList(labels);
         return labels.get(1).isDisplayed();
     }
 
     public boolean isThirdLabelVisible(){
+        waitForChargedElementsOfAWebElementList(labels);
         return labels.get(2).isDisplayed();
     }
 
     public boolean isFourthLabelVisible(){
+        waitForChargedElementsOfAWebElementList(labels);
         return labels.get(3).isDisplayed();
     }
 

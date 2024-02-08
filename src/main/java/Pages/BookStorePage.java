@@ -1,7 +1,6 @@
 package Pages;
 
 import TestComponents.BasePages;
-import com.beust.jcommander.IParameterizedParser;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -40,7 +39,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToFirstRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad(bookRow);
+        waitForChargedElementsOfAWebElementList(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(0));
@@ -54,7 +53,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToSecondRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad(bookRow);
+        waitForChargedElementsOfAWebElementList(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(1));
@@ -68,7 +67,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToThirdRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad(bookRow);
+        waitForChargedElementsOfAWebElementList(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(2));
@@ -82,7 +81,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToFourthRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad(bookRow);
+        waitForChargedElementsOfAWebElementList(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(3));
@@ -96,7 +95,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToFifthRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad(bookRow);
+        waitForChargedElementsOfAWebElementList(bookRow);
         if (bookRow.size() != 0){
             try {
                 waitForVisibleElement(bookRow.get(4));
@@ -111,7 +110,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToSixthRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad(bookRow);
+        waitForChargedElementsOfAWebElementList(bookRow);
         if (bookRow.size() != 0){
             try{
                 waitForVisibleElement(bookRow.get(5));
@@ -126,7 +125,7 @@ public class BookStorePage extends BasePages {
 
     public void scrollToSeventhRow() {
         waitForVisibleElement(title);
-        waitForPageToLoad(bookRow);
+        waitForChargedElementsOfAWebElementList(bookRow);
         if (bookRow.size() != 0){
             try{
                 waitForVisibleElement(bookRow.get(6));
@@ -149,7 +148,7 @@ public class BookStorePage extends BasePages {
 
     public String getFirstTitleTableText() {
         waitForVisibleElement(title);
-        waitForPageToLoad(tableTitles);
+        waitForChargedElementsOfAWebElementList(tableTitles);
         if (tableTitles.size() != 0){
             try{
                 waitForVisibleElement(tableTitles.get(0));
@@ -164,7 +163,7 @@ public class BookStorePage extends BasePages {
 
     public String getSecondTitleTableText() {
         waitForVisibleElement(title);
-        waitForPageToLoad(tableTitles);
+        waitForChargedElementsOfAWebElementList(tableTitles);
         if (tableTitles.size() != 0){
             try{
                 waitForVisibleElement(tableTitles.get(0));
@@ -179,7 +178,7 @@ public class BookStorePage extends BasePages {
 
     public String getThirdTitleTableText() {
         waitForVisibleElement(title);
-        waitForPageToLoad(tableTitles);
+        waitForChargedElementsOfAWebElementList(tableTitles);
         if (tableTitles.size() != 0){
             try{
                 return tableTitles.get(2).getText();
@@ -193,7 +192,7 @@ public class BookStorePage extends BasePages {
 
     public String getFourthTitleTableText() {
         waitForVisibleElement(title);
-        waitForPageToLoad(tableTitles);
+        waitForChargedElementsOfAWebElementList(tableTitles);
         if (tableTitles.size() != 0){
             try{
                 return tableTitles.get(3).getText();
@@ -206,8 +205,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfFirstBookText() {
-        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnTitle);
         if (columnTitle.size() != 0){
             try{
                 scroll(columnTitle.get(0));
@@ -221,8 +220,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfFirstBookText() {
-        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnAuthor);
         if (columnAuthor.size() != 0){
             try{
                 scroll(columnAuthor.get(0));
@@ -236,8 +235,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfFirstBookText() {
-        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnPublisher);
         if (columnPublisher.size() != 0){
             try{
                 scroll(columnPublisher.get(0));
@@ -251,9 +250,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfSecondBookText() {
-        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
-
+        waitForChargedElementsOfAWebElementList(columnTitle);
         if (columnTitle.size() != 0){
             try{
                 scroll(columnTitle.get(1));
@@ -267,8 +265,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfSecondBookText() {
-        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnAuthor);
         if (columnAuthor.size() != 0){
             try{
                 scroll(columnAuthor.get(1));
@@ -282,8 +280,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfSecondBookText() {
-        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnPublisher);
         if (columnPublisher.size() != 0){
             try{
                 scroll(columnPublisher.get(1));
@@ -297,8 +295,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfThirdBookText() {
-        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnTitle);
         if (columnTitle.size() != 0){
             try{
                 scroll(columnTitle.get(2));
@@ -312,8 +310,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfThirdBookText() {
-        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnAuthor);
         if (columnAuthor.size() != 0){
             try{
                 scroll(columnAuthor.get(2));
@@ -327,8 +325,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfThirdBookText() {
-        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnPublisher);
         if (columnPublisher.size() != 0){
             try{
                 scroll(columnPublisher.get(2));
@@ -342,8 +340,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfFourthBookText() {
-        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnTitle);
         if (columnTitle.size() != 0){
             try{
                 scroll(columnTitle.get(3));
@@ -357,8 +355,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfFourthBookText() {
-        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnAuthor);
         if (columnAuthor.size() != 0){
             try{
                 scroll(columnAuthor.get(3));
@@ -372,8 +370,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfFourthBookText() {
-        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnPublisher);
         if (columnPublisher.size() != 0){
             try{
                 scroll(columnPublisher.get(3));
@@ -387,8 +385,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfFifthBookText() {
-        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnTitle);
         if (columnTitle.size() != 0){
             try{
                 scroll(columnTitle.get(4));
@@ -402,8 +400,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfFifthBookText() {
-        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnAuthor);
         if (columnAuthor.size() != 0){
             try{
                 scroll(columnAuthor.get(4));
@@ -417,8 +415,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfFifthBookText() {
-        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnPublisher);
         if (columnPublisher.size() != 0){
             try{
                 scroll(columnPublisher.get(4));
@@ -432,8 +430,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfSixthBookText() {
-        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnTitle);
         if (columnTitle.size() != 0){
             try{
                 scroll(columnTitle.get(5));
@@ -447,8 +445,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfSixthBookText() {
-        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnAuthor);
         if (columnAuthor.size() != 0){
             try{
                 scroll(columnAuthor.get(5));
@@ -462,8 +460,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfSixthBookText() {
-        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnPublisher);
         if (columnPublisher.size() != 0){
             try{
                 scroll(columnPublisher.get(5));
@@ -477,8 +475,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfSeventhBookText() {
-        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnTitle);
         if (columnTitle.size() != 0){
             try{
                 scroll(columnTitle.get(6));
@@ -492,8 +490,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfSeventhBookText() {
-        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnAuthor);
         if (columnAuthor.size() != 0){
             try{
                 scroll(columnAuthor.get(6));
@@ -507,8 +505,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfSeventhBookText() {
-        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnPublisher);
         if (columnPublisher.size() != 0){
             try{
                 scroll(columnPublisher.get(6));
@@ -522,8 +520,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getTitleOfEighthBookText() {
-        waitForPageToLoad(columnTitle);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnTitle);
         if (columnTitle.size() != 0){
             try{
                 scroll(columnTitle.get(7));
@@ -537,8 +535,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getAuthorOfEighthBookText() {
-        waitForPageToLoad(columnAuthor);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnAuthor);
         if (columnAuthor.size() != 0){
             try{
                 scroll(columnAuthor.get(7));
@@ -551,8 +549,8 @@ public class BookStorePage extends BasePages {
     }
 
     public String getPublisherOfEighthBookText() {
-        waitForPageToLoad(columnPublisher);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnPublisher);
         if (columnPublisher.size() != 0){
             try{
                 scroll(columnPublisher.get(7));
@@ -574,8 +572,8 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleFirstImage() {
-        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnImages);
         if (columnImages.size() != 0){
             try{
                 scroll(columnImages.get(0));
@@ -589,8 +587,8 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleSecondImage() {
-        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnImages);
         if (columnImages.size() != 0){
             try{
                 scroll(columnImages.get(1));
@@ -604,8 +602,8 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleThirdImage() {
-        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnImages);
         if (columnImages.size() != 0){
             try{
                 scroll(columnImages.get(2));
@@ -619,8 +617,8 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleFourthImage() {
-        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnImages);
         if (columnImages.size() != 0){
             try{
                 scroll(columnImages.get(3));
@@ -634,8 +632,8 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleFifthImage() {
-        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnImages);
         if (columnImages.size() != 0){
             try{
                 scroll(columnImages.get(4));
@@ -649,8 +647,8 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleSixthImage() {
-        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnImages);
         if (columnImages.size() != 0){
             try{
                 scroll(columnImages.get(5));
@@ -664,8 +662,8 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleSeventhImage() {
-        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnImages);
         if (columnImages.size() != 0){
             try{
                 scroll(columnImages.get(6));
@@ -679,8 +677,8 @@ public class BookStorePage extends BasePages {
     }
 
     public boolean isVisibleEighthImage() {
-        waitForPageToLoad(columnImages);
         waitForVisibleElement(title);
+        waitForChargedElementsOfAWebElementList(columnImages);
         if (columnImages.size() != 0){
             try{
                 scroll(columnImages.get(7));
@@ -708,7 +706,7 @@ public class BookStorePage extends BasePages {
 
     public BSIBookPage searchAndClickOnATitle(String bookTitle){
         waitForVisibleElement(title);
-        waitForPageToLoad(columnTitle);
+        waitForChargedElementsOfAWebElementList(columnTitle);
         try {
             WebElement tryOne = driver.findElement(By.linkText(bookTitle));
             scroll(tryOne);
@@ -719,10 +717,6 @@ public class BookStorePage extends BasePages {
             System.out.println("Error on line 719 BookstorePage" + e.getMessage());
             return null;
         }
-    }
-
-    public void a(){
-        clickWithWait(columnTitle.get(1));
     }
 
     public BSLoginPage clickOnLoginTab(){

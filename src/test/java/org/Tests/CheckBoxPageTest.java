@@ -14,7 +14,6 @@ public class CheckBoxPageTest extends BaseTest {
     @Test
     public void validateCorrectPageTitle(){
         Assert.assertEquals(checkBoxPage.getPageTitleText(),"Check Box");
-
     }
 
     @Test
@@ -39,6 +38,4 @@ public class CheckBoxPageTest extends BaseTest {
         checkBoxPage.clickInDownloadElements();
         Assert.assertTrue(checkBoxPage.checkDownloadsClicked());
     }
-
-
 }

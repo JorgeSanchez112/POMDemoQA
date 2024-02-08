@@ -126,35 +126,35 @@ public class BSProfilePage extends BasePages {
     }
 
     public String getTableTitleImageText(){
-        waitForPageToLoad(tableHeaderTitles);
+        waitForChargedElementsOfAWebElementList(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(0));
         scroll(tableHeaderTitles.get(0));
         return tableHeaderTitles.get(0).getText();
     }
 
     public String getTableTitleTitleText(){
-        waitForPageToLoad(tableHeaderTitles);
+        waitForChargedElementsOfAWebElementList(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(1));
         scroll(tableHeaderTitles.get(1));
         return tableHeaderTitles.get(1).getText();
     }
 
     public String getTableTitleAuthorText(){
-        waitForPageToLoad(tableHeaderTitles);
+        waitForChargedElementsOfAWebElementList(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(2));
         scroll(tableHeaderTitles.get(2));
         return tableHeaderTitles.get(2).getText();
     }
 
     public String getTableTitlePublisherText(){
-        waitForPageToLoad(tableHeaderTitles);
+        waitForChargedElementsOfAWebElementList(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(3));
         scroll(tableHeaderTitles.get(3));
         return tableHeaderTitles.get(3).getText();
     }
 
     public String getTableTitleActionText(){
-        waitForPageToLoad(tableHeaderTitles);
+        waitForChargedElementsOfAWebElementList(tableHeaderTitles);
         waitForVisibleElement(tableHeaderTitles.get(4));
         scroll(tableHeaderTitles.get(4));
         return tableHeaderTitles.get(4).getText();
@@ -223,14 +223,14 @@ public class BSProfilePage extends BasePages {
     }
 
     public BSLoginPage clickOnLoginLink(){
-        waitForPageToLoad(linkRegisterAndLogin);
+        waitForChargedElementsOfAWebElementList(linkRegisterAndLogin);
         scroll(linkRegisterAndLogin.get(0));
         clickWithWait(linkRegisterAndLogin.get(0));
         return new BSLoginPage(driver);
     }
 
     public BSRegisterPage clickOnRegisterLink(){
-        waitForPageToLoad(linkRegisterAndLogin);
+        waitForChargedElementsOfAWebElementList(linkRegisterAndLogin);
         scroll(linkRegisterAndLogin.get(1));
         clickWithWait(linkRegisterAndLogin.get(1));
         return new BSRegisterPage(driver);

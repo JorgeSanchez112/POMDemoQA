@@ -56,8 +56,13 @@ public class BasePages {
     }
 
     public void waitForClick(WebElement element){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
+        try{
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+        }catch (WebDriverException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void waitForElementContainRedRGBValue(WebElement element, String attribute){
@@ -106,21 +111,23 @@ public class BasePages {
         }
     }
 
-    public void waitForPageToLoad(List<WebElement> list){
+    public void waitForChargedElementsOfAWebElementList(List<WebElement> elementsList){
         FluentWait wait = new FluentWait(driver);
         try {
             try {
-                wait.withTimeout(Duration.ofSeconds(10));
-                wait.pollingEvery(Duration.ofMillis(250));
-                wait.ignoring(NoSuchElementException.class);
-                wait.until(ExpectedConditions.visibilityOfAllElements(list));
+                try{
+                    wait.withTimeout(Duration.ofSeconds(10));
+                    wait.pollingEvery(Duration.ofMillis(250));
+                    wait.until(ExpectedConditions.visibilityOfAllElements(elementsList));
+                }catch (NoSuchElementException e){
+                    e.printStackTrace();
+                }
             }catch (TimeoutException e){
                 e.printStackTrace();
             }
         }catch (StaleElementReferenceException e){
             e.printStackTrace();
         }
-
     }
 
     public void waitAlert(){

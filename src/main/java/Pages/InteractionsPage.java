@@ -26,30 +26,35 @@ public class InteractionsPage extends BasePages {
     }
 
     public SortablePage clickOnSortable(){
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
         scroll(deployed_form_exercise.get(0));
         clickWithWait(deployed_form_exercise.get(0));
         return new SortablePage(driver);
     }
 
     public SelectablePage clickOnSelectable(){
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
         scroll(deployed_form_exercise.get(1));
         clickWithWait(deployed_form_exercise.get(1));
         return new SelectablePage(driver);
     }
 
     public ResizablePage clickOnResizable(){
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
         scroll(deployed_form_exercise.get(2));
         clickWithWait(deployed_form_exercise.get(2));
         return new ResizablePage(driver);
     }
 
     public DroppablePage clickOnDroppable(){
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
         scroll(deployed_form_exercise.get(3));
         clickWithWait(deployed_form_exercise.get(3));
         return new DroppablePage(driver);
     }
 
     public DraggablePage clickOnDragabble(){
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
         scroll(deployed_form_exercise.get(4));
         clickWithWait(deployed_form_exercise.get(4));
         return new DraggablePage(driver);

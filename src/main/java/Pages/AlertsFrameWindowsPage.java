@@ -26,30 +26,39 @@ public class AlertsFrameWindowsPage extends BasePages {
     }
 
     public BrowserWindows clickOnBrowserWindows(){
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
         scroll(deployed_form_exercise.get(0));
         clickWithWait(deployed_form_exercise.get(0));
         return new BrowserWindows(driver);
     }
 
     public AlertsPage clickOnAlerts(){
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
         scroll(deployed_form_exercise.get(1));
         clickWithWait(deployed_form_exercise.get(1));
         return new AlertsPage(driver);
     }
 
     public FramesPage clickOnFrames(){
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
         scroll(deployed_form_exercise.get(2));
         clickWithWait(deployed_form_exercise.get(2));
         return new FramesPage(driver);
     }
 
     public NestedFramesPage clickOnNestedFrames(){
-        scroll(deployed_form_exercise.get(3));
-        clickWithWait(deployed_form_exercise.get(3));
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
+        try {
+            scroll(deployed_form_exercise.get(3));
+            clickWithWait(deployed_form_exercise.get(3));
+        }catch (IndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
         return new NestedFramesPage(driver);
     }
 
     public ModalDialogsPage clickOnModalDialogs(){
+        waitForChargedElementsOfAWebElementList(deployed_form_exercise);
         scroll(deployed_form_exercise.get(4));
         clickWithWait(deployed_form_exercise.get(4));
         return new ModalDialogsPage(driver);
