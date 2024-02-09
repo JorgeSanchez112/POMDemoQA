@@ -20,7 +20,7 @@ import java.util.Properties;
 
 public class BaseTest {
 
-    private ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
+    private final ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
     protected WebDriver driver;
     protected Properties prop;
     protected HomePage homePage;
@@ -87,8 +87,8 @@ public class BaseTest {
     }
 
 
-    public MutableCapabilities chooseBrowser(String browser){
-        String browserName = browser;
+    public MutableCapabilities chooseBrowser(){
+        String browserName = prop.getProperty("browser");
 
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
@@ -113,8 +113,8 @@ public class BaseTest {
         return null;
     }
 
-    public WebDriver initialization(String browser) throws MalformedURLException {
-        WebDriver driver = new RemoteWebDriver(new URL(prop.getProperty("urlServer")), chooseBrowser(browser));
+    public WebDriver initialization() throws MalformedURLException {
+        WebDriver driver = new RemoteWebDriver(new URL(prop.getProperty("urlServer")), chooseBrowser());
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
         driver.get(prop.getProperty("url"));
@@ -125,12 +125,11 @@ public class BaseTest {
         return driver;
     }
 
-    @Parameters({"browser"})
     @BeforeMethod
-    public void setUp(String browser) throws MalformedURLException {
+    public void setUp() throws MalformedURLException {
         WebDriver driver = webDriverThreadLocal.get();
         if (driver == null) {
-            webDriverThreadLocal.set(initialization(browser));
+            webDriverThreadLocal.set(initialization());
         }
         driver = webDriverThreadLocal.get();
         System.out.println(driver);

@@ -44,7 +44,7 @@ public class BSProfilePage extends BasePages {
     WebElement previousButton;
     @FindBy(css = ".-center > .-pageInfo")
     WebElement pageTextOfCenterTable;
-    @FindBy(className = "-pageJump")
+    @FindBy(css = ".-pageJump")
     WebElement pageValue;
     @FindBy(className = "-totalPages")
     WebElement totalPagesNumber;
@@ -167,6 +167,7 @@ public class BSProfilePage extends BasePages {
     }
 
     public String getPageNumber(){
+        waitForVisibleElement(pageValue);
         return pageValue.getText();
     }
 

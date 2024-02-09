@@ -102,8 +102,8 @@ public class BSProfileTest extends BaseTest {
     @Test
     public void isBookFoundBySearchBox() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
-        bsProfilePage.typeOnSearchBox("Speaking");
-        Assert.assertTrue(bsProfilePage.isTitleInTableOfBooksCollection("Speaking JavaScript"));
+        bsProfilePage.typeOnSearchBox("Git Pocket Guide");
+        Assert.assertTrue(bsProfilePage.isTitleInTableOfBooksCollection("Git Pocket Guide"));
     }
 
     @Test
@@ -133,13 +133,41 @@ public class BSProfileTest extends BaseTest {
         Assert.assertEquals(bsProfilePage.clickOnGoToBookStoreButton().getBookStoreUrlText(),"https://demoqa.com/books");
     }
 
-    /*@Test
-    public void IsAddedABookInTable(){
+    @Test
+    public void validateCancelButtonOfDeleteAccountAlertIsFunctional() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
-    }*/
+        bsProfilePage.clickOnDeleteAccountButton();
+        bsProfilePage.cancelDeleteAccountOrBooks();
+        Assert.assertEquals(bsProfilePage.getUserNameValueText(),"lola12");
+    }
+
+    @Test
+    public void validateCancelButtonOfDeleteBooksAlertIsFunctional() throws InterruptedException {
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        bsProfilePage.clickOnGoToBookStoreButton().searchAndClickOnATitle("Learning JavaScript Design Patterns")
+                .addBookAndReturnToBookStore().clickOnProfile();
+        bsProfilePage.clickOnDeleteAllBooksButton();
+        bsProfilePage.cancelDeleteAccountOrBooks();
+        Assert.assertTrue(bsProfilePage.isTitleInTableOfBooksCollection("Learning JavaScript Design Patterns"));
+    }
+
+    @Test
+    public void IsAddedABookInTable() throws InterruptedException {
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        bsProfilePage.clickOnGoToBookStoreButton().searchAndClickOnATitle("Speaking JavaScript")
+                .addBookAndReturnToBookStore()
+                .clickOnProfile();
+        bsProfilePage.isTitleInTableOfBooksCollection("Speaking JavaScript");
+    }
+
+    @Test
+    public void pagenimber() throws InterruptedException {
+        bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsProfilePage.getPageNumber(),"");
+    }
 
     /*@Test
-    public void validateAccountIsDeleted(){
+    public void validateAccountIsDeleted() throws InterruptedException {
         bsProfilePage.clickOnLoginLink().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         bsProfilePage.deleteAccount().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
         Assert.assertTrue(bsProfilePage.isTitleVisible());

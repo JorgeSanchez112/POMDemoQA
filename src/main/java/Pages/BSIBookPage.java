@@ -52,7 +52,7 @@ public class BSIBookPage extends BasePages {
     private WebElement websiteLink;
     @FindBy(css = ".text-left > #addNewRecordButton")
     private WebElement backToBookStoreButton;
-    @FindBy(css = ".text-left > #addNewRecordButton")
+    @FindBy(css = ".text-right> #addNewRecordButton")
     private WebElement addToYourCollectionButton;
 
     public BSIBookPage(WebDriver driver) {
@@ -60,9 +60,15 @@ public class BSIBookPage extends BasePages {
         PageFactory.initElements(driver,this);
     }
 
+    public void acceptAlertMessage(){
+        driver.switchTo().alert().accept();
+    }
+
     public void clickOnAddToYourCollectionButton(){
         scroll(addToYourCollectionButton);
         clickWithWait(addToYourCollectionButton);
+        waitAlert();
+        acceptAlertMessage();
     }
 
     public String getPageTitleText(){
@@ -198,4 +204,10 @@ public class BSIBookPage extends BasePages {
         clickWithWait(backToBookStoreButton);
         return new BookStorePage(driver);
     }
+
+    public BookStorePage addBookAndReturnToBookStore(){
+        clickOnAddToYourCollectionButton();
+        return clickOnBackToBookStoreBookButton();
+    }
+
 }

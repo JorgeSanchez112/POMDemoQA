@@ -28,7 +28,7 @@ public class BSLoginPage extends BasePages {
     @FindBy(id = "name")
     private WebElement errorCredentialsMessage;
     @FindBy(css = "#adplus-anchor > div")
-    private WebElement privacity;
+    private WebElement advertisement;
 
     public BSLoginPage(WebDriver driver) {
         super(driver);
@@ -105,8 +105,9 @@ public class BSLoginPage extends BasePages {
     }
 
     public void userLogin(String username,String password) throws InterruptedException {
+        waitForVisibleElement(advertisement);
+        hidePublicity(advertisement);
         Thread.sleep(2000);
-        hidePublicity(privacity);
         typeOnUsernameInput(username);
         typeOnPasswordInput(password);
         clickOnLoginButton();
