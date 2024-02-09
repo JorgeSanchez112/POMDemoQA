@@ -4,6 +4,8 @@ import Pages.*;
 import org.apache.hc.client5.http.utils.Base64;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
@@ -13,6 +15,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.Objects;
 import java.util.Properties;
 
 public class BaseTest {
@@ -83,12 +86,35 @@ public class BaseTest {
         return "data:image/png;base64," + new String(base64Bytes);
     }
 
-    public WebDriver initialization() throws MalformedURLException {
-        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        ChromeOptions options = new ChromeOptions();
-        options.merge(desiredCapabilities);
 
-        WebDriver driver = new RemoteWebDriver(new URL(prop.getProperty("urlServer")), options);
+    public MutableCapabilities chooseBrowser(String browser){
+        String browserName = browser;
+
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+
+        if (browserName == null){
+            System.out.println("browser is: " + null);
+        }
+
+        switch (Objects.requireNonNull(browserName)){
+            case "chrome":
+                ChromeOptions chromeOptions = new ChromeOptions();
+                return chromeOptions.merge(desiredCapabilities);
+            case "firefox":
+                FirefoxOptions firefoxOptions= new FirefoxOptions();
+                return firefoxOptions.merge(desiredCapabilities);
+            case "edge":
+                EdgeOptions edgeOptions = new EdgeOptions();
+                return edgeOptions.merge(desiredCapabilities);
+            default:
+                System.out.println("selected browser is not available");
+                break;
+        }
+        return null;
+    }
+
+    public WebDriver initialization(String browser) throws MalformedURLException {
+        WebDriver driver = new RemoteWebDriver(new URL(prop.getProperty("urlServer")), chooseBrowser(browser));
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
         driver.get(prop.getProperty("url"));
@@ -99,12 +125,12 @@ public class BaseTest {
         return driver;
     }
 
-
+    @Parameters({"browser"})
     @BeforeMethod
-    public void setUp() throws MalformedURLException {
+    public void setUp(String browser) throws MalformedURLException {
         WebDriver driver = webDriverThreadLocal.get();
         if (driver == null) {
-            webDriverThreadLocal.set(initialization());
+            webDriverThreadLocal.set(initialization(browser));
         }
         driver = webDriverThreadLocal.get();
         System.out.println(driver);
@@ -123,7 +149,7 @@ public class BaseTest {
     @AfterMethod
     public void tearDown(){
         try {
-            driver = webDriverThreadLocal.get();
+            WebDriver driver = webDriverThreadLocal.get();
             if (driver != null) {
                 driver.quit();
             }

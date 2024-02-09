@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "Suite2">
+<suite name = "Suite2" parallel="methods" thread-count="1">
 
     <listeners>
         <listener class-name="Resources.Listeners"/>
@@ -9,7 +9,7 @@
     </listeners>
 
     <test name = "Form">
-
+        <parameter name="browser" value="chrome"/>
         <parameter name="name" value="name"/>
         <parameter name="lastname" value="lastname"/>
         <parameter name="email" value="email@test.qaz"/>
@@ -25,5 +25,4 @@
             <class name = "org.Tests.PracticeFormPageTest" />
         </classes>
     </test>
-
 </suite>

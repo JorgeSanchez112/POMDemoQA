@@ -38,7 +38,7 @@ public class Listeners extends BaseTest implements ITestListener {
         Object testClass = result.getInstance();
         WebDriver driver = null;
         try {
-            driver = ((BaseTest) testClass).initialization();
+            driver = ((BaseTest) testClass).initialization("chrome");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

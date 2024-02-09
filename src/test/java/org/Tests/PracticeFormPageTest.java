@@ -195,7 +195,7 @@ public class PracticeFormPageTest extends BaseTest {
         Assert.assertEquals(practiceFormPage.getAddressText(),"Address");
         Assert.assertEquals(practiceFormPage.getValueOfAddressRow(),text);
         Assert.assertEquals(practiceFormPage.getStateCityText(),"State and City");
-        Assert.assertEquals(practiceFormPage.getValueOfStateCityRow(), "Uttar Pradesh Agra");
+        Assert.assertEquals(practiceFormPage.getValueOfStateCityRow(), "Haryana Karnal");
     }
 
 }
