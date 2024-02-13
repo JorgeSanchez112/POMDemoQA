@@ -51,5 +51,12 @@ public class ModalDialogsPage extends BasePages {
     public boolean isInstructionsTextVisible(){
         return instructionText.isDisplayed();
     }
+    public boolean isCloseSmallModalVisible(){
+        return closeSmallModalButton.isDisplayed();
+    }
+
+    public boolean isCloseLargeModalVisible(){
+        return closeLargeModalButton.isDisplayed();
+    }
 
 }

@@ -1,13 +1,11 @@
 package Resources;
 
-import TestComponents.BasePages;
 import TestComponents.BaseTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.model.Log;
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -36,7 +34,6 @@ public class Listeners extends BaseTest implements ITestListener {
         extentTest.get().fail(result.getThrowable());
 
         Object testClass = result.getInstance();
-        WebDriver driver = null;
         try {
             driver = ((BaseTest) testClass).initialization();
         } catch (MalformedURLException e) {

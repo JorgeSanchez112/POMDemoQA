@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
-
 public class FormsPage extends BasePages {
     @FindBy(css = ".collapse.show > .menu-list > *")
     private WebElement deployed_form_exercise;

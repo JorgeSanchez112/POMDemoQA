@@ -193,6 +193,17 @@ public class BasePages {
         return false;
     }
 
+    public int getPositionOfOneElementInAList(List<WebElement> elementsList, String value){
+        int count = 0;
+        for (WebElement element: elementsList) {
+            if (Objects.equals(element.getText(), value)){
+                return count;
+            }
+            count++;
+        }
+        return 0;
+    }
+
     public int searchNumberOne(List<WebElement> dateOfDaysList){
         for (int i = 0; i<= dateOfDaysList.size(); i++){
             if (Objects.equals(dateOfDaysList.get(i).getText(), "1")){

@@ -20,7 +20,7 @@ import java.util.Properties;
 
 public class BaseTest {
 
-    private final ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
+    protected final ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
     protected WebDriver driver;
     protected Properties prop;
     protected HomePage homePage;
@@ -138,8 +138,12 @@ public class BaseTest {
 
         System.out.println("Thread ID: " + Thread.currentThread().getId() + " Session ID: " + ((RemoteWebDriver) driver).getSessionId());
         try {
-            homePage.waitForVisibleElement(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
-            homePage.hidePublicity(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
+            try {
+                homePage.waitForVisibleElement(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
+                homePage.hidePublicity(driver.findElement(By.cssSelector(prop.getProperty("publicityLocator"))));
+            }catch (NoSuchElementException e){
+                e.printStackTrace();
+            }
         } catch (TimeoutException e) {
             e.printStackTrace();
         }

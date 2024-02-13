@@ -7,59 +7,60 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.IOException;
 import java.util.List;
 
 public class BSProfilePage extends BasePages {
     @FindBy(className = "main-header") //not login
-    WebElement title;
+    private WebElement title;
     @FindBy(id = "notLoggin-label")
-    WebElement doNotLoginMessage;
+    private WebElement doNotLoginMessage;
     @FindBy(css = "#notLoggin-wrapper >* a")
-    List<WebElement> linkRegisterAndLogin;
+    private List<WebElement> linkRegisterAndLogin;
     @FindBy(css = ".text-left > #userName-label ") //logged in
-    WebElement booksLabel;
+    private WebElement booksLabel;
     @FindBy(id = "searchBox")
-    WebElement searchBox;
+    private WebElement searchBox;
     @FindBy(css = ".text-right > #userName-label")
-    WebElement usernameLabel;
+    private WebElement usernameLabel;
     @FindBy(id = "userName-value")
-    WebElement usernameValue;
+    private WebElement usernameValue;
     @FindBy(css = ".text-right.col-sm-12 > #submit")
-    WebElement logOutButton;
+    private WebElement logOutButton;
     @FindBy(className = "rt-th")
-    List<WebElement> tableHeaderTitles;
-    @FindBy(css = ".rt-tr > .rt-td:nth-child(1)")
-    List<WebElement> columnImages;
+    private List<WebElement> tableHeaderTitles;
+    @FindBy(css = ".rt-tr > .rt-td:nth-child(1) > img")
+    private List<WebElement> columnImages;
     @FindBy(css = ".rt-tr > .rt-td:nth-child(2)")
-    List<WebElement> columnTitles;
+    private List<WebElement> columnTitles;
     @FindBy(css = ".rt-tr > .rt-td:nth-child(3)")
-    List<WebElement> columnAuthors;
+    private List<WebElement> columnAuthors;
     @FindBy(css = ".rt-tr > .rt-td:nth-child(4)")
-    List<WebElement> columnPublishers;
-    @FindBy(css = ".rt-tr > .rt-td:nth-child(5)")
-    List<WebElement> columnActions;
+    private List<WebElement> columnPublishers;
+    @FindBy(id = "delete-record-undefined")
+    private List<WebElement> deleteBookIcon;
     @FindBy(className = "rt-noData")
-    WebElement messageNoData;
+    private WebElement messageNoData;
     @FindBy(css = ".-previous > button")
-    WebElement previousButton;
+    private WebElement previousButton;
     @FindBy(css = ".-center > .-pageInfo")
-    WebElement pageTextOfCenterTable;
-    @FindBy(css = ".-pageJump")
-    WebElement pageValue;
+    private WebElement pageTextOfCenterTable;
+    @FindBy(css = ".-pageJump > input[type=number]")
+    private WebElement pageValue;
     @FindBy(className = "-totalPages")
-    WebElement totalPagesNumber;
+    private WebElement totalPagesNumber;
     @FindBy(css = ".-next > button")
-    WebElement nextButton;
+    private WebElement nextButton;
     @FindBy(id = "gotoStore")
-    WebElement goToBookStoreButton;
+    private WebElement goToBookStoreButton;
     @FindBy(css = ".text-center > button")
-    WebElement deleteAccountButton;
+    private WebElement deleteAccountButton;
     @FindBy(css = ".text-right.di > button")
-    WebElement deleteAllBooksButton;
+    private WebElement deleteAllBooksButton;
     @FindBy(id = "closeSmallModal-ok")
-    WebElement okButtonOfAlertDeleteAccountAndBooks;
+    private WebElement okButtonOfAlertDeleteAccountAndBooks;
     @FindBy(id = "closeSmallModal-cancel")
-    WebElement cancelButtonOfAlertDeleteAccountAndBooks;
+    private WebElement cancelButtonOfAlertDeleteAccountAndBooks;
 
     public BSProfilePage(WebDriver driver) {
         super(driver);
@@ -91,6 +92,12 @@ public class BSProfilePage extends BasePages {
         clickWithWait(deleteAllBooksButton);
     }
 
+    public void clickOnIconTrash(String titleBook){
+        scroll(deleteBookIcon.get(getPositionOfBookWithTheTitle(titleBook)));
+        clickWithWait(deleteBookIcon.get(getPositionOfBookWithTheTitle(titleBook)));
+    }
+
+
     public void acceptDeleteAccountOrBooks(){
         clickWithWait(okButtonOfAlertDeleteAccountAndBooks);
     }
@@ -102,6 +109,12 @@ public class BSProfilePage extends BasePages {
     public void acceptAlert(){
         waitAlert();
         driver.switchTo().alert().accept();
+    }
+
+    public void deleteABook(String titleBook){
+        clickOnIconTrash(titleBook);
+        acceptDeleteAccountOrBooks();
+        acceptAlert();
     }
 
 
@@ -177,6 +190,11 @@ public class BSProfilePage extends BasePages {
         return totalPagesNumber.getText();
     }
 
+    public int getPositionOfBookWithTheTitle(String titleBook){
+        waitForChargedElementsOfAWebElementList(columnTitles);
+        return getPositionOfOneElementInAList(columnTitles,titleBook);
+    }
+
     public boolean isTitleVisible(){
         waitForVisibleElement(title);
         return title.isDisplayed();
@@ -186,20 +204,24 @@ public class BSProfilePage extends BasePages {
         return doNotLoginMessage.isDisplayed();
     }
 
-    public boolean isImageInTableOfBooksCollection(String value){
-        return searchForVisibleElement(columnImages,value);
+    public boolean isLinkImageDoesNotBrokeInTableOfBooksCollection(String titleBook) throws IOException {
+        waitForChargedElementsOfAWebElementList(columnImages);
+        return validateHTTPS_Response(columnImages.get(getPositionOfBookWithTheTitle(titleBook)).getAttribute("src"));
     }
 
     public boolean isTitleInTableOfBooksCollection(String value){
+        waitForChargedElementsOfAWebElementList(columnTitles);
         return searchForVisibleElement(columnTitles,value);
     }
 
-    public boolean isAuthorInTableOfBooksCollection(String value){
-        return searchForVisibleElement(columnAuthors,value);
+    public String getAuthorRegardToTitleBookText(String title){
+        waitForChargedElementsOfAWebElementList(columnAuthors);
+        return columnAuthors.get(getPositionOfBookWithTheTitle(title)).getText();
     }
 
-    public boolean isPublisherInTableOfBooksCollection(String value){
-        return searchForVisibleElement(columnPublishers,value);
+    public String getPublisherRegardToTitleBookText(String title){
+        waitForChargedElementsOfAWebElementList(columnPublishers);
+        return columnPublishers.get(getPositionOfBookWithTheTitle(title)).getText();
     }
 
     public boolean isMessageNoDataVisible(){

@@ -1,6 +1,7 @@
 package org.Tests;
 
 import TestComponents.BaseTest;
+import org.openqa.selenium.WebDriverException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,7 +19,12 @@ public class BSIBookPageTest extends BaseTest {
 
     @BeforeMethod
     public void initializeClass(){
-        bsiBookPage = homePage.clickOnSectionBookStoreApplication().searchAndClickOnATitle("Git Pocket Guide");
+        try{
+            bsiBookPage = homePage.clickOnSectionBookStoreApplication().searchAndClickOnATitle("Git Pocket Guide");
+        }catch (WebDriverException e){
+            e.printStackTrace();
+        }
+
     }
 
     @Test
@@ -124,6 +130,18 @@ public class BSIBookPageTest extends BaseTest {
     @Test
     public void isNotLogOutButtonVisible(){
         Assert.assertFalse(bsiBookPage.logOutButtonIsVisible());
+    }
+
+    @Test
+    public void validateUserNameValue() throws InterruptedException {
+        bsiBookPage.clickOnLogin().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsiBookPage.getUsernameValueText(),prop.getProperty("BSUsername"));
+    }
+
+    @Test
+    public void validateLogOutButtonIsFunctional() throws InterruptedException {
+        bsiBookPage.clickOnLogin().userLogin(prop.getProperty("BSUsername"),prop.getProperty("BSPassword"));
+        Assert.assertEquals(bsiBookPage.clickOnLogOutButton().getCurrentUrl(),"https://demoqa.com/login");
     }
 
 }
