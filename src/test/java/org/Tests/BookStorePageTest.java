@@ -22,7 +22,7 @@ public class BookStorePageTest extends BaseTest {
     }
 
     @Test
-    public void isFirstTitleOfTableCorrect() throws InterruptedException {
+    public void isFirstTitleOfTableCorrect() {
         Assert.assertEquals(bookStorePage.getFirstTitleTableText(), "Image");
     }
 

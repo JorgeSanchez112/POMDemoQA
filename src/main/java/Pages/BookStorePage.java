@@ -149,418 +149,169 @@ public class BookStorePage extends BasePages {
     public String getFirstTitleTableText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(tableTitles);
-        if (tableTitles.size() != 0){
-            try{
-                waitForVisibleElement(tableTitles.get(0));
-                return tableTitles.get(0).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(tableTitles,0);
     }
 
     public String getSecondTitleTableText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(tableTitles);
-        if (tableTitles.size() != 0){
-            try{
-                waitForVisibleElement(tableTitles.get(0));
-                return tableTitles.get(1).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(tableTitles,1);
     }
 
     public String getThirdTitleTableText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(tableTitles);
-        if (tableTitles.size() != 0){
-            try{
-                return tableTitles.get(2).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(tableTitles,2);
     }
 
     public String getFourthTitleTableText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(tableTitles);
-        if (tableTitles.size() != 0){
-            try{
-                return tableTitles.get(3).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(tableTitles,3);
     }
 
     public String getTitleOfFirstBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnTitle);
-        if (columnTitle.size() != 0){
-            try{
-                scroll(columnTitle.get(0));
-                return columnTitle.get(0).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnTitle,0);
     }
 
     public String getAuthorOfFirstBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnAuthor);
-        if (columnAuthor.size() != 0){
-            try{
-                scroll(columnAuthor.get(0));
-                return columnAuthor.get(0).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnAuthor,0);
     }
 
     public String getPublisherOfFirstBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnPublisher);
-        if (columnPublisher.size() != 0){
-            try{
-                scroll(columnPublisher.get(0));
-                return columnPublisher.get(0).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnPublisher,0);
     }
 
     public String getTitleOfSecondBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnTitle);
-        if (columnTitle.size() != 0){
-            try{
-                scroll(columnTitle.get(1));
-                return columnTitle.get(1).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnTitle,1);
     }
 
     public String getAuthorOfSecondBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnAuthor);
-        if (columnAuthor.size() != 0){
-            try{
-                scroll(columnAuthor.get(1));
-                return columnAuthor.get(1).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnAuthor,1);
     }
 
     public String getPublisherOfSecondBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnPublisher);
-        if (columnPublisher.size() != 0){
-            try{
-                scroll(columnPublisher.get(1));
-                return columnPublisher.get(1).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnPublisher,1);
     }
 
     public String getTitleOfThirdBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnTitle);
-        if (columnTitle.size() != 0){
-            try{
-                scroll(columnTitle.get(2));
-                return columnTitle.get(2).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnTitle,2);
     }
 
     public String getAuthorOfThirdBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnAuthor);
-        if (columnAuthor.size() != 0){
-            try{
-                scroll(columnAuthor.get(2));
-                return columnAuthor.get(2).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnAuthor,2);
     }
 
     public String getPublisherOfThirdBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnPublisher);
-        if (columnPublisher.size() != 0){
-            try{
-                scroll(columnPublisher.get(2));
-                return columnPublisher.get(2).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnPublisher,2);
     }
 
     public String getTitleOfFourthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnTitle);
-        if (columnTitle.size() != 0){
-            try{
-                scroll(columnTitle.get(3));
-                return columnTitle.get(3).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnTitle,3);
     }
 
     public String getAuthorOfFourthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnAuthor);
-        if (columnAuthor.size() != 0){
-            try{
-                scroll(columnAuthor.get(3));
-                return columnAuthor.get(3).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnAuthor,3);
     }
 
     public String getPublisherOfFourthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnPublisher);
-        if (columnPublisher.size() != 0){
-            try{
-                scroll(columnPublisher.get(3));
-                return columnPublisher.get(3).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnPublisher,3);
     }
 
     public String getTitleOfFifthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnTitle);
-        if (columnTitle.size() != 0){
-            try{
-                scroll(columnTitle.get(4));
-                return columnTitle.get(4).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnTitle,4);
     }
 
     public String getAuthorOfFifthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnAuthor);
-        if (columnAuthor.size() != 0){
-            try{
-                scroll(columnAuthor.get(4));
-                return columnAuthor.get(4).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnAuthor,4);
     }
 
     public String getPublisherOfFifthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnPublisher);
-        if (columnPublisher.size() != 0){
-            try{
-                scroll(columnPublisher.get(4));
-                return columnPublisher.get(4).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnPublisher,4);
     }
 
     public String getTitleOfSixthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnTitle);
-        if (columnTitle.size() != 0){
-            try{
-                scroll(columnTitle.get(5));
-                return columnTitle.get(5).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnTitle,5);
     }
 
     public String getAuthorOfSixthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnAuthor);
-        if (columnAuthor.size() != 0){
-            try{
-                scroll(columnAuthor.get(5));
-                return columnAuthor.get(5).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnAuthor,5);
     }
 
     public String getPublisherOfSixthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnPublisher);
-        if (columnPublisher.size() != 0){
-            try{
-                scroll(columnPublisher.get(5));
-                return columnPublisher.get(5).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnPublisher,5);
     }
 
     public String getTitleOfSeventhBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnTitle);
-        if (columnTitle.size() != 0){
-            try{
-                scroll(columnTitle.get(6));
-                return columnTitle.get(6).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnTitle,6);
     }
 
     public String getAuthorOfSeventhBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnAuthor);
-        if (columnAuthor.size() != 0){
-            try{
-                scroll(columnAuthor.get(6));
-                return columnAuthor.get(6).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnAuthor,6);
     }
 
     public String getPublisherOfSeventhBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnPublisher);
-        if (columnPublisher.size() != 0){
-            try{
-                scroll(columnPublisher.get(6));
-                return columnPublisher.get(6).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnPublisher,6);
     }
 
     public String getTitleOfEighthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnTitle);
-        if (columnTitle.size() != 0){
-            try{
-                scroll(columnTitle.get(7));
-                return columnTitle.get(7).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnTitle,7);
     }
 
     public String getAuthorOfEighthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnAuthor);
-        if (columnAuthor.size() != 0){
-            try{
-                scroll(columnAuthor.get(7));
-                return columnAuthor.get(7).getText();
-            }catch (IndexOutOfBoundsException e){
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnAuthor,7);
     }
 
     public String getPublisherOfEighthBookText() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnPublisher);
-        if (columnPublisher.size() != 0){
-            try{
-                scroll(columnPublisher.get(7));
-                return columnPublisher.get(7).getText();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-                return e.getMessage();
-            }
-        }
-        return "an error has happened";
+        return getElementTextAccordingToPositionReceived(columnPublisher,7);
     }
 
     public String getBookStoreUrlText(){
@@ -574,120 +325,49 @@ public class BookStorePage extends BasePages {
     public boolean isVisibleFirstImage() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnImages);
-        if (columnImages.size() != 0){
-            try{
-                scroll(columnImages.get(0));
-                return columnImages.get(0).isDisplayed();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-            }
-        }
-
-        return false;
+        return isElementVisibleAccordingToPositionReceivedOfList(columnImages,0);
     }
 
     public boolean isVisibleSecondImage() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnImages);
-        if (columnImages.size() != 0){
-            try{
-                scroll(columnImages.get(1));
-                return columnImages.get(1).isDisplayed();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-            }
-        }
-
-        return false;
+        return isElementVisibleAccordingToPositionReceivedOfList(columnImages,1);
     }
 
     public boolean isVisibleThirdImage() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnImages);
-        if (columnImages.size() != 0){
-            try{
-                scroll(columnImages.get(2));
-                return columnImages.get(2).isDisplayed();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-            }
-        }
-
-        return false;
+        return isElementVisibleAccordingToPositionReceivedOfList(columnImages,2);
     }
 
     public boolean isVisibleFourthImage() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnImages);
-        if (columnImages.size() != 0){
-            try{
-                scroll(columnImages.get(3));
-                return columnImages.get(3).isDisplayed();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-            }
-        }
-
-        return false;
+        return isElementVisibleAccordingToPositionReceivedOfList(columnImages,3);
     }
 
     public boolean isVisibleFifthImage() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnImages);
-        if (columnImages.size() != 0){
-            try{
-                scroll(columnImages.get(4));
-                return columnImages.get(4).isDisplayed();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-            }
-        }
-
-        return false;
+        return isElementVisibleAccordingToPositionReceivedOfList(columnImages,4);
     }
 
     public boolean isVisibleSixthImage() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnImages);
-        if (columnImages.size() != 0){
-            try{
-                scroll(columnImages.get(5));
-                return columnImages.get(5).isDisplayed();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-            }
-        }
-
-        return false;
+        return isElementVisibleAccordingToPositionReceivedOfList(columnImages,5);
     }
 
     public boolean isVisibleSeventhImage() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnImages);
-        if (columnImages.size() != 0){
-            try{
-                scroll(columnImages.get(6));
-                return columnImages.get(6).isDisplayed();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-            }
-        }
-
-        return false;
+        return isElementVisibleAccordingToPositionReceivedOfList(columnImages,6);
     }
 
     public boolean isVisibleEighthImage() {
         waitForVisibleElement(title);
         waitForChargedElementsOfAWebElementList(columnImages);
-        if (columnImages.size() != 0){
-            try{
-                scroll(columnImages.get(7));
-                return columnImages.get(7).isDisplayed();
-            }catch (IndexOutOfBoundsException e){
-                e.printStackTrace();
-            }
-        }
-        return false;
+        return isElementVisibleAccordingToPositionReceivedOfList(columnImages,7);
     }
 
     public boolean isBookTitleFound(String bookTitle, String textExpected){

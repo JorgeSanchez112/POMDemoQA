@@ -111,6 +111,30 @@ public class BasePages {
         }
     }
 
+    public String getElementTextAccordingToPositionReceived(List<WebElement> elements,int position){
+        if (elements.size() != 0){
+            try{
+                scroll(elements.get(position));
+                return elements.get(position).getText();
+            }catch (IndexOutOfBoundsException e){
+                e.printStackTrace();
+            }
+        }
+        return "Error in 'getElementTextAccordingToPositionReceived' method";
+    }
+
+    public boolean isElementVisibleAccordingToPositionReceivedOfList(List<WebElement> elements, int position){
+        if (elements.size() != 0){
+            try{
+                scroll(elements.get(position));
+                return elements.get(position).isDisplayed();
+            }catch (IndexOutOfBoundsException e){
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
+
     public void waitForChargedElementsOfAWebElementList(List<WebElement> elementsList){
         FluentWait wait = new FluentWait(driver);
         try {

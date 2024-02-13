@@ -2,7 +2,6 @@ package org.Tests;
 
 import TestComponents.BaseTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
