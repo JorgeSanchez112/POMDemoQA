@@ -10,8 +10,6 @@ import java.io.IOException;
 import java.util.List;
 
 public class BrokenLinksPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy (css = ".col-md-6 > div:nth-child(2) > img")
     private List<WebElement> images;
     @FindBy (tagName = "a")

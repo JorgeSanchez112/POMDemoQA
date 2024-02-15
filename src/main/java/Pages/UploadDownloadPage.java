@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class UploadDownloadPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(id = "downloadButton")
     private WebElement downloadButton;
 

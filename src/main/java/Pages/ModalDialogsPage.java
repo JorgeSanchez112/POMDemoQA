@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ModalDialogsPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(css = "#modalWrapper >* > div")
     private WebElement instructionText;
     @FindBy(id = "showSmallModal")

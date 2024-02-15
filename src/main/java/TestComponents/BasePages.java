@@ -3,6 +3,7 @@ package TestComponents;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,10 +18,9 @@ import java.util.Objects;
 
 public class BasePages {
 
-    protected final WebDriver driver;
-
-    private HttpURLConnection http;
-    private int responseCode = 200;
+    @FindBy(className = "text-center")
+    protected WebElement pageTitle;
+    protected WebDriver driver;
 
     public BasePages(WebDriver driver) {
         this.driver = driver;
@@ -36,21 +36,18 @@ public class BasePages {
     }
 
     public void hidePublicity(WebElement element){
+        waitForVisibleElement(element);
         try {
-            try {
-                ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'none';", element);
-            }catch (TimeoutException e){
-                e.printStackTrace();
-            }
-        }catch (StaleElementReferenceException e){
+            ((JavascriptExecutor) driver).executeScript("arguments[0].style.display = 'none';", element);
+        }catch (WebDriverException e){
             e.printStackTrace();
         }
     }
 
-    public void typingInInput(WebElement input,String text){
+    public void sendKeysToElement(WebElement input,String text){
         try {
             input.sendKeys(text);
-        }catch (TimeoutException e){
+        }catch (WebDriverException e){
             e.printStackTrace();
         }
     }
@@ -65,29 +62,11 @@ public class BasePages {
 
     }
 
-    public void waitForElementContainRedRGBValue(WebElement element, String attribute){
-        try{
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.attributeContains(element,attribute,"rgb(220, 53, 69)"));
-        }catch (TimeoutException e){
-            e.printStackTrace();
-        }
-    }
-
-    public void waitForElementContainGreenRGBValue(WebElement element, String attribute){
-        try{
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.attributeContains(element,attribute,"rgb(40, 167, 69)"));
-        }catch (TimeoutException e){
-            e.printStackTrace();
-        }
-    }
-
-    public void waitForElementContainRedRGBAValue(WebElement element, String attribute){
+    public void waitForElementAttributeToContain(WebElement element, String attribute, String expectedValue) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.attributeContains(element,attribute,"rgba(220, 53, 69, 1)"));
-        }catch (TimeoutException e){
+            wait.until(ExpectedConditions.attributeContains(element, attribute, expectedValue));
+        } catch (TimeoutException e) {
             e.printStackTrace();
         }
     }
@@ -139,17 +118,13 @@ public class BasePages {
         FluentWait wait = new FluentWait(driver);
         try {
             try {
-                try{
-                    wait.withTimeout(Duration.ofSeconds(10));
-                    wait.pollingEvery(Duration.ofMillis(250));
-                    wait.until(ExpectedConditions.visibilityOfAllElements(elementsList));
-                }catch (NoSuchElementException e){
-                    e.printStackTrace();
-                }
-            }catch (TimeoutException e){
+                wait.withTimeout(Duration.ofSeconds(10));
+                wait.pollingEvery(Duration.ofMillis(250));
+                wait.until(ExpectedConditions.visibilityOfAllElements(elementsList));
+            }catch (NoSuchElementException e){
                 e.printStackTrace();
             }
-        }catch (StaleElementReferenceException e){
+        }catch (WebDriverException e){
             e.printStackTrace();
         }
     }
@@ -342,11 +317,11 @@ public class BasePages {
     }
 
     public boolean validateHTTPS_Response(String src) throws IOException {
-        http = (HttpURLConnection) (new URL(src).openConnection());
+        HttpURLConnection http = (HttpURLConnection) (new URL(src).openConnection());
         http.setRequestMethod("HEAD");
         http.connect();
 
-        responseCode = http.getResponseCode();
+        int responseCode = http.getResponseCode();
 
         return responseCode == 200;
     }

@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class ButtonsPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy (id = "doubleClickBtn")
     private WebElement doubleClickBtn;
     @FindBy (id = "rightClickBtn")

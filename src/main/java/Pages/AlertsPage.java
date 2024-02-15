@@ -10,8 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class AlertsPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(className = "mr-3")
     private List<WebElement> labels;
     @FindBy(id = "alertButton")

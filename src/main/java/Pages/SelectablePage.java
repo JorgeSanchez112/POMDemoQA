@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class SelectablePage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(id = "demo-tab-grid")
     private WebElement tabGrid;
     @FindBy(css = ".mt-2.list-group-item")

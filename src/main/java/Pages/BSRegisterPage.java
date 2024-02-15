@@ -8,8 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class BSRegisterPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement title;
     @FindBy(tagName = "h4")
     private WebElement subTitle;
     @FindBy(id = "firstname-label")
@@ -43,7 +41,7 @@ public class BSRegisterPage extends BasePages {
     }
 
     public boolean isTitleVisible(){
-        return title.isDisplayed();
+        return pageTitle.isDisplayed();
     }
 
     public boolean isRecaptchaMessageVisible(){
@@ -81,22 +79,22 @@ public class BSRegisterPage extends BasePages {
     }
 
     public String getFirstNameInputBorderColor(){
-        waitForElementContainRedRGBValue(firstNameInput,"border-color");
+        waitForElementAttributeToContain(firstNameInput,"border-color","rgb(220, 53, 69)");
         return firstNameInput.getCssValue("border-color");
     }
 
     public String getLastNameInputBorderColor(){
-        waitForElementContainRedRGBValue(lastNameInput,"border-color");
+        waitForElementAttributeToContain(lastNameInput,"border-color","rgb(220, 53, 69)");
         return lastNameInput.getCssValue("border-color");
     }
 
     public String getUsernameInputBorderColor(){
-        waitForElementContainRedRGBValue(usernameInput,"border-color");
+        waitForElementAttributeToContain(usernameInput,"border-color","rgb(220, 53, 69)");
         return usernameInput.getCssValue("border-color");
     }
 
     public String getPasswordInputBorderColor(){
-        waitForElementContainRedRGBValue(passwordInput,"border-color");
+        waitForElementAttributeToContain(passwordInput,"border-color","rgb(220, 53, 69)");
         return passwordInput.getCssValue("border-color");
     }
 

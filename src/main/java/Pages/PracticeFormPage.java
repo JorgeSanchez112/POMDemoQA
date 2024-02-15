@@ -10,8 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class PracticeFormPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(css = "div.practice-form-wrapper > h5")
     private WebElement titleForm;
     @FindBy(id = "userName-label")
@@ -56,9 +54,9 @@ public class PracticeFormPage extends BasePages {
     private WebElement currentAddressField;
     @FindBy(id = "stateCity-label")
     private WebElement stateCityLabel;
-    @FindBy(id = "state")
+    @FindBy(id = "react-select-3-input")
     private WebElement listStatesBox;
-    @FindBy(id = "city")
+    @FindBy(id = "react-select-4-input")
     private WebElement listCitiesBox;
     @FindBy(css = ".css-1wa3eu0-placeholder")
     private List<WebElement> placeholdersStateAndCity;
@@ -143,19 +141,21 @@ public class PracticeFormPage extends BasePages {
         currentAddressField.sendKeys(text);
     }
 
-    public void typeInStateListBox(){
-        doubleClick(listStatesBox);
+    public void typeInStateListBox(String state){
+        sendKeysToElement(listStatesBox,state);
+        listStatesBox.sendKeys(Keys.ENTER);
     }
 
-    public void typeInCityListBox(){
-        doubleClick(listCitiesBox);
+    public void typeInCityListBox(String city){
+        sendKeysToElement(listCitiesBox,city);
+        listCitiesBox.sendKeys(Keys.ENTER);
     }
 
     public void enterToSubmitButton(){
         submitButton.sendKeys(Keys.ENTER);
     }
 
-    public void fillAllFormFields(String name, String lastname,String email, String gender, String phone, String month, String day, String year, String subject, String picturePath, String text){
+    public void fillAllFormFields(String name, String lastname,String email, String gender, String phone, String month, String day, String year, String subject, String picturePath, String text, String state, String city){
         typeInFirstNameField(name);
         typeInLastNameField(lastname);
         typeInEmailField(email);
@@ -166,8 +166,8 @@ public class PracticeFormPage extends BasePages {
         clickOnMusicCheckBoxButton();
         selectAPicture(picturePath);
         typeInCurrentAddressField(text);
-        typeInStateListBox();
-        typeInCityListBox();
+        typeInStateListBox(state);
+        typeInCityListBox(city);
         enterToSubmitButton();
     }
 
@@ -189,7 +189,7 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeFirstNameField(){
-        waitForElementContainRedRGBValue(firstNameField,"border-color");
+        waitForElementAttributeToContain(firstNameField,"border-color","rgb(220, 53, 69)");
         return firstNameField.getCssValue("border-color");
     }
 
@@ -198,7 +198,7 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeLastNameField(){
-        waitForElementContainRedRGBAValue(lastNameField,"border-color");
+        waitForElementAttributeToContain(lastNameField,"border-color","rgb(220, 53, 69)");
         return lastNameField.getCssValue("border-color");
     }
 
@@ -212,7 +212,7 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeEmailField(){
-        waitForElementContainGreenRGBValue(emailField,"border-color");
+        waitForElementAttributeToContain(emailField,"border-color","rgb(40, 167, 69)");
         return emailField.getCssValue("border-color");
     }
 
@@ -221,7 +221,7 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeGenderRadioButtons(){
-        waitForElementContainRedRGBAValue(radioButtonGenders.get(0),"color");
+        waitForElementAttributeToContain(radioButtonGenders.get(0),"border-color","rgba(220, 53, 69, 1)");
         return radioButtonGenders.get(0).getCssValue("color");
     }
 
@@ -234,7 +234,7 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeMobileField(){
-        waitForElementContainRedRGBValue(mobileField,"border-color");
+        waitForElementAttributeToContain(mobileField,"border-color","rgb(220, 53, 69)");
         return mobileField.getCssValue("border-color");
     }
 
@@ -243,7 +243,7 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeBirthDateField(){
-        waitForElementContainRedRGBValue(emailField,"border-color");
+        waitForElementAttributeToContain(emailField,"border-color","rgb(220, 53, 69)");
         return emailField.getCssValue("border-color");
     }
 
@@ -256,17 +256,17 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeSportsCheckboxButton(){
-        waitForElementContainGreenRGBValue(checkboxes.get(0),"border-color");
+        waitForElementAttributeToContain(checkboxes.get(0),"border-color","rgb(40, 167, 69)");
         return checkboxes.get(0).getCssValue("border-color").intern();
     }
 
     public String getCssAttributeReadingCheckboxButton(){
-        waitForElementContainGreenRGBValue(checkboxes.get(1),"border-color");
+        waitForElementAttributeToContain(checkboxes.get(1),"border-color","rgb(40, 167, 69)");
         return checkboxes.get(1).getCssValue("border-color").intern();
     }
 
     public String getCssAttributeMusicCheckboxButton(){
-        waitForElementContainGreenRGBValue(checkboxes.get(2),"border-color");
+        waitForElementAttributeToContain(checkboxes.get(2),"border-color","rgb(40, 167, 69)");
         return checkboxes.get(2).getCssValue("border-color").intern();
     }
 
@@ -283,7 +283,7 @@ public class PracticeFormPage extends BasePages {
     }
 
     public String getCssAttributeCurrentAddressField(){
-        waitForElementContainGreenRGBValue(currentAddressField,"border-color");
+        waitForElementAttributeToContain(currentAddressField,"border-color","rgba(220, 53, 69, 1)");
         return currentAddressField.getCssValue("border-color");
     }
 

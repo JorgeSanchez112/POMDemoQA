@@ -4,12 +4,11 @@
 <suite name="crazy things" parallel="methods" thread-count="2">
     <listeners>
         <listener class-name="Resources.Listeners"/>
-        <listener class-name="Resources.MyTransformer"/>
     </listeners>
 
     <test name="test">
         <classes>
-            <class name="org.Tests.BSIBookPageTest"/>
+            <class name="org.Tests.AccordianPageTestBase"/>
         </classes>
     </test>
 </suite>

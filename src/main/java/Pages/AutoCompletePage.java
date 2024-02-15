@@ -10,8 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class AutoCompletePage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(css = "#autoCompleteMultiple > span")
     private WebElement multipleContainerLabel;
     @FindBy(id = "autoCompleteMultipleInput")

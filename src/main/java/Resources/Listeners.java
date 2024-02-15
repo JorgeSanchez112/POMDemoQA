@@ -1,6 +1,6 @@
 package Resources;
 
-import TestComponents.BaseTest;
+import TestComponents.TestBase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -13,7 +13,7 @@ import org.testng.ITestResult;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
-public class Listeners extends BaseTest implements ITestListener {
+public class Listeners extends TestBase implements ITestListener {
     ExtentTest test;
     ExtentReports extent = ExtentReporterNG.getReportObject();
     ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
@@ -35,12 +35,14 @@ public class Listeners extends BaseTest implements ITestListener {
 
         Object testClass = result.getInstance();
         try {
-            driver = ((BaseTest) testClass).initialization();
+            driver = ((TestBase) testClass).initialization();
+            System.out.println(driver + "1");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
 
         try {
+            System.out.println(driver + "2");
             test.fail(MediaEntityBuilder.createScreenCaptureFromBase64String(getScreenShot(driver), result.getMethod().getMethodName()).build());
         } catch (IOException e) {
             throw new RuntimeException(e);

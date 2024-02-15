@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class BSLoginPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement title;
     @FindBy(tagName = "h2")
     private WebElement subtitle;
     @FindBy(tagName = "h5")
@@ -38,13 +36,13 @@ public class BSLoginPage extends BasePages {
     public void typeOnUsernameInput(String name){
         waitForVisibleElement(usernameInput);
         scroll(usernameInput);
-        typingInInput(usernameInput,name);
+        sendKeysToElement(usernameInput,name);
     }
 
     public void typeOnPasswordInput(String password){
         waitForVisibleElement(passwordInput);
         scroll(passwordInput);
-        typingInInput(passwordInput,password);
+        sendKeysToElement(passwordInput,password);
     }
 
     public void clickOnLoginButton(){
@@ -77,7 +75,7 @@ public class BSLoginPage extends BasePages {
     }
 
     public String getUsernameInputBorderColor(){
-        waitForElementContainRedRGBValue(usernameInput,"border-color");
+        waitForElementAttributeToContain(usernameInput,"border-color","rgb(220, 53, 69)");
         return usernameInput.getCssValue("border-color");
     }
 
@@ -90,7 +88,7 @@ public class BSLoginPage extends BasePages {
     }
 
     public boolean isTitleVisible(){
-        return title.isDisplayed();
+        return pageTitle.isDisplayed();
     }
 
     public boolean isErrorMessageVisible(){
@@ -105,7 +103,6 @@ public class BSLoginPage extends BasePages {
     }
 
     public void userLogin(String username,String password) throws InterruptedException {
-        waitForVisibleElement(advertisement);
         hidePublicity(advertisement);
         Thread.sleep(2000);
         typeOnUsernameInput(username);

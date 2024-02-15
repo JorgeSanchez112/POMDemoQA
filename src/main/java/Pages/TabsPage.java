@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class TabsPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(className = "mb-3")
     private WebElement subTitle;
     @FindBy(id = "demo-tab-what")

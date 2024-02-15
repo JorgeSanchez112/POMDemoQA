@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class TextBoxPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(id = "userName")
     private WebElement fullNameField;
     @FindBy(id = "userEmail")

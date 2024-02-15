@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ResizablePage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(id = "resizableBoxWithRestriction")
     private WebElement resizableBoxRestricted;
     @FindBy(css = "#resizableBoxWithRestriction > .text")

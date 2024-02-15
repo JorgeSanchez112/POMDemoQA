@@ -10,205 +10,205 @@
 
     <test name = "home">
         <classes>
-            <class name = "org.Tests.BaseHomePageTest" />
+            <class name = "org.Tests.HomePageTestBase" />
         </classes>
     </test>
 
     <test name = "elements">
         <classes>
-            <class name = "org.Tests.ElementsPageTest" />
+            <class name = "org.Tests.ElementsPageTestBase" />
         </classes>
     </test>
 
     <test name = "forms">
         <classes>
-            <class name = "org.Tests.FormsPageTest" />
+            <class name = "org.Tests.FormsPageTestBase" />
         </classes>
     </test>
 
     <test name = "alerts,frame and windows">
         <classes>
-            <class name = "org.Tests.AlertsPageFrameWindowsPageTest" />
+            <class name = "org.Tests.AlertsPageFrameWindowsPageTestBase" />
         </classes>
     </test>
 
     <test name = "widgets">
         <classes>
-            <class name = "org.Tests.WidgetsPageTest" />
+            <class name = "org.Tests.WidgetsPageTestBase" />
         </classes>
     </test>
 
     <test name = "interactions">
         <classes>
-            <class name = "org.Tests.InteractionsPageTest" />
+            <class name = "org.Tests.InteractionsPageTestBase" />
         </classes>
     </test>
 
     <test name = "Book Store Application">
         <classes>
-            <class name = "org.Tests.BookStorePageTest" />
+            <class name = "org.Tests.BookStorePageTestBase" />
         </classes>
     </test>
 
     <test name = "Text Box">
         <classes>
-            <class name = "org.Tests.TextBoxPageTest" />
+            <class name = "org.Tests.TextBoxPageTestBase" />
         </classes>
     </test>
 
     <test name = "Check Box">
         <classes>
-            <class name = "org.Tests.CheckBoxPageTest" />
+            <class name = "org.Tests.CheckBoxPageTestBase" />
         </classes>
     </test>
 
     <test name = "Radio Button">
         <classes>
-            <class name = "org.Tests.RadioButtonPageTest" />
+            <class name = "org.Tests.RadioButtonPageTestBase" />
         </classes>
     </test>
 
     <test name = "Web Tables">
         <classes>
-            <class name = "org.Tests.WebTablesPageTest" />
+            <class name = "org.Tests.WebTablesPageTestBase" />
         </classes>
     </test>
 
     <test name = "Buttons">
         <classes>
-            <class name = "org.Tests.ButtonsPageTest" />
+            <class name = "org.Tests.ButtonsPageTestBase" />
         </classes>
     </test>
 
     <test name = "Links">
         <classes>
-            <class name = "org.Tests.LinksPageTest" />
+            <class name = "org.Tests.LinksPageTestBase" />
         </classes>
     </test>
 
     <test name = "Broken Links - Images">
         <classes>
-            <class name = "org.Tests.BrokenLinksPageTest" />
+            <class name = "org.Tests.BrokenLinksPageTestBase" />
         </classes>
     </test>
 
     <test name = "Upload and Download">
         <classes>
-            <class name = "org.Tests.UploadDownloadPageTest" />
+            <class name = "org.Tests.UploadDownloadPageTestBase" />
         </classes>
     </test>
 
     <test name = "Dynamic Properties">
         <classes>
-            <class name = "org.Tests.DynamicPropertiesPageTest" />
+            <class name = "org.Tests.DynamicPropertiesPageTestBase" />
         </classes>
     </test>
 
     <test name = "Alerts">
         <classes>
-            <class name = "org.Tests.AlertsPageTest" />
+            <class name = "org.Tests.AlertsPageTestBase" />
         </classes>
     </test>
 
     <test name = "Frames">
         <classes>
-            <class name = "org.Tests.FramesPageTest" />
+            <class name = "org.Tests.FramesPageTestBase" />
         </classes>
     </test>
 
     <test name = "Nested Frames">
         <classes>
-            <class name = "org.Tests.NestedFramesPageTest" />
+            <class name = "org.Tests.NestedFramesPageTestBase" />
         </classes>
     </test>
 
     <test name = "Modal Dialogs">
         <classes>
-            <class name = "org.Tests.ModalDialogsPageTest" />
+            <class name = "org.Tests.ModalDialogsPageTestBase" />
         </classes>
     </test>
 
     <test name = "Accordian">
         <classes>
-            <class name = "org.Tests.AccordianPageTest" />
+            <class name = "org.Tests.AccordianPageTestBase" />
         </classes>
     </test>
 
     <test name = "Auto Complete">
         <classes>
-            <class name = "org.Tests.AutoCompletePageTest" />
+            <class name = "org.Tests.AutoCompletePageTestBase" />
         </classes>
     </test>
 
     <test name = "Date Picker">
         <classes>
-            <class name = "org.Tests.DatePickerPageTest" />
+            <class name = "org.Tests.DatePickerPageTestBase" />
         </classes>
     </test>
 
     <test name = "Slider">
         <classes>
-            <class name = "org.Tests.SliderPageTest" />
+            <class name = "org.Tests.SliderPageTestBase" />
         </classes>
     </test>
 
     <test name = "Progress Bar">
         <classes>
-            <class name = "org.Tests.ProgressBarPageTest" />
+            <class name = "org.Tests.ProgressBarPageTestBase" />
         </classes>
     </test>
 
     <test name = "Tabs">
         <classes>
-            <class name = "org.Tests.TabsPageTest" />
+            <class name = "org.Tests.TabsPageTestBase" />
         </classes>
     </test>
 
     <test name = "Tool tips">
         <classes>
-            <class name = "org.Tests.ToolTipsPageTest" />
+            <class name = "org.Tests.ToolTipsPageTestBase" />
         </classes>
     </test>
 
     <test name = "Menu">
         <classes>
-            <class name = "org.Tests.MenuPageTest" />
+            <class name = "org.Tests.MenuPageTestBase" />
         </classes>
     </test>
 
     <test name = "Select Menu">
         <classes>
-            <class name = "org.Tests.SelectMenuPageTest" />
+            <class name = "org.Tests.SelectMenuPageTestBase" />
         </classes>
     </test>
 
     <test name = "Sortable">
         <classes>
-            <class name = "org.Tests.SortablePageTest" />
+            <class name = "org.Tests.SortablePageTestBase" />
         </classes>
     </test>
 
     <test name = "Selectable">
         <classes>
-            <class name = "org.Tests.SelectablePageTest" />
+            <class name = "org.Tests.SelectablePageTestBase" />
         </classes>
     </test>
 
     <test name = "Resizable">
         <classes>
-            <class name = "org.Tests.ResizablePageTest" />
+            <class name = "org.Tests.ResizablePageTestBase" />
         </classes>
     </test>
 
     <test name = "Droppable">
         <classes>
-            <class name = "org.Tests.DroppablePageTest" />
+            <class name = "org.Tests.DroppablePageTestBase" />
         </classes>
     </test>
 
     <test name = "Draggable">
         <classes>
-            <class name = "org.Tests.DraggablePageTest" />
+            <class name = "org.Tests.DraggablePageTestBase" />
         </classes>
     </test>
 

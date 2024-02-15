@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class FramesPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(css = "#framesWrapper > div:nth-child(1)")
     private WebElement useAdvices;
     @FindBy(id = "frame1")

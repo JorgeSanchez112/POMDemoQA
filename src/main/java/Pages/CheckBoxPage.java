@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class CheckBoxPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(css = ".rct-option-expand-all")
     private WebElement expandTree;
     @FindBy(css = ".rct-node-expanded > ol > li > span > label")

@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LinksPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(linkText = "Home")
     private WebElement  linkToHomePage;
     @FindBy(css = "#linkWrapper > P:nth-child(3) > a")

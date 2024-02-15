@@ -11,9 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class BSProfilePage extends BasePages {
-    @FindBy(className = "main-header") //not login
-    private WebElement title;
-    @FindBy(id = "notLoggin-label")
+    @FindBy(id = "notLoggin-label") //not login
     private WebElement doNotLoginMessage;
     @FindBy(css = "#notLoggin-wrapper >* a")
     private List<WebElement> linkRegisterAndLogin;
@@ -196,8 +194,8 @@ public class BSProfilePage extends BasePages {
     }
 
     public boolean isTitleVisible(){
-        waitForVisibleElement(title);
-        return title.isDisplayed();
+        waitForVisibleElement(pageTitle);
+        return pageTitle.isDisplayed();
     }
 
     public boolean isMessageDoNotLoginShowed(){

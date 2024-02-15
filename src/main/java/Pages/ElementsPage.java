@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class ElementsPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy (css = ".collapse.show > .menu-list > *")
     private List<WebElement> deployed_element_exercises;
 

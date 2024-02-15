@@ -11,8 +11,6 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class SelectMenuPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(css = "#selectMenuContainer > div:nth-child(1) > div")
     private WebElement valueLabel;
     @FindBy(id = "withOptGroup")

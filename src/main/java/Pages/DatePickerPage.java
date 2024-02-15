@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class DatePickerPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(css = ".col-md-3.col-sm-12")
     private List<WebElement> labels;
     @FindBy(id = "datePickerMonthYearInput")

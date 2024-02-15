@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class WebTablesPage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy (id = "addNewRecordButton")
     private WebElement addButton;
     @FindBy (id = "searchBox")

@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class SortablePage extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(id = "demo-tab-grid")
     private WebElement tabGrid;
     @FindBy(css = "#demo-tabpane-list >* .list-group-item-action")

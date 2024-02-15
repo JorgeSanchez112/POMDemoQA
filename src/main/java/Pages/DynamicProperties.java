@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DynamicProperties extends BasePages {
-    @FindBy(className = "main-header")
-    private WebElement pageTitle;
     @FindBy(css = "div.col-md-6 > div > p")
     private WebElement randomIdText;
     @FindBy(id = "enableAfter")
@@ -37,7 +35,7 @@ public class DynamicProperties extends BasePages {
     }
 
     public String getButtonTextColor(){
-        waitForElementContainRedRGBAValue(colorChangeButton,"color");
+        waitForElementAttributeToContain(colorChangeButton,"border-color","rgba(220, 53, 69, 1)");
         return colorChangeButton.getCssValue("color");
     }
 
