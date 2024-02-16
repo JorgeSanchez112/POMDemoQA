@@ -54,25 +54,25 @@ public class BSRegisterTestBase extends TestBase {
     @Test
     public void isActiveRedBorderColorToNotFilledFirstNameInput(){
         bsRegisterPage.clickOnRegisterButton();
-        Assert.assertEquals(bsRegisterPage.getFirstNameInputBorderColor(),"rgb(220, 53, 69)");
+        Assert.assertEquals(bsRegisterPage.getFirstNameInputBorderColor(),prop.getProperty("RGBRedColor"));
     }
 
     @Test
     public void isActiveRedBorderColorToNotFilledLastNameInput(){
         bsRegisterPage.clickOnRegisterButton();
-        Assert.assertEquals(bsRegisterPage.getLastNameInputBorderColor(),"rgb(220, 53, 69)");
+        Assert.assertEquals(bsRegisterPage.getLastNameInputBorderColor(),prop.getProperty("RGBRedColor"));
     }
 
     @Test
     public void isActiveRedBorderColorToNotFilledUserNameInput(){
         bsRegisterPage.clickOnRegisterButton();
-        Assert.assertEquals(bsRegisterPage.getUsernameInputBorderColor(),"rgb(220, 53, 69)");
+        Assert.assertEquals(bsRegisterPage.getUsernameInputBorderColor(),prop.getProperty("RGBRedColor"));
     }
 
     @Test
     public void isActiveRedBorderColorToNotFilledPasswordInput(){
         bsRegisterPage.clickOnRegisterButton();
-        Assert.assertEquals(bsRegisterPage.getPasswordInputBorderColor(),"rgb(220, 53, 69)");
+        Assert.assertEquals(bsRegisterPage.getPasswordInputBorderColor(),prop.getProperty("RGBRedColor"));
     }
 
     @Test

@@ -31,8 +31,13 @@ public class BasePages {
     }
 
     public void scroll(WebElement element){
-        waitForVisibleElement(element);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        try{
+            waitForVisibleElement(element);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        }catch (TimeoutException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void hidePublicity(WebElement element){
@@ -59,7 +64,6 @@ public class BasePages {
         }catch (WebDriverException e){
             e.printStackTrace();
         }
-
     }
 
     public void waitForElementAttributeToContain(WebElement element, String attribute, String expectedValue) {

@@ -24,7 +24,6 @@ public class BSIBookPageTestBase extends TestBase {
         }catch (WebDriverException e){
             e.printStackTrace();
         }
-
     }
 
     @Test

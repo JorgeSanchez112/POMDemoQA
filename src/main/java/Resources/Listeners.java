@@ -36,13 +36,11 @@ public class Listeners extends TestBase implements ITestListener {
         Object testClass = result.getInstance();
         try {
             driver = ((TestBase) testClass).initialization();
-            System.out.println(driver + "1");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
 
         try {
-            System.out.println(driver + "2");
             test.fail(MediaEntityBuilder.createScreenCaptureFromBase64String(getScreenShot(driver), result.getMethod().getMethodName()).build());
         } catch (IOException e) {
             throw new RuntimeException(e);

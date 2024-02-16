@@ -49,6 +49,13 @@ public class AlertsPageTestBase extends TestBase {
     }
 
     @Test
+    public void validateAcceptAlert(){
+        alertsPage.clickOnThirdButton();
+        alertsPage.acceptAlert();
+        Assert.assertEquals(alertsPage.getConfirmResultText(),"You selected Ok");
+    }
+
+    @Test
     public void validateDismissAlert(){
         alertsPage.clickOnThirdButton();
         alertsPage.dismissAlert();
