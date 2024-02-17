@@ -8,7 +8,7 @@
 
     <test name="test">
         <classes>
-            <class name="org.Tests.AccordianPageTestBase"/>
+            <class name="org.Tests.AccordianPageTest"/>
         </classes>
     </test>
 </suite>

@@ -24,7 +24,7 @@
         <parameter name="state" value="Haryana"/>
         <parameter name="city" value="Karnal"/>
         <classes>
-            <class name = "org.Tests.PracticeFormPageTestBase" />
+            <class name = "org.Tests.PracticeFormPageTest" />
         </classes>
     </test>
 </suite>

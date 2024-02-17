@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "Suite1" parallel="methods" thread-count="4">
+<suite name = "Suite1" parallel="methods" thread-count="2">
     
     <listeners>
         <listener class-name="Resources.Listeners"/>
@@ -9,208 +9,354 @@
     </listeners>
 
     <test name = "home">
+        <parameter name="uRL" value="https://demoqa.com/"/>
+
         <classes>
-            <class name = "org.Tests.HomePageTestBase" />
+            <class name = "org.Tests.HomePageTest" />
         </classes>
     </test>
 
     <test name = "elements">
+        <parameter name="uRL" value="https://demoqa.com/elements"/>
+        <parameter name="pageTitle" value="Elements"/>
+        <parameter name="elementsSize" value="9"/>
+
         <classes>
-            <class name = "org.Tests.ElementsPageTestBase" />
+            <class name = "org.Tests.ElementsPageTest" />
         </classes>
     </test>
 
     <test name = "forms">
+        <parameter name="uRL" value="https://demoqa.com/forms"/>
+        <parameter name="pageTitle" value="Forms"/>
+
         <classes>
-            <class name = "org.Tests.FormsPageTestBase" />
+            <class name = "org.Tests.FormsPageTest" />
         </classes>
     </test>
 
     <test name = "alerts,frame and windows">
+        <parameter name="uRL" value="https://demoqa.com/alertsWindows"/>
+        <parameter name="elementsSize" value="5"/>
+
         <classes>
-            <class name = "org.Tests.AlertsPageFrameWindowsPageTestBase" />
+            <class name = "org.Tests.AlertsPageFrameWindowsPageTest" />
         </classes>
     </test>
 
     <test name = "widgets">
+        <parameter name="uRL" value="https://demoqa.com/widgets"/>
+        <parameter name="elementsSize" value="9"/>
+
         <classes>
-            <class name = "org.Tests.WidgetsPageTestBase" />
+            <class name = "org.Tests.WidgetsPageTest" />
         </classes>
     </test>
 
     <test name = "interactions">
+        <parameter name="uRL" value="https://demoqa.com/interaction"/>
+        <parameter name="elementsSize" value="5"/>
+
         <classes>
-            <class name = "org.Tests.InteractionsPageTestBase" />
+            <class name = "org.Tests.InteractionsPageTest" />
         </classes>
     </test>
 
     <test name = "Book Store Application">
+        <parameter name="uRL" value="https://demoqa.com/books"/>
+        <parameter name="firstTitleTable" value="Image"/>
+        <parameter name="secondTitleTable" value="Title"/>
+        <parameter name="thirdTitleTable" value="Author"/>
+        <parameter name="fourthTitleTable" value="Publisher"/>
+        <parameter name="titleOfFirstBook" value="Git Pocket Guide"/>
+        <parameter name="titleOfSecondBook" value="Learning JavaScript Design Patterns"/>
+        <parameter name="titleOfThirdBook" value="Designing Evolvable Web APIs with ASP.NET"/>
+        <parameter name="titleOfFourthBook" value="Speaking JavaScript"/>
+        <parameter name="titleOfFifthBook" value="You Don't Know JS"/>
+        <parameter name="titleOfSixthBook" value="Programming JavaScript Applications"/>
+        <parameter name="titleOfSeventhBook" value="Eloquent JavaScript, Second Edition"/>
+        <parameter name="titleOfEighthBook" value="Understanding ECMAScript 6"/>
+        <parameter name="authorOfGitPocketGuideBook" value="Richard E. Silverman"/>
+        <parameter name="authorOfLearningJavaScriptDesignPatternsBook" value="Addy Osmani"/>
+        <parameter name="authorOfDesigningEvolvableWebAPIswithASPNETBook" value="Glenn Block et al."/>
+        <parameter name="authorOfSpeakingJavaScriptBook" value="Axel Rauschmayer"/>
+        <parameter name="authorOfYouDontKnowJSBook" value="Kyle Simpson"/>
+        <parameter name="authorOfProgrammingJavaScriptApplicationsBook" value="Eric Elliott"/>
+        <parameter name="authorOfEloquentJavaScriptSecondEditionBook" value="Marijn Haverbeke"/>
+        <parameter name="authorOfUnderstandingECMAScript6Book" value="Nicholas C. Zakas"/>
+        <parameter name="publisherOfBooks" value="O'Reilly Media"/>
+        <parameter name="SecondPublisherOfBooks" value="No Starch Press"/>
+        <parameter name="searchBarPlaceholder" value="Type to search"/>
+        <parameter name="searchBar" value="GIT"/>
+        <parameter name="titleExpected" value="Git"/>
+        <parameter name="elementsSize" value="4"/>
+
         <classes>
-            <class name = "org.Tests.BookStorePageTestBase" />
+            <class name = "org.Tests.BookStorePageTest" />
         </classes>
     </test>
 
     <test name = "Text Box">
+        <parameter name="pageTitle" value="Text Box"/>
+        <parameter name="username" value="desconocido1"/>
+        <parameter name="email" value="example@12.gov"/>
+        <parameter name="address" value="Street unknown"/>
+        <parameter name="permanentAddress" value="Permanent street unknown"/>
+        <parameter name="userNameMessage" value="Name:"/>
+        <parameter name="emailMessage" value="Email:"/>
+        <parameter name="addressMessage" value="Current Address :"/>
+        <parameter name="permanentAddressMessage" value="Permananet Address :"/>
+
         <classes>
-            <class name = "org.Tests.TextBoxPageTestBase" />
+            <class name = "org.Tests.TextBoxPageTest" />
         </classes>
     </test>
 
     <test name = "Check Box">
+        <parameter name="pageTitle" value="Check Box"/>
+
         <classes>
-            <class name = "org.Tests.CheckBoxPageTestBase" />
+            <class name = "org.Tests.CheckBoxPageTest" />
         </classes>
     </test>
 
     <test name = "Radio Button">
+        <parameter name="pageTitle" value="Radio Button"/>
+        <parameter name="yesRadioButtonMessage" value="Yes"/>
+        <parameter name="ImpressiveRadioButtonMessage" value="Impressive"/>
+
         <classes>
-            <class name = "org.Tests.RadioButtonPageTestBase" />
+            <class name = "org.Tests.RadioButtonPageTest" />
         </classes>
     </test>
 
     <test name = "Web Tables">
+        <parameter name="pageTitle" value="Web Tables"/>
+        <parameter name="searchBox" value="Kierra"/>
+        <parameter name="messageNoRowsFound" value="No rows found"/>
+        <parameter name="name" value="Aleatorio"/>
+        <parameter name="lastName" value="apellido"/>
+        <parameter name="email" value="locosaurio@loco.com"/>
+        <parameter name="age" value="12"/>
+        <parameter name="salary" value="1000000"/>
+        <parameter name="department" value="IT"/>
+
+
         <classes>
-            <class name = "org.Tests.WebTablesPageTestBase" />
+            <class name = "org.Tests.WebTablesPageTest" />
         </classes>
     </test>
 
     <test name = "Buttons">
+        <parameter name="pageTitle" value="Buttons"/>
+        <parameter name="DoubleClickMessage" value="You have done a double click"/>
+        <parameter name="RightClickMessage" value="You have done a right click"/>
+        <parameter name="ClickMeMessage" value="You have done a dynamic click"/>
+
         <classes>
-            <class name = "org.Tests.ButtonsPageTestBase" />
+            <class name = "org.Tests.ButtonsPageTest" />
         </classes>
     </test>
 
     <test name = "Links">
+        <parameter name="pageTitle" value="Links"/>
+        <parameter name="uRLHome" value="https://demoqa.com/"/>
+        <parameter name="hTTPTwoZeroOne" value="201"/>
+        <parameter name="hTTPTwoZeroFour" value="204"/>
+        <parameter name="hTTPThreeZeroOne" value="301"/>
+        <parameter name="hTTPFourHundred" value="400"/>
+        <parameter name="hTTPFourZeroOne" value="401"/>
+        <parameter name="hTTPFourZeroThree" value="403"/>
+        <parameter name="hTPPFourZeroFour" value="404"/>
+        <parameter name="messageTwoZeroOne" value="Created"/>
+        <parameter name="messageTwoZeroFour" value="No Content"/>
+        <parameter name="messageThreeZeroOne" value="Moved Permanently"/>
+        <parameter name="messageFourHundred" value="Bad Request"/>
+        <parameter name="messageFourZeroOne" value="Unauthorized"/>
+        <parameter name="messageFourZeroThree" value="Forbidden"/>
+        <parameter name="messageFourZeroFour" value="Not Found"/>
         <classes>
-            <class name = "org.Tests.LinksPageTestBase" />
+            <class name = "org.Tests.LinksPageTest" />
         </classes>
     </test>
 
     <test name = "Broken Links - Images">
+        <parameter name="pageTitle" value="Broken Links - Images"/>
+
         <classes>
-            <class name = "org.Tests.BrokenLinksPageTestBase" />
+            <class name = "org.Tests.BrokenLinksPageTest" />
         </classes>
     </test>
 
     <test name = "Upload and Download">
+        <parameter name="pageTitle" value="Upload and Download"/>
+
         <classes>
-            <class name = "org.Tests.UploadDownloadPageTestBase" />
+            <class name = "org.Tests.UploadDownloadPageTest" />
         </classes>
     </test>
 
     <test name = "Dynamic Properties">
+        <parameter name="pageTitle" value="Dynamic Properties"/>
+
         <classes>
-            <class name = "org.Tests.DynamicPropertiesPageTestBase" />
+            <class name = "org.Tests.DynamicPropertiesPageTest" />
         </classes>
     </test>
 
     <test name = "Alerts">
+        <parameter name="pageTitle" value="Alerts"/>
+        <parameter name="acceptAlertMessage" value="You selected Ok"/>
+        <parameter name="dismissAlertMessage" value="You selected Cancel"/>
+        <parameter name="inputAlert" value="lolada"/>
+        <parameter name="inputAlertMessage" value="You entered "/>
+
+
         <classes>
-            <class name = "org.Tests.AlertsPageTestBase" />
+            <class name = "org.Tests.AlertsPageTest" />
         </classes>
     </test>
 
     <test name = "Frames">
+        <parameter name="pageTitle" value="Frames"/>
+
         <classes>
-            <class name = "org.Tests.FramesPageTestBase" />
+            <class name = "org.Tests.FramesPageTest" />
         </classes>
     </test>
 
     <test name = "Nested Frames">
+        <parameter name="pageTitle" value="Nested Frames"/>
+        <parameter name="parentFrame" value="Parent frame"/>
+        <parameter name="childIframe" value="Child Iframe"/>
+
         <classes>
-            <class name = "org.Tests.NestedFramesPageTestBase" />
+            <class name = "org.Tests.NestedFramesPageTest" />
         </classes>
     </test>
 
     <test name = "Modal Dialogs">
+        <parameter name="pageTitle" value="Modal Dialogs"/>
+        <parameter name="smallModal" value="This is a small modal. It has very less content"/>
+        <parameter name="largeModal" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
+
         <classes>
-            <class name = "org.Tests.ModalDialogsPageTestBase" />
+            <class name = "org.Tests.ModalDialogsPageTest" />
         </classes>
     </test>
 
     <test name = "Accordian">
+        <parameter name="pageTitle" value="Accordian"/>
+        <parameter name="firstTopicTitle" value="What is Lorem Ipsum?"/>
+        <parameter name="secondTopicTitle" value="Where does it come from?"/>
+        <parameter name="thirdTopicTitle" value="Why do we use it?"/>
+
         <classes>
-            <class name = "org.Tests.AccordianPageTestBase" />
+            <class name = "org.Tests.AccordianPageTest" />
         </classes>
     </test>
 
     <test name = "Auto Complete">
+        <parameter name="pageTitle" value="Auto Complete"/>
+        <parameter name="firstLabel" value="Type multiple color names"/>
+        <parameter name="secondLabel" value="Type single color name"/>
+        <parameter name="firstColor" value="Bla"/>
+        <parameter name="secondColor" value="Whit"/>
+        <parameter name="firstColorExpected" value="Black"/>
+        <parameter name="secondColorExpected" value="White"/>
+        <parameter name="color" value="Voil"/>
+        <parameter name="colorExpected" value="Voilet"/>
         <classes>
-            <class name = "org.Tests.AutoCompletePageTestBase" />
+            <class name = "org.Tests.AutoCompletePageTest" />
         </classes>
     </test>
 
     <test name = "Date Picker">
+        <parameter name="pageTitle" value="Date Picker"/>
+        <parameter name="firstLabel" value="Select Date"/>
+        <parameter name="secondLabel" value="Date And Time"/>
+        <parameter name="month" value="May"/>
+        <parameter name="day" value="30"/>
+        <parameter name="year" value="2022"/>
+        <parameter name="dateExpected" value="05/30/2022"/>
+        <parameter name="dateTimeExpected" value="May 30, 2022 8:00 PM"/>
+
         <classes>
-            <class name = "org.Tests.DatePickerPageTestBase" />
+            <class name = "org.Tests.DatePickerPageTest" />
         </classes>
     </test>
 
     <test name = "Slider">
+        <parameter name="pageTitle" value="Slider"/>
+
         <classes>
-            <class name = "org.Tests.SliderPageTestBase" />
+            <class name = "org.Tests.SliderPageTest" />
         </classes>
     </test>
 
     <test name = "Progress Bar">
+        <parameter name="pageTitle" value="Progress Bar"/>
+        <parameter name="firstLabel" value="Progress Bar"/>
+        <parameter name="fullBarPercentage" value="100%"/>
+        <parameter name="emptyBarPercentage" value="0%"/>
+
         <classes>
-            <class name = "org.Tests.ProgressBarPageTestBase" />
+            <class name = "org.Tests.ProgressBarPageTest" />
         </classes>
     </test>
 
-    <test name = "Tabs">
-        <classes>
-            <class name = "org.Tests.TabsPageTestBase" />
-        </classes>
-    </test>
+<!--    <test name = "Tabs">-->
+<!--        <classes>-->
+<!--            <class name = "org.Tests.TabsPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name = "Tool tips">
-        <classes>
-            <class name = "org.Tests.ToolTipsPageTestBase" />
-        </classes>
-    </test>
+<!--    <test name = "Tool tips">-->
+<!--        <classes>-->
+<!--            <class name = "org.Tests.ToolTipsPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name = "Menu">
-        <classes>
-            <class name = "org.Tests.MenuPageTestBase" />
-        </classes>
-    </test>
+<!--    <test name = "Menu">-->
+<!--        <classes>-->
+<!--            <class name = "org.Tests.MenuPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name = "Select Menu">
-        <classes>
-            <class name = "org.Tests.SelectMenuPageTestBase" />
-        </classes>
-    </test>
+<!--    <test name = "Select Menu">-->
+<!--        <classes>-->
+<!--            <class name = "org.Tests.SelectMenuPageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name = "Sortable">
-        <classes>
-            <class name = "org.Tests.SortablePageTestBase" />
-        </classes>
-    </test>
+<!--    <test name = "Sortable">-->
+<!--        <classes>-->
+<!--            <class name = "org.Tests.SortablePageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name = "Selectable">
-        <classes>
-            <class name = "org.Tests.SelectablePageTestBase" />
-        </classes>
-    </test>
+<!--    <test name = "Selectable">-->
+<!--        <classes>-->
+<!--            <class name = "org.Tests.SelectablePageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name = "Resizable">
-        <classes>
-            <class name = "org.Tests.ResizablePageTestBase" />
-        </classes>
-    </test>
+<!--    <test name = "Resizable">-->
+<!--        <classes>-->
+<!--            <class name = "org.Tests.ResizablePageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name = "Droppable">
-        <classes>
-            <class name = "org.Tests.DroppablePageTestBase" />
-        </classes>
-    </test>
+<!--    <test name = "Droppable">-->
+<!--        <classes>-->
+<!--            <class name = "org.Tests.DroppablePageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name = "Draggable">
-        <classes>
-            <class name = "org.Tests.DraggablePageTestBase" />
-        </classes>
-    </test>
-
+<!--    <test name = "Draggable">-->
+<!--        <classes>-->
+<!--            <class name = "org.Tests.DraggablePageTest" />-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
 

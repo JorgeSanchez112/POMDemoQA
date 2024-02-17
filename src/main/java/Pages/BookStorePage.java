@@ -81,7 +81,7 @@ public class BookStorePage extends BasePages {
         searchBox.sendKeys(text);
     }
 
-    public String getSearchBarPlaceholder(){
+    public String getSearchBarPlaceholderText(){
         return searchBox.getAttribute("placeholder");
     }
 

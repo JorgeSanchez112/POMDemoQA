@@ -42,15 +42,15 @@ public class ButtonsPage extends BasePages {
         return pageTitle.getText();
     }
 
-    public String getDoubleClickMessage(){
+    public String getDoubleClickMessageText(){
         return doubleClickMessage.getText();
     }
 
-    public String getRightClickMessage(){
+    public String getRightClickMessageText(){
         return rightClickMessage.getText();
     }
 
-    public String getClickMeMessage(){
+    public String getClickMeMessageText(){
         return clickMeMessage.getText();
     }
 
