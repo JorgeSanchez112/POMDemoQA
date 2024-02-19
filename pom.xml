@@ -99,7 +99,7 @@
     </profile>
 
     <profile>
-      <id>integrationTest</id>
+      <id>BSA</id>
       <build>
         <plugins>
           <plugin>
@@ -108,7 +108,7 @@
             <version>3.1.2</version>
             <configuration>
               <suiteXmlFiles>
-                <suiteXmlFile>src/testSuites/IntegrationTest.xml</suiteXmlFile>
+                <suiteXmlFile>src/testSuites/BookstoreApplication.xml</suiteXmlFile>
               </suiteXmlFiles>
             </configuration>
           </plugin>

@@ -3,6 +3,7 @@ package org.Tests;
 import TestComponents.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class TabsPageTest extends TestBase {
@@ -11,10 +12,10 @@ public class TabsPageTest extends TestBase {
         tabsPage = homePage.clickOnSectionWidgets().clickOnTabs();
     }
 
-
+    @Parameters("pageTitle")
     @Test
-    public void validateCorrectPageTitle(){
-        Assert.assertEquals(tabsPage.getPageTitleText(),"Tabs");
+    public void validateCorrectPageTitle(String pageTitle){
+        Assert.assertEquals(tabsPage.getPageTitleText(),pageTitle);
     }
 
     @Test
@@ -22,38 +23,44 @@ public class TabsPageTest extends TestBase {
         Assert.assertTrue(tabsPage.isSubTitleDisplayed());
     }
 
+    @Parameters("firstTabTitle")
     @Test
-    public void validateCorrectTitleOfFirstTab(){
-        Assert.assertEquals(tabsPage.getFirstTitleTab(),"What");
+    public void validateCorrectTitleOfFirstTab(String firstTabTitle){
+        Assert.assertEquals(tabsPage.getFirstTitleTab(),firstTabTitle);
     }
 
+    @Parameters("secondTabTitle")
     @Test
-    public void validateCorrectTitleOfSecondTab(){
-        Assert.assertEquals(tabsPage.getSecondTitleTab(),"Origin");
+    public void validateCorrectTitleOfSecondTab(String secondTabTitle){
+        Assert.assertEquals(tabsPage.getSecondTitleTab(),secondTabTitle);
     }
 
+    @Parameters("thirdTabTitle")
     @Test
-    public void validateCorrectTitleOfThirdTab(){
-        Assert.assertEquals(tabsPage.getThirdTitleTab(),"Use");
+    public void validateCorrectTitleOfThirdTab(String thirdTabTitle){
+        Assert.assertEquals(tabsPage.getThirdTitleTab(),thirdTabTitle);
     }
 
+    @Parameters("whatTabText")
     @Test
-    public void tabWhatParagraphIsDisplayed(){
+    public void tabWhatParagraphIsDisplayed(String whatTabText){
         tabsPage.clickOnTabWhat();
-        Assert.assertEquals(tabsPage.getParagraphOfWhatText(), "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+        Assert.assertEquals(tabsPage.getParagraphOfWhatText(), whatTabText);
     }
 
+    @Parameters({"firstParagraphOfOriginTabText", "secondParaGraphOfOriginTabText"})
     @Test
-    public void tabOriginParagraphIsDisplayed(){
+    public void tabOriginParagraphIsDisplayed(String firstParagraphOfOriginTabText, String secondParaGraphOfOriginTabText){
         tabsPage.clickOnTabOrigin();
-        Assert.assertEquals(tabsPage.getFirstParagraphsOfOriginText(), "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.");
-        Assert.assertEquals(tabsPage.getSecondParagraphsOfOriginText(),"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.");
+        Assert.assertEquals(tabsPage.getFirstParagraphsOfOriginText(), firstParagraphOfOriginTabText);
+        Assert.assertEquals(tabsPage.getSecondParagraphsOfOriginText(),secondParaGraphOfOriginTabText);
     }
 
+    @Parameters("useTabText")
     @Test
-    public void tabUseParagraphIsDisplayed(){
+    public void tabUseParagraphIsDisplayed(String useTabText){
         tabsPage.clickOnTabUse();
-        Assert.assertEquals(tabsPage.getParagraphOfUseText(), "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).");
+        Assert.assertEquals(tabsPage.getParagraphOfUseText(), useTabText);
     }
 
     @Test

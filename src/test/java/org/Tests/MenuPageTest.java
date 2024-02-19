@@ -3,6 +3,7 @@ package org.Tests;
 import TestComponents.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class MenuPageTest extends TestBase {
@@ -11,9 +12,10 @@ public class MenuPageTest extends TestBase {
         menuPage = homePage.clickOnSectionWidgets().clickOnMenu();
     }
 
+    @Parameters("pageTitle")
     @Test
-    public void validateCorrectPageTitle(){
-        Assert.assertEquals(menuPage.getPageTitleText(),"Menu");
+    public void validateCorrectPageTitle(String pageTitle){
+        Assert.assertEquals(menuPage.getPageTitleText(),pageTitle);
     }
 
     @Test

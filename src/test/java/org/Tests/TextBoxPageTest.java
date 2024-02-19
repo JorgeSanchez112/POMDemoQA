@@ -14,8 +14,8 @@ public class TextBoxPageTest extends TestBase {
 
     @Parameters("pageTitle")
     @Test
-    public void IsCorrectPageTitleText(){
-        Assert.assertEquals(textBoxPage.getPageTitleText(),"Text Box");
+    public void IsCorrectPageTitleText(String pageTitle){
+        Assert.assertEquals(textBoxPage.getPageTitleText(),pageTitle);
     }
 
     @Parameters({"username","userNameMessage"})

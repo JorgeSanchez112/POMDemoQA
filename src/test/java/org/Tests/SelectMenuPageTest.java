@@ -3,6 +3,7 @@ package org.Tests;
 import TestComponents.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class SelectMenuPageTest extends TestBase {
@@ -11,18 +12,21 @@ public class SelectMenuPageTest extends TestBase {
         selectMenuPage = homePage.clickOnSectionWidgets().clickOnSelectMenu();
     }
 
+    @Parameters("pageTitle")
     @Test
-    public void validateCorrectPageTitle(){
-        Assert.assertEquals(selectMenuPage.getPageTitleText(),"Select Menu");
+    public void validateCorrectPageTitle(String pageTitle){
+        Assert.assertEquals(selectMenuPage.getPageTitleText(),pageTitle);
     }
 
+    @Parameters("firstLabel")
     @Test
-    public void validateCorrectSelectValueLabel(){
-        Assert.assertEquals(selectMenuPage.getValueLabelText(),"Select Value");
+    public void validateCorrectSelectValueLabel(String firstLabel){
+        Assert.assertEquals(selectMenuPage.getValueLabelText(),firstLabel);
     }
 
+    @Parameters("expectedValue")
     @Test
-    public void selectValueByDropdown(){
+    public void selectValueByDropdown(String expectedValue){ //need change, I need find a way where I can choose an option just write the value.
         selectMenuPage.clickOnSelectValueContainer();
         selectMenuPage.downOneOptionInSelectValueDropDown();
         selectMenuPage.enterActionInSelectValueDropDown();
@@ -30,13 +34,15 @@ public class SelectMenuPageTest extends TestBase {
                 "Group 1, option 2");
     }
 
+    @Parameters("secondLabel")
     @Test
-    public void validateCorrectSelectOneLabel(){
-        Assert.assertEquals(selectMenuPage.getOneLabelText(),"Select One");
+    public void validateCorrectSelectOneLabel(String secondLabel){
+        Assert.assertEquals(selectMenuPage.getOneLabelText(),secondLabel);
     }
 
+    @Parameters("expectedOne")
     @Test
-    public void selectOneByDropdown(){
+    public void selectOneByDropdown(String expectedOne){
         selectMenuPage.clickOnSelectOneContainer();
         selectMenuPage.downOneOptionInSelectOneDropDown();
         selectMenuPage.enterActionInSelectOneDropDown();
@@ -44,25 +50,29 @@ public class SelectMenuPageTest extends TestBase {
                 "Mr.");
     }
 
+    @Parameters("thirdLabel")
     @Test
-    public void validateCorrectOldStyleSelectLabel(){
-        Assert.assertEquals(selectMenuPage.getOldStyleSelectLabelText(),"Old Style Select Menu");
+    public void validateCorrectOldStyleSelectLabel(String thirdLabel){
+        Assert.assertEquals(selectMenuPage.getOldStyleSelectLabelText(),thirdLabel);
     }
 
-    @Test
-    public void selectValueInOldSelectMenu(){
+    @Parameters("expectedOldValue")
+    @Test //this need a change
+    public void selectValueInOldSelectMenu(String expectedOldValue){
         selectMenuPage.selectValueOnOldStyleSelectMenu();
         Assert.assertEquals(selectMenuPage.getSelectValueOnOldStyleSelectMenuText(),"6");
     }
 
+    @Parameters("fourthLabel")
     @Test
-    public void validateCorrectMultiselectDropdownLabel(){
-        Assert.assertEquals(selectMenuPage.getMultiSelectDropdownLabelText(),"Multiselect drop down");
+    public void validateCorrectMultiselectDropdownLabel(String fourthLabel){
+        Assert.assertEquals(selectMenuPage.getMultiSelectDropdownLabelText(),fourthLabel);
 
     }
 
+    @Parameters({"firstExpectedMultiValue","secondExpectedMultiValue","thirdExpectedMultiValue","fourthExpectedMultiValue"})
     @Test
-    public void selectMultiplyValuesInDropdown(){
+    public void selectMultiplyValuesInDropdown(String firstExpectedMultiValue, String secondExpectedMultiValue, String thirdExpectedMultiValue, String fourthExpectedMultiValue){ //need changes
         selectMenuPage.clickOnMultiSelectDropdownContainer();
         selectMenuPage.downOneOptionInMultiSelectDropDown();
         selectMenuPage.enterActionInMultiSelectDropDown();
@@ -75,17 +85,19 @@ public class SelectMenuPageTest extends TestBase {
         Assert.assertEquals(selectMenuPage.getRedValueTextOfMultiplyDropdown(),"Red");
     }
 
+    @Parameters("fifthLabel")
     @Test
-    public void validateCorrectStandardMultiSelectLabel(){
-        Assert.assertEquals(selectMenuPage.getStandardMultiSelectLabelText(),"Standard multi select");
+    public void validateCorrectStandardMultiSelectLabel(String fifthLabel){
+        Assert.assertEquals(selectMenuPage.getStandardMultiSelectLabelText(),fifthLabel);
     }
 
+    @Parameters({"selectFirstValueOnStandardMultiSelect","selectSecondValueOnStandardMultiSelect","selectThirdValueOnStandardMultiSelect","selectFourthValueOnStandardMultiSelect"})
     @Test
-    public void selectMultiplyValuesOnStandardMultiSelect(){
-        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Volvo");
-        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Saab");
-        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Opel");
-        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect("Audi");
+    public void selectMultiplyValuesOnStandardMultiSelect(String selectFirstValueOnStandardMultiSelect, String selectSecondValueOnStandardMultiSelect, String selectThirdValueOnStandardMultiSelect, String selectFourthValueOnStandardMultiSelect){
+        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect(selectFirstValueOnStandardMultiSelect);
+        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect(selectSecondValueOnStandardMultiSelect);
+        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect(selectThirdValueOnStandardMultiSelect);
+        selectMenuPage.scrollAndSelectValueOnStandardMultiSelect(selectFourthValueOnStandardMultiSelect);
         Assert.assertTrue(selectMenuPage.isVolvoSelectedOfStandardMultiSelect());
         Assert.assertTrue(selectMenuPage.isSaabSelectedOfStandardMultiSelect());
         Assert.assertTrue(selectMenuPage.isOpelSelectedOfStandardMultiSelect());

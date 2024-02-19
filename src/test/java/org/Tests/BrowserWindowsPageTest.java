@@ -3,6 +3,7 @@ package org.Tests;
 import TestComponents.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
@@ -12,9 +13,10 @@ public class BrowserWindowsPageTest extends TestBase {
         browserWindows = homePage.clickOnSectionAlerts_Frame_Windows().clickOnBrowserWindows();
     }
 
+    @Parameters("pageTitle")
     @Test
-    public void validateCorrectPageTitle(){
-        Assert.assertEquals(browserWindows.getPageTitleText(), "Browser Windows");
+    public void validateCorrectPageTitle(String pageTitle){
+        Assert.assertEquals(browserWindows.getPageTitleText(), pageTitle);
 
     }
 
@@ -34,11 +36,12 @@ public class BrowserWindowsPageTest extends TestBase {
         Assert.assertTrue(browserWindows.newTabTextIsVisible());
     }
 
+    @Parameters("messageOfNewWindow")
     @Test
-    public void validateNewWindowMessage(){
+    public void validateNewWindowMessage(String messageOfNewWindow){
         browserWindows.clickOnNewWindowMessageButton();
         browserWindows.switchToTab();
-        Assert.assertEquals(browserWindows.getMessageOfNewWindow(), "Knowledge increases by sharing but not by saving. Please share this website with your friends and in your organization.");
+        Assert.assertEquals(browserWindows.getMessageOfNewWindow(), messageOfNewWindow);
     }
 
 }

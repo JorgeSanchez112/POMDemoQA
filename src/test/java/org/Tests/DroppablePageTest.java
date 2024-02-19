@@ -3,6 +3,7 @@ package org.Tests;
 import TestComponents.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class DroppablePageTest extends TestBase {
@@ -11,9 +12,10 @@ public class DroppablePageTest extends TestBase {
         droppablePage = homePage.clickOnSectionInteractions().clickOnDroppable();
     }
 
+    @Parameters("pageTitle")
     @Test
-    public void validateCorrectPageTitle(){
-        Assert.assertEquals(droppablePage.getPageTitleText(),"Droppable");
+    public void validateCorrectPageTitle(String pageTitle){
+        Assert.assertEquals(droppablePage.getPageTitleText(),pageTitle);
     }
 
     @Test

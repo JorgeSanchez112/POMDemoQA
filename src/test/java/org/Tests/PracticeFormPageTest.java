@@ -12,99 +12,118 @@ public class PracticeFormPageTest extends TestBase {
         practiceFormPage = homePage.clickOnSectionForms().clickOnPracticeFormSection();
     }
 
+    @Parameters("pageTitle")
     @Test
-    public void validateCorrectPageTitle(){
-        Assert.assertEquals(practiceFormPage.getPageTitleText(),"Practice Form");
+    public void validateCorrectPageTitle(String pageTitle){
+        Assert.assertEquals(practiceFormPage.getPageTitleText(),pageTitle);
     }
 
+    @Parameters("formTitle")
     @Test
-    public void validateTitle(){
-        Assert.assertEquals(practiceFormPage.getTextFormTitle(),"Student Registration Form");
+    public void validateTitle(String formTitle){
+        Assert.assertEquals(practiceFormPage.getTextFormTitle(),formTitle);
     }
 
+    @Parameters("labelName")
     @Test
-    public void validateLabelName(){
-        Assert.assertEquals(practiceFormPage.getTextOfLabelName(), "Name");
+    public void validateLabelName(String labelName){
+        Assert.assertEquals(practiceFormPage.getTextOfLabelName(), labelName);
     }
 
+    @Parameters("labelEmail")
     @Test
-    public void validateLabelEmail(){
-        Assert.assertEquals(practiceFormPage.getTextOfLabelEmail(), "Email");
+    public void validateLabelEmail(String labelEmail){
+        Assert.assertEquals(practiceFormPage.getTextOfLabelEmail(), labelEmail);
     }
 
+    @Parameters("labelGender")
     @Test
-    public void validateLabelGender(){
-        Assert.assertEquals(practiceFormPage.getTextOfLabelGender(), "Gender");
+    public void validateLabelGender(String labelGender){
+        Assert.assertEquals(practiceFormPage.getTextOfLabelGender(), labelGender);
     }
 
+    @Parameters("labelMobile")
     @Test
-    public void validateLabelMobile(){
-        Assert.assertEquals(practiceFormPage.getTextOfLabelMobile(), "Mobile(10 Digits)");
+    public void validateLabelMobile(String labelMobile){
+        Assert.assertEquals(practiceFormPage.getTextOfLabelMobile(), labelMobile);
     }
 
+    @Parameters("labelBirthDate")
     @Test
-    public void validateLabelBirthDate(){
-        Assert.assertEquals(practiceFormPage.getTextOfLabelDateOfBirth(), "Date of Birth");
+    public void validateLabelBirthDate(String labelBirthDate){
+        Assert.assertEquals(practiceFormPage.getTextOfLabelDateOfBirth(), labelBirthDate);
     }
 
+    @Parameters("labelSubjects")
     @Test
-    public void validateLabelSubjects(){
-        Assert.assertEquals(practiceFormPage.getTextOfLabelSubjects(), "Subjects");
+    public void validateLabelSubjects(String labelSubjects){
+        Assert.assertEquals(practiceFormPage.getTextOfLabelSubjects(), labelSubjects);
     }
 
+    @Parameters("labelHobbies")
     @Test
-    public void validateLabelHobbies(){
-        Assert.assertEquals(practiceFormPage.getTextOfLabelHobbies(), "Hobbies");
+    public void validateLabelHobbies(String labelHobbies){
+        Assert.assertEquals(practiceFormPage.getTextOfLabelHobbies(), labelHobbies);
     }
 
+    @Parameters("labelPicture")
     @Test
-    public void validateLabelPicture(){
-        Assert.assertEquals(practiceFormPage.getTextOfLabelPicture(), "Picture");
+    public void validateLabelPicture(String labelPicture){
+        Assert.assertEquals(practiceFormPage.getTextOfLabelPicture(), labelPicture);
     }
 
+    @Parameters("labelCurrentAddress")
     @Test
-    public void validateLabelCurrentAddress(){
-        Assert.assertEquals(practiceFormPage.getTextOfLabelCurrentAddress(), "Current Address");
+    public void validateLabelCurrentAddress(String labelCurrentAddress){
+        Assert.assertEquals(practiceFormPage.getTextOfLabelCurrentAddress(), labelCurrentAddress);
     }
 
+    @Parameters("labelStateCity")
     @Test
-    public void validateLabelsStateAndCity() {
-        Assert.assertEquals(practiceFormPage.getTextOfLabelStateCity(), "State and City");
+    public void validateLabelsStateAndCity(String labelStateCity) {
+        Assert.assertEquals(practiceFormPage.getTextOfLabelStateCity(), labelStateCity);
     }
 
+    @Parameters("placeholderFirstNameField")
     @Test
-    public void validatePlaceholderFirstNameField(){
-        Assert.assertEquals(practiceFormPage.getPlaceholderFirstNameField(), "First Name");
+    public void validatePlaceholderFirstNameField(String placeholderFirstNameField){
+        Assert.assertEquals(practiceFormPage.getPlaceholderFirstNameField(), placeholderFirstNameField);
     }
 
+    @Parameters("placeholderLastNameField")
     @Test
-    public void validatePlaceholderLastNameField(){
-        Assert.assertEquals(practiceFormPage.getPlaceholderLastNameField(), "Last Name");
+    public void validatePlaceholderLastNameField(String placeholderLastNameField){
+        Assert.assertEquals(practiceFormPage.getPlaceholderLastNameField(), placeholderLastNameField);
     }
 
+    @Parameters("placeholderEmailField")
     @Test
-    public void validatePlaceholderEmailField(){
-        Assert.assertEquals(practiceFormPage.getPlaceholderEmailField(), "name@example.com");
+    public void validatePlaceholderEmailField(String placeholderEmailField){
+        Assert.assertEquals(practiceFormPage.getPlaceholderEmailField(), placeholderEmailField);
     }
 
+    @Parameters("placeholderMobileField")
     @Test
-    public void validatePlaceholderMobileField(){
-        Assert.assertEquals(practiceFormPage.getPlaceholderMobileField(), "Mobile Number");
+    public void validatePlaceholderMobileField(String placeholderMobileField){
+        Assert.assertEquals(practiceFormPage.getPlaceholderMobileField(), placeholderMobileField);
     }
 
+    @Parameters("placeholderCurrentAddressField")
     @Test
-    public void validatePlaceholderCurrentAddressField(){
-        Assert.assertEquals(practiceFormPage.getPlaceholderCurrentAddressField(), "Current Address");
+    public void validatePlaceholderCurrentAddressField(String placeholderCurrentAddressField){
+        Assert.assertEquals(practiceFormPage.getPlaceholderCurrentAddressField(), placeholderCurrentAddressField);
     }
 
+    @Parameters("placeholderStatesListBox")
     @Test
-    public void validatePlaceholderStateListBox(){
-        Assert.assertEquals(practiceFormPage.getPlaceholderStatesListBox(), "Select State");
+    public void validatePlaceholderStateListBox(String placeholderStatesListBox){
+        Assert.assertEquals(practiceFormPage.getPlaceholderStatesListBox(), placeholderStatesListBox);
     }
 
+    @Parameters("placeholderCitiesListBox")
     @Test
-    public void validatePlaceholderCityListBox(){
-        Assert.assertEquals(practiceFormPage.getPlaceholderCitiesListBox(), "Select City");
+    public void validatePlaceholderCityListBox(String placeholderCitiesListBox){
+        Assert.assertEquals(practiceFormPage.getPlaceholderCitiesListBox(), placeholderCitiesListBox);
     }
 
     @Test
@@ -167,35 +186,35 @@ public class PracticeFormPageTest extends TestBase {
         Assert.assertEquals(practiceFormPage.getCssAttributeCurrentAddressField(), prop.getProperty("RGBGreenColor"));
     }
 
-    @Test
-    @Parameters({"name","lastname","email","gender","phone","month","day","year","subject","text","state","city"})
-    public void validateCorrectRegisterValues(String name, String lastname,String email, String gender, String phone, String month, String day, String year, String subject,String text, String state, String city) {
+    @Test //separate this test are much asserts that can be tested for separate
+    @Parameters({"nameValue","lastnameValue","emailValue","labelGender","genderValue","labelMobile","phoneValue","labelBirthDate","monthValue","dayValue","yearValue","labelSubjects","subjectValue","labelHobbies","labelPicture","textValue","stateValue","cityValue"})
+    public void validateCorrectRegisterValues(String nameValue, String lastnameValue, String emailValue, String labelGender, String genderValue, String labelMobile, String phoneValue, String labelBirthDate, String monthValue, String dayValue, String yearValue, String labelSubjects, String subjectValue, String labelHobbies, String labelPicture, String textValue, String stateValue, String cityValue) {
 
-        practiceFormPage.fillAllFormFields(name, lastname, email, gender, phone, month, day, year, subject,"C:\\Users\\Jorge\\Pictures\\Captura.png", text, state, city);
+        practiceFormPage.fillAllFormFields(nameValue, lastnameValue, emailValue, genderValue, phoneValue, monthValue, dayValue, yearValue, subjectValue,"C:\\Users\\Jorge\\Pictures\\Captura.png", textValue, stateValue, cityValue);
 
         Assert.assertTrue(practiceFormPage.isVisibleTitleSubmitForm());
         Assert.assertEquals(practiceFormPage.getTitleLabelFieldsText(),"Label");
         Assert.assertEquals(practiceFormPage.getTitleValueFieldsText(),"Values");
         Assert.assertEquals(practiceFormPage.getStudentNameText(),"Student Name");
-        Assert.assertEquals(practiceFormPage.getValueOfStudentNameRow(),name + " " + lastname);
+        Assert.assertEquals(practiceFormPage.getValueOfStudentNameRow(),nameValue + " " + lastnameValue);
         Assert.assertEquals(practiceFormPage.getStudentEmailText(),"Student Email");
-        Assert.assertEquals(practiceFormPage.getValueOfStudentEmailRow(),email);
-        Assert.assertEquals(practiceFormPage.getGenderText(),"Gender");
-        Assert.assertEquals(practiceFormPage.getValueOfGenderRow(),gender);
-        Assert.assertEquals(practiceFormPage.getMobileText(),"Mobile");
-        Assert.assertEquals(practiceFormPage.getValueOfMobileRow(),phone);
-        Assert.assertEquals(practiceFormPage.getDateBirthText(),"Date of Birth");
-        Assert.assertEquals(practiceFormPage.getValueOfDateBirthRow(),day + " " + month + "," + year);
-        Assert.assertEquals(practiceFormPage.getSubjectsText(),"Subjects");
-        Assert.assertEquals(practiceFormPage.getValueOfSubjectsRow(),"Maths");
-        Assert.assertEquals(practiceFormPage.getHobbiesText(),"Hobbies");
+        Assert.assertEquals(practiceFormPage.getValueOfStudentEmailRow(),emailValue);
+        Assert.assertEquals(practiceFormPage.getGenderText(),labelGender);
+        Assert.assertEquals(practiceFormPage.getValueOfGenderRow(),genderValue);
+        Assert.assertEquals(practiceFormPage.getMobileText(),labelMobile);
+        Assert.assertEquals(practiceFormPage.getValueOfMobileRow(),phoneValue);
+        Assert.assertEquals(practiceFormPage.getDateBirthText(),labelBirthDate);
+        Assert.assertEquals(practiceFormPage.getValueOfDateBirthRow(),dayValue + " " + monthValue + "," + yearValue);
+        Assert.assertEquals(practiceFormPage.getSubjectsText(),labelSubjects);
+        Assert.assertEquals(practiceFormPage.getValueOfSubjectsRow(),subjectValue);
+        Assert.assertEquals(practiceFormPage.getHobbiesText(),labelHobbies);
         Assert.assertEquals(practiceFormPage.getValueOfHobbiesRow(),"Music");
-        Assert.assertEquals(practiceFormPage.getPictureText(),"Picture");
+        Assert.assertEquals(practiceFormPage.getPictureText(),labelPicture);
         Assert.assertEquals(practiceFormPage.getValueOfPictureRow(),"Captura.png");
         Assert.assertEquals(practiceFormPage.getAddressText(),"Address");
-        Assert.assertEquals(practiceFormPage.getValueOfAddressRow(),text);
+        Assert.assertEquals(practiceFormPage.getValueOfAddressRow(),textValue);
         Assert.assertEquals(practiceFormPage.getStateCityText(),"State and City");
-        Assert.assertEquals(practiceFormPage.getValueOfStateCityRow(), state + "" + city);
+        Assert.assertEquals(practiceFormPage.getValueOfStateCityRow(), stateValue + "" + cityValue);
     }
 
 }

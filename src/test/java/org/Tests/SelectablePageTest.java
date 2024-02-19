@@ -3,6 +3,7 @@ package org.Tests;
 import TestComponents.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class SelectablePageTest extends TestBase {
@@ -11,9 +12,10 @@ public class SelectablePageTest extends TestBase {
         selectablePage = homePage.clickOnSectionInteractions().clickOnSelectable();
     }
 
+    @Parameters("pageTitle")
     @Test
-    public void validateCorrectPageTitle(){
-        Assert.assertEquals(selectablePage.getPageTitleText(),"Selectable");
+    public void validateCorrectPageTitle(String pageTitle){
+        Assert.assertEquals(selectablePage.getPageTitleText(),pageTitle);
 
     }
     @Test
